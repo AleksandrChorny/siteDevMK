@@ -12,7 +12,16 @@ $colorOrange: #f7931e;
 $colorLightOrange: #fbb03b;
 $colorPurple: #b26eaa;
 $colorBlur: rgba(246, 246, 246, 0.5);
-$maxHeightMobileLandscape: 600px;
+
+$maxHeightMobileLandscape: 500px;
+//$widthMinMobile: 321px;
+$mobileMediumWidth: 376px;
+$mobileClassicWidth: 426px;
+$tabletWidth: 769px;
+$desctopSmallWidth: 1024px;
+
+//$widthMobile: 426px;
+
 //$minHeightMobileLandscape: 600px;
 
 //міксин задає колір та блюр
@@ -27,6 +36,8 @@ body {
    font-size: 14px;
    background-color: $colorLightGray;
 }
+
+
 
 //.wraper {
 //   width: 100%;
@@ -82,7 +93,14 @@ body {
 //}
 
 //@import "_header";
-@import "_search";
+
 @import "_cover";
 @import "_leftSideBar";
 @import "_navigation";
+@import "_tile-6x3";
+@import "_goods";
+@import "_pageDescription";
+@import "_footer";
+@import "_contacts-form";
+
+

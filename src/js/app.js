@@ -1,5 +1,6 @@
 //Подключение файлов js из папки 'modules'
-import * as cover from "./modules/cover.js"
+import * as cover from "./modules/cover.js";
+import * as nav from "./modules/navigation.js";
 
 //flsFunctions.isWebp();
 
@@ -8,3 +9,4 @@ import * as cover from "./modules/cover.js"
 //! const swiper = new Swiper(...);
 
 cover.viewText();
+nav.viewNavigation();

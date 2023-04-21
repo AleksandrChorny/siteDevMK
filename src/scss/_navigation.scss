@@ -1,6 +1,7 @@
 .main-menu {
    position: fixed;
    right: 50%;
+   bottom: -110%;
    transform: translateX(50%);
    
    width: 100%;
@@ -25,6 +26,7 @@
 
    z-index: 3;
 
+   transition: all .3s;
    &._active{
       bottom: 0;
    }
