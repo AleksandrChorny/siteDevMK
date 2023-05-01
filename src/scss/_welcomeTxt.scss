@@ -1,0 +1,39 @@
+.welcome-txt{
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+
+   padding: 40px;
+   background-color: $colorLightGray;
+   &__title-block{
+      display: flex;
+      justify-content: center;
+      align-items: center;
+
+      gap: 20px;
+   }
+   &__svg{
+      width: 33.65px;
+      height: 32.98px;
+   }
+   &__txt-title{
+      font-weight: 400;
+      font-size: 24px;
+      line-height: 24px;
+
+      text-align: center;
+      text-transform: uppercase;
+      
+      color: $colorDarkGray;
+   }
+   &__text-block{
+   font-weight: 400;
+   font-size: 14px;
+   line-height: 16px;
+   text-align: center;
+   max-width: 95%;
+   
+   color: $colorDarkGray;
+   margin-top: 20px;
+   }
+}
