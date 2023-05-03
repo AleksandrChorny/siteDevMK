@@ -10,3 +10,5 @@ import * as nav from "./modules/navigation.js";
 
 cover.viewText();
 nav.viewNavigation();
+nav.viewNavigateItems();
+nav.viewContacts();

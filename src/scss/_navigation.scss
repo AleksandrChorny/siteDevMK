@@ -125,30 +125,71 @@
 .group-wrapper {
    display: flex;
    justify-content: center;
-   align-items: center;
+   align-items: flex-start;
 
    position: fixed;
    width: 100%;
    height: calc(100svh - 56px);
    top: -110%;
    left: 0;
-   z-index: 1;
+   z-index: 2;
 
    background: rgba(245, 245, 245, 0.6);
    backdrop-filter: blur(20px);
 
    transition: all .3s;
+   overflow-y: auto;
    @media (min-width: $tabletWidth) {
       bottom: -110%;
       left: 50%;
-      transform: translateX(-82.5%);
+      
       width: auto;
       height: min-content;
       backdrop-filter: none;
       background: rgba(245, 245, 245, 0);
+
+      z-index: 1;
+      &._textile-wrapper {
+         transform: translateX(-78%);
+      }
+      &._dishes-wrapper {
+         transform: translateX(-119%);
+      }
+      &._electronics-wrapper {
+         transform: translateX(-94.5%);
+      }
+      &._bags-wrapper {
+         transform: translateX(1%);
+      }
+      &._caps-wrapper {
+         transform: translateX(-29.5%);
+      }
+      &._pens-wrapper {
+         transform: translateX(40.5%);
+      }
+      
    }
    @media (min-width: $desctopSmallWidth) {
+      z-index: 1;
       bottom: -110%;
+      &._textile-wrapper {
+         transform: translateX(-82.5%);
+      }
+      &._dishes-wrapper {
+         transform: translateX(-125%);
+      }
+      &._electronics-wrapper {
+         transform: translateX(-99.5%);
+      }
+      &._bags-wrapper {
+         transform: translateX(2%);
+      }
+      &._caps-wrapper {
+         transform: translateX(52%);
+      }
+      &._pens-wrapper {
+         transform: translateX(48.5%);
+      }
    }
    &._show {
       top: 0;
@@ -174,20 +215,9 @@
    backdrop-filter: blur(20px);
    -webkit-backdrop-filter: blur(20px);
 
+   margin: auto 0;
+
    border-radius: 12px;
-}
-
-.textil {
-   display: grid;
-   grid-template-columns: 1fr 1fr;
-   grid-template-rows: repeat(9, min-content);
-
-   gap: 4px;
-   padding: 8px;
-   @media (min-width: $tabletWidth) {
-      grid-template-columns: repeat(6, min-content);
-      grid-template-rows: repeat(7, min-content);
-   }
 }
 
 .signboard {
@@ -210,6 +240,26 @@
    @media (min-width: $tabletWidth) {
       grid-column: 1/5;
       grid-row: 1/3;
+      &._dishes {
+         grid-column: 1/3;
+         grid-row: 1/2;
+      }
+      &._electronics {
+         grid-column: 1/2;
+         grid-row: 1/2;
+      }
+      &._bags {
+         grid-column: 1/3;
+         grid-row: 1/2;
+      }
+      &._caps {
+         grid-column: 1/3;
+         grid-row: 1/2;
+      }
+      &._pens {
+         grid-column: 1/3;
+         grid-row: 1/2;
+      }
    }
    &__img {
       width: auto;
@@ -244,6 +294,7 @@
    flex-wrap: nowrap;
    justify-content: flex-start;
    align-items: center;
+   gap: 8px;
 
    background: rgba(111, 111, 111, 0.6);
    border: 1px solid #CACACA;
@@ -290,10 +341,71 @@
    &__paragraph {
       font-size: 12px;
       color: $colorLightGray;
-      margin-top: 4px;
    }
 }
 
+.horizontal-large {
+   padding: 8px 8px 12px 8px;
+   gap: 12px;
+}
+.horizontal-mid {
+   position: relative;
+   flex-direction: column;
+   align-items: flex-start;
+   padding: 8px 4px 8px 12px;
+   gap: 12px;
+
+   grid-column: 1/3;
+   &__img {
+      position: absolute;
+      right: 0;
+      bottom: 0;
+      height: 53px;
+      
+      overflow: hidden;
+
+   }
+   &__svg {
+      width: 88px;
+      height: 100%;
+      aspect-ratio: 2/1;
+   }
+   
+}
+.horizontal-small {
+   padding: 8px 12px;
+   &__paragraph {
+      font-size: 12px;
+      margin-top: 0;
+      color: $colorLightGray;
+   }
+}
+.vertical {
+   grid-row: 4/6;
+   flex-direction: column;
+   padding: 12px;
+   gap: 12px;
+   &__svg {
+      fill: $colorLightGray;
+      max-width: 69px;
+      max-height: 63px;
+
+   }
+  
+}
+
+.textil {
+   display: grid;
+   grid-template-columns: 1fr 1fr;
+   grid-template-rows: repeat(9, min-content);
+
+   gap: 4px;
+   padding: 8px;
+   @media (min-width: $tabletWidth) {
+      grid-template-columns: repeat(6, min-content);
+      grid-template-rows: repeat(7, min-content);
+   }
+}
 .type-board-textil {
    &:nth-child(2){
       grid-column: 1/3;
@@ -346,52 +458,95 @@
    }
 }
 
-.horizontal-large {
-   padding: 8px 8px 12px 8px;
-   gap: 12px;
-}
-.horizontal-mid {
-   position: relative;
-   flex-direction: column;
-   align-items: flex-start;
-   padding: 8px 4px 8px 12px;
-   gap: 12px;
+.dishes {
+   display: grid;
+   grid-template-columns: 1fr 1fr;
+   grid-template-rows: repeat(4, min-content);
 
-   grid-column: 1/3;
-   &__img {
-      position: absolute;
-      right: 0;
-      bottom: 0;
-      height: 53px;
-      
-      overflow: hidden;
-
-   }
-   &__svg {
-      width: 88px;
-      height: 100%;
-      aspect-ratio: 2/1;
-   }
-   
+   gap: 4px;
+   padding: 8px;
 }
-.horizontal-small {
-   padding: 8px 12px;
-   &__paragraph {
-      font-size: 12px;
-      margin-top: 0;
-      color: $colorLightGray;
+.type-board-dishes {
+   &:nth-child(2){
+      grid-column: 1/3;
    }
-}
-.vertical {
-   grid-row: 4/6;
-   flex-direction: column;
-   padding: 12px;
-   gap: 12px;
-   &__svg {
-      fill: $colorLightGray;
-      max-width: 69px;
-      max-height: 63px;
+   &:nth-child(3){
+      grid-column: 1/2;
+   }
+   &:nth-child(4){
+      grid-column: 1/2;
+   }
+   &:nth-child(5){
+      grid-column: 2/3;
+      grid-row: 3/5;
 
    }
-  
+}
+
+.electronics {
+   display: grid;
+   grid-template-columns: 1fr;
+   grid-template-rows: repeat(3, min-content);
+
+   gap: 4px;
+   padding: 8px;
+}
+.type-board-electronics {
+   &:nth-child(2){
+      grid-column: 1/1;
+   }
+   &:nth-child(3){
+      grid-column: 1/1;
+   }
+}
+
+.bags {
+   display: grid;
+   grid-template-columns: 1fr 1fr;
+   grid-template-rows: repeat(4, min-content);
+
+   gap: 4px;
+   padding: 8px;
+}
+.type-board-bags {
+   &:nth-child(2){
+      grid-column: 1/3;
+   }
+   &:nth-child(3){
+      grid-column: 1/3;
+   }
+   &:nth-child(4){
+      grid-column: 1/2;
+   }
+   &:nth-child(5){
+      grid-column: 2/3;
+   }
+}
+
+.caps {
+   display: grid;
+   grid-template-columns: 1fr 1fr;
+   grid-template-rows: repeat(2, min-content);
+
+   gap: 4px;
+   padding: 8px;
+}
+.type-board-caps {
+   &:nth-child(2){
+      grid-column: 1/3;
+   }
+}
+
+.pens {
+   display: grid;
+   grid-template-columns: 1fr 1fr;
+   grid-template-rows: repeat(2, min-content);
+
+   gap: 4px;
+   padding: 8px;
+}
+.type-board-pens {
+   &:nth-child(2){
+      grid-column: 1/3;
+   }
 }
