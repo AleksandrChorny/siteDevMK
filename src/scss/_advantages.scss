@@ -1,0 +1,57 @@
+.advantages{
+   padding: 20px;
+   background-color: linear-gradient(180deg, #F5F5F5 0%, #FFFFFF 100%);
+   &__title{
+      font-weight: 400;
+      font-size: 32px;
+      line-height: 32px;
+      text-align: center;
+      text-transform: uppercase;
+
+      color: $colorDarkGray;
+   }
+   &__box{
+      display: flex;
+      justify-content: center;
+      align-items: flex-start;
+
+      margin-top: 40px;
+
+      gap: 16px;
+   }
+   &__item{
+      display: flex;
+      justify-content: center;
+      align-items: flex-start;
+
+      width: 22.7%;
+   }
+   &__svg{
+      height: 50px;
+
+      margin-right: 12px;
+      margin-top: 20px;
+   }
+   &__description{
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+   }
+   h3{
+      font-weight: 700;
+      font-size: 20px;
+      line-height: 20px;
+      text-align: left;
+      
+      color: $colorBlue;
+   }
+   p{
+      font-weight: 400;
+      font-size: 14px;
+      line-height: 16px;
+
+      margin-top: 8px;
+      
+      color: $colorDarkGray;
+   }
+}
