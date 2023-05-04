@@ -10,7 +10,7 @@
    height: 56px;
    
    @include blur($colorBlur);
-   z-index: 3;
+   z-index: 4;
    @media (min-width: $desctopSmallWidth) {
       width: 60px;
       height: 100vh;
@@ -23,6 +23,7 @@
       justify-content: space-evenly;
       //width: 100%;
       margin: 0 max(0, 10%);
+
       @media (min-width: $desctopSmallWidth) {
          flex-direction: column;
          margin: max(0, 10vh) 0;
@@ -67,6 +68,10 @@
       left: 50%;
       transform: translateX(-50%);
 
+      opacity: 0;
+
+      transition: all .3s;
+
       
       @media (min-width: $desctopSmallWidth) {
          bottom: auto;
@@ -77,10 +82,12 @@
       }
 
       &._show {
+         opacity: 1;
          bottom: 64px;
          
          @media (min-width: $desctopSmallWidth) {
-         left: calc(100% + 18px);
+            bottom: auto;
+            left: calc(100% + 18px);
          }
       }
    }
