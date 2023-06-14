@@ -1,6 +1,7 @@
 //Подключение файлов js из папки 'modules'
 import * as cover from "./modules/cover.js";
 import * as nav from "./modules/navigation.js";
+import * as header from "./modules/header.js"
 
 //flsFunctions.isWebp();
 
@@ -12,3 +13,4 @@ cover.viewText();
 nav.viewNavigation();
 nav.viewNavigateItems();
 nav.viewContacts();
+header.searchPanel();
