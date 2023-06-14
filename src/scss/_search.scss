@@ -81,7 +81,6 @@ $animateTimePassive: .5s;
 
       overflow: hidden ;
       cursor: pointer;
-
       &::before, &::after{
          content: '';
          position: absolute;
@@ -92,16 +91,18 @@ $animateTimePassive: .5s;
          border-radius: 2px;
 
          transition: all .3s;
-         &._active {
-            width: 2px;
-            height:  20px;
-         }
       }
       &::before{
          transform: rotate(45deg);
       }
       &::after{
          transform: rotate(-45deg);
+      }
+      &._active {
+         &::before, &::after {
+            width: 2px;
+            height:  20px;
+         }
       }
    }
    &__results {
