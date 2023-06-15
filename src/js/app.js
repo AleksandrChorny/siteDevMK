@@ -1,7 +1,9 @@
 //Подключение файлов js из папки 'modules'
+import * as header from "./modules/header.js";
 import * as cover from "./modules/cover.js";
 import * as nav from "./modules/navigation.js";
 import * as welcomeText from "./modules/welcomeText.js";
+
 
 //flsFunctions.isWebp();
 

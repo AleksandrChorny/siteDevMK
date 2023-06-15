@@ -5,6 +5,7 @@ import * as preloader from "./preloader.js";
 
 //const body = document.querySelector("body");
 const search = document.querySelector('.search');
+const clossearchResults = document.querySelector('.search__results');
 const closeButton = document.querySelector('.search__close');
 const searchResultsClassName = 'search__results';
 
@@ -20,15 +21,16 @@ export function close() {
 
 //run search panel
 export function run() {
-   //add style left & top to variable css
-   const styleOfsetX = search.getBoundingClientRect().x;
-   const styleOfsetY = search.getBoundingClientRect().y;
-   search.style.cssText = `--searchLeft: ${styleOfsetX}px; --searchTop: ${styleOfsetY}px;`;
+   ////add style left & top to variable css
+   //const styleOfsetX = search.getBoundingClientRect().x;
+   //const styleOfsetY = search.getBoundingClientRect().y;
+   //search.style.cssText = `--searchLeft: ${styleOfsetX}px; --searchTop: ${styleOfsetY}px;`;
 
    //on search remove _passive  and add _action tu run search
    if (search) {
-      search.classList.remove('_passive');
-      search.classList.add('_action');
+      //search.classList.remove('_passive');
+      clossearchResults.classList.toggle('_active');
+      closeButton.classList.toggle('_active');
       body.noneScrole();
    }
 
@@ -45,7 +47,7 @@ export function run() {
 }
 
 export function mySearch(inputValue) {
-   const searchResult = document.querySelector(`.${searchResultsClassName}`);
+   const searchResult = document.querySelector('.search__results');
    const url = "/form/submit/";
    const formData = new FormData();
    const language = document.documentElement.lang;
