@@ -22,7 +22,10 @@
       display: flex;
       justify-content: space-evenly;
       //width: 100%;
-      margin: 0 max(0, 10%);
+      margin: 0;
+      @media (min-width: $mobileClassicWidth) {
+         margin: 0 max(0, 5%);
+      }
 
       @media (min-width: $desctopSmallWidth) {
          flex-direction: column;

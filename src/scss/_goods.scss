@@ -2,6 +2,9 @@
 @import "_goodsColor";
 .goods {
    width: 100%;
+   padding-bottom: 12px;
+
+   background: white;
    overflow: hidden;
    
    &__title{
@@ -12,18 +15,20 @@
       text-align: center;
       text-transform: uppercase;
       
-      background-color: $colorLightGray;
-      margin: 2px 0;
+      background-color: white;
+      margin: 16px 0;
          h2{
             font-size: 2.1em;
-            line-height: 40px;
+            line-height: 1em;
             letter-spacing: 0%;
+
+            color: $colorBlue;
          }
       @media (max-width: 426px) {
          //font-size: 1.6em;
          h2{
             font-size: 1.8em;
-            //line-height: 40px;
+            line-height: 1.2em;
             //letter-spacing: 0%;
          }
       }
@@ -49,5 +54,12 @@
       //   //padding: 0 4px;
       //   gap: 4px;
       //}
+      @media (min-width: $desctopSmallWidth) {
+         padding-left: 56px;
+      }
+
+      @media (min-width: $desctopLargeWidth) {
+         padding-left: 0;
+      }
    }
 }
