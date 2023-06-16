@@ -126,7 +126,7 @@ $animateTimePassive: .5s;
       z-index: 1;
 
       transition: height .3s;
-      transition-delay: .3s;
+      transition-delay: height .3s;
       &._active {
          top: 50%;
          left: 50%;
