@@ -1,50 +1,50 @@
-import * as body from "./body.js";
+//import * as body from "./body.js";
 import * as getFile from "./includeFile.js";
 import * as preloader from "./preloader.js";
 
 
 //const body = document.querySelector("body");
-const search = document.querySelector('.search');
-const clossearchResults = document.querySelector('.search__results');
-const closeButton = document.querySelector('.search__close');
+//const search = document.querySelector('.search');
+//const clossearchResults = document.querySelector('.search__results');
+//const closeButton = document.querySelector('.search__close');
 const searchResultsClassName = 'search__results';
 
 
-//on search remove _action and add _passive tu close search
-export function close() {
-   if (search.closest('._action')) {
-      search.classList.remove('_action');
-      search.classList.add('_passive');
-      body.scrole();
-   }
-}
+////on search remove _action and add _passive tu close search
+//export function close() {
+//   if (search.closest('._action')) {
+//      search.classList.remove('_action');
+//      search.classList.add('_passive');
+//      body.scrole();
+//   }
+//}
 
-//run search panel
-export function run() {
-   ////add style left & top to variable css
-   //const styleOfsetX = search.getBoundingClientRect().x;
-   //const styleOfsetY = search.getBoundingClientRect().y;
-   //search.style.cssText = `--searchLeft: ${styleOfsetX}px; --searchTop: ${styleOfsetY}px;`;
+////run search panel
+//export function run() {
+//   ////add style left & top to variable css
+//   //const styleOfsetX = search.getBoundingClientRect().x;
+//   //const styleOfsetY = search.getBoundingClientRect().y;
+//   //search.style.cssText = `--searchLeft: ${styleOfsetX}px; --searchTop: ${styleOfsetY}px;`;
 
-   //on search remove _passive  and add _action tu run search
-   if (search) {
-      //search.classList.remove('_passive');
-      clossearchResults.classList.toggle('_active');
-      closeButton.classList.toggle('_active');
-      body.noneScrole();
-   }
+//   //on search remove _passive  and add _action tu run search
+//   if (search) {
+//      //search.classList.remove('_passive');
+//      clossearchResults.classList.toggle('_active');
+//      closeButton.classList.toggle('_active');
+//      //body.noneScrole();
+//   }
 
-   //close search
-   if (closeButton) {
-      document.addEventListener('click', stop);
-      function stop(event) {
-         //console.log(event.target);
-         if (event.target == closeButton || event.target == search) {
-            close()
-         }
-      }
-   }
-}
+//   //close search
+//   if (closeButton) {
+//      document.addEventListener('click', stop);
+//      function stop(event) {
+//         //console.log(event.target);
+//         if (event.target == closeButton || event.target == search) {
+//            close()
+//         }
+//      }
+//   }
+//}
 
 export function mySearch(inputValue) {
    const searchResult = document.querySelector('.search__results');
