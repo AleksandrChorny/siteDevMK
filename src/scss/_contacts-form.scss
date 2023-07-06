@@ -32,25 +32,28 @@
       padding: 0.1em;
       font-size: 1.2em;
       margin: .4em 0 .8em 0;
+
+      border-radius: 16px;
+      
       color: $colorDarkGray;
    }
    textarea{
       height: 6em;
    }
    input[type=submit]{
-      height: 48px;
-      width: 200px;
+      height: min-content;
+      width: min-content;
 
-      margin: 16px auto;
+      padding: .9em 1.5em;
+      margin: auto;
 
-      font-size: 1.6em;
+      font-size: 16px;
       font-weight: 400;
-      text-transform: uppercase;
       
       cursor: pointer;
       background-color: $colorOrange;
       color: $colorWhite;
-      transition: background-color .5s;
+      transition: background-color .3s;
       &:hover{
          background-color: $colorLightOrange;
       }

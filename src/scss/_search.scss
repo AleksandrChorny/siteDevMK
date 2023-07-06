@@ -176,6 +176,14 @@ $animateTimePassive: .5s;
         display: none;
        }
    }
+   &__welcome-text,
+   &__error-text {
+      margin-top: 12px;
+      line-height: 1.2em;
+      text-align: center;
+
+      color: $colorDarkGray;
+   }
 }
 
 .search-card {
