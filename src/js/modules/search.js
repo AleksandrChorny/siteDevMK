@@ -57,7 +57,7 @@ export function mySearch(inputValue) {
    pre.classList.add('search__results', '_center');
    pre.append(preloader.createPreloaderSpinner());
    searchResult.replaceWith(pre);
-   die();
+   //die();
    //console.log(language);
    //console.log(formData);
 

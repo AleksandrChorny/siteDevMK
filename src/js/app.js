@@ -17,3 +17,13 @@ nav.viewNavigation();
 nav.viewNavigateItems();
 nav.viewContacts();
 header.searchPanel();
+
+
+//document.addEventListener('click', logo);
+
+//function logo() {
+//   if (event.target.closest('.header__logo')) {
+//      event.preventDefault();
+//      console.log('logo')
+//   }
+//}
