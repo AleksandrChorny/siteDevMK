@@ -7,6 +7,13 @@
    justify-self: end;
    width: 85%;
    //height: 400px;
+   &._cover-form {
+      grid-area: none;
+      &::after {
+         content: '';
+         display: none;
+      }
+   }
    &::after{
       content: '';
       position: absolute;

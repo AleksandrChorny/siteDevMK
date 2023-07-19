@@ -163,5 +163,17 @@
    <button class="cover__button" type="button">
       Замовити
    </button>
-   <div class="cover__contact-form _active"></div>
+   <div class="cover__contact-form _active">
+      <form action="/" name="footer">
+         <label for="name">Name:<i>*</i></label>
+         <input type="text" name="name" required>
+         <label for="phone">Telephone:<i>*</i></label>
+         <input type="tel" name="phone" required>
+         <label for="email">E-mail:</label>
+         <input type="email" name="email">
+         <label for="text">Ваше повідомлення:</label>
+         <textarea name="text"></textarea>
+         <input type="submit" value="Надіслати" name="contactBtn">
+      </form>
+   </div>
 </section>
