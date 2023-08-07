@@ -26,7 +26,7 @@ export function viewNavigateItems() {
          // Проходимо по всім елементам меню
          navItems.forEach(item => {
             // Видаляємо клас шоу, якщо елемент його має, та не співпадає з імʼям кнопки меню
-            if(item.classList.contains('_show') && item.getAttribute('data-name') !== buttonName){
+            if (item.classList.contains('_show') && item.getAttribute('data-name') !== buttonName) {
                item.classList.remove('_show')
             }
             // Додаємо, або видаляємо клас шоу якщо елемент співпадає з імʼям кнопки
@@ -35,7 +35,7 @@ export function viewNavigateItems() {
             }
          });
       }
-         //Видаляємо клас шоу у всіх елементів меню, якщо клікнули за межами головного меню
+      //Видаляємо клас шоу у всіх елементів меню, якщо клікнули за межами головного меню
       if (!event.target.closest('.main-menu')) {
          navItems.forEach(item => {
             item.classList.remove('_show')
@@ -45,11 +45,12 @@ export function viewNavigateItems() {
 }
 
 export function viewContacts() {
-   const contactBars= document.querySelectorAll('.left-side-bar__contacts');
-   const contactBtns= document.querySelectorAll('.left-side-bar__items button');
+   const contactBtns = document.querySelectorAll('.left-side-bar__items button');
+
+   const contactBars = document.querySelectorAll('.left-side-bar__contacts');
 
    contactBtns.forEach(contactBtn => {
-      contactBtn.addEventListener('click', (event) =>{
+      contactBtn.addEventListener('click', (event) => {
          const btnName = contactBtn.getAttribute('data-name');
          contactBars.forEach(contact => {
             const contactName = contact.getAttribute('data-name');
@@ -59,9 +60,9 @@ export function viewContacts() {
             if (contactName !== btnName) {
                contact.classList.remove('_show')
             }
-         })  
+         })
       })
    })
 
-   
+
 }
