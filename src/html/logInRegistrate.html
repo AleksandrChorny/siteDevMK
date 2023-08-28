@@ -1,4 +1,5 @@
-<div class="log-in _active">
+<div class="log-in">
+    <div class="log-in__close"></div>
     <h3>Увійти в обліковий запис</h3>
     <form action="/" name="log-in">
         <label for="uname">Логін:</label>
@@ -18,6 +19,10 @@
         <input type="text" name="name" required>
         <label for="company">Company Name:</label>
         <input type="text" name="company">
+        <label for="pass">Пароль (мінімум 6 символів):<i>*</i></label>
+        <input type="password" id="pass" name="password" minlength="6" required />
+        <label for="pass">Пароль ще раз:<i>*</i></label>
+        <input type="password" id="pass" name="password" minlength="6" required />
         <input type="submit" value="Створити" name="registrateBtn">
     </form>
 </div>
