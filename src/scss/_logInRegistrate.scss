@@ -29,7 +29,7 @@
         height: auto;
 
         gap: 20px 4px;
-        padding: 20px 4px;
+        padding: 16px 4px;
 
         background: rgba(111, 111, 111, 0.4);
         border: 1px solid $colorLightGray;
@@ -55,6 +55,46 @@
         padding: 20px 8px;
         gap: 8px;
         }
+    }
+
+    &__close {
+        position: absolute;
+        
+        top: 8px;
+        right: 8px;
+        width: 32px;
+        height: 32px;
+
+        transform: rotate(45deg);
+        &::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 50%;
+            transform: translateX(-50%);
+
+            width: 3px;
+            height: 32px;
+
+            border-radius: 3px;
+
+            background-color: $colorLightGray;
+        }
+        &::after {
+            content: "";
+            position: absolute;
+            top: 50%;
+            left: 0;
+            transform: translateY(-50%);
+
+            width: 32px;
+            height: 3px;
+
+            border-radius: 3px;
+
+            background-color: $colorLightGray;
+        }
+
     }
 
     h3 {
