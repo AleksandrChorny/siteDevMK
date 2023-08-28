@@ -181,7 +181,7 @@
          transform: translate(-50%, -50%);
 
          width: 98%;
-         height: 418px;
+         height: auto;
 
          gap: 20px 4px;
          padding: 20px 4px;
@@ -205,11 +205,21 @@
          }
          @media (min-width: $desctopSmallWidth) {
             width: 300px;
-            height: 418px;
+            height: auto;
    
             padding: 20px 8px;
             gap: 8px;
          }
+      }
+
+
+      h3 {
+        margin: 12px 0 8px 0;
+
+        font-size: 1.3em;
+        font-weight: 400;
+        text-align: center;
+        color: $colorWhite;
       }
 
       form {
@@ -268,3 +278,41 @@
       }
    }
 }
+.contact-form-close {
+      position: absolute;
+        
+        top: 8px;
+        right: 8px;
+        width: 32px;
+        height: 32px;
+
+        transform: rotate(45deg);
+        &::before {
+            content: "";
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+
+            width: 3px;
+            height: 28px;
+
+            border-radius: 3px;
+
+            background-color: $colorLightGray;
+        }
+        &::after {
+            content: "";
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+
+            width: 28px;
+            height: 3px;
+
+            border-radius: 3px;
+
+            background-color: $colorLightGray;
+        }
+   }
