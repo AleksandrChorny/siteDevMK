@@ -1,12 +1,18 @@
 <!DOCTYPE html>
 <html lang="en">
-<!-- include file html/head.html and add him title -->
-<!--@@include('html/head.html',{
-"title": "My GULP"
-})-->
+   @@include('html/head.html',{
+      "title": "Article",
+      "templateCSS": '"css/main.min.css"'
+      })
 
 <body>
-   <!--@@include('html/slider.html',{})-->
+   @@include('html/logInRegistrate.html',{})
+   @@include('html/leftSideBar.html',{})
+   @@include('html/navigation.html',{})
+   @@include('html/header.html',{})
+   @@include('html/articleContent.html',{})
+   @@include('html/printingTariff.html',{})
+   @@include('html/footer.html',{})
    <script src="js/app.min.js"></script>
 </body>
 

@@ -36,6 +36,10 @@ $desctopLargeWidth: 1440px;
 body {
    font-family: Montserrat;
    font-size: 14px;
+   
+}
+
+.mine {
    background-color: $colorLightGray;
 }
 
@@ -97,6 +101,7 @@ body {
 //@import "_header";
 
 @import "_logInRegistrate";
+@import "_header";
 @import "_cover";
 @import "_leftSideBar";
 @import "_navigation";
@@ -107,5 +112,7 @@ body {
 @import "_pageDescription";
 @import "_footer";
 @import "_contacts-form";
+@import "_article";
+@import "_tariff";
 
 
