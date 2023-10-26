@@ -60,6 +60,8 @@
       cursor: pointer;
       background-color: $colorOrange;
       color: $colorWhite;
+      border-radius: 16px;
+
       transition: background-color .3s;
       &:hover{
          background-color: $colorLightOrange;
