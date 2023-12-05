@@ -28,4 +28,17 @@ header.searchPanel();
 //      event.preventDefault();
 //      console.log('logo')
 //   }
-//}ч
+//}
+
+//* ADMIN js
+const setupBTNs = document.querySelectorAll('.setup-bar button');
+
+document.addEventListener('click', (event) => {
+   setupBTNs.forEach(setupBTN => {
+      if (event.target == setupBTN) {
+         const name = event.target.name;
+         const form = document.querySelector(`.setup-form[name="${name}"]`);
+         form.classList.toggle('_active');
+      }
+   });
+});
