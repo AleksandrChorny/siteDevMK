@@ -9,6 +9,10 @@
    border-radius: 15px;
    
    transition: all .3s;
+   @media (max-width: 643px) {
+   width: 304px;
+
+   }
    &:hover {
       @media (min-width: $desctopSmallWidth) {
          box-shadow: 2px 3px 5px 0 rgba($colorDarkGray, .3);

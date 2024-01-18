@@ -25,6 +25,7 @@
             color: $colorBlue;
          }
       @media (max-width: 426px) {
+
          //font-size: 1.6em;
          h2{
             font-size: 1.8em;
@@ -54,6 +55,13 @@
       //   //padding: 0 4px;
       //   gap: 4px;
       //}
+      @media (max-width: 643px) {
+         justify-content: flex-start;
+         grid-template-columns: repeat(8, 304px);
+         width: auto;
+         padding: 0 4px;
+         overflow-x: auto;
+      }
       @media (min-width: $desctopSmallWidth) {
          padding-left: 56px;
       }
