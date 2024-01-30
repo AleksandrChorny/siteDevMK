@@ -36,7 +36,7 @@ $desctopLargeWidth: 1440px;
 body {
    font-family: Montserrat;
    font-size: 14px;
-   
+   overflow-x: hidden;
 }
 
 .mine {
@@ -121,6 +121,13 @@ body {
 @import "_AddSectionBtn";
 @import "_TeamplateSettings";
 @import "_TeamplateCreateCard";
+@import "_PageSettingsBlock";
+
+@import "_TeamplateSectionTiles";
+@import "_SectionsCatalog";
+
+
+
 
 
 

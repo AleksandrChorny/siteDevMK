@@ -2,6 +2,7 @@
    position: relative;
    width: auto;
    height: 2px;
+   cursor: pointer;
 
    background: linear-gradient(90deg, #4976B3 55%, rgba(73, 118, 179, 0.00) 99%);
    &__another-section-btn{
@@ -63,7 +64,7 @@
          width: 30px;
          height: 30px;
          border-radius: 50%;
-         box-shadow: 15px -15px 0px 0px #4976B3;
+         box-shadow: 15px -15px 0px 0px $colorBlue;
    
       }
       &::after {
@@ -74,7 +75,7 @@
          width: 30px;
          height: 30px;
          border-radius: 50%;
-         box-shadow: -15px -15px 0px 0px #4976B3;
+         box-shadow: -15px -15px 0px 0px $colorBlue;
       }
 
       &:hover {
@@ -152,7 +153,7 @@
       opacity: 0;
       gap: 16px;
       margin-left: 0;
-      &._active {
+      &._btns-show {
          height: auto;
          width: auto;
 
@@ -173,40 +174,40 @@
 
    }
 }
-.management-block{
+// .management-block{
 
-   &__close-btn{
-      position: relative;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      width: 36px;
-      height: 36px;
+//    &__close-btn{
+//       position: relative;
+//       display: flex;
+//       justify-content: center;
+//       align-items: center;
+//       width: 36px;
+//       height: 36px;
 
-      transform: rotate(45deg);
+//       transform: rotate(45deg);
 
-      border-radius: 50%;
-      background: $colorBlue;
-      &::before{
-         content: "";
-         width: 24px;
-         height: 4px;
-         background: $colorWhite;
-         border-radius: 2px;
-      }
-      &::after{
-         content: "";
-         position: absolute;
-         left: 50%;
-         transform: translateX(-50%);
-         width: 4px;
-         height: 24px;
-         border-radius: 2px;
-         background: $colorWhite;
+//       border-radius: 50%;
+//       background: $colorBlue;
+//       &::before{
+//          content: "";
+//          width: 24px;
+//          height: 4px;
+//          background: $colorWhite;
+//          border-radius: 2px;
+//       }
+//       &::after{
+//          content: "";
+//          position: absolute;
+//          left: 50%;
+//          transform: translateX(-50%);
+//          width: 4px;
+//          height: 24px;
+//          border-radius: 2px;
+//          background: $colorWhite;
 
-      }
-   }
-}
+//       }
+//    }
+// }
 .management{
    &__svg{
       width: 36px;

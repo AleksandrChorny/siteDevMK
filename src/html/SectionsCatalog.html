@@ -1,0 +1,127 @@
+<div class="Section-catalog">
+   <button class="Section-catalog__close"></button>
+
+   <div class="Section-catalog__tiles-container">
+      <p class="Section-catalog__tiles-container-title">Select or create a Section for this Teamplate</p>
+      <div class="Section-catalog__tiles-wrapper">
+         <div class="Section-catalog__tile-wrapper">
+            <p class="Section-catalog__tile-title">New</p>
+            <button class="Section-catalog__tile-add-btn"></button>
+         </div>
+
+         <div class="Section-catalog__teamplate-tiles">
+            <div class="Section-catalog__tile-wrapper">
+               <p class="Section-catalog__tile-title">Mine</p>
+               <div class="Section-catalog__tile-img">
+                  <img class="Section-catalog__img" src="\img\admin\mine.jpg" alt="teamplate preview">
+               </div>
+               <button class="Section-catalog__title-btn">UPD</button>
+            </div>
+            <div class="Section-catalog__tile-wrapper">
+               <p class="Section-catalog__tile-title">Mine</p>
+               <div class="Section-catalog__tile-img">
+                  <img class="Section-catalog__img" src="\img\admin\mine.jpg" alt="teamplate preview">
+               </div>
+               <button class="Section-catalog__title-btn">UPD</button>
+            </div>
+            <div class="Section-catalog__tile-wrapper">
+               <p class="Section-catalog__tile-title">Mine</p>
+               <div class="Section-catalog__tile-img">
+                  <img class="Section-catalog__img" src="\img\admin\mine.jpg" alt="teamplate preview">
+               </div>
+               <button class="teamplate-catalog__title-btn">UPD</button>
+            </div>
+
+            <div class="Section-catalog__tile-wrapper">
+               <p class="Section-catalog__tile-title">Mine</p>
+               <div class="Section-catalog__tile-img">
+                  <img class="Section-catalog__img" src="\img\admin\mine.jpg" alt="teamplate preview">
+               </div>
+               <button class="Section-catalog__title-btn">UPD</button>
+            </div>
+            <div class="Section-catalog__tile-wrapper">
+               <p class="Section-catalog__tile-title">Mine</p>
+               <div class="Section-catalog__tile-img">
+                  <img class="Section-catalog__img" src="\img\admin\mine.jpg" alt="teamplate preview">
+               </div>
+               <button class="Section-catalog__title-btn">UPD</button>
+            </div>
+            <div class="Section-catalog__tile-wrapper">
+               <p class="Section-catalog__tile-title">Mine</p>
+               <div class="Section-catalog__tile-img">
+                  <img class="Section-catalog__img" src="\img\admin\mine.jpg" alt="teamplate preview">
+               </div>
+               <button class="teamplate-catalog__title-btn">UPD</button>
+            </div>
+         </div>
+
+   </div>
+   <button class="Section-catalog__confirm-btn">OK</button>
+</div>
+
+<script>
+   console.log('max');
+   const buttonClassAdd = document.querySelector(".Section-catalog__tile-add-btn");
+   console.log(buttonClassAdd);
+   function classAdd(){
+      console.log("12341234")
+      buttonClassAdd.classList.toggle("_action");
+   }
+   buttonClassAdd.addEventListener("click", classAdd)
+
+
+   const buttonClose = document.querySelector(".Section-catalog__close");
+   const buttonNewSection = document.querySelector(".page-settings-block__btn");
+   const buttonCircle = document.querySelector(".another-section-btn__circle");
+   
+   const Catalog = document.querySelector(".Section-catalog");
+   console.log('Add new class Max')
+
+   function classClose(){
+      // console log('Add new class Max')
+
+      Catalog.classList.toggle("_action");
+   }
+
+   buttonClose.addEventListener("click", classClose)
+   buttonNewSection.addEventListener("click", classClose)
+   buttonCircle.addEventListener("click", classClose)
+
+   const addPageClose = document.querySelector(".teamplate-catalog__close");
+   const addPageBtn = document.querySelector(".new-page-btn");
+   const addPageMenu = document.querySelector(".teamplate-catalog");
+
+function viewTeamplateCatalog(){
+   // console.log('Add new class Max')
+   addPageMenu.classList.toggle("_view");
+
+}
+
+   addPageBtn.addEventListener("click", viewTeamplateCatalog)
+   addPageClose.addEventListener("click", viewTeamplateCatalog)
+
+
+   const newTeamplate = document.querySelector(".teamplate-catalog__tile-add-btn");
+   console.log(newTeamplate)
+
+   function newTeampAction(){
+
+      newTeamplate.classList.toggle("_action");
+   }
+
+   newTeamplate.addEventListener("click", newTeampAction)
+
+// 11111111111111111111111111111111111111111111111111111?
+
+
+   // console.log(1222222222222222222222222222)
+
+   // const showMeButtons = document.querySelector(".teamplate-settings__btn");
+
+   // function showMeButtons(){
+
+   //    showMeButtons.classList.toggle("_btns-show");
+   // }
+
+   // showMeButtons.addEventListener("click", showMeButtons)
+</script>
