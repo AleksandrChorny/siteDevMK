@@ -1,12 +1,24 @@
 .teamplate-create-card{
-   position: absolute;
-   left: 50%;
+   position: fixed;
+   right: -100%;
    top: 120px;
-   transform: translateX(-50%);
+   transform: translateX(50%);
    display: flex;
    justify-content: center;
    align-items: center;
    z-index: 12;
+   border-radius: 20px;
+      border: 1px solid #F5F5F5;
+      background: rgba(111, 111, 111, 0.60);
+      box-shadow: 1px 1px 2px 0px rgba(0, 0, 0, 0.25) inset, 1px 1px 2px 0px rgba(0, 0, 0, 0.25);
+      backdrop-filter: blur(10px);
+
+   transition: all .3s;
+   &._view{
+      transition: all .3s;
+      right: 50%;
+      top: 120px;
+   }
    &__close {
       position: absolute;
       
@@ -57,11 +69,7 @@
       padding: 28px 8px;
       width: auto;
       height: auto;
-
-      border-radius: 20px;
-      border: 1px solid #F5F5F5;
-      background: rgba(111, 111, 111, 0.60);
-      box-shadow: 1px 1px 2px 0px rgba(0, 0, 0, 0.25) inset, 1px 1px 2px 0px rgba(0, 0, 0, 0.25);
+      
    }
    &__text{
       color: #FFF;
