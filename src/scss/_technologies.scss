@@ -56,7 +56,9 @@
       @media (max-width: 768px){
          align-items: flex-start;
          justify-content: center;
-         width: 304px;
+         // width: 304px;
+         width: 100%;
+
          min-height: 568px;
          height: auto;
          // background: radial-gradient(10025.89% 72.08% at 46.71% 9.86%, #FFF 0%, #E5E5E5 100%);
