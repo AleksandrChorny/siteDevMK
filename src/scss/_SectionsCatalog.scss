@@ -1,7 +1,7 @@
-.Section-catalog{
+.section-catalog{
    display: flex;
    flex-direction: column;
-   position: absolute;
+   position: fixed;
    top: 16px;
    right: -110%;
 
@@ -19,7 +19,7 @@
    z-index: 10;
    transition: all .5s;
 
-   &._action{
+   &._view{
       right: 0;
       transition: all .3s;
 
