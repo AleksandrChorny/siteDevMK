@@ -141,6 +141,12 @@
       font-weight: 400;
       line-height: 0;
       transition: all .5s;
+      &._view{
+         font-size: 16px;
+         line-height: 16px;
+         margin-left: 8px;
+         opacity: 1;
+      }
    }
    &__management-block {
       display: flex;
@@ -174,6 +180,11 @@
 
    }
 }
+
+
+
+
+
 // .management-block{
 
 //    &__close-btn{
