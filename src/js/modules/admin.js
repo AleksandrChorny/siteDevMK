@@ -55,6 +55,8 @@ document.addEventListener('click', (event) => {
    //виклик меню налаштування секцією
    if (event.target.closest('.section-settings__btn')) {
       viewModal(document.querySelector('.management-block'));
+      viewModal(document.querySelector('.section-settings__name'));
+
    }
 
 })
