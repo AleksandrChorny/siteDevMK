@@ -43,6 +43,9 @@
       grid-row: 3 / 4;
 
       display: flex;
+
+      width: max-content;
+      height: min-content;
       // align-items: center;
       gap: 8px;
 
