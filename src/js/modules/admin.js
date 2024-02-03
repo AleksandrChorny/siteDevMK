@@ -56,9 +56,18 @@ document.addEventListener('click', (event) => {
    if (event.target.closest('.section-settings__btn')) {
       viewModal(document.querySelector('.management-block'));
       viewModal(document.querySelector('.section-settings__name'));
-
    }
+      //виклик 
+      if (
+         event.target.closest('.management__button')
+         && event.target.closest(".management__button").name == 'section-settings'
+      ) {
+         viewModal(document.querySelector('.section-upd'));
+      }
 
+      if (event.target.closest(".section-upd__close")) {
+         closeModal(document.querySelector(".section-upd"));
+      }
 })
 //page - settings - block
 
