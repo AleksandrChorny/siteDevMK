@@ -1,7 +1,7 @@
 <div class="section-catalog">
    <button class="section-catalog__close"></button>
 
-   <div class="section-catalog__tiles-container">
+   <form class="section-catalog__tiles-container" action="/">
       <p class="section-catalog__tiles-container-title">Select or create a Section for this Teamplate</p>
       <div class="section-catalog__tiles-wrapper">
          <!-- Кнопка додавання нового шаблона секції -->
@@ -15,7 +15,7 @@
             <!-- Картка шаблона секції -->
             <div class="section-catalog__tile-wrapper">
                <label class="section-catalog__tile">
-                  <input class="section-catalog__radio" type="radio" value="Mine" id="">
+                  <input class="section-catalog__radio" type="radio" value="Mine" name="sections">
                      Mine
                   <spun class="section-catalog__tile-img">
                      <img class="section-catalog__img" src="\img\admin\mine.jpg" alt="teamplate preview">
@@ -26,7 +26,7 @@
 
             <div class="section-catalog__tile-wrapper">
                <label class="section-catalog__tile">
-                  <input class="section-catalog__radio" type="radio">
+                  <input class="section-catalog__radio" type="radio" name="sections">
                      Mine
                   <spun class="section-catalog__tile-img">
                      <img class="section-catalog__img" src="\img\admin\mine.jpg" alt="teamplate preview">
@@ -37,7 +37,7 @@
 
             <div class="section-catalog__tile-wrapper">
                <label class="section-catalog__tile">
-                  <input class="section-catalog__radio" type="radio">
+                  <input class="section-catalog__radio" type="radio" name="sections">
                      Mine
                   <spun class="section-catalog__tile-img">
                      <img class="section-catalog__img" src="\img\admin\mine.jpg" alt="teamplate preview">
@@ -48,7 +48,7 @@
 
             <div class="section-catalog__tile-wrapper">
                <label class="section-catalog__tile">
-                  <input class="section-catalog__radio" type="radio">
+                  <input class="section-catalog__radio" type="radio" name="sections">
                      Mine
                   <spun class="section-catalog__tile-img">
                      <img class="section-catalog__img" src="\img\admin\mine.jpg" alt="teamplate preview">
@@ -59,7 +59,7 @@
 
             <div class="section-catalog__tile-wrapper">
                <label class="section-catalog__tile">
-                  <input class="section-catalog__radio" type="radio">
+                  <input class="section-catalog__radio" type="radio" name="sections">
                      Mine
                   <spun class="section-catalog__tile-img">
                      <img class="section-catalog__img" src="\img\admin\mine.jpg" alt="teamplate preview">
@@ -70,7 +70,7 @@
 
             <div class="section-catalog__tile-wrapper">
                <label class="section-catalog__tile">
-                  <input class="section-catalog__radio" type="radio">
+                  <input class="section-catalog__radio" type="radio" name="sections">
                      Mine
                   <spun class="section-catalog__tile-img">
                      <img class="section-catalog__img" src="\img\admin\mine.jpg" alt="teamplate preview">
@@ -81,5 +81,5 @@
          </div>
 
       </div>
-      <button class="section-catalog__confirm-btn">OK</button>
-   </div>
+      <button class="section-catalog__confirm-btn" type="submit">OK</button>
+   </form>
