@@ -57,7 +57,7 @@ document.addEventListener('click', (event) => {
       viewModal(document.querySelector('.management-block'));
       viewModal(document.querySelector('.section-settings__name'));
    }
-      //виклик 
+      //виклик меню налаштування 'Заголовок секцій'
       if (
          event.target.closest('.management__button')
          && event.target.closest(".management__button").name == 'section-settings'
