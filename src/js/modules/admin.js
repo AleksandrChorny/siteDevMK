@@ -99,19 +99,26 @@ document.addEventListener('click', (event) => {
          }
       });
       elem.classList.add('checked');
-
    }
    //при натисканні на кнопку '.button-section-select'
    //отримати родича '.section-settings'
    //у цього родича знайти '.items__number'
    //у нього отримати номер innerHTML або name
    //цей номер передати '.section-catalog' data-section-number="number"
-   const num = document.querySelector('.items__number');
-   const num1 = num.dataset.number;
-   const num2 = num.innerHTML;
-   console.log(num);
-   console.log(num1);
-   console.log(num2);
+   if (event.target.closest('.button-section-select')){
+      const elemSection = event.target.closest('.section-settings');
+      const num = elemSection.querySelector('.items__number').dataset.number;
+      let elems = document.querySelector('.section-catalog');
+      elems.setAttribute('dataSectionNamber', num);
+      // console.log(elems)
+   }
+
+   // const num = document.querySelector('.items__number');
+   // const num1 = num.dataset.number;
+   // const num2 = num.innerHTML;
+   // console.log(num);
+   // console.log(num1);
+   // console.log(num2);
 
 })
 
