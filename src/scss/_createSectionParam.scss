@@ -1,12 +1,9 @@
-.new-card{
+.create-section-param{
    position: fixed;
-   // top: 120px;
-   // right: -100%;
-
-   top: 0;
-   left: 0;
-
+   top: 120px;
+   right: -100%;
    transform: translateX(50%);
+
    display: flex;
    justify-content: center;
    align-items: center;
@@ -20,8 +17,8 @@
    transition: all .3s;
    &._view{
       transition: all .3s;
-      right: 50%;
       top: 120px;
+      right: 50%;
    }
    &__close {
       position: absolute;

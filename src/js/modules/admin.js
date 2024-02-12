@@ -64,9 +64,16 @@ document.addEventListener('click', (event) => {
       ) {
          viewModal(document.querySelector('.section-upd'));
       }
-
       if (event.target.closest(".section-upd__close")) {
          closeModal(document.querySelector(".section-upd"));
+      }
+      
+      //виклик меню налаштування 'Create-section-param'
+      if (event.target.closest('.section-catalog__tile-add-btn')) {
+         viewModal(document.querySelector('.create-section-param'));
+      }
+      if (event.target.closest(".create-section-param__close")) {
+         closeModal(document.querySelector(".create-section-param"));
       }
 })
 //page - settings - block
