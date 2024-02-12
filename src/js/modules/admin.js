@@ -87,8 +87,32 @@ document.addEventListener('click', (event) => {
       viewModal(parent.querySelector('.management-block'));
       viewModal(parent.querySelector('.section-settings__name'));
       //parent.querySelector('.management-block').classList.add('_view');
-      console.log(parent);
+      //console.log(parent);
    }
+
+   if (event.target.closest('.section-catalog__tile-wrapper')) {
+      const elem = event.target.closest('.section-catalog__tile-wrapper');
+      const allSections = document.querySelectorAll('.section-catalog__tile-wrapper');
+      allSections.forEach((section) => {
+         if (section.classList.contains('checked')) {
+            section.classList.remove('checked');
+         }
+      });
+      elem.classList.add('checked');
+
+   }
+   //при натисканні на кнопку '.button-section-select'
+   //отримати родича '.section-settings'
+   //у цього родича знайти '.items__number'
+   //у нього отримати номер innerHTML або name
+   //цей номер передати '.section-catalog'
+   const num = document.querySelector('.items__number');
+   const num1 = num.dataset.number;
+   const num2 = num.innerHTML;
+   console.log(num);
+   console.log(num1);
+   console.log(num2);
+
 })
 
 
