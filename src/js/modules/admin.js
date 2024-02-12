@@ -53,29 +53,45 @@ document.addEventListener('click', (event) => {
    }
 
    //виклик меню налаштування секцією
-   if (event.target.closest('.section-settings__btn')) {
-      viewModal(document.querySelector('.management-block'));
-      viewModal(document.querySelector('.section-settings__name'));
+   //if (event.target.closest('.section-settings__btn')) {
+   //   viewModal(document.querySelector('.management-block'));
+   //   viewModal(document.querySelector('.section-settings__name'));
+   //}
+   //виклик меню налаштування 'Заголовок секцій'
+   if (
+      event.target.closest('.management__button')
+      && event.target.closest(".management__button").name == 'section-settings'
+   ) {
+      const parent = event.target.closest(".section-settings");
+      viewModal(parent.querySelector('.section-upd'));
    }
-      //виклик меню налаштування 'Заголовок секцій'
-      if (
-         event.target.closest('.management__button')
-         && event.target.closest(".management__button").name == 'section-settings'
-      ) {
-         viewModal(document.querySelector('.section-upd'));
-      }
-      if (event.target.closest(".section-upd__close")) {
-         closeModal(document.querySelector(".section-upd"));
-      }
-      
-      //виклик меню налаштування 'Create-section-param'
-      if (event.target.closest('.section-catalog__tile-add-btn')) {
-         viewModal(document.querySelector('.create-section-param'));
-      }
-      if (event.target.closest(".create-section-param__close")) {
-         closeModal(document.querySelector(".create-section-param"));
-      }
+   if (event.target.closest(".section-upd__close")) {
+      const parent = event.target.closest(".section-settings");
+      closeModal(parent.querySelector(".section-upd"));
+   }
+
+   //виклик меню налаштування 'Create-section-param'
+   if (event.target.closest('.section-catalog__tile-add-btn')) {
+      viewModal(document.querySelector('.create-section-param'));
+   }
+   if (event.target.closest(".create-section-param__close")) {
+      closeModal(document.querySelector(".create-section-param"));
+   }
+   //const elem = document.querySelectorAll('.section-settings__btn');
+   //const parent = document.querySelector('.section-settings__btn').closest(".section-settings__wrapper");
+   //const buttonBlock = parent.querySelector('.management-block');
+
+   if (event.target.closest('.section-settings__btn')) {
+      //const elem = event.target;
+      const parent = event.target.closest(".section-settings__btns-wrapper");
+      viewModal(parent.querySelector('.management-block'));
+      viewModal(parent.querySelector('.section-settings__name'));
+      //parent.querySelector('.management-block').classList.add('_view');
+      console.log(parent);
+   }
 })
+
+
 //page - settings - block
 
 ////функція додавання та видалення класу у елемента

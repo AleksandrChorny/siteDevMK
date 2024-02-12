@@ -7,27 +7,29 @@
 })
 
 <body class="mine">
+   @@include('html/sectionSettings.html',{
+   "number": "0",
+   "name": "header"
+   })
    @@include('html/TeamplateCreateCard.html',{})
    @@include('html/CreateNewPageBtn.html',{})
    @@include('html/header.html',{})
    @@include('html/logInRegistrate.html',{})
    @@include('html/leftSideBar.html',{})
-   @@include('html/navigation.html',{})
+   <!--@@include('html/navigation.html',{})-->
    @@include('html/404MineScreen.html',{})
-   @@include('html/sectionSettings.html',{})
+   @@include('html/sectionSettings.html',{
+   "number": "1",
+   "name": "footer"
+   })
    @@include('html/footer.html',{})
    @@include('html/AddSectionBtn.html',{})
    @@include('html/PageSettingsBlock.html',{})
 
    @@include('html/TeamplateSectionTiles.html',{})
-   <!-- @@include('html/SectionsCatalog.html',{}) -->
-   @@include('html/sectionsUpd.html',{})
+   @@include('html/SectionsCatalog.html',{})
+   <!--@@include('html/sectionsUpd.html',{})-->
    <!-- @@include('html/createSectionParam.html',{}) -->
-
-
-
-
-
 
 
 
