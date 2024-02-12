@@ -105,7 +105,7 @@ document.addEventListener('click', (event) => {
    //отримати родича '.section-settings'
    //у цього родича знайти '.items__number'
    //у нього отримати номер innerHTML або name
-   //цей номер передати '.section-catalog'
+   //цей номер передати '.section-catalog' data-section-number="number"
    const num = document.querySelector('.items__number');
    const num1 = num.dataset.number;
    const num2 = num.innerHTML;
