@@ -1,0 +1,39 @@
+//обнуляємо стилі браузеру
+@import "_null";
+
+//include fonts from file 'dist/fonts.scss'
+@import "fonts";
+//Кольори проекту
+@import "_colorsOfProgects";
+
+
+
+//$widthMobile: 426px;
+
+//$minHeightMobileLandscape: 600px;
+
+//міксин задає колір та блюр
+@mixin blur($color){
+   background: $color;
+   backdrop-filter: blur(10px);
+   -webkit-backdrop-filter: blur(10px);
+}
+
+body {
+   font-family: Montserrat;
+   font-size: 14px;
+   overflow-x: hidden;
+}
+
+.main {
+   background-color: $colorLightGray;
+}
+
+@import "_logInRegistrate";
+@import "_header";
+@import "_leftSideBar";
+@import "_navigation";
+@import "_contacts-form";
+@import "_mainScreen404";
+
+@import "_footer";

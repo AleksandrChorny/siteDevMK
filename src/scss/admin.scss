@@ -1,0 +1,16 @@
+//Підключення кольорів проекту
+@import "_colorsOfProgects";
+
+//підключення стилів
+@import "./admin/_CreateNewPageBtn";
+@import "./admin/_PageSettingsPanel";
+@import "./admin/_sectionSettingsPanel";
+
+@import "./admin/_selectSection";
+@import "./admin/_createSectionParam";
+@import "./admin/_sectionsUpdParamMenu";
+
+@import "./admin/_selectTeamplateMenu";
+@import "./admin/_createTeamplateMenu";
+
+@import "./admin/_AddSectionBtn";

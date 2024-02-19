@@ -3,24 +3,8 @@
 
 //include fonts from file 'dist/fonts.scss'
 @import "fonts";
-
-$colorWhite: #fff;
-$colorDarkGray: #6f6f6f;
-$colorLightGray: #f5f5f5;
-$colorBlue: #4170b4;
-$colorOrange: #f7931e;
-$colorLightOrange: #fbb03b;
-$colorPurple: #b26eaa;
-$colorBlur: rgba(246, 246, 246, 0.5);
-
-$maxHeightMobileLandscape: 500px;
-//$widthMinMobile: 321px;
-$mobileMediumWidth: 376px;
-$mobileClassicWidth: 426px;
-$tabletWidth: 768px;
-$desctopSmallWidth: 1024px;
-$desctopLargeWidth: 1440px;
-
+//Кольори проекту
+@import "_colorsOfProgects";
 
 //$widthMobile: 426px;
 
@@ -39,7 +23,7 @@ body {
    overflow-x: hidden;
 }
 
-.mine {
+.main {
    background-color: $colorLightGray;
 }
 
@@ -110,27 +94,12 @@ body {
 @import "_advantages";
 @import "_goods";
 @import "_pageDescription";
-@import "_footer";
 @import "_contacts-form";
 @import "_article";
 @import "_articleOrderForm";
 @import "_tariff";
 @import "_technologies";
-@import "_404MineScreen";
-@import "_CreateNewPageBtn";
-@import "_AddSectionBtn";
-@import "_sectionSettings";
-@import "_TeamplateCreateCard";
-@import "_PageSettingsBlock";
-
-@import "_TeamplateSectionTiles";
-@import "_SectionsCatalog";
-@import "_sectionsUpd";
-
-@import "_createSectionParam";
-
-
-
+@import "_footer";
 
 
 

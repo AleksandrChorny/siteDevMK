@@ -1,4 +1,4 @@
-.section-catalog{
+.select-teamplate-menu{
    display: flex;
    flex-direction: column;
    position: fixed;
@@ -22,7 +22,6 @@
    &._view{
       right: 0;
       transition: all .3s;
-
    }
       &__close{
          display: flex;
@@ -62,10 +61,37 @@
 
          }
       }
+      &__url-form{
+         display: flex;
+         flex-direction: column;
+         gap: 16px;
+         margin-left: 36px;
+      }
+      &__url-text{
+         color: $colorWhite;
+         font-family: Montserrat;
+         font-size: 20px;
+         font-style: normal;
+         font-weight: 700;
+         line-height: 20px;
+      }
+      &__url-input{
+         width: 400px;
+         height: 32px;
+         padding: 8px;
+
+         border-radius: 16px;
+         border: 1px solid $colorWhite;
+         background: $colorLightGray;
+         color: $colorDarkGray;
+         font-size: 16px;
+         line-height: 16px;
+         font-weight: 400;
+      }
+
       &__tiles-container{
          width: auto;
          height: auto;
-         margin-top: 16px;
 
       }
       &__tiles-container-title{
@@ -90,12 +116,8 @@
       }
       &__teamplate-tiles{
          display: flex;
-         flex-direction: column;
-         flex-wrap: wrap;
+         flex-wrap: nowrap;
          max-width: 88%;
-         max-height: 468px;
-         // max-height: 135svh;
-
          padding-right: 8px;
          padding-bottom: 12px;
          gap: 8px;
@@ -180,9 +202,7 @@
                background: $colorDarkGray;
             }
             }
-         &._action{
-            width: 336px;
-         }
+         
       }
       &__tile-title{
          color: #FFF;
@@ -195,7 +215,7 @@
       &__tile-img{
          overflow: hidden;
          width: 320px;
-         height: 132px;
+         height: 370px;
 
          border-radius: 12px;
          background: #F5F5F5;
@@ -235,7 +255,7 @@
          align-items: center;
          width: 102px;
          height: 52px;
-         margin-top: 27px;
+         // padding: 18px 0px;
          transition: all .3s;
 
          color: #FFF;
