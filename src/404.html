@@ -2,31 +2,34 @@
 <html lang="en">
 <!-- include file html/head.html and add him title -->
 @@include('html/head.html',{
-"title": "Главная",
-"templateCSS": '"css/main.min.css"'
+"title": "Сторінка 404",
+"templateCSS": '"css/404.min.css"',
+"adminCSS": '"css/admin.min.css"',
 })
 
-<body class="mine">
-   <!-- @@include('html/TeamplateCreateCard.html',{}) -->
-   @@include('html/CreateNewPageBtn.html',{})
+<body class="main">
+   @@include('html/admin/sectionSettingsPanel.html',{
+   "number": "0",
+   "name": "header"
+   })
+   @@include('html/admin/CreateNewPageBtn.html',{})
+   @@include('html/admin/createTeamplateMenu.html',{})
    @@include('html/header.html',{})
    @@include('html/logInRegistrate.html',{})
    @@include('html/leftSideBar.html',{})
    @@include('html/navigation.html',{})
-   @@include('html/404MineScreen.html',{})
-   @@include('html/sectionSettings.html',{})
+   @@include('html/mainScreen404.html',{})
+   @@include('html/admin/sectionSettingsPanel.html',{
+   "number": "1",
+   "name": "footer"
+   })
+   @@include('html/admin/PageSettingsPanel.html',{})
+
+   @@include('html/admin/selectTeamplateMenu.html',{})
+   @@include('html/admin/selectSectionMenu.html',{})
+
    @@include('html/footer.html',{})
-   @@include('html/AddSectionBtn.html',{})
-   @@include('html/PageSettingsBlock.html',{})
-
-   @@include('html/TeamplateSectionTiles.html',{})
-   <!-- @@include('html/SectionsCatalog.html',{}) -->
-   @@include('html/sectionsUpd.html',{})
-   @@include('html/newCard.html',{})
-
-
-
-
+   @@include('html/admin/AddSectionBtn.html',{})
 
 
 
