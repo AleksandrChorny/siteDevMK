@@ -6,6 +6,8 @@
     right: -110%;
     transform: translate(50%, -50%);
 
+    max-width: 440px;
+
     padding: 12px;
     gap: 16px;
 
@@ -147,7 +149,7 @@
             &:hover {
                 background: rgba(245, 245, 245, .8)
             }
-            @media (max-width: 425px) {
+            @media (max-width: 460px) {
                 width: 264px;
             }
         }
@@ -157,7 +159,7 @@
             line-height: 14px;
             color: $colorLightGray;
         }
-        @media (max-width: 425px) {
+        @media (max-width: 460px) {
             padding: 12px;
 
         }
