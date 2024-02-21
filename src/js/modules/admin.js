@@ -10,12 +10,16 @@ function closeModal(element) {
    element.classList.remove('_view');
 }
 
+sectionSettings.setFileName();
+
 document.addEventListener('click', (event) => {
    //виклик меню створення нового параметра секції
    createSectionParam.viewMenu(event);
    createSectionParam.closeMenu(event);
 
    sectionSettings.viewSelectSectionMenu(event);
+   sectionSettings.viewCreateSectionMenu(event);
+
 
    teamplateSettings.viewSelectTeamplateMenu(event);
    teamplateSettings.viewCreateTeamplateMenu(event)
@@ -88,4 +92,8 @@ document.addEventListener('click', (event) => {
    // console.log(num1);
    // console.log(num2);
 
+})
+
+document.addEventListener('change', () => {
+   sectionSettings.setFileName();
 })
