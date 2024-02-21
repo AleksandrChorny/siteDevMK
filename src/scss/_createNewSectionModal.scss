@@ -1,0 +1,196 @@
+.create-new-section-modal {
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    top: 50%;
+    right: -110%;
+    transform: translate(50%, -50%);
+
+    max-width: 440px;
+
+    padding: 12px;
+    gap: 16px;
+
+    border-radius: 20px;
+    border: 1px solid $colorWhite;
+    background: rgba(111, 111, 111, 0.40);
+    box-shadow: 0px 0px 8px 0px rgba(0, 0, 0, 0.30), 1px 1px 2px 0px rgba(0, 0, 0, 0.25) inset;
+    backdrop-filter: blur(10px);
+
+    overflow: hidden;
+    z-index: 10;
+
+    transition: all .5s;
+
+    &._view{
+        right: 50%;
+        transition: all .3s;
+    }
+
+    &__close {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        position: absolute;
+        top: 8px;
+        left: 8px;
+        width: 32px;
+        height: 32px;
+        border-radius: 50%;
+        transform: rotate(45deg);
+        border: 2px solid #F5F5F5;
+        background: rgba(111, 111, 111, 0.40);
+        box-shadow: 2px 2px 4px 0px rgba(0, 0, 0, 0.25);
+
+        &::before{
+           content: "";
+           width: 16px;
+           height: 2px;
+           border-radius: 2px;
+           background: white;
+           filter: drop-shadow(2px 2px 4px rgba(0, 0, 0, 0.25));
+
+        }
+        &::after{
+           content: "";
+           position: absolute;
+           left: 50%;
+           transform: translateX(-50%);
+           width: 2px;
+           height:16px;
+           border-radius: 2px;
+
+           background: white;
+           filter: drop-shadow(2px 2px 4px rgba(0, 0, 0, 0.25));
+
+        }
+    }
+    &__title {
+        width: 100%;
+        margin: 6px 0 0 46px;
+        color: $colorWhite;
+        font-family: Montserrat;
+        font-size: 20px;
+        font-style: normal;
+        font-weight: 700;
+        line-height: 20px;
+        width: 100%;
+        text-align: left;
+    }
+    &__upload-block-wrapper {
+        display: flex;
+        flex-wrap: nowrap;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+
+        gap: 12px;        
+    }
+    &__text {
+        display: block;
+        position: relative;
+        width: 100%;
+        padding: 0 0 0 20px;
+        color: $colorWhite;
+        font-family: Montserrat;
+        font-size: 14px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 14px;
+        width: 100%;
+        text-align: left;
+        &::before {
+            content: '';
+            position: absolute;
+            top: 3px;
+            left: 0px;
+            width: 8px;
+            height: 8px;
+            border-radius: 50%;
+            background: $colorLightGray;
+        }
+    }
+    &__upload-block {
+        display: flex;
+        flex-wrap: nowrap;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+
+        padding: 12px 56px;
+        gap: 12px;
+
+        border-radius: 20px;
+        border: 1px solid #F5F5F5;
+        background: rgba(111, 111, 111, 0.60);
+        box-shadow: 1px 1px 2px 0px rgba(0, 0, 0, 0.25) inset, 1px 1px 2px 0px rgba(0, 0, 0, 0.25);
+        img {
+            max-width: 160px;
+            opacity: .8;
+        }
+        label {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            width: 304px;
+            height: 56px;
+            background: $colorLightGray;
+            border-radius: 12px;
+            box-shadow: 1px 1px 4px rgba(0, 0, 0, 0.25), 1px 1px 2px $colorWhite inset, -1px -1px 2px rgba(0, 0, 0, 0.25) inset;
+            cursor: pointer;
+
+            font-size: 16px;
+            font-weight: 400;
+            line-height: 16px;
+            color: $colorDarkGray;
+
+            transition: all .3s;
+            &:hover {
+                background: rgba(245, 245, 245, .8)
+            }
+            @media (max-width: 460px) {
+                width: 264px;
+            }
+        }
+        p {
+            font-size: 14px;
+            font-weight: 400;
+            line-height: 14px;
+            color: $colorLightGray;
+        }
+        @media (max-width: 460px) {
+            padding: 12px;
+
+        }
+    }
+    &__input {
+        appearance: none;
+        position: absolute;
+        width: .1px;
+        height: .1px;
+        opacity: 0;
+        overflow: hidden;
+        z-index: -1;
+    }
+    &__submit {
+        height: 52px;
+        padding: 0 16px;
+
+        background: $colorOrange;
+        border-radius: 12px;
+
+        color: $colorWhite;
+        font-size: 16px;
+        font-weight: 400;
+        line-height: 16px;
+
+        cursor: pointer;
+
+        transition: all .3s;
+        &:hover {
+        background: $colorLightOrange;
+
+        }
+    }
+}
