@@ -31,34 +31,34 @@ document.addEventListener('click', (event) => {
 
 
    //виклик меню налаштування секцією
-   //if (event.target.closest('.section-settings__btn')) {
+   //if (event.target.closest('.section-control__btn')) {
    //   viewModal(document.querySelector('.management-block'));
-   //   viewModal(document.querySelector('.section-settings__name'));
+   //   viewModal(document.querySelector('.section-control__name'));
    //}
    //виклик меню налаштування 'Заголовок секцій'
    if (
       event.target.closest('.management__button')
-      && event.target.closest(".management__button").name == 'section-settings-panel'
+      && event.target.closest(".management__button").name == 'section-control-panel'
    ) {
-      const parent = event.target.closest(".section-settings-panel");
+      const parent = event.target.closest(".section-control-panel");
       viewModal(parent.querySelector('.section-upd-params-menu'));
    }
    if (event.target.closest(".section-upd-params-menu__close")) {
-      const parent = event.target.closest(".section-settings-panel");
+      const parent = event.target.closest(".section-control-panel");
       closeModal(parent.querySelector(".section-upd-params-menu"));
       closeModal(parent.querySelector(".create-section-param"));
    }
 
 
-   //const elem = document.querySelectorAll('.section-settings-panel__btn');
-   //const parent = document.querySelector('.section-settings-panel__btn').closest(".section-settings-panel__wrapper");
+   //const elem = document.querySelectorAll('.section-control-panel__btn');
+   //const parent = document.querySelector('.section-control-panel__btn').closest(".section-control-panel__wrapper");
    //const buttonBlock = parent.querySelector('.management-block');
 
-   if (event.target.closest('.section-settings-panel__btn')) {
+   if (event.target.closest('.section-control-panel__btn')) {
       //const elem = event.target;
-      const parent = event.target.closest(".section-settings-panel__btns-wrapper");
+      const parent = event.target.closest(".section-control-panel__btns-wrapper");
       viewModal(parent.querySelector('.management-block'));
-      viewModal(parent.querySelector('.section-settings-panel__name'));
+      viewModal(parent.querySelector('.section-control-panel__name'));
       //parent.querySelector('.management-block').classList.add('_view');
       //console.log(parent);
    }
@@ -74,12 +74,12 @@ document.addEventListener('click', (event) => {
       elem.classList.add('checked');
    }
    //при натисканні на кнопку '.button-section-select'
-   //отримати родича '.section-settings-panel'
+   //отримати родича '.section-control-panel'
    //у цього родича знайти '.items__number'
    //у нього отримати номер innerHTML або name
    //цей номер передати '.section-catalog' data-section-number="number"
    if (event.target.closest('.button-section-select')) {
-      const section_upd_params_menu = event.target.closest('.section-settings-panel');
+      const section_upd_params_menu = event.target.closest('.section-control-panel');
       const number = section_upd_params_menu.querySelector('.items__number').dataset.number;
       //const section_select_menu = document.querySelector('.section-catalog');
       document.querySelector('.section-catalog').setAttribute('data-section-namber', number);
