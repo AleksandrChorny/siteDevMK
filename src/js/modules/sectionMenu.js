@@ -43,3 +43,25 @@ export function setFileName() {
       label.innerHTML = label.dataset['name'];
    })
 }
+
+export function checkSelectedSection(event) {
+   if (event.target.closest('.select-section-menu__tile-wrapper')) {
+      const elem = event.target.closest('.select-section-menu__tile-wrapper');
+      const allSections = document.querySelectorAll('.select-section-menu__tile-wrapper');
+      allSections.forEach((section) => {
+         if (section.classList.contains('checked')) {
+            section.classList.remove('checked');
+         }
+      });
+      elem.classList.add('checked');
+   }
+}
+
+export function addSectionNumberToDataSectionNamber(event) {
+   if (event.target.closest('.button-section-select')) {
+      const section_upd_params_menu = event.target.closest('.section-control-panel');
+      const number = section_upd_params_menu.querySelector('.items__number').dataset.number;
+      //const section_select_menu = document.querySelector('.select-section-menu');
+      document.querySelector('.select-section-menu').setAttribute('data-section-namber', number);
+   }
+}
