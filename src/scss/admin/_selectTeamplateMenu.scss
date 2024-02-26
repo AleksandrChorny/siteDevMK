@@ -7,7 +7,7 @@
 
    width: auto;
    max-width: 70%;
-   padding: 8px 24px;
+   padding: 12px 0 12px 24px;
    gap: 16px;
    overflow: hidden;
 
@@ -65,7 +65,6 @@
          display: flex;
          flex-direction: column;
          gap: 16px;
-         margin-left: 36px;
       }
       &__url-text{
          color: $colorWhite;
@@ -74,10 +73,13 @@
          font-style: normal;
          font-weight: 700;
          line-height: 20px;
+
+         margin-left: 36px;
       }
       &__url-input{
          width: 400px;
          height: 32px;
+         margin-left: 36px;
          padding: 8px;
 
          border-radius: 16px;
@@ -117,7 +119,7 @@
       &__teamplate-tiles{
          display: flex;
          flex-wrap: nowrap;
-         max-width: 88%;
+         // max-width: 88%;
          padding-right: 8px;
          padding-bottom: 12px;
          gap: 8px;
