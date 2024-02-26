@@ -6,13 +6,14 @@ import * as teamplateSettings from "./teamplateSettings.js";
 document.addEventListener('click', (event) => {
    controlPanel.viewControlPanel(event);
 
-   sectionParam.viewUpdSectionParamMenu(event);
-   sectionParam.viewCreateSectionParamMenu(event);
-
    sectionMenu.viewSelectSectionMenu(event);
    sectionMenu.viewCreateSectionMenu(event);
-   sectionMenu.checkSelectedSection(event);
+   //sectionMenu.checkSelectedSection(event);
    sectionMenu.addSectionNumberToDataSectionNamber(event);
+   sectionMenu.viewUpdSectionMenu(event);
+
+   sectionParam.viewUpdSectionParamMenu(event);
+   sectionParam.viewCreateSectionParamMenu(event);
 
    teamplateSettings.viewSelectTeamplateMenu(event);
    teamplateSettings.viewCreateTeamplateMenu(event);

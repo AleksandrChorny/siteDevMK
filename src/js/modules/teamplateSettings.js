@@ -22,7 +22,6 @@ export function viewCreateTeamplateMenu(event) {
    if (event.target.closest('.select-teamplate-menu__tile-add-btn')) {
       controllerModal.view(document.querySelector('.create-teamplate-menu'));
    }
-   console.log(event.target);
 
    if (event.target.closest(".create-teamplate-menu__close")) {
       controllerModal.close(document.querySelector(".create-teamplate-menu"));

@@ -1,0 +1,24 @@
+<div class="update-section-menu">
+   <!-- Кнопка закриття модалки -->
+   <button class="update-section-menu__close"></button>
+
+   <h3 class="update-section-menu__title">Завантажте файли секції:</h3>
+   <form class="update-section-menu__upload-block-wrapper" action="/setup/section/upd/" method="post"
+      enctype="multipart/form-data">
+      <p class="update-section-menu__text">Оберіть файли верстки секції для завантаження в форматі html або php</p>
+      <div class="update-section-menu__upload-block">
+         <img src="/img/admin/upload-pic.png" alt="">
+         <input class="update-section-menu__input" type="file" id="update-section-layout" accept=".php">
+         <label for="update-section-layout" data-name="Завантажити HTML/PHP">Завантажити HTML/PHP</label>
+      </div>
+      <p class="update-section-menu__text">Оберіть файли попереднього перегляду секції для завантаження в форматі jpg
+         або png</p>
+      <div class="update-section-menu__upload-block">
+         <img src="/img/admin/upload-pic.png" alt="">
+         <input class="update-section-menu__input" type="file" id="update-section-preview" accept=".png, .jpg">
+         <label for="update-section-preview" data-name="Завантажити JPG/PNG">Завантажити JPG/PNG</label>
+      </div>
+      <input type="hidden" name="section_id">
+      <input class="update-section-menu__submit" type="submit" value="Відправити">
+   </form>
+</div>

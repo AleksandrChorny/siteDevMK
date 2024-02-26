@@ -14,11 +14,14 @@ export function viewSelectSectionMenu(event) {
    if (event.target.closest(".select-section-menu__close")) {
       controllerModal.close(document.querySelector('.select-section-menu'));
       controllerModal.close(document.querySelector('.create-section-menu'));
+      controllerModal.close(document.querySelector(".update-section-menu"));
    }
 }
 
 export function viewCreateSectionMenu(event) {
+
    if (event.target.closest(".select-section-menu__tile-add-btn")) {
+      event.preventDefault();
       controllerModal.view(document.querySelector('.create-section-menu'));
    }
 
@@ -44,18 +47,18 @@ export function setFileName() {
    })
 }
 
-export function checkSelectedSection(event) {
-   if (event.target.closest('.select-section-menu__tile-wrapper')) {
-      const elem = event.target.closest('.select-section-menu__tile-wrapper');
-      const allSections = document.querySelectorAll('.select-section-menu__tile-wrapper');
-      allSections.forEach((section) => {
-         if (section.classList.contains('checked')) {
-            section.classList.remove('checked');
-         }
-      });
-      elem.classList.add('checked');
-   }
-}
+//export function checkSelectedSection(event) {
+//   if (event.target.closest('.select-section-menu__tile-wrapper')) {
+//      const elem = event.target.closest('.select-section-menu__tile-wrapper');
+//      const allSections = document.querySelectorAll('.select-section-menu__tile-wrapper');
+//      allSections.forEach((section) => {
+//         if (section.classList.contains('checked')) {
+//            section.classList.remove('checked');
+//         }
+//      });
+//      elem.classList.add('checked');
+//   }
+//}
 
 export function addSectionNumberToDataSectionNamber(event) {
    if (event.target.closest('.button-section-select')) {
@@ -63,5 +66,19 @@ export function addSectionNumberToDataSectionNamber(event) {
       const number = section_upd_params_menu.querySelector('.items__number').dataset.number;
       //const section_select_menu = document.querySelector('.select-section-menu');
       document.querySelector('.select-section-menu').setAttribute('data-section-namber', number);
+   }
+}
+
+export function viewUpdSectionMenu(event) {
+   if (event.target.closest('.select-section-menu__title-btn') && event.target.name == 'view-upd-section-menu') {
+      event.preventDefault();
+      const section_id = event.target.dataset.id;
+      const upd_section_menu = document.querySelector(".update-section-menu");
+      upd_section_menu.querySelector('[name="section_id"]').value = section_id;
+      controllerModal.view(document.querySelector(".update-section-menu"));
+   }
+
+   if (event.target.closest('.update-section-menu__close')) {
+      controllerModal.close(document.querySelector(".update-section-menu"));
    }
 }
