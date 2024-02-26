@@ -1,61 +1,86 @@
 <div class="select-section-menu">
    <button class="select-section-menu__close"></button>
 
-   <div class="select-section-menu__tiles-container">
+   <form class="select-section-menu__tiles-container" action="/">
       <p class="select-section-menu__tiles-container-title">Select or create a Section for this Teamplate</p>
       <div class="select-section-menu__tiles-wrapper">
+         <!-- Кнопка додавання нового шаблона секції -->
          <div class="select-section-menu__tile-wrapper">
             <p class="select-section-menu__tile-title">New</p>
             <button class="select-section-menu__tile-add-btn"></button>
          </div>
 
+         <!-- Каталог завантажених шаблонів секцій -->
          <div class="select-section-menu__teamplate-tiles">
+            <!-- Картка шаблона секції -->
             <div class="select-section-menu__tile-wrapper">
-               <p class="select-section-menu__tile-title">Mine</p>
-               <div class="select-section-menu__tile-img">
-                  <img class="select-section-menu__img" src="\img\admin\mine.jpg" alt="teamplate preview">
-               </div>
-               <button class="select-section-menu__title-btn">UPD</button>
-            </div>
-            <div class="select-section-menu__tile-wrapper">
-               <p class="select-section-menu__tile-title">Mine</p>
-               <div class="select-section-menu__tile-img">
-                  <img class="select-section-menu__img" src="\img\admin\mine.jpg" alt="teamplate preview">
-               </div>
-               <button class="select-section-menu__title-btn">UPD</button>
-            </div>
-            <div class="select-section-menu__tile-wrapper">
-               <p class="select-section-menu__tile-title">Mine</p>
-               <div class="select-section-menu__tile-img">
-                  <img class="select-section-menu__img" src="\img\admin\mine.jpg" alt="teamplate preview">
-               </div>
+               <label class="select-section-menu__tile">
+                  <input class="select-section-menu__radio" type="radio" value="Mine" name="sections">
+                  Mine
+                  <spun class="select-section-menu__tile-img">
+                     <img class="select-section-menu__img" src="\img\admin\mine.jpg" alt="teamplate preview">
+                     </span>
+               </label>
                <button class="select-section-menu__title-btn">UPD</button>
             </div>
 
             <div class="select-section-menu__tile-wrapper">
-               <p class="select-section-menu__tile-title">Mine</p>
-               <div class="select-section-menu__tile-img">
-                  <img class="select-section-menu__img" src="\img\admin\mine.jpg" alt="teamplate preview">
-               </div>
+               <label class="select-section-menu__tile">
+                  <input class="select-section-menu__radio" type="radio" name="sections">
+                  Mine
+                  <spun class="select-section-menu__tile-img">
+                     <img class="select-section-menu__img" src="\img\admin\mine.jpg" alt="teamplate preview">
+                     </span>
+               </label>
                <button class="select-section-menu__title-btn">UPD</button>
             </div>
+
             <div class="select-section-menu__tile-wrapper">
-               <p class="select-section-menu__tile-title">Mine</p>
-               <div class="select-section-menu__tile-img">
-                  <img class="select-section-menu__img" src="\img\admin\mine.jpg" alt="teamplate preview">
-               </div>
+               <label class="select-section-menu__tile">
+                  <input class="select-section-menu__radio" type="radio" name="sections">
+                  Mine
+                  <spun class="select-section-menu__tile-img">
+                     <img class="select-section-menu__img" src="\img\admin\mine.jpg" alt="teamplate preview">
+                     </span>
+               </label>
                <button class="select-section-menu__title-btn">UPD</button>
             </div>
+
             <div class="select-section-menu__tile-wrapper">
-               <p class="select-section-menu__tile-title">Mine</p>
-               <div class="select-section-menu__tile-img">
-                  <img class="select-section-menu__img" src="\img\admin\mine.jpg" alt="teamplate preview">
-               </div>
+               <label class="select-section-menu__tile">
+                  <input class="select-section-menu__radio" type="radio" name="sections">
+                  Mine
+                  <spun class="select-section-menu__tile-img">
+                     <img class="select-section-menu__img" src="\img\admin\mine.jpg" alt="teamplate preview">
+                     </span>
+               </label>
+               <button class="select-section-menu__title-btn">UPD</button>
+            </div>
+
+            <div class="select-section-menu__tile-wrapper">
+               <label class="select-section-menu__tile">
+                  <input class="select-section-menu__radio" type="radio" name="sections">
+                  Mine
+                  <spun class="select-section-menu__tile-img">
+                     <img class="select-section-menu__img" src="\img\admin\mine.jpg" alt="teamplate preview">
+                     </span>
+               </label>
+               <button class="select-section-menu__title-btn">UPD</button>
+            </div>
+
+            <div class="select-section-menu__tile-wrapper">
+               <label class="select-section-menu__tile">
+                  <input class="select-section-menu__radio" type="radio" name="sections">
+                  Mine
+                  <spun class="select-section-menu__tile-img">
+                     <img class="select-section-menu__img" src="\img\admin\mine.jpg" alt="teamplate preview">
+                     </span>
+               </label>
                <button class="select-section-menu__title-btn">UPD</button>
             </div>
          </div>
 
       </div>
-      <button class="select-section-menu__confirm-btn">OK</button>
-   </div>
+      <button class="select-section-menu__confirm-btn" type="submit">OK</button>
+   </form>
 </div>
