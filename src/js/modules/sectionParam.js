@@ -2,16 +2,17 @@ import * as controllerModal from "./controllerModal.js";
 
 export function viewUpdSectionParamMenu(event) {
    if (
-      event.target.closest('.management__button')
-      && event.target.closest(".management__button").name == 'view-upd-parm-menu'
+      event.target.closest('button')
+      && event.target.closest('button').name == 'view-section-upd-param-menu'
    ) {
       const controlPanel = event.target.closest(".section-control-panel");
       controllerModal.view(controlPanel.querySelector('.section-upd-params-menu'));
    }
-   if (event.target.closest(".section-upd-params-menu__close")) {
+
+   if (event.target.closest('.section-upd-params-menu__close')) {
       const controlPanel = event.target.closest(".section-control-panel");
-      controllerModal.close(controlPanel.querySelector(".section-upd-params-menu"));
-      controllerModal.close(controlPanel.querySelector(".create-section-param"));
+      controllerModal.close(controlPanel.querySelector('.section-upd-params-menu'));
+      controllerModal.close(controlPanel.querySelector('.create-section-param'));
    }
 }
 

@@ -192,44 +192,6 @@
    }
 }
 
-
-
-
-
-// .management-block{
-
-//    &__close-btn{
-//       position: relative;
-//       display: flex;
-//       justify-content: center;
-//       align-items: center;
-//       width: 36px;
-//       height: 36px;
-
-//       transform: rotate(45deg);
-
-//       border-radius: 50%;
-//       background: $colorBlue;
-//       &::before{
-//          content: "";
-//          width: 24px;
-//          height: 4px;
-//          background: $colorWhite;
-//          border-radius: 2px;
-//       }
-//       &::after{
-//          content: "";
-//          position: absolute;
-//          left: 50%;
-//          transform: translateX(-50%);
-//          width: 4px;
-//          height: 24px;
-//          border-radius: 2px;
-//          background: $colorWhite;
-
-//       }
-//    }
-// }
 .management{
    // &__svg{
    //    width: 36px;

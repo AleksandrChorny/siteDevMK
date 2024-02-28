@@ -47,19 +47,6 @@ export function setFileName() {
    })
 }
 
-//export function checkSelectedSection(event) {
-//   if (event.target.closest('.select-section-menu__tile-wrapper')) {
-//      const elem = event.target.closest('.select-section-menu__tile-wrapper');
-//      const allSections = document.querySelectorAll('.select-section-menu__tile-wrapper');
-//      allSections.forEach((section) => {
-//         if (section.classList.contains('checked')) {
-//            section.classList.remove('checked');
-//         }
-//      });
-//      elem.classList.add('checked');
-//   }
-//}
-
 export function addSectionNumberToDataSectionNamber(event) {
    if (event.target.closest('.button-section-select')) {
       const section_upd_params_menu = event.target.closest('.section-control-panel');
@@ -70,15 +57,17 @@ export function addSectionNumberToDataSectionNamber(event) {
 }
 
 export function viewUpdSectionMenu(event) {
-   if (event.target.closest('.select-section-menu__title-btn') && event.target.name == 'view-upd-section-menu') {
-      event.preventDefault();
-      const section_id = event.target.dataset.id;
-      const upd_section_menu = document.querySelector(".update-section-menu");
-      upd_section_menu.querySelector('[name="section_id"]').value = section_id;
-      controllerModal.view(document.querySelector(".update-section-menu"));
+   if (
+      event.target.closest('.management__button')
+      && event.target.closest(".management__button").name == 'view-section-upd-menu'
+   ) {
+      const controlPanel = event.target.closest(".section-control-panel");
+      controllerModal.view(controlPanel.querySelector('.section-upd-menu'));
    }
-
-   if (event.target.closest('.update-section-menu__close')) {
-      controllerModal.close(document.querySelector(".update-section-menu"));
+   if (event.target.closest(".section-upd-menu__close")) {
+      const controlPanel = event.target.closest(".section-control-panel");
+      controllerModal.close(controlPanel.querySelector(".section-upd-menu"));
+      controllerModal.close(controlPanel.querySelector(".section-upd-params-menu"));
+      //controllerModal.close(controlPanel.querySelector(".create-section-param"));
    }
 }
