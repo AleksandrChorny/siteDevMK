@@ -7,13 +7,14 @@
 @import "./admin/_pageControlPanel";
 @import "./admin/_sectionControlPanel";
 @import "./admin/_createSectionMenu";
-@import "./admin/_updateSectionMenu";
+@import "./admin/_sectionsSettingsMenu";
 
-@import "./admin/_selectSectionMenu";
+@import "./admin/_sectionSelectMenu";
 @import "./admin/_createSectionParam";
-@import "./admin/_sectionsUpdMenu";
+@import "./admin/_sectionUpdateFilesMenu";
 @import "./admin/_sectionsUpdParamMenu";
 @import "./admin/_blockUpdParamsMenu";
+@import "./admin/_block_createParamMenu";
 
 @import "./admin/_selectTeamplateMenu";
 @import "./admin/_createTeamplateMenu";

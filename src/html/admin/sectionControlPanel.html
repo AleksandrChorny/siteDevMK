@@ -1,12 +1,13 @@
 <section class="section-control-panel">
-   <button class="section-control-panel__button-section-select button-section-select" type="button">
+   <button class="section-control-panel__button-section-select button-section-select" type="button"
+      data-name="btn-view-section-select-menu" data-section-number="@@number">
       <span class="button-section-select__circle"></span>
    </button>
    <div class="section-control-panel__wrapper">
       <div class="section-control-panel__btns-wrapper">
          <button class="section-control-panel__btn">
             <div class="section-control-panel__items items">
-               <span class="items__number" data-number="@@number">@@number</span>
+               <span class="items__number">@@number</span>
                <svg class="items__svg">
                   <use xlink:href="@img/icons/icons.svg#GearNew"></use>
                </svg>
@@ -31,7 +32,7 @@
                </form>
             </div>
             <div class="section-control-panel__management">
-               <button class="management__button" name="view-section-upd-menu" type="button">
+               <button class="management__button" name="view-section-settings-menu" type="button">
                   <svg class="management__svg">
                      <use xlink:href="@img/icons/icons.svg#editing-btn"></use>
                   </svg>
@@ -52,6 +53,6 @@
    </div>
    @@include('sectionsUpdParamMenu.html',{})
    @@include('createSectionParam.html',{})
-   @@include('sectionsUpdMenu.html',{})
+   @@include('sectionsSettingsMenu.html',{})
 
 </section>

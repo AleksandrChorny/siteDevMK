@@ -1,9 +1,9 @@
 <div class="block-upd-params-menu">
    <div class="block-upd-params-menu__close"></div>
-   <p class="block-upd-params-menu__title">Параметри секції "Назва секції"</p>
+   <p class="block-upd-params-menu__title">Параметри секції "@@blockName"</p>
    <div class="add-param">
       <p class="add-param__title">Додати параметер</p>
-      <button class="add-param__btn"></button>
+      <button class="add-param__btn" name="btn-view-block-create-param"></button>
    </div>
    <form class="upd-params-form block-upd-params-menu__form" action="/setup/block/params-upd">
       <div class="upd-params-form__items-wrapper">
@@ -25,4 +25,5 @@
       </div>
       <button class="upd-params-form__btn" type="submit">OK</button>
    </form>
+   @@include('block_createParamMenu.html',{})
 </div>

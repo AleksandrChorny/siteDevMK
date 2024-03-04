@@ -1,27 +1,26 @@
 import * as controlPanel from "./controlPanel.js";
-import * as sectionParam from "./sectionParam.js";
 import * as sectionMenu from "./sectionMenu.js";
 import * as blocks from "./blocks.js";
-import * as teamplateSettings from "./teamplateSettings.js";
+//import * as teamplateSettings from "./teamplateSettings.js";
 
 document.addEventListener('click', (event) => {
    controlPanel.viewControlPanel(event);
 
-   sectionMenu.viewSelectSectionMenu(event);
+   sectionMenu.view_select_section_menu(event);
    sectionMenu.viewCreateSectionMenu(event);
-   //sectionMenu.checkSelectedSection(event);
-   sectionMenu.addSectionNumberToDataSectionNamber(event);
-   sectionMenu.viewUpdSectionMenu(event);
+   sectionMenu.viewSectionSettingsMenu(event);
+   //sectionMenu.addSectionNumberToDataSectionNamber(event);
+   sectionMenu.view_section_update_files_menu(event);
+   sectionMenu.viewSectionCreateParamMenu(event);
+   sectionMenu.viewUpdSectionParamMenu(event);
 
-   blocks.viewUpdBlockParamMenu(event);
+   blocks.view_block_update_param_menu(event);
+   blocks.view_block_createParamMenu(event);
 
-   sectionParam.viewUpdSectionParamMenu(event);
-   sectionParam.viewCreateSectionParamMenu(event);
-
-   teamplateSettings.viewSelectTeamplateMenu(event);
-   teamplateSettings.viewCreateTeamplateMenu(event);
+   //teamplateSettings.viewSelectTeamplateMenu(event);
+   //teamplateSettings.viewCreateTeamplateMenu(event);
 })
 
 document.addEventListener('change', () => {
-   sectionMenu.setFileName();
+   sectionMenu.setFileNameInCreateSectionMenu();
 })
