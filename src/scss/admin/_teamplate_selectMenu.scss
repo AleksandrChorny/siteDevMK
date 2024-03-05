@@ -1,4 +1,4 @@
-.select-teamplate-menu{
+.teamplate-select-menu{
    display: flex;
    flex-direction: column;
    position: fixed;
@@ -183,7 +183,7 @@
          width: 0.1px;
          height: 0.1px;
          opacity: 0;
-         &:checked + .select-teamplate-menu__tile-img {
+         &:checked + .teamplate-select-menu__tile-img {
             border: 2px solid $colorLightOrange;
             box-shadow: 0 0 8px 0 $colorLightOrange;
          }

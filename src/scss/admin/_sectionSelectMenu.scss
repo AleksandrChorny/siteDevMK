@@ -201,7 +201,7 @@
       &__radio {
          position: absolute;
          appearance: none;
-         &:checked + .section-catalog__tile-img {
+         &:checked + .section-select-menu__tile-img {
             border: 2px solid $colorLightOrange;
             box-shadow: 0 0 8px 0 $colorLightOrange;
          }

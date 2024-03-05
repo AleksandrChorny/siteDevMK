@@ -40,7 +40,6 @@ export function view_select_section_menu(event) {
 export function viewCreateSectionMenu(event) {
 
    if (event.target.closest(".section-select-menu__tile-add-btn")) {
-      event.preventDefault();
       controllerModal.view(document.querySelector('.create-section-menu'));
    }
 
@@ -68,7 +67,6 @@ export function setFileNameInCreateSectionMenu() {
 
 export function view_section_update_files_menu(event) {
    if (event.target.name == 'btn-view-section-upd-files-menu') {
-      event.preventDefault();
       const section_id = event.target.dataset.id;
       const section_update_files_menu = document.querySelector('[data-name="section-update-files-menu"]');
       section_update_files_menu.querySelector('[name="section_id"]').value = section_id;

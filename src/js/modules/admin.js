@@ -1,7 +1,10 @@
+import * as adminTool from "./adminTool.js";
 import * as controlPanel from "./controlPanel.js";
 import * as sectionMenu from "./sectionMenu.js";
 import * as blocks from "./blocks.js";
-//import * as teamplateSettings from "./teamplateSettings.js";
+import * as teamplateSettings from "./teamplateSettings.js";
+
+
 
 document.addEventListener('click', (event) => {
    controlPanel.viewControlPanel(event);
@@ -16,11 +19,14 @@ document.addEventListener('click', (event) => {
 
    blocks.view_block_update_param_menu(event);
    blocks.view_block_createParamMenu(event);
+   blocks.viewBlockCreateMenu(event);
 
-   //teamplateSettings.viewSelectTeamplateMenu(event);
-   //teamplateSettings.viewCreateTeamplateMenu(event);
+   teamplateSettings.viewTeamplateSelectMenu(event);
+   teamplateSettings.viewTeamplateCreateMenu(event);
 })
 
-document.addEventListener('change', () => {
+document.addEventListener('change', (event) => {
+   adminTool.controlPanelSwitch(event);
+
    sectionMenu.setFileNameInCreateSectionMenu();
 })

@@ -25,3 +25,26 @@ export function view_block_createParamMenu(event) {
       event.target.closest(".block-create-param-menu").remove();
    }
 }
+
+export function viewBlockCreateMenu(event) {
+   if (event.target.closest('[data-name="btn-view-block-create-menu"]')) {
+      const block_createMenu = event.target.closest('[data-name="btn-view-block-create-menu"]').nextElementSibling;
+      if (block_createMenu) {
+         const clone = block_createMenu.cloneNode(true);
+         document.body.append(clone);
+         controllerModal.view(clone);
+         return;
+      }
+      alert('Меню додавання блоку відсутне в панелі адміністратора. Будьласка зверніться до адміністратора');
+   }
+
+   if (event.target.closest('[data-name="btn-close-block-create-menu"]')) {
+      if (event.target.closest('[data-name="block-create-menu"]')) {
+         controllerModal.close(event.target.closest('[data-name="block-create-menu"]'))
+         return;
+      }
+      console.log('не можу закрити меню не вистачає дата-елемента. Зверніться до адміністратора');
+      alert('Вибачте, щось пішло не так, зверніться до адміністратора, або спробуйте перезавантажити сторінку');
+   }
+}
+
