@@ -5,6 +5,10 @@
    cursor: pointer;
 
    background: linear-gradient(90deg, #4976B3 55%, rgba(73, 118, 179, 0.00) 99%);
+
+   &._invisible{
+      display: none;
+      }
    &__button-section-select{
       display: flex;
       justify-content: center;

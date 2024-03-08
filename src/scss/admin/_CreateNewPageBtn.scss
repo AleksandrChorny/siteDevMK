@@ -45,4 +45,7 @@
       background-color: $colorLightOrange;
 
    }
+   &._invisible{
+      display: none;
+      }
 }

@@ -3,6 +3,9 @@ import * as controlPanel from "./controlPanel.js";
 import * as sectionMenu from "./sectionMenu.js";
 import * as blocks from "./blocks.js";
 import * as teamplateSettings from "./teamplateSettings.js";
+import * as Stile from "./stileSelectMenu.js";
+import * as StileMenu from "./stileCreateMenu.js";
+
 
 
 
@@ -23,6 +26,11 @@ document.addEventListener('click', (event) => {
 
    teamplateSettings.viewTeamplateSelectMenu(event);
    teamplateSettings.viewTeamplateCreateMenu(event);
+   // ____Max____
+   Stile.viewStileSelectMenu(event);
+   StileMenu.viewStileCreateMenu(event);
+
+
 })
 
 document.addEventListener('change', (event) => {
@@ -30,3 +38,4 @@ document.addEventListener('change', (event) => {
 
    sectionMenu.setFileNameInCreateSectionMenu();
 })
+console.log(navigator.clipboard.writeText('text'))
