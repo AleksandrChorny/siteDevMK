@@ -55,4 +55,3 @@ document.addEventListener('change', (event) => {
 
    sectionMenu.setFileNameInCreateSectionMenu();
 })
-console.log(navigator.clipboard.writeText('text'))

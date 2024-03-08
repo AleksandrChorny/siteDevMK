@@ -25,11 +25,7 @@ nav.viewContacts();
 header.searchPanel();
 
 
-//document.addEventListener('click', logo);
-
-//function logo() {
-//   if (event.target.closest('.header__logo')) {
-//      event.preventDefault();
-//      console.log('logo')
-//   }
-//}ч
+//TODO: Копіювання в буфер обміну
+//const key = document.querySelector('.section-settings-menu__block-copy-key').title;
+////console.log(key);
+//navigator.clipboard.writeText(key);
