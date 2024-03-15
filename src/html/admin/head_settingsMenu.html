@@ -1,0 +1,59 @@
+<div class="head-settings-menu" data-name="head-settings-menu">
+   <div class="head-settings-menu__close" data-name="head-settings-menu__close"></div>
+   <p class="head-settings-menu__title">Head</p>
+   <button class="head-settings-menu__to-params-btn" type="button" data-name="btn-view-head-upd-param-menu">Параметри
+      секції</button>
+   <div class="head-settings-menu__blocks-menu">
+      <p class="head-settings-menu__blocks-menu-title">Блоки секції</p>
+      <ul class="head-settings-menu__blocks">
+         <li class="head-settings-menu__block-items">
+            <button class="head-settings-menu__block-upd-btn" type="button"
+               title="Натисніть для редагування параметрів блока" name="btn-view-block-upd-param-menu">Назва
+               блока</button>
+            <button class="head-settings-menu__block-copy-key" title="Скопіювати PHP ключ">Copy key</button>
+            @@include('blockUpdParamsMenu.html',{"blockName": "tovar"})
+         </li>
+         <li class="head-settings-menu__block-items">
+            <button class="head-settings-menu__block-upd-btn" type="button"
+               title="Натисніть для редагування параметрів блока" name="btn-view-block-upd-param-menu">Назва
+               блока</button>
+            <button class="head-settings-menu__block-copy-key" title="Скопіювати PHP ключ">Copy key</button>
+            @@include('blockUpdParamsMenu.html',{"blockName": "color"})
+         </li>
+         <li class="head-settings-menu__block-items">
+            <button class="head-settings-menu__block-upd-btn" type="button"
+               title="Натисніть для редагування параметрів блока" name="btn-view-block-upd-param-menu">Назва
+               блока</button>
+            <button class="head-settings-menu__block-copy-key" title="Скопіювати PHP ключ">Copy key</button>
+            @@include('blockUpdParamsMenu.html',{"blockName": "image"})
+         </li>
+         <li class="head-settings-menu__block-items">
+            <button class="head-settings-menu__block-upd-btn" type="button"
+               title="Натисніть для редагування параметрів блока" name="btn-view-block-upd-param-menu">Назва
+               блока</button>
+            <button class="head-settings-menu__block-copy-key" title="Скопіювати PHP ключ">Copy key</button>
+            @@include('blockUpdParamsMenu.html',{"blockName": "slider"})
+         </li>
+         <li class="head-settings-menu__block-items">
+            <button class="head-settings-menu__block-upd-btn" type="button"
+               title="Натисніть для редагування параметрів блока" name="btn-view-block-upd-param-menu">Назва
+               блока</button>
+            <button class="head-settings-menu__block-copy-key" title="Скопіювати PHP ключ">Copy key</button>
+            @@include('blockUpdParamsMenu.html',{"blockName": "about"})
+         </li>
+         <li class="head-settings-menu__block-items">
+            <button class="head-settings-menu__block-upd-btn" type="button"
+               title="Натисніть для редагування параметрів блока" name="btn-view-block-upd-param-menu">Назва
+               блока</button>
+            <button class="head-settings-menu__block-copy-key" title="Скопіювати PHP ключ">Copy key</button>
+            @@include('blockUpdParamsMenu.html',{"blockName": "cost"})
+         </li>
+      </ul>
+      <div class="head-settings-menu__add-block">
+         <p class="head-settings-menu__add-block-title">Новий блок</p>
+         <button class="head-settings-menu__add-block-btn" type="button"
+            data-name="btn-view-head-create-menu"></button>
+         <!-- @@include('head_createMenu.html',{}) -->
+      </div>
+   </div>
+</div>

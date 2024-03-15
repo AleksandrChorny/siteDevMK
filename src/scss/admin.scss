@@ -9,6 +9,11 @@
 @import "./admin/_createSectionMenu";
 @import "./admin/_sectionsSettingsMenu";
 
+@import "./admin/_head_settingsMenu";
+@import "./admin/_head_UpdParamMenu";
+@import "./admin/_head_createMenu";
+
+
 @import "./admin/_sectionSelectMenu";
 @import "./admin/_createSectionParam";
 @import "./admin/_sectionUpdateFilesMenu";
@@ -19,7 +24,6 @@
 
 @import "./admin/_stile_selectMenu";
 @import "./admin/_stile_createMenu";
-
 
 @import "./admin/_teamplate_selectMenu";
 @import "./admin/_teamplate_createMenu";

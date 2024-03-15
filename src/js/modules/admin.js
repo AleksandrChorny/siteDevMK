@@ -5,6 +5,7 @@ import * as blocks from "./blocks.js";
 import * as teamplateSettings from "./teamplateSettings.js";
 import * as Stile from "./stileSelectMenu.js";
 import * as StileMenu from "./stileCreateMenu.js";
+import * as HeadMenu from "./headSettingsMenu.js";
 
 
 
@@ -29,6 +30,8 @@ document.addEventListener('click', (event) => {
    // ____Max____
    Stile.viewStileSelectMenu(event);
    StileMenu.viewStileCreateMenu(event);
+
+   HeadMenu.viewheadSettingsMenu(event);
 
 
 })
