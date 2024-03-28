@@ -6,6 +6,8 @@ import * as teamplateSettings from "./teamplateSettings.js";
 import * as Stile from "./stileSelectMenu.js";
 import * as StileMenu from "./stileCreateMenu.js";
 import * as HeadMenu from "./headSettingsMenu.js";
+import * as blockMenu from "./blockSelectMenu.js";
+
 
 
 
@@ -32,8 +34,7 @@ document.addEventListener('click', (event) => {
    StileMenu.viewStileCreateMenu(event);
 
    HeadMenu.viewheadSettingsMenu(event);
-
-
+   blockMenu.viewblockSelectMenu(event);
 })
 
 document.addEventListener('change', (event) => {
