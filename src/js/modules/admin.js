@@ -4,10 +4,6 @@ import * as sectionMenu from "./sectionMenu.js";
 import * as blocks from "./blocks.js";
 import * as teamplateSettings from "./teamplateSettings.js";
 import * as Stile from "./stileSelectMenu.js";
-import * as StileMenu from "./stileCreateMenu.js";
-
-
-
 
 document.addEventListener('click', (event) => {
    controlPanel.viewControlPanel(event);
@@ -28,8 +24,8 @@ document.addEventListener('click', (event) => {
    teamplateSettings.viewTeamplateCreateMenu(event);
    // ____Max____
    Stile.viewStileSelectMenu(event);
-   StileMenu.viewStileCreateMenu(event);
-
+   Stile.viewStileCreateMenu(event);
+   //Stile.setFileNameInCreateStileMenu();
 
 })
 
