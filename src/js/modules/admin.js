@@ -46,8 +46,7 @@ document.addEventListener('click', (event) => {
    Stile.viewStileSelectMenu(event);
    StileMenu.viewStileCreateMenu(event);
 
-   HeadMenu.viewheadSettingsMenu(event);
-   blockMenu.viewblockSelectMenu(event);
+
 })
 
 document.addEventListener('change', (event) => {
