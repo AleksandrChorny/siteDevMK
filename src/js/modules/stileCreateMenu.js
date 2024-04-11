@@ -6,5 +6,6 @@ export function viewStileCreateMenu(event) {
    }
    if (event.target.closest('[data-name="btn-close-stile-create-menu"]')) {
       controllerModal.close(document.querySelector('[data-name="stile-create-menu"]'));
+      //sc
    }
 }
