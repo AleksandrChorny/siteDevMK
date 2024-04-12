@@ -28,13 +28,11 @@ export function view_block_createParamMenu(event) {
 
 export function viewBlockCreateMenu(event) {
    if (event.target.closest('[data-name="btn-view-block-create-menu"]')) {
-      const block_createMenu = event.target.closest('[data-name="btn-view-block-create-menu"]').nextElementSibling;
-      if (block_createMenu) {
-         const clone = block_createMenu.cloneNode(true);
-         document.body.append(clone);
-         controllerModal.view(clone);
+      if (document.querySelector('[data-name="block-create-menu"]')) {
+         controllerModal.view(document.querySelector('[data-name="block-create-menu"]'));
          return;
       }
+
       alert('Меню додавання блоку відсутне в панелі адміністратора. Будьласка зверніться до адміністратора');
    }
 
@@ -48,3 +46,17 @@ export function viewBlockCreateMenu(event) {
    }
 }
 
+//Виклик вікна настройки меню "Block"
+export function viewblockSelectMenu(event) {
+   if (event.target.closest('[name="btn-view-block-select-menu"]')) {
+      const section_id = event.target.closest('[name="btn-view-block-select-menu"]').dataset.sectionId;
+      if (document.querySelector('.block-select-menu [data-name="section-select-form"] [name="section_id"]')) {
+         document.querySelector('.block-select-menu [data-name="section-select-form"] [name="section_id"]').value = section_id;
+      }
+      controllerModal.view(document.querySelector('[name="block-select-menu"]'));
+   }
+
+   if (event.target.closest('[name="block-select-menu__close"]')) {
+      controllerModal.close(document.querySelector('[name="block-select-menu"]'));
+   }
+}
