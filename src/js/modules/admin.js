@@ -2,11 +2,11 @@ import * as adminTool from "./adminTool.js";
 import * as action from "./action.js";
 import * as controlPanel from "./controlPanel.js";
 import * as sectionMenu from "./sectionMenu.js";
-import * as blocks from "./blocks.js";
 import * as teamplateSettings from "./teamplateSettings.js";
 import * as Stile from "./stileSelectMenu.js";
 import * as StileMenu from "./stileCreateMenu.js";
 import * as HeadMenu from "./headSettingsMenu.js";
+import * as blocks from "./blocks.js";
 import * as blocks from "./blocks.js";
 
 
@@ -46,7 +46,6 @@ document.addEventListener('click', (event) => {
    StileMenu.viewStileCreateMenu(event);
 
    HeadMenu.viewheadSettingsMenu(event);
-   blockMenu.viewblockSelectMenu(event);
 })
 
 document.addEventListener('change', (event) => {
