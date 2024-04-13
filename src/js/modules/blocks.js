@@ -12,7 +12,6 @@ export function view_block_update_param_menu(event) {
       event.target.closest(".block-upd-params-menu").remove();
    }
 }
-
 export function view_block_createParamMenu(event) {
    if (event.target.name == 'btn-view-block-create-param') {
       const block_upd_params_menu = event.target.closest(".block-upd-params-menu");
@@ -47,4 +46,14 @@ export function viewBlockCreateMenu(event) {
       alert('Вибачте, щось пішло не так, зверніться до адміністратора, або спробуйте перезавантажити сторінку');
    }
 }
+export function viewblockSettingsMenu(event) {
+   if (event.target.closest('[name="btn-view-block-upd-files-menu"]')) {
+      controllerModal.view(document.querySelector('[data-name="view-block-settings-menu"]'));
+   }
+
+   if (event.target.closest('[data-name="block-settings-menu__close"]')) {
+      controllerModal.close(document.querySelector('[data-name="view-block-settings-menu"]'));
+   }
+}
+
 
