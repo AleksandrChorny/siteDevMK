@@ -56,4 +56,14 @@ export function viewblockSettingsMenu(event) {
    }
 }
 
+export function viewblockUpdFilesMenu(event) {
+   if (event.target.closest('[name="view-block-upd-param-menu"]')) {
+      controllerModal.view(document.querySelector('[data-name="block-update-files-menu"]'));
+   }
+
+   if (event.target.closest('[name="btn-close-block-upd-menu"]')) {
+      controllerModal.close(document.querySelector('[data-name="block-update-files-menu"]'));
+   }
+}
+
 

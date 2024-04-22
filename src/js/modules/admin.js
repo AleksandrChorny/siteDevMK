@@ -28,6 +28,7 @@ document.addEventListener('click', (event) => {
    blocks.viewBlockCreateMenu(event);
    blocks.viewblockSettingsMenu(event);
 
+   blocks.viewblockUpdFilesMenu(event);
 
    teamplateSettings.viewTeamplateSelectMenu(event);
    teamplateSettings.viewTeamplateCreateMenu(event);
