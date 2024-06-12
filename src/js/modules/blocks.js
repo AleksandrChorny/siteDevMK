@@ -78,9 +78,10 @@ export function viewblockUpdFilesMenu(event) {
 //Виклик вікна настройки меню "Block"
 export function viewblockSelectMenu(event) {
    if (event.target.closest('[name="btn-view-block-select-menu"]')) {
-      const section_id = event.target.closest('[name="btn-view-block-select-menu"]').dataset.sectionId;
-      if (document.querySelector('.block-select-menu [data-name="section-select-form"] [name="section_id"]')) {
-         document.querySelector('.block-select-menu [data-name="section-select-form"] [name="section_id"]').value = section_id;
+      const section_id = event.target.closest('[name="btn-view-block-select-menu"]').dataset.blockInSectionOrder;
+      console.log(event.target.closest('[name="btn-view-block-select-menu"]'));
+      if (document.querySelector('.block-select-menu [data-name="section-select-form"] [name="block_in_section_order"]')) {
+         document.querySelector('.block-select-menu [data-name="section-select-form"] [name="block_in_section_order"]').value = section_id;
       }
       controllerModal.view(document.querySelector('[name="block-select-menu"]'));
    }
