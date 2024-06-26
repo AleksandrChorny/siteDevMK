@@ -10,10 +10,6 @@ import * as StileMenu from "./stileCreateMenu.js";
 import * as HeadMenu from "./headSettingsMenu.js";
 import * as blockMenu from "./blockSelectMenu.js";
 
-
-
-
-
 document.addEventListener('click', (event) => {
    action.view(event)
    controlPanel.viewControlPanel(event);
