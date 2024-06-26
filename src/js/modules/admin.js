@@ -9,10 +9,6 @@ import * as HeadMenu from "./headSettingsMenu.js";
 import * as blocks from "./blocks.js";
 import * as blocks from "./blocks.js";
 
-
-
-
-
 document.addEventListener('click', (event) => {
    action.view(event)
    controlPanel.viewControlPanel(event);
