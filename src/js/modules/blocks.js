@@ -56,39 +56,41 @@ export function viewBlockCreateMenu(event) {
          alert('Вибачте, щось пішло не так, зверніться до адміністратора, або спробуйте перезавантажити сторінку');
       }
    }
-   export function viewblockSettingsMenu(event) {
-      if (event.target.closest('[name="btn-view-block-upd-files-menu"]')) {
-         controllerModal.view(document.querySelector('[data-name="view-block-settings-menu"]'));
-      }
+}
 
-      if (event.target.closest('[data-name="block-settings-menu__close"]')) {
-         controllerModal.close(document.querySelector('[data-name="view-block-settings-menu"]'));
-      }
+export function viewblockSettingsMenu(event) {
+   if (event.target.closest('[name="btn-view-block-upd-files-menu"]')) {
+      controllerModal.view(document.querySelector('[data-name="view-block-settings-menu"]'));
    }
 
-   export function viewblockUpdFilesMenu(event) {
-      if (event.target.closest('[name="view-block-upd-param-menu"]')) {
-         controllerModal.view(document.querySelector('[data-name="block-update-files-menu"]'));
-      }
+   if (event.target.closest('[data-name="block-settings-menu__close"]')) {
+      controllerModal.close(document.querySelector('[data-name="view-block-settings-menu"]'));
+   }
+}
 
-      if (event.target.closest('[name="btn-close-block-upd-menu"]')) {
-         controllerModal.close(document.querySelector('[data-name="block-update-files-menu"]'));
-      }
+export function viewblockUpdFilesMenu(event) {
+   if (event.target.closest('[name="view-block-upd-param-menu"]')) {
+      controllerModal.view(document.querySelector('[data-name="block-update-files-menu"]'));
    }
 
-
-   //Виклик вікна настройки меню "Block"
-   export function viewblockSelectMenu(event) {
-      if (event.target.closest('[name="btn-view-block-select-menu"]')) {
-         const section_id = event.target.closest('[name="btn-view-block-select-menu"]').dataset.blockInSectionOrder;
-         console.log(event.target.closest('[name="btn-view-block-select-menu"]'));
-         if (document.querySelector('.block-select-menu [data-name="section-select-form"] [name="block_in_section_order"]')) {
-            document.querySelector('.block-select-menu [data-name="section-select-form"] [name="block_in_section_order"]').value = section_id;
-         }
-         controllerModal.view(document.querySelector('[name="block-select-menu"]'));
-      }
-
-      if (event.target.closest('[name="block-select-menu__close"]')) {
-         controllerModal.close(document.querySelector('[name="block-select-menu"]'));
-      }
+   if (event.target.closest('[name="btn-close-block-upd-menu"]')) {
+      controllerModal.close(document.querySelector('[data-name="block-update-files-menu"]'));
    }
+}
+
+
+//Виклик вікна настройки меню "Block"
+export function viewblockSelectMenu(event) {
+   if (event.target.closest('[name="btn-view-block-select-menu"]')) {
+      const section_id = event.target.closest('[name="btn-view-block-select-menu"]').dataset.blockInSectionOrder;
+      console.log(event.target.closest('[name="btn-view-block-select-menu"]'));
+      if (document.querySelector('.block-select-menu [data-name="section-select-form"] [name="block_in_section_order"]')) {
+         document.querySelector('.block-select-menu [data-name="section-select-form"] [name="block_in_section_order"]').value = section_id;
+      }
+      controllerModal.view(document.querySelector('[name="block-select-menu"]'));
+   }
+
+   if (event.target.closest('[name="block-select-menu__close"]')) {
+      controllerModal.close(document.querySelector('[name="block-select-menu"]'));
+   }
+}

@@ -7,7 +7,6 @@ import * as Stile from "./stileSelectMenu.js";
 import * as StileMenu from "./stileCreateMenu.js";
 import * as HeadMenu from "./headSettingsMenu.js";
 import * as blocks from "./blocks.js";
-import * as blocks from "./blocks.js";
 
 document.addEventListener('click', (event) => {
    action.view(event)
