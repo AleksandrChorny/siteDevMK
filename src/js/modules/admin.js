@@ -2,7 +2,11 @@ import * as adminTool from "./adminTool.js";
 import * as action from "./action.js";
 import * as controlPanel from "./controlPanel.js";
 import * as sectionMenu from "./sectionMenu.js";
+<<<<<<< HEAD
+=======
+import * as sectionModerationMenu from "./sectionModerationMenu.js";
 import * as blocks from "./blocks.js";
+>>>>>>> add_invisible_to_admin_element_max
 import * as teamplateSettings from "./teamplateSettings.js";
 import * as Stile from "./stileSelectMenu.js";
 import * as StileMenu from "./stileCreateMenu.js";
@@ -35,9 +39,13 @@ document.addEventListener('click', (event) => {
    blocks.view_block_update_param_menu(event);
    blocks.view_block_createParamMenu(event);
    blocks.viewBlockCreateMenu(event);
+<<<<<<< HEAD
+   blocks.viewblockSelectMenu(event);
+=======
    blocks.viewblockSettingsMenu(event);
 
    blocks.viewblockUpdFilesMenu(event);
+>>>>>>> add_invisible_to_admin_element_max
 
    teamplateSettings.viewTeamplateSelectMenu(event);
    teamplateSettings.viewTeamplateCreateMenu(event);
@@ -46,7 +54,6 @@ document.addEventListener('click', (event) => {
    StileMenu.viewStileCreateMenu(event);
 
    HeadMenu.viewheadSettingsMenu(event);
-   blockMenu.viewblockSelectMenu(event);
 })
 
 document.addEventListener('change', (event) => {
