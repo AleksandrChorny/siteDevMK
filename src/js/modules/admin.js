@@ -35,9 +35,7 @@ document.addEventListener('click', (event) => {
    blocks.view_block_update_param_menu(event);
    blocks.view_block_createParamMenu(event);
    blocks.viewBlockCreateMenu(event);
-   blocks.viewblockSettingsMenu(event);
-
-   blocks.viewblockUpdFilesMenu(event);
+   blocks.viewblockSelectMenu(event);
 
    teamplateSettings.viewTeamplateSelectMenu(event);
    teamplateSettings.viewTeamplateCreateMenu(event);
