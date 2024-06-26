@@ -1,5 +1,7 @@
 import * as controllerModal from "./controllerModal.js";
 
+
+
 //Виклик вікна настройки меню "Block"
 export function viewblockSelectMenu(event) {
    if (event.target.closest('[name="btn-view-block-select-menu"]')) {
