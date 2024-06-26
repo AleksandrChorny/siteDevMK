@@ -1,0 +1,55 @@
+<div class="block_moderation_menu" data-name="view-block_moderation_menu">
+   <div class="close-btn" data-name="block_moderation_menu__close"></div>
+   <p class="title-h2">Налаштування Блоку</p>
+   <div class="settings-location section_moderation_menu__block-items _big">
+      <div class="settings-group _view" data-action="view">
+         <p class="title-h3">Параметри секції</p>
+         <div class="settings-item block_moderation_menu__item" data-action="view">
+            <div class="title-h3 settings-item__title">cover-title</div>
+            <button class="copy-key-btn settings-item__copy-key" data-name="block-item-copy-key"
+               title="Скопіювати PHP ключ">Copy
+               key</button>
+            <form class="settings-form settings-item__param-upd-form" action="/setup/params/upd/" title="update params"
+               method="post" enctype="multipart/form-data">
+               <textarea class="textarea" name="title">I am title of cover</textarea>
+               <input type="hidden" name="param_id" value="14">
+               <button class="btn-form" type="submit">OK</button>
+            </form>
+         </div>
+         <form class="settings-form settings-group__add-param-form" action="/setup/params/create/" title="update params"
+            method="post" enctype="multipart/form-data" data-name="param-create-form">
+            <input class="input" name="param_id" value="Новий імʼя параметра">
+            <textarea class="textarea" name="param_id">значення параметра</textarea>
+            <button class="btn-form" type="submit" data-button-name="param-create-form">Додати параметр</button>
+         </form>
+         <!--<button class="block-item__copy-key _view" data-name="block-item-copy-key" title="Скопіювати PHP ключ">Copy
+            key</button>-->
+      </div>
+      <div class="settings-group block_moderation_menu__group _view" data-action="view">
+         <p class="title-h3">Блоки секції</p>
+         <div class="settings-item block_moderation_menu__item" data-action="not view">
+            <div class="title-h3 settings-item__title">cover-title</div>
+            <button class="copy-key-btn settings-item__copy-key" data-name="block-item-copy-key"
+               title="Скопіювати PHP ключ">Copy
+               key</button>
+         </div>
+         <div class="settings-item block_moderation_menu__item" data-action="not view">
+            <div class="title-h3 settings-item__title">cover-title</div>
+            <button class="copy-key-btn settings-item__copy-key" data-name="block-item-copy-key"
+               title="Скопіювати PHP ключ">Copy
+               key</button>
+         </div>
+         <div class="settings-item block_moderation_menu__item" data-action="not view">
+            <div class="title-h3 settings-item__title">cover-title</div>
+            <button class="copy-key-btn settings-item__copy-key" data-name="block-item-copy-key"
+               title="Скопіювати PHP ключ">Copy
+               key</button>
+         </div>
+         <button class="btn-form" type="button" name="btn-view-block-select-menu">block
+            select</button>
+      </div>
+
+   </div>
+   <button class="dark-gray-btn block_moderation_menu__btn-file" type="button"
+      name="view-block-upd-param-menu">Files</button>
+</div>

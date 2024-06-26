@@ -5,11 +5,27 @@
       <p class="block-select-menu__tiles-container-title">Select or create a Block for this Teamplate</p>
       <div class="block-select-menu__tiles-wrapper">
          <!-- Кнопка додавання нового шаблона секції -->
+<<<<<<< HEAD
          <div class="block-select-menu__tile-wrapper">
             <p class="block-select-menu__tile-title">New</p>
             <button class="block-select-menu__tile-add-btn" type="button"
                data-name="btn-view-block-create-menu"></button>
+=======
+         <div>
+            <div class="block-select-menu__tile-wrapper">
+               <p class="block-select-menu__tile-title">New</p>
+               <button class="block-select-menu__tile-add-btn" type="button"
+                  data-name="btn-view-block-create-menu"></button>
+               @@include('block_createMenu.html',{})
+            </div>
+            <div class="block-select-menu__tile-wrapper  _moderation" data-name="btn-view-block-moderation-menu">
+               <p class="block-select-menu__tile-title">New</p>
+               <button class="block-select-menu__tile-add-btn" type="button"
+                  data-name="btn-view-block-create-menu"></button>
+            </div>
+>>>>>>> add_invisible_to_admin_element_max
          </div>
+
 
          <!-- Каталог завантажених шаблонів секцій -->
          <div class="block-select-menu__teamplate-tiles">
@@ -22,7 +38,7 @@
                      <img class="block-select-menu__img" src="\img\admin\mine.jpg" alt="teamplate preview">
                      </span>
                </label>
-               <button class="block-select-menu__title-btn" type="button" name="btn-view-section-upd-files-menu"
+               <button class="block-select-menu__title-btn" type="button" name="btn-view-block-upd-files-menu"
                   data-id="43">UPD</button>
             </div>
 

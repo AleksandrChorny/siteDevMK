@@ -1,14 +1,23 @@
 <div class="section-select-menu">
    <button class="section-select-menu__close"></button>
 
-   <form class="section-select-menu__tiles-container" action="/some/" data-name="section-select-form">
+   <form class="section-select-menu__tiles-container" action="/setup/section/select/" title="select section"
+      method="post" enctype="multipart/form-data">
       <p class="section-select-menu__tiles-container-title">Select or create a Section for this Teamplate</p>
       <div class="section-select-menu__tiles-wrapper">
          <!-- Кнопка додавання нового шаблона секції -->
-         <div class="section-select-menu__tile-wrapper">
-            <p class="section-select-menu__tile-title">New</p>
-            <button class="section-select-menu__tile-add-btn" type="button"></button>
+         <div>
+            <div class="section-select-menu__tile-wrapper">
+               <p class="section-select-menu__tile-title">New</p>
+               <button class="section-select-menu__tile-add-btn" type="button"></button>
+            </div>
+
+            <div class="section-select-menu__tile-wrapper _moderation" data-name="btn-view-section-moderation-menu">
+               <p class="section-select-menu__tile-title">Name</p>
+               <button class="section-select-menu__tile-add-btn" type="button"></button>
+            </div>
          </div>
+
 
          <!-- Каталог завантажених шаблонів секцій -->
          <div class="section-select-menu__teamplate-tiles">
