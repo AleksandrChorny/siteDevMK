@@ -139,108 +139,108 @@
    } 
 
 }
-.upd-params-form {
-   display: flex;
-   flex-direction: column;
-   justify-content: flex-start;
-   align-items: center;
+//.upd-params-form {
+//   display: flex;
+//   flex-direction: row;
+//   justify-content: flex-start;
+//   align-items: center;
 
-   width: 100%;
+//   width: 100%;
 
-   padding: 0;
-   gap: 12px;
+//   padding: 0;
+//   gap: 12px;
 
-   background: transparent;
-   &__items-wrapper {
-      display: flex;
-      flex-direction: column;
-      justify-content: flex-start;
-      align-items: center;
+//   background: transparent;
+//   &__items-wrapper {
+//      display: flex;
+//      flex-direction: column;
+//      justify-content: flex-start;
+//      align-items: center;
 
-      width: 100%;
-      height: 300px;
+//      width: 100%;
+//      height: 130px;
 
-      padding: 0;
-      gap: 8px;
+//      padding: 0;
+//      gap: 8px;
 
-      overflow-y: auto;
-   }
-   &__items {
-      width: 100%;
+//      overflow-y: auto;
+//   }
+//   &__items {
+//      width: 100%;
 
-      padding: 8px;
+//      padding: 8px;
 
-      border-radius: 20px;
-      border: 1px solid #fff;
-      background: rgba(111,111,111,.4);
-      box-shadow: 0 0 8px 0 rgba(0,0,0,.3), 1px 1px 2px 0 rgba(0,0,0,.25) inset;
-      backdrop-filter: blur(20px);
-   }
-   &__title {
-      display: block;
+//      border-radius: 20px;
+//      border: 1px solid #fff;
+//      background: rgba(111,111,111,.4);
+//      box-shadow: 0 0 8px 0 rgba(0,0,0,.3), 1px 1px 2px 0 rgba(0,0,0,.25) inset;
+//      backdrop-filter: blur(20px);
+//   }
+//   &__title {
+//      display: block;
 
-      font-size: 14px;
-      line-height: 14px;
-      font-weight: 700;
-      color: $colorWhite;
-   }
-   &__textarea {
-      display: block;
-      width: 100%;
-      height: 54px;
+//      font-size: 14px;
+//      line-height: 14px;
+//      font-weight: 700;
+//      color: $colorWhite;
+//   }
+//   &__textarea {
+//      display: block;
+//      width: 100%;
+//      height: 54px;
 
-      padding: 8px;
+//      padding: 8px;
 
-      border-radius: 12px;
+//      border-radius: 12px;
 
-      font-size: 12px;
-      line-height: 14px;
-      font-weight: 400;
-      color: $colorDarkGray;
+//      font-size: 12px;
+//      line-height: 14px;
+//      font-weight: 400;
+//      color: $colorDarkGray;
 
-      background: $colorLightGray;
-      box-shadow: inset 1px 1px 4px 0 rgba(0,0,0,.4);
-      border: solid 1px $colorLightGray;
-   }
-   &__title {
-      display: block;
+//      background: $colorLightGray;
+//      box-shadow: inset 1px 1px 4px 0 rgba(0,0,0,.4);
+//      border: solid 1px $colorLightGray;
+//   }
+//   &__title {
+//      display: block;
 
-      margin-bottom: 8px;
+//      margin-bottom: 8px;
 
-      color: $colorWhite;
-      font-family: Montserrat;
-      font-size: 14px;
-      font-style: normal;
-      font-weight: 700;
-      line-height: 14px;
-      text-align: center;
-   }
-   &__btn {
-      display: flex;
-      justify-content: center;
-      align-items: center;
+//      color: $colorWhite;
+//      font-family: Montserrat;
+//      font-size: 14px;
+//      font-style: normal;
+//      font-weight: 700;
+//      line-height: 14px;
+//      text-align: center;
+//   }
+//   &__btn {
+//      display: flex;
+//      justify-content: center;
+//      align-items: center;
 
-      width: fit-content;
-      padding: 16px 32px;
+//      width: fit-content;
+//      padding: 16px 32px;
 
-      color: $colorWhite;
+//      color: $colorWhite;
 
-      font-family: Montserrat;
-      font-size: 16px;
-      font-style: normal;
-      font-weight: 400;
-      line-height: 16px;
+//      font-family: Montserrat;
+//      font-size: 16px;
+//      font-style: normal;
+//      font-weight: 400;
+//      line-height: 16px;
 
-      border-radius: 12px;
-      background: $colorOrange;
-      box-shadow: 1px 1px 2px 0px rgba(0, 0, 0, 0.25);
+//      border-radius: 12px;
+//      background: $colorOrange;
+//      box-shadow: 1px 1px 2px 0px rgba(0, 0, 0, 0.25);
 
-      transition: all .3s;
-      &:hover{
-         background: $colorLightOrange;
-      }
-   }
-}
+//      transition: all .3s;
+//      &:hover{
+//         background: $colorLightOrange;
+//      }
+//   }
+//}
 .copy-key {
    //display: block;
    display: flex;

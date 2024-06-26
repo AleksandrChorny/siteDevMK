@@ -1,6 +1,9 @@
+
 //Підключення кольорів проекту
 @import "_colorsOfProgects";
 
+//Підключення стилів загальних блоків
+@import "./admin/_globalBlocks";
 //підключення стилів
 @import "./admin/_adminToolsSwitch";
 @import "./admin/_CreateNewPageBtn";
@@ -15,9 +18,11 @@
 
 
 @import "./admin/_sectionSelectMenu";
+@import "./admin/_section_moderationMenu";
 @import "./admin/_createSectionParam";
 @import "./admin/_sectionUpdateFilesMenu";
 @import "./admin/_sectionsUpdParamMenu";
+@import "./admin/_block_moderationMenu";
 @import "./admin/_block_UpdateFilesMenu";
 @import "./admin/_blockUpdParamsMenu";
 @import "./admin/_block_createParamMenu";

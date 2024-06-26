@@ -1,5 +1,15 @@
 import * as controllerModal from "./controllerModal.js";
 
+export function viewBlockModerationMenu(event) {
+   if (event.target.closest("[data-name='btn-view-block-moderation-menu']")) {
+      controllerModal.view(document.querySelector('[data-name="view-block_moderation_menu"]'));
+   }
+
+   if (event.target.closest('[data-name="block_moderation_menu__close"]')) {
+      controllerModal.close(document.querySelector('[data-name="view-block_moderation_menu"]'));
+   }
+}
+
 export function view_block_update_param_menu(event) {
    if (event.target.name == 'btn-view-block-upd-param-menu') {
       const sectionUpdMenuBlockItems = event.target.closest(".section-settings-menu__block-items");

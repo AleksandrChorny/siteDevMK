@@ -48,6 +48,46 @@ export function viewCreateSectionMenu(event) {
    }
 }
 
+export function viewSectionModerationMenu(event) {
+   if (event.target.closest("[data-name='btn-view-section-moderation-menu']")) {
+      //const section_number = event.target.closest("[data-name='btn-view-section-select-menu']").dataset.sectionNumber;
+      //if (!section_number) {
+      //   alert('Увага! В кнопці відсутній "data-section-number"!! Нова секція додасться в кінець сторінки');
+      //}
+      //const hidden_input = create_hidden_input('section_number', section_number);
+      //const section_select_form = document.querySelector('[data-name="section-select-form"]');
+      //if (section_select_form) {
+      //   section_select_form.prepend(hidden_input);
+      //}
+      controllerModal.view(document.querySelector('[data-name="view-section_moderation_menu"]'));
+   }
+
+   if (event.target.closest('[data-name="section_moderation_menu__close"]')) {
+      controllerModal.close(document.querySelector('[data-name="view-section_moderation_menu"]'));
+   }
+}
+
+export function viewBlockParam(event) {
+   if (event.target.closest('[data-name="btn-view-block-param"]')) {
+      if (event.target.closest('[data-name="param-items"]')) {
+         return;
+      }
+      const blockItems = event.target.closest('[data-name="btn-view-block-param"]');
+
+      controllerModal.view(blockItems.querySelector('[data-name="param-items"]'));
+      if (blockItems.querySelector('[data-name="block-item-copy-key"]')) {
+         controllerModal.view(blockItems.querySelector('[data-name="block-item-copy-key"]'));
+      }
+   }
+}
+
+export function viewParamUpdForm(event) {
+   if (event.target.closest('[data-name="btn-view-param-upd-form"]')) {
+      const paramUpdForm = event.target.closest('[data-name="btn-view-param-upd-form"]').nextElementSibling;
+      controllerModal.view(paramUpdForm);
+   }
+}
+
 export function setFileNameInCreateSectionMenu() {
    const inputs = document.querySelectorAll('.create-section-menu__upload-block-wrapper .create-section-menu__input');
 
@@ -84,11 +124,11 @@ export function viewSectionSettingsMenu(event) {
       && event.target.closest(".management__button").name == 'view-section-settings-menu'
    ) {
       const controlPanel = event.target.closest(".section-control-panel");
-      controllerModal.view(controlPanel.querySelector('.section-settings-menu'));
+      controllerModal.view(controlPanel.querySelector('[data-name="section-settings-menu"]'));
    }
-   if (event.target.closest(".section-settings-menu__close")) {
+   if (event.target.closest('[data-button-name="close-section-settings-menu"]')) {
       const controlPanel = event.target.closest(".section-control-panel");
-      controllerModal.close(controlPanel.querySelector(".section-settings-menu"));
+      controllerModal.close(controlPanel.querySelector('[data-name="section-settings-menu"]'));
       controllerModal.close(controlPanel.querySelector(".section-upd-params-menu"));
       //controllerModal.close(controlPanel.querySelector(".create-section-param"));
    }
