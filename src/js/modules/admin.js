@@ -2,11 +2,13 @@ import * as adminTool from "./adminTool.js";
 import * as action from "./action.js";
 import * as controlPanel from "./controlPanel.js";
 import * as sectionMenu from "./sectionMenu.js";
+import * as sectionModerationMenu from "./sectionModerationMenu.js";
+import * as blocks from "./blocks.js";
 import * as teamplateSettings from "./teamplateSettings.js";
 import * as Stile from "./stileSelectMenu.js";
 import * as StileMenu from "./stileCreateMenu.js";
 import * as HeadMenu from "./headSettingsMenu.js";
-import * as blocks from "./blocks.js";
+import * as blockMenu from "./blockSelectMenu.js";
 
 document.addEventListener('click', (event) => {
    action.view(event)
@@ -30,7 +32,9 @@ document.addEventListener('click', (event) => {
    blocks.view_block_update_param_menu(event);
    blocks.view_block_createParamMenu(event);
    blocks.viewBlockCreateMenu(event);
-   blocks.viewblockSelectMenu(event);
+   blocks.viewblockSettingsMenu(event);
+
+   blocks.viewblockUpdFilesMenu(event);
 
    teamplateSettings.viewTeamplateSelectMenu(event);
    teamplateSettings.viewTeamplateCreateMenu(event);
@@ -39,6 +43,7 @@ document.addEventListener('click', (event) => {
    StileMenu.viewStileCreateMenu(event);
 
    HeadMenu.viewheadSettingsMenu(event);
+   blockMenu.viewblockSelectMenu(event);
 })
 
 document.addEventListener('change', (event) => {
@@ -46,3 +51,4 @@ document.addEventListener('change', (event) => {
 
    sectionMenu.setFileNameInCreateSectionMenu();
 })
+console.log(navigator.clipboard.writeText('text'))
