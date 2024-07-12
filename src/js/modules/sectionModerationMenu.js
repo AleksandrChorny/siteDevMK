@@ -1,7 +1,5 @@
 import * as controllerModal from "./controllerModal.js";
 
-console.log('dved');
-
 export function viewParamCreateForm(event) {
 
    if (event.target.closest('[data-button-name="param-create-form"]')) {

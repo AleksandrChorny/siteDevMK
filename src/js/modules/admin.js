@@ -9,6 +9,7 @@ import * as Stile from "./stileSelectMenu.js";
 import * as StileMenu from "./stileCreateMenu.js";
 import * as HeadMenu from "./headSettingsMenu.js";
 import * as blockMenu from "./blockSelectMenu.js";
+import * as modalWindow from "./modalWindow.js";
 
 document.addEventListener('click', (event) => {
    action.view(event)
@@ -44,6 +45,7 @@ document.addEventListener('click', (event) => {
 
    HeadMenu.viewheadSettingsMenu(event);
    blockMenu.viewblockSelectMenu(event);
+   modalWindow.close(event);
 })
 
 document.addEventListener('change', (event) => {
