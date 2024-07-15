@@ -188,6 +188,8 @@
       
       overflow-x: auto;
 
+      display: none;
+
       &::-webkit-scrollbar {
          height: 0;
          padding-top: 4px;
@@ -199,6 +201,9 @@
             height: 8px;
          }
          }
+      &._view {
+         display: flex;
+      }
    }
    &__tile-wrapper{
       position: relative;
