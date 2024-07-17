@@ -6,78 +6,371 @@
       <p class="section-select-menu__tiles-container-title">Select or create a Section for this Teamplate</p>
       <div class="section-select-menu__tiles-wrapper">
          <!-- Кнопка додавання нового шаблона секції -->
-          <div class="section-select-menu__selectors">
-               <button class="new-bookmarks-button" type="button">NEW Section</button>
-               <div class="bookmarks-panel">
-                  <button class="bookmarks " type="button">available Sections</button>
-                  <button class="bookmarks _active" type="button">on moderation</button>
-                  <button class="bookmarks" type="button">archive</button>
-                  <button class="bookmarks _add" type="button" title="Додати новий тип секції">new type</button>
-               </div>
+         <div class="section-select-menu__selectors">
+            <button class="new-bookmarks-button" type="button" data-button-name="section-create">NEW Section</button>
+            <div class="bookmarks-panel">
+               <button class="bookmarks _active" type="button" data-button-name="section-type"
+                  data-type="available">available
+                  Sections</button>
+               <button class="bookmarks" type="button" data-button-name="section-type" data-type="on moderation">on
+                  moderation</button>
+               <button class="bookmarks" type="button" data-button-name="section-type"
+                  data-type="archive">archive</button>
+               <button class="bookmarks _add" type="button" title="Додати новий тип секції">new type</button>
+            </div>
          </div>
 
          <!-- Каталог завантажених шаблонів секцій -->
-         <div class="section-select-menu__teamplate-tiles">
+         <div class="section-select-menu__teamplate-tiles _view" data-name="section-tile" data-type="available">
             <!-- Картка шаблона секції -->
             <div class="section-select-menu__tile-wrapper">
                <label class="section-select-menu__tile">
                   <input class="section-select-menu__radio" type="radio" value="Mine" name="section-id"
                      value="sectionId">
-                  Mine
+                  Mine1
                   <spun class="section-select-menu__tile-img">
                      <img class="section-select-menu__img" src="\img\admin\mine.jpg" alt="teamplate preview">
-                  </span>
+                     </span>
                </label>
-               <button class="section-select-menu__title-btn" type="button" name="btn-view-section-upd-files-menu"
+               <button class="section-select-menu__title-btn" type="button" data-button-name="section-upd"
                   data-id="43">UPD</button>
+               <div class="section_moderation_menu" data-name="section-moderation-menu">
+                  <div class="close-btn" data-name="section_moderation_menu__close"></div>
+                  <p class="title-h2">Налаштування секції: <br> "section name main1"</p>
+                  <div class="location-place grid-column-all section_moderation_menu__block-items _big">
+                     <div class="settings-group" data-name="groups-of-params">
+                        <p class="title-h3">Параметри секції</p>
+                        <div class="settings-item section_moderation_menu__item" data-name="param-panel">
+                           <div class="title-h3 settings-item__title">cover-title</div>
+                           <button class="copy-key-btn settings-item__copy-key" data-name="block-item-copy-key"
+                              title="Скопіювати PHP ключ">Copy
+                              key</button>
+                           <form class="settings-form settings-item__param-upd-form" action="/setup/params/upd/"
+                              title="update params" method="post" enctype="multipart/form-data" name="param-upd-form">
+                              <textarea class="textarea" name="title">I am title of cover</textarea>
+                              <input type="hidden" name="param_id" value="14">
+                              <button class="btn-form" type="submit">OK</button>
+                           </form>
+                        </div>
+                        <form class="settings-form settings-group__add-param-form" action="/setup/params/create/"
+                           title="update params" method="post" enctype="multipart/form-data"
+                           data-name="param-create-form">
+                           <input class="input" name="param_id" value="Новий імʼя параметра">
+                           <textarea class="textarea" name="param_id">значення параметра</textarea>
+                           <button class="btn-form" type="submit" data-button-name="param-create-form">Додати
+                              параметр</button>
+                        </form>
+                        <!--<button class="block-item__copy-key _view" data-name="block-item-copy-key" title="Скопіювати PHP ключ">Copy
+                              key</button>-->
+                     </div>
+                     <div class="settings-group section_moderation_menu__group" data-name="groups-of-blocks">
+                        <p class="title-h3">Блоки секції</p>
+                        <div class="settings-item section_moderation_menu__item">
+                           <div class="title-h3 settings-item__title">cover-title</div>
+                           <button class="copy-key-btn settings-item__copy-key" data-name="block-item-copy-key"
+                              title="Скопіювати PHP ключ">Copy
+                              key</button>
+                        </div>
+                        <div class="settings-item section_moderation_menu__item" data-name="param-panel">
+                           <div class="title-h3 settings-item__title">cover-title</div>
+                           <button class="copy-key-btn settings-item__copy-key" data-name="block-item-copy-key"
+                              title="Скопіювати PHP ключ">Copy
+                              key</button>
+                        </div>
+                        <div class="settings-item section_moderation_menu__item" data-name="param-panel">
+                           <div class="title-h3 settings-item__title">cover-title</div>
+                           <button class="copy-key-btn settings-item__copy-key" data-name="block-item-copy-key"
+                              title="Скопіювати PHP ключ">Copy
+                              key</button>
+                        </div>
+                        <button class="btn-form" type="button" name="btn-view-block-select-menu">block
+                           select</button>
+                     </div>
+
+                  </div>
+                  <button class="dark-gray-btn section_moderation_menu__btn-file" type="button"
+                     name="view-block-upd-param-menu">Files</button>
+               </div>
             </div>
 
             <div class="section-select-menu__tile-wrapper">
                <label class="section-select-menu__tile">
-                  <input class="section-select-menu__radio" type="radio" name="section-id" value="sectionId">
-                  Mine
+                  <input class="section-select-menu__radio" type="radio" value="Mine" name="section-id"
+                     value="sectionId">
+                  Mine1
                   <spun class="section-select-menu__tile-img">
                      <img class="section-select-menu__img" src="\img\admin\mine.jpg" alt="teamplate preview">
                      </span>
                </label>
-               <button class="section-select-menu__title-btn" type="button" name="view-upd-section-menu"
-                  data-id="44">UPD</button>
+               <button class="section-select-menu__title-btn" type="button" data-button-name="section-upd"
+                  data-id="43">UPD</button>
+               <div class="section_moderation_menu" data-name="section-moderation-menu">
+                  <div class="close-btn" data-name="section_moderation_menu__close"></div>
+                  <p class="title-h2">Налаштування секції: <br> "section name main1"</p>
+                  <div class="location-place grid-column-all section_moderation_menu__block-items _big">
+                     <div class="settings-group" data-name="groups-of-params">
+                        <p class="title-h3">Параметри секції</p>
+                        <div class="settings-item section_moderation_menu__item" data-name="param-panel">
+                           <div class="title-h3 settings-item__title">cover-title</div>
+                           <button class="copy-key-btn settings-item__copy-key" data-name="block-item-copy-key"
+                              title="Скопіювати PHP ключ">Copy
+                              key</button>
+                           <form class="settings-form settings-item__param-upd-form" action="/setup/params/upd/"
+                              title="update params" method="post" enctype="multipart/form-data" name="param-upd-form">
+                              <textarea class="textarea" name="title">I am title of cover</textarea>
+                              <input type="hidden" name="param_id" value="14">
+                              <button class="btn-form" type="submit">OK</button>
+                           </form>
+                        </div>
+                        <form class="settings-form settings-group__add-param-form" action="/setup/params/create/"
+                           title="update params" method="post" enctype="multipart/form-data"
+                           data-name="param-create-form">
+                           <input class="input" name="param_id" value="Новий імʼя параметра">
+                           <textarea class="textarea" name="param_id">значення параметра</textarea>
+                           <button class="btn-form" type="submit" data-button-name="param-create-form">Додати
+                              параметр</button>
+                        </form>
+                        <!--<button class="block-item__copy-key _view" data-name="block-item-copy-key" title="Скопіювати PHP ключ">Copy
+                              key</button>-->
+                     </div>
+                     <div class="settings-group section_moderation_menu__group" data-name="groups-of-blocks">
+                        <p class="title-h3">Блоки секції</p>
+                        <div class="settings-item section_moderation_menu__item">
+                           <div class="title-h3 settings-item__title">cover-title</div>
+                           <button class="copy-key-btn settings-item__copy-key" data-name="block-item-copy-key"
+                              title="Скопіювати PHP ключ">Copy
+                              key</button>
+                        </div>
+                        <div class="settings-item section_moderation_menu__item" data-name="param-panel">
+                           <div class="title-h3 settings-item__title">cover-title</div>
+                           <button class="copy-key-btn settings-item__copy-key" data-name="block-item-copy-key"
+                              title="Скопіювати PHP ключ">Copy
+                              key</button>
+                        </div>
+                        <div class="settings-item section_moderation_menu__item" data-name="param-panel">
+                           <div class="title-h3 settings-item__title">cover-title</div>
+                           <button class="copy-key-btn settings-item__copy-key" data-name="block-item-copy-key"
+                              title="Скопіювати PHP ключ">Copy
+                              key</button>
+                        </div>
+                        <button class="btn-form" type="button" name="btn-view-block-select-menu">block
+                           select</button>
+                     </div>
+
+                  </div>
+                  <button class="dark-gray-btn section_moderation_menu__btn-file" type="button"
+                     name="view-block-upd-param-menu">Files</button>
+               </div>
             </div>
 
             <div class="section-select-menu__tile-wrapper">
                <label class="section-select-menu__tile">
-                  <input class="section-select-menu__radio" type="radio" name="section-id" value="sectionId">
-                  Mine
+                  <input class="section-select-menu__radio" type="radio" value="Mine" name="section-id"
+                     value="sectionId">
+                  Mine1
                   <spun class="section-select-menu__tile-img">
                      <img class="section-select-menu__img" src="\img\admin\mine.jpg" alt="teamplate preview">
                      </span>
                </label>
-               <button class="section-select-menu__title-btn" type="button" name="view-upd-section-menu"
-                  data-id="45">UPD</button>
+               <button class="section-select-menu__title-btn" type="button" data-button-name="section-upd"
+                  data-id="43">UPD</button>
+               <div class="section_moderation_menu" data-name="section-moderation-menu">
+                  <div class="close-btn" data-name="section_moderation_menu__close"></div>
+                  <p class="title-h2">Налаштування секції: <br> "section name main1"</p>
+                  <div class="location-place grid-column-all section_moderation_menu__block-items _big">
+                     <div class="settings-group" data-name="groups-of-params">
+                        <p class="title-h3">Параметри секції</p>
+                        <div class="settings-item section_moderation_menu__item" data-name="param-panel">
+                           <div class="title-h3 settings-item__title">cover-title</div>
+                           <button class="copy-key-btn settings-item__copy-key" data-name="block-item-copy-key"
+                              title="Скопіювати PHP ключ">Copy
+                              key</button>
+                           <form class="settings-form settings-item__param-upd-form" action="/setup/params/upd/"
+                              title="update params" method="post" enctype="multipart/form-data" name="param-upd-form">
+                              <textarea class="textarea" name="title">I am title of cover</textarea>
+                              <input type="hidden" name="param_id" value="14">
+                              <button class="btn-form" type="submit">OK</button>
+                           </form>
+                        </div>
+                        <form class="settings-form settings-group__add-param-form" action="/setup/params/create/"
+                           title="update params" method="post" enctype="multipart/form-data"
+                           data-name="param-create-form">
+                           <input class="input" name="param_id" value="Новий імʼя параметра">
+                           <textarea class="textarea" name="param_id">значення параметра</textarea>
+                           <button class="btn-form" type="submit" data-button-name="param-create-form">Додати
+                              параметр</button>
+                        </form>
+                        <!--<button class="block-item__copy-key _view" data-name="block-item-copy-key" title="Скопіювати PHP ключ">Copy
+                              key</button>-->
+                     </div>
+                     <div class="settings-group section_moderation_menu__group" data-name="groups-of-blocks">
+                        <p class="title-h3">Блоки секції</p>
+                        <div class="settings-item section_moderation_menu__item">
+                           <div class="title-h3 settings-item__title">cover-title</div>
+                           <button class="copy-key-btn settings-item__copy-key" data-name="block-item-copy-key"
+                              title="Скопіювати PHP ключ">Copy
+                              key</button>
+                        </div>
+                        <div class="settings-item section_moderation_menu__item" data-name="param-panel">
+                           <div class="title-h3 settings-item__title">cover-title</div>
+                           <button class="copy-key-btn settings-item__copy-key" data-name="block-item-copy-key"
+                              title="Скопіювати PHP ключ">Copy
+                              key</button>
+                        </div>
+                        <div class="settings-item section_moderation_menu__item" data-name="param-panel">
+                           <div class="title-h3 settings-item__title">cover-title</div>
+                           <button class="copy-key-btn settings-item__copy-key" data-name="block-item-copy-key"
+                              title="Скопіювати PHP ключ">Copy
+                              key</button>
+                        </div>
+                        <button class="btn-form" type="button" name="btn-view-block-select-menu">block
+                           select</button>
+                     </div>
+
+                  </div>
+                  <button class="dark-gray-btn section_moderation_menu__btn-file" type="button"
+                     name="view-block-upd-param-menu">Files</button>
+               </div>
             </div>
 
             <div class="section-select-menu__tile-wrapper">
                <label class="section-select-menu__tile">
-                  <input class="section-select-menu__radio" type="radio" name="section-id" value="sectionId">
-                  Mine
+                  <input class="section-select-menu__radio" type="radio" value="Mine" name="section-id"
+                     value="sectionId">
+                  Mine1
                   <spun class="section-select-menu__tile-img">
                      <img class="section-select-menu__img" src="\img\admin\mine.jpg" alt="teamplate preview">
                      </span>
                </label>
-               <button class="section-select-menu__title-btn" type="button" name="view-upd-section-menu"
-                  data-id="46">UPD</button>
+               <button class="section-select-menu__title-btn" type="button" data-button-name="section-upd"
+                  data-id="43">UPD</button>
+               <div class="section_moderation_menu" data-name="section-moderation-menu">
+                  <div class="close-btn" data-name="section_moderation_menu__close"></div>
+                  <p class="title-h2">Налаштування секції: <br> "section name main1"</p>
+                  <div class="location-place grid-column-all section_moderation_menu__block-items _big">
+                     <div class="settings-group" data-name="groups-of-params">
+                        <p class="title-h3">Параметри секції</p>
+                        <div class="settings-item section_moderation_menu__item" data-name="param-panel">
+                           <div class="title-h3 settings-item__title">cover-title</div>
+                           <button class="copy-key-btn settings-item__copy-key" data-name="block-item-copy-key"
+                              title="Скопіювати PHP ключ">Copy
+                              key</button>
+                           <form class="settings-form settings-item__param-upd-form" action="/setup/params/upd/"
+                              title="update params" method="post" enctype="multipart/form-data" name="param-upd-form">
+                              <textarea class="textarea" name="title">I am title of cover</textarea>
+                              <input type="hidden" name="param_id" value="14">
+                              <button class="btn-form" type="submit">OK</button>
+                           </form>
+                        </div>
+                        <form class="settings-form settings-group__add-param-form" action="/setup/params/create/"
+                           title="update params" method="post" enctype="multipart/form-data"
+                           data-name="param-create-form">
+                           <input class="input" name="param_id" value="Новий імʼя параметра">
+                           <textarea class="textarea" name="param_id">значення параметра</textarea>
+                           <button class="btn-form" type="submit" data-button-name="param-create-form">Додати
+                              параметр</button>
+                        </form>
+                        <!--<button class="block-item__copy-key _view" data-name="block-item-copy-key" title="Скопіювати PHP ключ">Copy
+                              key</button>-->
+                     </div>
+                     <div class="settings-group section_moderation_menu__group" data-name="groups-of-blocks">
+                        <p class="title-h3">Блоки секції</p>
+                        <div class="settings-item section_moderation_menu__item">
+                           <div class="title-h3 settings-item__title">cover-title</div>
+                           <button class="copy-key-btn settings-item__copy-key" data-name="block-item-copy-key"
+                              title="Скопіювати PHP ключ">Copy
+                              key</button>
+                        </div>
+                        <div class="settings-item section_moderation_menu__item" data-name="param-panel">
+                           <div class="title-h3 settings-item__title">cover-title</div>
+                           <button class="copy-key-btn settings-item__copy-key" data-name="block-item-copy-key"
+                              title="Скопіювати PHP ключ">Copy
+                              key</button>
+                        </div>
+                        <div class="settings-item section_moderation_menu__item" data-name="param-panel">
+                           <div class="title-h3 settings-item__title">cover-title</div>
+                           <button class="copy-key-btn settings-item__copy-key" data-name="block-item-copy-key"
+                              title="Скопіювати PHP ключ">Copy
+                              key</button>
+                        </div>
+                        <button class="btn-form" type="button" name="btn-view-block-select-menu">block
+                           select</button>
+                     </div>
+
+                  </div>
+                  <button class="dark-gray-btn section_moderation_menu__btn-file" type="button"
+                     name="view-block-upd-param-menu">Files</button>
+               </div>
             </div>
 
             <div class="section-select-menu__tile-wrapper">
                <label class="section-select-menu__tile">
-                  <input class="section-select-menu__radio" type="radio" name="section-id" value="sectionId">
-                  Mine
+                  <input class="section-select-menu__radio" type="radio" value="Mine" name="section-id"
+                     value="sectionId">
+                  Mine1
                   <spun class="section-select-menu__tile-img">
                      <img class="section-select-menu__img" src="\img\admin\mine.jpg" alt="teamplate preview">
                      </span>
                </label>
-               <button class="section-select-menu__title-btn" type="button" name="view-upd-section-menu"
-                  data-id="1">UPD</button>
+               <button class="section-select-menu__title-btn" type="button" data-button-name="section-upd"
+                  data-id="43">UPD</button>
+               <div class="section_moderation_menu" data-name="section-moderation-menu">
+                  <div class="close-btn" data-name="section_moderation_menu__close"></div>
+                  <p class="title-h2">Налаштування секції: <br> "section name main1"</p>
+                  <div class="location-place grid-column-all section_moderation_menu__block-items _big">
+                     <div class="settings-group" data-name="groups-of-params">
+                        <p class="title-h3">Параметри секції</p>
+                        <div class="settings-item section_moderation_menu__item" data-name="param-panel">
+                           <div class="title-h3 settings-item__title">cover-title</div>
+                           <button class="copy-key-btn settings-item__copy-key" data-name="block-item-copy-key"
+                              title="Скопіювати PHP ключ">Copy
+                              key</button>
+                           <form class="settings-form settings-item__param-upd-form" action="/setup/params/upd/"
+                              title="update params" method="post" enctype="multipart/form-data" name="param-upd-form">
+                              <textarea class="textarea" name="title">I am title of cover</textarea>
+                              <input type="hidden" name="param_id" value="14">
+                              <button class="btn-form" type="submit">OK</button>
+                           </form>
+                        </div>
+                        <form class="settings-form settings-group__add-param-form" action="/setup/params/create/"
+                           title="update params" method="post" enctype="multipart/form-data"
+                           data-name="param-create-form">
+                           <input class="input" name="param_id" value="Новий імʼя параметра">
+                           <textarea class="textarea" name="param_id">значення параметра</textarea>
+                           <button class="btn-form" type="submit" data-button-name="param-create-form">Додати
+                              параметр</button>
+                        </form>
+                        <!--<button class="block-item__copy-key _view" data-name="block-item-copy-key" title="Скопіювати PHP ключ">Copy
+                              key</button>-->
+                     </div>
+                     <div class="settings-group section_moderation_menu__group" data-name="groups-of-blocks">
+                        <p class="title-h3">Блоки секції</p>
+                        <div class="settings-item section_moderation_menu__item">
+                           <div class="title-h3 settings-item__title">cover-title</div>
+                           <button class="copy-key-btn settings-item__copy-key" data-name="block-item-copy-key"
+                              title="Скопіювати PHP ключ">Copy
+                              key</button>
+                        </div>
+                        <div class="settings-item section_moderation_menu__item" data-name="param-panel">
+                           <div class="title-h3 settings-item__title">cover-title</div>
+                           <button class="copy-key-btn settings-item__copy-key" data-name="block-item-copy-key"
+                              title="Скопіювати PHP ключ">Copy
+                              key</button>
+                        </div>
+                        <div class="settings-item section_moderation_menu__item" data-name="param-panel">
+                           <div class="title-h3 settings-item__title">cover-title</div>
+                           <button class="copy-key-btn settings-item__copy-key" data-name="block-item-copy-key"
+                              title="Скопіювати PHP ключ">Copy
+                              key</button>
+                        </div>
+                        <button class="btn-form" type="button" name="btn-view-block-select-menu">block
+                           select</button>
+                     </div>
+
+                  </div>
+                  <button class="dark-gray-btn section_moderation_menu__btn-file" type="button"
+                     name="view-block-upd-param-menu">Files</button>
+               </div>
             </div>
 
             <div class="section-select-menu__tile-wrapper">
@@ -92,7 +385,7 @@
                   data-id="3">UPD</button>
             </div>
          </div>
-         <div class="section-select-menu__teamplate-tiles _view">
+         <div class="section-select-menu__teamplate-tiles" data-name="section-tile" data-type="on moderation">
             <!-- Картка шаблона секції -->
             <div class="section-select-menu__tile-wrapper">
                <label class="section-select-menu__tile">
@@ -101,7 +394,7 @@
                   Mine
                   <spun class="section-select-menu__tile-img">
                      <img class="section-select-menu__img" src="\img\admin\mine.jpg" alt="teamplate preview">
-                  </span>
+                     </span>
                </label>
                <button class="section-select-menu__title-btn" type="button" name="btn-view-section-upd-files-menu"
                   data-id="43">UPD</button>
@@ -130,41 +423,20 @@
                <button class="section-select-menu__title-btn" type="button" name="view-upd-section-menu"
                   data-id="45">UPD</button>
             </div>
-
+         </div>
+         <div class="section-select-menu__teamplate-tiles" data-name="section-tile" data-type="archive">
+            <!-- Картка шаблона секції -->
             <div class="section-select-menu__tile-wrapper">
                <label class="section-select-menu__tile">
-                  <input class="section-select-menu__radio" type="radio" name="section-id" value="sectionId">
+                  <input class="section-select-menu__radio" type="radio" value="Mine" name="section-id"
+                     value="sectionId">
                   Mine
                   <spun class="section-select-menu__tile-img">
                      <img class="section-select-menu__img" src="\img\admin\mine.jpg" alt="teamplate preview">
                      </span>
                </label>
-               <button class="section-select-menu__title-btn" type="button" name="view-upd-section-menu"
-                  data-id="46">UPD</button>
-            </div>
-
-            <div class="section-select-menu__tile-wrapper">
-               <label class="section-select-menu__tile">
-                  <input class="section-select-menu__radio" type="radio" name="section-id" value="sectionId">
-                  Mine
-                  <spun class="section-select-menu__tile-img">
-                     <img class="section-select-menu__img" src="\img\admin\mine.jpg" alt="teamplate preview">
-                     </span>
-               </label>
-               <button class="section-select-menu__title-btn" type="button" name="view-upd-section-menu"
-                  data-id="1">UPD</button>
-            </div>
-
-            <div class="section-select-menu__tile-wrapper">
-               <label class="section-select-menu__tile">
-                  <input class="section-select-menu__radio" type="radio" name="section-id" value="sectionId">
-                  Mine
-                  <spun class="section-select-menu__tile-img">
-                     <img class="section-select-menu__img" src="\img\admin\mine.jpg" alt="teamplate preview">
-                     </span>
-               </label>
-               <button class="section-select-menu__title-btn" type="button" name="view-upd-section-menu"
-                  data-id="3">UPD</button>
+               <button class="section-select-menu__title-btn" type="button" name="btn-view-section-upd-files-menu"
+                  data-id="43">UPD</button>
             </div>
          </div>
 

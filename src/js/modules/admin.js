@@ -1,5 +1,4 @@
 import * as adminTool from "./adminTool.js";
-import * as action from "./action.js";
 import * as controlPanel from "./controlPanel.js";
 import * as sectionMenu from "./sectionMenu.js";
 import * as sectionModerationMenu from "./sectionModerationMenu.js";
@@ -12,21 +11,23 @@ import * as blockMenu from "./blockSelectMenu.js";
 import * as modalWindow from "./modalWindow.js";
 
 document.addEventListener('click', (event) => {
-   action.view(event)
    controlPanel.viewControlPanel(event);
 
    sectionMenu.view_select_section_menu(event);
    sectionMenu.viewBlockParam(event);
    sectionMenu.viewParamUpdForm(event);
    sectionMenu.viewCreateSectionMenu(event);
-   sectionMenu.viewSectionModerationMenu(event);
    sectionMenu.viewSectionSettingsMenu(event);
    //sectionMenu.addSectionNumberToDataSectionNamber(event);
    sectionMenu.view_section_update_files_menu(event);
+   sectionMenu.viewSectionModerationMenu(event);
    sectionMenu.viewSectionCreateParamMenu(event);
    sectionMenu.viewUpdSectionParamMenu(event);
+   sectionMenu.viewSectionType(event);
 
    sectionModerationMenu.viewParamCreateForm(event);
+   sectionModerationMenu.activeSettingsGroup(event);
+   sectionModerationMenu.viewParamUpdForm(event);
 
 
    blocks.viewBlockModerationMenu(event);

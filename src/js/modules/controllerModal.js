@@ -5,3 +5,11 @@ export function view(element) {
 export function close(element) {
    element.classList.remove('_view');
 }
+
+export function activate(element) {
+   element.classList.add('_active');
+}
+export function deActivate(element) {
+   element.classList.remove('_active');
+}
+
