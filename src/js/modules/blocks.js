@@ -1,4 +1,5 @@
 import * as controllerModal from "./controllerModal.js";
+import * as fetchUrl from "./fetchUrl.js";
 
 export function viewBlockModerationMenu(event) {
    if (event.target.closest("[data-name='btn-view-block-moderation-menu']")) {
@@ -36,24 +37,26 @@ export function view_block_createParamMenu(event) {
 }
 
 export function viewBlockCreateMenu(event) {
-   if (event.target.closest('[data-name="btn-view-block-create-menu"]')) {
-      const block_createMenu = event.target.closest('[data-name="btn-view-block-create-menu"]').nextElementSibling;
-      if (block_createMenu) {
-         const clone = block_createMenu.cloneNode(true);
-         document.body.append(clone);
-         controllerModal.view(clone);
-         return;
-      }
-      alert('Меню додавання блоку відсутне в панелі адміністратора. Будьласка зверніться до адміністратора');
+   const buttonView = event.target.closest('[data-button-name="block-create"]');
+   const buttonClose = event.target.closest('[data-button-name="close-block-create-menu"]');
+
+   if (buttonView) {
+      const url = buttonView.dataset.url;
+      //console.log(url);
+      const data = { 'section_id': 'section_id' };
+      // Вызываем функцию
+      //fetchUrl.htmlIncludeForDeveping(url);
+      fetchUrl.getUrlJSON(url)
+         .then((data) => {
+            document.body.innerHTML += data;
+         });
    }
 
-   if (event.target.closest('[data-name="btn-close-block-create-menu"]')) {
+   if (buttonClose) {
       if (event.target.closest('[data-name="block-create-menu"]')) {
-         controllerModal.close(event.target.closest('[data-name="block-create-menu"]'))
+         event.target.closest('[data-name="block-create-menu"]').remove();
          return;
       }
-      console.log('не можу закрити меню не вистачає дата-елемента. Зверніться до адміністратора');
-      alert('Вибачте, щось пішло не так, зверніться до адміністратора, або спробуйте перезавантажити сторінку');
    }
 }
 export function viewblockSettingsMenu(event) {

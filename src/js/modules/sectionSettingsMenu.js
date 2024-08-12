@@ -1,32 +1,17 @@
 import * as controllerModal from "./controllerModal.js";
 
-
-export function viewParamCreateForm(event) {
-
-   if (event.target.closest('[data-button-name="param-create-form"]')) {
-      if (event.target.closest('[data-button-name="param-create-form"]').parentElement.classList.contains("_view")) {
-         return;
-      }
-
-      event.preventDefault();
-
-      if (event.target.closest('[data-button-name="param-create-form"]').parentElement.dataset.name == 'param-create-form') {
-         controllerModal.view(event.target.closest('[data-button-name="param-create-form"]').parentElement);
-      }
-   }
-}
-//Розгортання блоку налаштувань в модерейшн меню
-export function activeSettingsGroup(event) {
+export function actionSettingsItem(event) {
    //Перевіряємо чи був click on section-moderation-menu
-   if (event.target.closest('[data-name="section-moderation-menu"]')) {
+   if (event.target.closest('[data-name="section-settings-menu"]')) {
       //Збираю потрібні елементи
-      const moderationMenu = event.target.closest('[data-name="section-moderation-menu"]');
+      const sectionSettingsMenu = event.target.closest('[data-name="section-settings-menu"]');
       const groupsOfParams = event.target.closest('[data-name="groups-of-params"]');
       const groupsOfBlocks = event.target.closest('[data-name="groups-of-blocks"]');
+      console.log(groupsOfBlocks);
       //Функція згортання всіх елементів та розгортання того по якому клікнули
       function actionParamItems() {
          //Отримую список всіх параметрів
-         const paramItems = moderationMenu.querySelectorAll('[data-name="param-item"]');
+         const paramItems = sectionSettingsMenu.querySelectorAll('[data-name="param-item"]');
          //Перевіряю чи є параметри в списку
          if (paramItems.length > 0) {
             //Запускаю цикл прозодження по параметру
@@ -69,13 +54,5 @@ export function activeSettingsGroup(event) {
          //Розгортаю потрібний
          actionParamItems()
       }
-   }
-}
-
-export function close(event) {
-   const buttonClose = event.target.closest('[data-name="section_moderation_menu__close"]');
-
-   if (buttonClose) {
-      controllerModal.close(event.target.closest('[data-name="section-moderation-menu"]'));
    }
 }

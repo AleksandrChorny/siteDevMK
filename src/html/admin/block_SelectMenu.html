@@ -1,102 +1,117 @@
-<div class="block-select-menu" name="block-select-menu">
+<div class="block-select-menu _view" data-name="block-select-menu">
    <button class="block-select-menu__close" name="block-select-menu__close"></button>
 
-   <form class="block-select-menu__tiles-container" action="/some/" data-name="section-select-form">
-      <p class="block-select-menu__tiles-container-title">Select or create a Block for this Teamplate</p>
+   <form class="block-select-menu__tiles-container" action="/setup/block/select/" title="select block" method="post"
+      enctype="multipart/form-data">
+      <p class="block-select-menu__tiles-container-title">Select or create a BLOCK for this sectionName</p>
       <div class="block-select-menu__tiles-wrapper">
          <!-- Кнопка додавання нового шаблона секції -->
-         <div>
-            <div class="block-select-menu__tile-wrapper">
-               <p class="block-select-menu__tile-title">New</p>
-               <button class="block-select-menu__tile-add-btn" type="button"
-                  data-name="btn-view-block-create-menu"></button>
-               @@include('block_createMenu.html',{})
-            </div>
-            <div class="block-select-menu__tile-wrapper  _moderation" data-name="btn-view-block-moderation-menu">
-               <p class="block-select-menu__tile-title">New</p>
-               <button class="block-select-menu__tile-add-btn" type="button"
-                  data-name="btn-view-block-create-menu"></button>
+         <div class="block-select-menu__selectors">
+            <button class="new-bookmarks-button" type="button" data-button-name="block-create"
+               data-url="/block_createMenu.html">NEW
+               Block</button>
+            <div class="bookmarks-panel">
+               <button class="bookmarks _active" type="button" data-button-name="block-type"
+                  data-type="available">available
+                  Block</button>
+               <button class="bookmarks" type="button" data-button-name="block-type" data-type="on moderation">on
+                  moderation</button>
+               <button class="bookmarks" type="button" data-button-name="block-type"
+                  data-type="archive">archive</button>
+               <button class="bookmarks _add" type="button" title="Додати новий тип блоку">new type</button>
             </div>
          </div>
 
-
          <!-- Каталог завантажених шаблонів секцій -->
-         <div class="block-select-menu__teamplate-tiles">
+         <div class="block-select-menu__teamplate-tiles _active" data-name="block-tile" data-type="available">
             <!-- Картка шаблона секції -->
             <div class="block-select-menu__tile-wrapper">
                <label class="block-select-menu__tile">
-                  <input class="block-select-menu__radio" type="radio" value="Mine" name="sections">
-                  Mine
+                  <input class="block-select-menu__radio" type="radio" value="Mine" name="block-id" value="blockId">
+                  Mine1
                   <spun class="block-select-menu__tile-img">
                      <img class="block-select-menu__img" src="\img\admin\mine.jpg" alt="teamplate preview">
                      </span>
                </label>
-               <button class="block-select-menu__title-btn" type="button" name="btn-view-block-upd-files-menu"
+               <button class="block-select-menu__title-btn" type="button" data-button-name="view-block-moderation-menu"
+                  data-id="43" data-url="/setup/block/view-moderation-menu/">UPD</button>
+            </div>
+            <div class="block-select-menu__tile-wrapper">
+               <label class="block-select-menu__tile">
+                  <input class="block-select-menu__radio" type="radio" value="Mine" name="block-id" value="blockId">
+                  Mine1
+                  <spun class="block-select-menu__tile-img">
+                     <img class="block-select-menu__img" src="\img\admin\mine.jpg" alt="teamplate preview">
+                     </span>
+               </label>
+               <button class="block-select-menu__title-btn" type="button" data-button-name="view-block-moderation-menu"
                   data-id="43">UPD</button>
             </div>
-
             <div class="block-select-menu__tile-wrapper">
                <label class="block-select-menu__tile">
-                  <input class="block-select-menu__radio" type="radio" name="sections">
-                  Mine
+                  <input class="block-select-menu__radio" type="radio" value="Mine" name="block-id" value="blockId">
+                  Mine1
                   <spun class="block-select-menu__tile-img">
                      <img class="block-select-menu__img" src="\img\admin\mine.jpg" alt="teamplate preview">
                      </span>
                </label>
-               <button class="block-select-menu__title-btn" type="button" name="view-upd-section-menu"
-                  data-id="44">UPD</button>
+               <button class="block-select-menu__title-btn" type="button" data-button-name="view-block-moderation-menu"
+                  data-id="43">UPD</button>
             </div>
-
+         </div>
+         <div class="block-select-menu__teamplate-tiles" data-name="block-tile" data-type="on moderation">
+            <!-- Картка шаблона секції -->
             <div class="block-select-menu__tile-wrapper">
                <label class="block-select-menu__tile">
-                  <input class="block-select-menu__radio" type="radio" name="sections">
-                  Mine
+                  <input class="block-select-menu__radio" type="radio" value="Mine" name="block-id" value="blockId">
+                  Mine1
                   <spun class="block-select-menu__tile-img">
                      <img class="block-select-menu__img" src="\img\admin\mine.jpg" alt="teamplate preview">
                      </span>
                </label>
-               <button class="block-select-menu__title-btn" type="button" name="view-upd-section-menu"
-                  data-id="45">UPD</button>
+               <button class="block-select-menu__title-btn" type="button" data-button-name="view-block-moderation-menu"
+                  data-id="43">UPD</button>
             </div>
-
+         </div>
+         <div class="block-select-menu__teamplate-tiles" data-name="block-tile" data-type="archive">
+            <!-- Картка шаблона секції -->
             <div class="block-select-menu__tile-wrapper">
                <label class="block-select-menu__tile">
-                  <input class="block-select-menu__radio" type="radio" name="sections">
-                  Mine
+                  <input class="block-select-menu__radio" type="radio" value="Mine" name="block-id" value="blockId">
+                  Mine1
                   <spun class="block-select-menu__tile-img">
                      <img class="block-select-menu__img" src="\img\admin\mine.jpg" alt="teamplate preview">
                      </span>
                </label>
-               <button class="block-select-menu__title-btn" type="button" name="view-upd-section-menu"
-                  data-id="46">UPD</button>
+               <button class="block-select-menu__title-btn" type="button" data-button-name="view-block-moderation-menu"
+                  data-id="43">UPD</button>
             </div>
-
             <div class="block-select-menu__tile-wrapper">
                <label class="block-select-menu__tile">
-                  <input class="block-select-menu__radio" type="radio" name="sections">
-                  Mine
+                  <input class="block-select-menu__radio" type="radio" value="Mine" name="block-id" value="blockId">
+                  Mine1
                   <spun class="block-select-menu__tile-img">
                      <img class="block-select-menu__img" src="\img\admin\mine.jpg" alt="teamplate preview">
                      </span>
                </label>
-               <button class="block-select-menu__title-btn" type="button" name="view-upd-section-menu"
-                  data-id="1">UPD</button>
+               <button class="block-select-menu__title-btn" type="button" data-button-name="view-block-moderation-menu"
+                  data-id="43">UPD</button>
             </div>
-
             <div class="block-select-menu__tile-wrapper">
                <label class="block-select-menu__tile">
-                  <input class="block-select-menu__radio" type="radio" name="sections">
-                  Mine
+                  <input class="block-select-menu__radio" type="radio" value="Mine" name="block-id" value="blockId">
+                  Mine1
                   <spun class="block-select-menu__tile-img">
                      <img class="block-select-menu__img" src="\img\admin\mine.jpg" alt="teamplate preview">
                      </span>
                </label>
-               <button class="block-select-menu__title-btn" type="button" name="view-upd-section-menu"
-                  data-id="3">UPD</button>
+               <button class="block-select-menu__title-btn" type="button" data-button-name="view-block-moderation-menu"
+                  data-id="43">UPD</button>
             </div>
          </div>
 
       </div>
+      <input type="hidden" name="section_id" value="43">
       <button class="block-select-menu__confirm-btn" type="submit">OK</button>
    </form>
 </div>

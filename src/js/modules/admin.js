@@ -1,6 +1,7 @@
 import * as adminTool from "./adminTool.js";
 import * as controlPanel from "./controlPanel.js";
 import * as sectionMenu from "./sectionMenu.js";
+import * as sectionSettingsMenu from "./sectionSettingsMenu.js";
 import * as sectionModerationMenu from "./sectionModerationMenu.js";
 import * as blocks from "./blocks.js";
 import * as teamplateSettings from "./teamplateSettings.js";
@@ -25,9 +26,11 @@ document.addEventListener('click', (event) => {
    sectionMenu.viewUpdSectionParamMenu(event);
    sectionMenu.viewSectionType(event);
 
+   sectionSettingsMenu.actionSettingsItem(event);
+
    sectionModerationMenu.viewParamCreateForm(event);
    sectionModerationMenu.activeSettingsGroup(event);
-   sectionModerationMenu.viewParamUpdForm(event);
+   sectionModerationMenu.close(event);
 
 
    blocks.viewBlockModerationMenu(event);
@@ -46,6 +49,7 @@ document.addEventListener('click', (event) => {
 
    HeadMenu.viewheadSettingsMenu(event);
    blockMenu.viewblockSelectMenu(event);
+   blockMenu.viewBlockType(event);
    modalWindow.close(event);
 })
 

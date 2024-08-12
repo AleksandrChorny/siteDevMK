@@ -1,102 +1,124 @@
 <div class="section-settings-menu" data-name="section-settings-menu">
    <div class="close-btn" data-button-name="close-section-settings-menu"></div>
-   <p class="title-h2">Редагування секції: <br> "section name"</p>
+   <p class="title-h2">Налаштування секції: "section name main1"</p>
+   <div class="location-place grid-column-all">
+      <div class="settings-group" data-name="groups-of-params">
+         <p class="title-h3">Параметри секції</p>
 
-   <div class="settings-location section-settings-menu__block-items _big">
-      <!--Редагування блоків секціі-->
-      <div class="settings-group _view" data-action="view">
-         <p class="title-h3">Параметри секції "cover"</p>
-         <div class="settings-item" data-action="view">
-            <div class="title-h3 settings-item__title">cover-title</div>
-            <form class="settings-form" action="/setup/params/upd/" title="update params" method="post"
-               enctype="multipart/form-data">
+         <div class="settings-item section-settings-menu__item" data-name="param-item">
+            <p class="title-h3 settings-item__title">cover-title</p>
+            <div class="settings-item__btn-block" data-name="btn-block">
+               <button class="copy-key-btn settings-item__copy-key _view" data-name="copy-key"
+                  title="Скопіювати PHP ключ">Copy key</button>
+               <button data-name="btn-editing">
+                  <svg>
+                     <use xlink:href="img/icons/icons.svg#GearNew"></use>
+                  </svg>
+               </button>
+               <button data-name="btn-del">
+                  <svg class="management__svg">
+                     <use xlink:href="img/icons/icons.svg#del-btn"></use>
+                  </svg>
+               </button>
+            </div>
+            <form class="settings-form settings-item__param-upd-form" action="/setup/params/upd/" title="update params"
+               method="post" enctype="multipart/form-data" name="param-upd-form">
                <textarea class="textarea" name="title">I am title of cover</textarea>
                <input type="hidden" name="param_id" value="14">
                <button class="btn-form" type="submit">OK</button>
             </form>
          </div>
-         <div class="settings-item" data-action="view">
-            <div class="title-h3 settings-item__title">cover-img</div>
-            <form class="settings-form" action="/setup/params/upd/" title="update params" method="post"
-               enctype="multipart/form-data">
-               <textarea class="textarea" name="title">I am title of cover</textarea>
-               <input type="hidden" name="param_id" value="14">
-               <button class="btn-form" type="submit">OK</button>
-            </form>
-         </div>
-         <div class="settings-item" data-action="view">
-            <div class="title-h3 settings-item__title">cover-description</div>
-            <form class="settings-form" action="/setup/params/upd/" title="update params" method="post"
-               enctype="multipart/form-data">
-               <textarea class="textarea" name="title">I am title of cover</textarea>
-               <input type="hidden" name="param_id" value="14">
-               <button class="btn-form" type="submit">OK</button>
-            </form>
-         </div>
-      </div>
-      <div class="settings-group" data-action="view">
-         <p class="title-h3">block "logo"</p>
-         <div class="settings-item" data-action="view">
-            <div class="title-h3 settings-item__title">logo-img</div>
-            <form class="settings-form" action="/setup/params/upd/" title="update params" method="post"
-               enctype="multipart/form-data">
-               <textarea class="textarea" name="title">I am title of cover</textarea>
-               <input type="hidden" name="param_id" value="14">
-               <button class="btn-form" type="submit">OK</button>
-            </form>
-         </div>
-         <div class="settings-item" data-action="view">
-            <div class="title-h3 settings-item__title">logo-title</div>
-            <form class="settings-form" action="/setup/params/upd/" title="update params" method="post"
-               enctype="multipart/form-data">
-               <textarea class="textarea" name="title">I am title of cover</textarea>
-               <input type="hidden" name="param_id" value="14">
-               <button class="btn-form" type="submit">OK</button>
-            </form>
-         </div>
-         <div class="settings-item" data-action="view">
-            <div class="title-h3 settings-item__title">logo-href</div>
-            <form class="settings-form" action="/setup/params/upd/" title="update params" method="post"
-               enctype="multipart/form-data">
-               <textarea class="textarea" name="title">I am title of cover</textarea>
-               <input type="hidden" name="param_id" value="14">
-               <button class="btn-form" type="submit">OK</button>
-            </form>
-         </div>
-         <div class="settings-item" data-action="view">
-            <div class="title-h3 settings-item__title">logo-alt</div>
-            <form class="settings-form" action="/setup/params/upd/" title="update params" method="post"
-               enctype="multipart/form-data">
+
+         <div class="settings-item section-settings-menu__item" data-name="param-item">
+            <p class="title-h3 settings-item__title">cover-title</p>
+            <div class="settings-item__btn-block" data-name="btn-block">
+               <button class="copy-key-btn settings-item__copy-key _view" data-name="copy-key"
+                  title="Скопіювати PHP ключ">Copy key</button>
+               <button data-name="btn-editing">
+                  <svg>
+                     <use xlink:href="img/icons/icons.svg#GearNew"></use>
+                  </svg>
+               </button>
+               <button data-name="btn-del">
+                  <svg class="management__svg">
+                     <use xlink:href="img/icons/icons.svg#del-btn"></use>
+                  </svg>
+               </button>
+            </div>
+            <form class="settings-form settings-item__param-upd-form" action="/setup/params/upd/" title="update params"
+               method="post" enctype="multipart/form-data" name="param-upd-form">
                <textarea class="textarea" name="title">I am title of cover</textarea>
                <input type="hidden" name="param_id" value="14">
                <button class="btn-form" type="submit">OK</button>
             </form>
          </div>
       </div>
-      <div class="settings-group" data-action="view">
-         <p class="title-h3">Block "footer"</p>
-         <div class="settings-item" data-action="view">
-            <div class="title-h3 settings-item__title">footer-title</div>
-            <form class="settings-form" action="/setup/params/upd/" title="update params" method="post"
-               enctype="multipart/form-data">
+      <div class="settings-group section-settings-menu__group" data-name="groups-of-blocks">
+         <p class="title-h3">Блоки секції</p>
+         <div class="settings-item section-settings-menu__item" data-name="param-item">
+            <p class="title-h3 settings-item__title">cover-title</p>
+            <div class="settings-item__btn-block" data-name="btn-block">
+               <button class="copy-key-btn settings-item__copy-key _view" data-name="copy-key"
+                  title="Скопіювати PHP ключ">Copy key</button>
+               <button data-name="btn-editing">
+                  <svg>
+                     <use xlink:href="img/icons/icons.svg#GearNew"></use>
+                  </svg>
+               </button>
+               <button data-name="btn-del">
+                  <svg class="management__svg">
+                     <use xlink:href="img/icons/icons.svg#del-btn"></use>
+                  </svg>
+               </button>
+            </div>
+            <form class="settings-form settings-item__param-upd-form" action="/setup/params/upd/" title="update params"
+               method="post" enctype="multipart/form-data" name="param-upd-form">
                <textarea class="textarea" name="title">I am title of cover</textarea>
                <input type="hidden" name="param_id" value="14">
                <button class="btn-form" type="submit">OK</button>
             </form>
          </div>
-         <div class="settings-item" data-action="view">
-            <div class="title-h3 settings-item__title">footer-number</div>
-            <form class="settings-form" action="/setup/params/upd/" title="update params" method="post"
-               enctype="multipart/form-data">
+         <div class="settings-item section-settings-menu__item" data-name="param-item">
+            <p class="title-h3 settings-item__title">cover-title</p>
+            <div class="settings-item__btn-block" data-name="btn-block">
+               <button class="copy-key-btn settings-item__copy-key _view" data-name="copy-key"
+                  title="Скопіювати PHP ключ">Copy key</button>
+               <button data-name="btn-editing">
+                  <svg>
+                     <use xlink:href="img/icons/icons.svg#GearNew"></use>
+                  </svg>
+               </button>
+               <button data-name="btn-del">
+                  <svg class="management__svg">
+                     <use xlink:href="img/icons/icons.svg#del-btn"></use>
+                  </svg>
+               </button>
+            </div>
+            <form class="settings-form settings-item__param-upd-form" action="/setup/params/upd/" title="update params"
+               method="post" enctype="multipart/form-data" name="param-upd-form">
                <textarea class="textarea" name="title">I am title of cover</textarea>
                <input type="hidden" name="param_id" value="14">
                <button class="btn-form" type="submit">OK</button>
             </form>
          </div>
-         <div class="settings-item" data-action="view">
-            <div class="title-h3 settings-item__title">footer-viber</div>
-            <form class="settings-form" action="/setup/params/upd/" title="update params" method="post"
-               enctype="multipart/form-data">
+         <div class="settings-item section-settings-menu__item" data-name="param-item">
+            <p class="title-h3 settings-item__title">cover-title</p>
+            <div class="settings-item__btn-block" data-name="btn-block">
+               <button class="copy-key-btn settings-item__copy-key _view" data-name="copy-key"
+                  title="Скопіювати PHP ключ">Copy key</button>
+               <button data-name="btn-editing">
+                  <svg>
+                     <use xlink:href="img/icons/icons.svg#GearNew"></use>
+                  </svg>
+               </button>
+               <button data-name="btn-del">
+                  <svg class="management__svg">
+                     <use xlink:href="img/icons/icons.svg#del-btn"></use>
+                  </svg>
+               </button>
+            </div>
+            <form class="settings-form settings-item__param-upd-form" action="/setup/params/upd/" title="update params"
+               method="post" enctype="multipart/form-data" name="param-upd-form">
                <textarea class="textarea" name="title">I am title of cover</textarea>
                <input type="hidden" name="param_id" value="14">
                <button class="btn-form" type="submit">OK</button>

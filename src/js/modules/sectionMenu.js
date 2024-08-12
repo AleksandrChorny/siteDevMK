@@ -1,4 +1,5 @@
 import * as controllerModal from "./controllerModal.js";
+import * as fetchUrl from "./fetchUrl.js";
 
 
 function add_section_number_to_data_section_number(event) {
@@ -100,17 +101,21 @@ export function view_section_update_files_menu(event) {
 }
 
 export function viewSectionModerationMenu(event) {
-   const buttonView = event.target.closest('[data-button-name="section-upd"]');
-   const buttonClose = event.target.closest('[data-name="section_moderation_menu__close"]');
-   if (buttonView) {
-      const sectionModerationMenu = buttonView.nextElementSibling
+   const buttonView = event.target.closest('[data-button-name="view-section-moderation-menu"]');
 
-      if (sectionModerationMenu.dataset.name == 'section-moderation-menu') {
-         controllerModal.view(sectionModerationMenu);
-      }
-   }
-   if (buttonClose) {
-      controllerModal.close(event.target.closest('[data-name="section-moderation-menu"]'));
+   if (buttonView) {
+      const section_id = buttonView.dataset.id;
+      const url = buttonView.dataset.url;
+      const data = { 'section_id': section_id };
+      // Вызываем функцию
+      fetchUrl.getUrlJSON(url, data)
+         .then((data) => {
+            //console.log(document.body);
+            document.body.innerHTML += data;
+            //console.log(data); // JSON data parsed by `response.json()` call
+            // console.log(myModal)
+            //myModal.innerHTML = data; // JSON data parsed by `response.json()` call
+         });
    }
 }
 
@@ -178,10 +183,11 @@ export function viewSectionType(event) {
       })
       sectionTiles.forEach((sectionTile) => {
          controllerModal.close(sectionTile)
+         controllerModal.deActivate(sectionTile)
          if (sectionTile.dataset.type == type) {
-            console.log(type)
-            console.log(sectionTile)
-            controllerModal.view(sectionTile);
+            //console.log(type)
+            //console.log(sectionTile)
+            controllerModal.activate(sectionTile);
          }
       })
    }

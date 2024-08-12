@@ -1,79 +1,3 @@
-.bookmarks-panel {
-   display: flex;
-
-   align-items: flex-end;
-
-   width: 100%;
-   height: auto;
-
-   // background: red;
-
-   gap: 2px;
-   padding: 4px 4px 0 4px;
-
-   overflow-x: auto;
-   &::-webkit-scrollbar {
-      height: 0;
-   }
-}
-.bookmarks {
-   width: min-content;
-   height: min-content;
-   min-height: 28px;
-   min-width: 56px;
-
-   padding: .5em 1em;
-
-   color: $colorLightGray;
-   font-size: 14px;
-   text-transform: uppercase;
-   white-space: nowrap;
-
-   background: rgba(111, 111, 111, 0);
-
-   border-radius: 12px 12px 0 0;
-   box-shadow: 0 2px 3px 0px rgba(0, 0, 0, 0.12) inset;
-
-   // backdrop-filter: blur(10px);
-
-   &._new {
-      border-radius: 12px;
-      padding: 1em 1.5em;
-      margin-right: 12px;
-
-   }
-   &._active {
-      position: relative;
-      color: $colorWhite;
-      font-size: 16px;
-      background: rgba(111, 111, 111, 0);
-      border: 1px solid rgba(255, 255, 255, 0.4);
-      border-bottom: 0;
-      border-radius: 12px 12px 0 0;
-      box-shadow: 0px 0px 12px 0px rgba(0, 0, 0, 0.40);
-   }
-   &._add {
-      margin-left: 40px;
-   }
-}
-.new-bookmarks-button {
-   border-radius: 12px;
-   padding: 1em 1.5em;
-   margin-right: 8px;
-
-   width: min-content;
-   height: min-content;
-
-   color: $colorWhite;
-   background-color: $colorBlue;
-   border: 1px solid $colorWhite;
-
-   font-size: 14px;
-   text-transform: uppercase;
-   white-space: nowrap;
-
-}
-
 .section-select-menu{
    display: flex;
    flex-direction: column;
@@ -204,7 +128,7 @@
             height: 8px;
          }
          }
-      &._view {
+      &._active {
          padding-bottom: 12px;
          max-height: 469px;
          transition: max-height 0.5s cubic-bezier(1, 0, 1, 0);

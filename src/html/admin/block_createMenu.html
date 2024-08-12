@@ -1,32 +1,9 @@
 <div class="block-create-menu" data-name="block-create-menu">
-   <form class="block-create-menu__form">
-      <span class="block-create-menu__text" action="/some/" data-name="section-create-form">Введіть ім’я секції</span>
-      <input class="block-create-menu__input" type="text">
+   <form class="block-create-menu__form" action="/setup/block/create/" title="create section" method="post"
+      enctype="multipart/form-data" data-name="block-create-form">
+      <span class="block-create-menu__text">Введіть ім’я блоку</span>
+      <input class="block-create-menu__input" type="text" name="block-name">
       <input class="block-create-menu__btn" type="submit" value="Створити">
    </form>
-   <div class="block-create-menu__close" data-name="btn-close-block-create-menu"></div>
+   <div class="block-create-menu__close" data-button-name="close-block-create-menu"></div>
 </div>
-
-
-<!--<div class="block-create-menu" data-name="block-create-menu">
-   Кнопка закриття модалки
-   <button class="block-create-menu__close" data-name="btn-close-block-create-menu"></button>
-
-   <h3 class="block-create-menu__title">Завантажте файли:</h3>
-   <form class="block-create-menu__upload-block-wrapper">
-      <p class="block-create-menu__text">Оберіть файли верстки блока для завантаження в форматі html або php</p>
-      <div class="block-create-menu__upload-block">
-         <img src="/img/admin/upload-pic.png" alt="">
-         <input class="block-create-menu__input" type="file" id="create-section-layout" accept=".php">
-         <label for="create-section-layout" data-id="Завантажити HTML/PHP">Завантажити HTML/PHP</label>
-      </div>
-      <p class="block-create-menu__text">Оберіть файли попереднього перегляду блока для завантаження в форматі jpg
-         або png</p>
-      <div class="block-create-menu__upload-block">
-         <img src="/img/admin/upload-pic.png" alt="">
-         <input class="block-create-menu__input" type="file" id="create-section-preview" accept=".png, .jpg">
-         <label for="create-section-preview" data-name="Завантажити JPG/PNG">Завантажити JPG/PNG</label>
-      </div>
-      <input class="block-create-menu__submit" type="submit" value="Відправити">
-   </form>
-</div>-->
