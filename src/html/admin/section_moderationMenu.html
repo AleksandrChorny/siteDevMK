@@ -1,4 +1,4 @@
-<div class="section_moderation_menu" data-name="section-moderation-menu">
+<div class="section_moderation_menu _view" data-name="section-moderation-menu">
    <div class="close-btn" data-name="section_moderation_menu__close"></div>
    <p class="title-h2">Налаштування секції: "section name main1"</p>
    <div class="location-place grid-column-all">
@@ -60,6 +60,8 @@
             <button class="btn-form" type="submit" data-button-name="param-create-form">Додати параметр</button>
          </form>
       </div>
+
+
       <div class="settings-group section_moderation_menu__group" data-name="groups-of-blocks">
          <p class="title-h3">Блоки секції</p>
          <div class="settings-item section_moderation_menu__item" data-name="param-item">
@@ -78,12 +80,78 @@
                   </svg>
                </button>
             </div>
-            <form class="settings-form settings-item__param-upd-form" action="/setup/params/upd/" title="update params"
+
+
+
+            <div class="settings-group _view" data-name="groups-of-params">
+               <p class="title-h3">Параметри секції</p>
+      
+               <div class="settings-item section_moderation_menu__item _view" data-name="param-item">
+                  <p class="title-h3 settings-item__title">cover-title</p>
+                  <div class="settings-item__btn-block" data-name="btn-block">
+                     <button class="copy-key-btn settings-item__copy-key _view" data-name="copy-key"
+                        title="Скопіювати PHP ключ">Copy key</button>
+                     <button data-name="btn-editing">
+                        <svg>
+                           <use xlink:href="img/icons/icons.svg#GearNew"></use>
+                        </svg>
+                     </button>
+                     <button data-name="btn-del">
+                        <svg class="management__svg">
+                           <use xlink:href="img/icons/icons.svg#del-btn"></use>
+                        </svg>
+                     </button>
+                  </div>
+                  <form class="settings-form settings-item__param-upd-form" action="/setup/params/upd/" title="update params"
+                     method="post" enctype="multipart/form-data" name="param-upd-form">
+                     <textarea class="textarea" name="title">I am title of cover</textarea>
+                     <input type="hidden" name="param_id" value="14">
+                     <button class="btn-form" type="submit">OK</button>
+                  </form>
+               </div>
+      
+               <div class="settings-item section_moderation_menu__item" data-name="param-item">
+                  <p class="title-h3 settings-item__title">cover-title</p>
+                  <div class="settings-item__btn-block" data-name="btn-block">
+                     <button class="copy-key-btn settings-item__copy-key _view" data-name="copy-key"
+                        title="Скопіювати PHP ключ">Copy key</button>
+                     <button data-name="btn-editing">
+                        <svg>
+                           <use xlink:href="img/icons/icons.svg#GearNew"></use>
+                        </svg>
+                     </button>
+                     <button data-name="btn-del">
+                        <svg class="management__svg">
+                           <use xlink:href="img/icons/icons.svg#del-btn"></use>
+                        </svg>
+                     </button>
+                  </div>
+                  <form class="settings-form settings-item__param-upd-form" action="/setup/params/upd/" title="update params"
+                     method="post" enctype="multipart/form-data" name="param-upd-form">
+                     <textarea class="textarea" name="title">I am title of cover</textarea>
+                     <input type="hidden" name="param_id" value="14">
+                     <button class="btn-form" type="submit">OK</button>
+                  </form>
+               </div>
+      
+               <form class="settings-form settings-group__add-param-form" action="/setup/params/create/" title="update params"
+                  method="post" enctype="multipart/form-data" data-name="param-create-form">
+                  <input class="input" name="param_id" value="Новий імʼя параметра">
+                  <textarea class="textarea" name="param_id">значення параметра</textarea>
+                  <button class="btn-form" type="submit" data-button-name="param-create-form">Додати параметр</button>
+               </form>
+            </div>
+
+            
+
+
+
+            <!-- <form class="settings-form settings-item__param-upd-form" action="/setup/params/upd/" title="update params"
                method="post" enctype="multipart/form-data" name="param-upd-form">
                <textarea class="textarea" name="title">I am title of cover</textarea>
                <input type="hidden" name="param_id" value="14">
                <button class="btn-form" type="submit">OK</button>
-            </form>
+            </form> -->
          </div>
          <div class="settings-item section_moderation_menu__item" data-name="param-item">
             <p class="title-h3 settings-item__title">cover-title</p>
