@@ -1,12 +1,6 @@
 import * as controllerModal from "./controllerModal.js";
-import * as blockSelectMenu from "./blockSelectMenu.js";
+import * as fetchUrl from "./fetchUrl.js";
 
-export function viewBlockSelectMenu(event) {
-   if (event.target.closest('[name="btn-view-block-select-menu"]')) {
-      const sectionId = event.target.closest('[name="btn-view-block-select-menu"]').dataset.sectionId;
-      blockSelectMenu.viewBlockSelectMenu(sectionId)
-   }
-}
 export function viewParamCreateForm(event) {
 
    if (event.target.closest('[data-button-name="param-create-form"]')) {
@@ -23,10 +17,11 @@ export function viewParamCreateForm(event) {
 }
 //Розгортання блоку налаштувань в модерейшн меню
 export function activeSettingsGroup(event) {
-   //Перевіряємо чи був click on section-moderation-menu
-   if (event.target.closest('[data-name="section-moderation-menu"]')) {
+   //Перевіряємо чи був click on block-moderation-menu
+   if (event.target.closest('[data-name="block-moderation-menu"]')) {
+      //console.log(event.target);
       //Збираю потрібні елементи
-      const moderationMenu = event.target.closest('[data-name="section-moderation-menu"]');
+      const moderationMenu = event.target.closest('[data-name="block-moderation-menu"]');
       const groupsOfParams = event.target.closest('[data-name="groups-of-params"]');
       const groupsOfBlocks = event.target.closest('[data-name="groups-of-blocks"]');
       //Функція згортання всіх елементів та розгортання того по якому клікнули
@@ -78,24 +73,57 @@ export function activeSettingsGroup(event) {
    }
 }
 
-export function view_section_update_files_menu(event) {
-   if (event.target.name == 'view-section-upd-param-menu') {
-      const section_id = event.target.dataset.sectionId;
-      const section_update_files_menu = document.querySelector('[data-name="section-update-files-menu"]');
-      section_update_files_menu.querySelector('input[name="section_id"]').value = section_id;
-      console.log(section_update_files_menu);
-      controllerModal.view(section_update_files_menu);
+export function view_block_update_files_menu(event) {
+   if (event.target.name == 'view-block-upd-param-menu') {
+      const block_id = event.target.dataset.blockId;
+      const block_update_files_menu = document.querySelector('[data-name="block-update-files-menu"]');
+      block_update_files_menu.querySelector('input[name="block_id"]').value = block_id;
+      console.log(block_update_files_menu);
+      controllerModal.view(block_update_files_menu);
    }
 
-   if (event.target.closest('.section-update-files-menu__close')) {
-      controllerModal.close(document.querySelector('[data-name="section-update-files-menu"]'));
+   if (event.target.closest('.block-update-files-menu__close')) {
+      controllerModal.close(document.querySelector('[data-name="block-update-files-menu"]'));
    }
 }
 
 export function close(event) {
-   const buttonClose = event.target.closest('[data-name="section_moderation_menu__close"]');
+   const buttonClose = event.target.closest('[data-name="block_moderation_menu__close"]');
 
    if (buttonClose) {
-      controllerModal.close(event.target.closest('[data-name="section-moderation-menu"]'));
+      controllerModal.close(event.target.closest('[data-name="block-moderation-menu"]'));
+   }
+}
+
+export function viewBlockModerationMenu(id) {
+   const url = '/setup/block/view-moderation-menu/';
+   const data = { 'block_id': id };
+   // Вызываем функцию
+   fetchUrl.getUrlJSON(url, data)
+      .then((data) => {
+         //console.log(document.body);
+         document.body.innerHTML += data;
+         //console.log(data); // JSON data parsed by `response.json()` call
+         // console.log(myModal)
+         //myModal.innerHTML = data; // JSON data parsed by `response.json()` call
+      });
+}
+
+export function viewBlockModerationMenu1(event) {
+   const buttonView = event.target.closest('[data-button-name="view-block-moderation-menu"]');
+
+   if (buttonView) {
+      const section_id = buttonView.dataset.id;
+      const url = buttonView.dataset.url;
+      const data = { 'section_id': section_id };
+      // Вызываем функцию
+      fetchUrl.getUrlJSON(url, data)
+         .then((data) => {
+            //console.log(document.body);
+            document.body.innerHTML += data;
+            //console.log(data); // JSON data parsed by `response.json()` call
+            // console.log(myModal)
+            //myModal.innerHTML = data; // JSON data parsed by `response.json()` call
+         });
    }
 }

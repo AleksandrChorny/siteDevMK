@@ -2,12 +2,12 @@ import * as controllerModal from "./controllerModal.js";
 import * as fetchUrl from "./fetchUrl.js";
 
 
-function add_section_number_to_data_section_number(event) {
-   const section_upd_params_menu = event.target.closest('.section-control-panel');
-   const number = section_upd_params_menu.querySelector('.items__number').dataset.number;
-   //const section_select_menu = document.querySelector('.select-section-menu');
-   document.querySelector('.section-select-menu').setAttribute('data-section-namber', number);
-}
+//function add_section_number_to_data_section_number(event) {
+//   const section_upd_params_menu = event.target.closest('.section-control-panel');
+//   const number = section_upd_params_menu.querySelector('.items__number').dataset.number;
+//   //const section_select_menu = document.querySelector('.select-section-menu');
+//   document.querySelector('.section-select-menu').setAttribute('data-section-namber', number);
+//}
 
 function create_hidden_input(name, value) {
    const input = document.createElement("input");
@@ -70,35 +70,22 @@ export function viewParamUpdForm(event) {
    }
 }
 
-export function setFileNameInCreateSectionMenu() {
-   const inputs = document.querySelectorAll('.create-section-menu__upload-block-wrapper .create-section-menu__input');
+//export function setFileNameInCreateSectionMenu() {
+//   const inputs = document.querySelectorAll('.create-section-menu__upload-block-wrapper .create-section-menu__input');
 
-   inputs.forEach((input) => {
-      const inputId = input.id;
-      const label = document.querySelector(`.create-section-menu__upload-block-wrapper [for=${inputId}]`);
+//   inputs.forEach((input) => {
+//      const inputId = input.id;
+//      const label = document.querySelector(`.create-section-menu__upload-block-wrapper [for=${inputId}]`);
 
-      if (input.files && input.files.length > 0) {
-         const fileName = input.files[0].name;
-         label.innerHTML = fileName;
-         return;
-      }
+//      if (input.files && input.files.length > 0) {
+//         const fileName = input.files[0].name;
+//         label.innerHTML = fileName;
+//         return;
+//      }
 
-      label.innerHTML = label.dataset['name'];
-   })
-}
-
-export function view_section_update_files_menu(event) {
-   if (event.target.name == 'btn-view-section-upd-files-menu') {
-      const section_id = event.target.dataset.id;
-      const section_update_files_menu = document.querySelector('[data-name="section-update-files-menu"]');
-      section_update_files_menu.querySelector('[name="section_id"]').value = section_id;
-      controllerModal.view(section_update_files_menu);
-   }
-
-   if (event.target.closest('.section-update-files-menu__close')) {
-      controllerModal.close(document.querySelector(".section-update-files-menu"));
-   }
-}
+//      label.innerHTML = label.dataset['name'];
+//   })
+//}
 
 export function viewSectionModerationMenu(event) {
    const buttonView = event.target.closest('[data-button-name="view-section-moderation-menu"]');
