@@ -56,11 +56,15 @@ export function activeSettingsGroup(event) {
       //Розгортаю панель з параметрами
       if (groupsOfParams) {
          //розгортаю параметри
+         console.log(groupsOfParams);
          groupsOfParams.classList.remove('_pacive');
          groupsOfParams.classList.add('_active');
          //Згортаю блоки
-         groupsOfParams.nextElementSibling.classList.remove('_active');
-         groupsOfParams.nextElementSibling.classList.add('_pacive');
+         if (groupsOfParams.nextElementSibling) {
+            groupsOfParams.nextElementSibling.classList.remove('_active');
+            groupsOfParams.nextElementSibling.classList.add('_pacive');
+         }
+
          //Розготраю потрібний
          actionParamItems();
       }
@@ -70,10 +74,35 @@ export function activeSettingsGroup(event) {
          groupsOfBlocks.classList.remove('_pacive');
          groupsOfBlocks.classList.add('_active');
          //згортаю параметри
-         groupsOfBlocks.previousElementSibling.classList.remove('_active');
-         groupsOfBlocks.previousElementSibling.classList.add('_pacive');
+         if (groupsOfBlocks.previousElementSibling) {
+            groupsOfBlocks.previousElementSibling.classList.remove('_active');
+            groupsOfBlocks.previousElementSibling.classList.add('_pacive');
+         }
+
          //Розгортаю потрібний
          actionParamItems()
+      }
+   }
+
+   if (event.target.closest('[data-name="groups-of-block-params"]')) {
+      const groupOfBlockParam = event.target.closest('[data-name="groups-of-block-params"]');
+      const blockParamItems = groupOfBlockParam.querySelectorAll('[data-name="block-param-item"]');
+
+      if (blockParamItems.length > 0) {
+         blockParamItems.forEach(element => {
+            element.classList.remove('_view')
+            element.querySelector('[data-name="copy-key"]').classList.add('_view')
+            element.querySelector('[data-name="btn-block"]').classList.remove('_view')
+         })
+      }
+      if (event.target.closest('[data-name="block-param-item"]')) {
+         const paramItem = event.target.closest('[data-name="block-param-item"]');
+         const copyKey = paramItem.querySelector('[data-name="copy-key"]');
+         const buttonBlock = paramItem.querySelector('[data-name="btn-block"]');
+         //встановлюю класи вибраному параметру
+         paramItem.classList.add('_view');
+         copyKey.classList.remove('_view');
+         buttonBlock.classList.add('_view');
       }
    }
 }

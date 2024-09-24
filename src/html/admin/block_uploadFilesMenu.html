@@ -1,0 +1,27 @@
+<div class="block-upload-files-menu" data-name="block-upload-files-menu">
+   <!-- Кнопка закриття модалки -->
+   <button class="block-upload-files-menu__close" name="btn-close-block-upload-menu"></button>
+
+   <h3 class="block-upload-files-menu__title">Завантажте файли блоку:</h3>
+   <form class="block-upload-files-menu__upload-block-wrapper" action="/setup/block/upload-view-and-preview/"
+      method="post" enctype="multipart/form-data">
+      <p class="block-upload-files-menu__text">Оберіть файли верстки блоку для завантаження в форматі html або php
+      </p>
+      <div class="block-upload-files-menu__upload-block">
+         <img src="/img/admin/upload-pic.png" alt="">
+         <input class="block-upload-files-menu__input" type="file" id="upload-block-layout" accept=".php" name="view">
+         <label for="upload-block-layout" data-name="Завантажити HTML/PHP">Завантажити HTML/PHP</label>
+      </div>
+      <p class="block-upload-files-menu__text">Оберіть файли попереднього перегляду блоку для завантаження в форматі
+         jpg
+         або png</p>
+      <div class="block-upload-files-menu__upload-block">
+         <img src="/img/admin/upload-pic.png" alt="">
+         <input class="block-upload-files-menu__input" type="file" id="upload-block-preview" accept=".png, .jpg"
+            name="preView">
+         <label for="upload-block-preview" data-name="Завантажити JPG/PNG">Завантажити JPG/PNG</label>
+      </div>
+      <input type="hidden" name="block_id">
+      <input class="block-upload-files-menu__submit" type="submit" value="Відправити">
+   </form>
+</div>

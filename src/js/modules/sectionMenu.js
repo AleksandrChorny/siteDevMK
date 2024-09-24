@@ -49,19 +49,20 @@ export function viewCreateSectionMenu(event) {
    }
 }
 
-export function viewBlockParam(event) {
-   if (event.target.closest('[data-name="btn-view-block-param"]')) {
-      if (event.target.closest('[data-name="param-items"]')) {
-         return;
-      }
-      const blockItems = event.target.closest('[data-name="btn-view-block-param"]');
+//export function viewBlockParam(event) {
+//   console.log(event.target.closest('[data-name="btn-view-block-param"]'))
+//   //if (event.target.closest('[data-name="btn-view-block-param"]')) {
+//   //   if (event.target.closest('[data-name="param-items"]')) {
+//   //      return;
+//   //   }
+//   //   const blockItems = event.target.closest('[data-name="btn-view-block-param"]');
 
-      controllerModal.view(blockItems.querySelector('[data-name="param-items"]'));
-      if (blockItems.querySelector('[data-name="block-item-copy-key"]')) {
-         controllerModal.view(blockItems.querySelector('[data-name="block-item-copy-key"]'));
-      }
-   }
-}
+//   //   controllerModal.view(blockItems.querySelector('[data-name="param-items"]'));
+//   //   if (blockItems.querySelector('[data-name="block-item-copy-key"]')) {
+//   //      controllerModal.view(blockItems.querySelector('[data-name="block-item-copy-key"]'));
+//   //   }
+//   //}
+//}
 
 export function viewParamUpdForm(event) {
    if (event.target.closest('[data-name="btn-view-param-upd-form"]')) {

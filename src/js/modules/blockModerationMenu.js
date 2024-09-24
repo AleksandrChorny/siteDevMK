@@ -1,5 +1,7 @@
 import * as controllerModal from "./controllerModal.js";
 import * as fetchUrl from "./fetchUrl.js";
+import * as blockUploadFilesMenu from "./blockUploadFilesMenu.js";
+
 
 export function viewParamCreateForm(event) {
 
@@ -54,8 +56,11 @@ export function activeSettingsGroup(event) {
          groupsOfParams.classList.remove('_pacive');
          groupsOfParams.classList.add('_active');
          //Згортаю блоки
-         groupsOfParams.nextElementSibling.classList.remove('_active');
-         groupsOfParams.nextElementSibling.classList.add('_pacive');
+         if (groupsOfParams.nextElementSibling) {
+            groupsOfParams.nextElementSibling.classList.remove('_active');
+            groupsOfParams.nextElementSibling.classList.add('_pacive');
+         }
+
          //Розготраю потрібний
          actionParamItems();
       }
@@ -65,8 +70,11 @@ export function activeSettingsGroup(event) {
          groupsOfBlocks.classList.remove('_pacive');
          groupsOfBlocks.classList.add('_active');
          //згортаю параметри
-         groupsOfBlocks.previousElementSibling.classList.remove('_active');
-         groupsOfBlocks.previousElementSibling.classList.add('_pacive');
+         if (groupsOfBlocks.previousElementSibling) {
+            groupsOfBlocks.previousElementSibling.classList.remove('_active');
+            groupsOfBlocks.previousElementSibling.classList.add('_pacive');
+         }
+
          //Розгортаю потрібний
          actionParamItems()
       }
@@ -125,5 +133,14 @@ export function viewBlockModerationMenu1(event) {
             // console.log(myModal)
             //myModal.innerHTML = data; // JSON data parsed by `response.json()` call
          });
+   }
+}
+
+export function viewBlockUploadFilesMenu(event) {
+   const button = event.target.closest('[name="view-block-files-upload-menu"]');
+   if (button) {
+      const block_id = button.dataset.blockId;
+      blockUploadFilesMenu.setBlockId(block_id);
+      blockUploadFilesMenu.viewUploadFilesMenu();
    }
 }

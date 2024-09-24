@@ -15,3 +15,21 @@ export function controlPanelSwitch(event) {
       })
    }
 }
+
+export function elementPosition() {
+   const editableElements = document.querySelectorAll('[contenteditable="true"]');
+   editableElements.forEach((element) => {
+      if (element.dataset.sectionId) {
+         const id = element.dataset.sectionId;
+         const sectionControlPanel = document.querySelector('[data-section-id="' + id + '"]');
+         const x = element.getBoundingClientRect().x;
+         const y = element.getBoundingClientRect().y;
+         sectionControlPanel.style.position = "absolute";
+         sectionControlPanel.style.top = y + "px";
+         //sectionControlPanel.style.left = '50px';
+         console.log(x, y);
+
+      }
+
+   });
+}

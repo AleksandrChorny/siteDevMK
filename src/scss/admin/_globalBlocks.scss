@@ -113,6 +113,10 @@
    &._pacive{
      width: 20%;
    }
+   &._full{
+      width: 100%;
+      grid-column: 1/3;
+    }
    &__copy-key{
       position: relative;
       left: 8px;
