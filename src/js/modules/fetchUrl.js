@@ -7,7 +7,8 @@ export async function getUrlFormData(url = '', data = {}) {
       credentials: 'same-origin', // include, *same-origin, omit
       headers: {
          //'Content-Type': 'application/json'
-         'Content-Type': 'application/x-www-form-urlencoded',
+         //'Content-Type': 'application/x-www-form-urlencoded',
+         //'Content-Type': 'multipart/form-data',
       },
       redirect: 'follow', // manual, *follow, error
       referrerPolicy: 'no-referrer', // no-referrer, *client

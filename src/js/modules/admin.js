@@ -14,7 +14,34 @@ import * as StileMenu from "./stileCreateMenu.js";
 import * as HeadMenu from "./headSettingsMenu.js";
 import * as modalWindow from "./modalWindow.js";
 
+
+import * as fetchUrl from "./fetchUrl.js";
+
 document.addEventListener('click', (event) => {
+   if (event.target.closest('[data-preventdefoult="true"]')) {
+      event.preventDefault();
+      const FORM = event.target.closest('form');
+      const TITLE = FORM.title;
+      const URL = FORM.action;
+
+      let formData = new FormData(FORM);
+
+      fetchUrl.getUrlFormData(URL, formData)
+         .then((response) => {
+            //console.log(response);
+            document.body.innerHTML += response;
+         });
+   }
+
+   if (event.target.closest('[data-name="btn-view-block-create-menu"]')) {
+      const STYLE_CREATE_MENU = document.querySelector('[data-name="stile-create-menu"]');
+      if (STYLE_CREATE_MENU) {
+         STYLE_CREATE_MENU.classList.add('_view');
+      } else {
+         alert('style create menu not found');
+      }
+   }
+
    controlPanel.viewControlPanel(event);
 
    sectionMenu.view_select_section_menu(event);
@@ -89,38 +116,38 @@ document.addEventListener('change', (event) => {
 //});
 //})
 
-document.addEventListener("mouseover", (event) => {
-   if (event.target.closest('[edit="true"]')) {
-      event.target.style.border = "solid, 1px, black"
-      //console.log(event.target);
-      let div = document.createElement("div");
-      div.classList.add('edit');
-      div.style.width = '15px';
-      div.style.height = '15px';
-      div.style.background = '#00e4ff';
-      div.style.borderRadius = '50%';
-      div.style.position = 'absolute'
-      div.style.top = event.target.offsetTop + 5 + 'px';
-      div.style.left = event.target.offsetLeft + 20 + 'px';
-      div.style.zIndex = 999;
-      const edit = document.querySelectorAll('.edit');
-      edit.forEach(e => {
-         e.remove();
-      });
-      document.body.appendChild(div);
-   }
-});
-document.addEventListener("mouseout", (event) => {
-   event.target.style.border = "";
+//document.addEventListener("mouseover", (event) => {
+//   if (event.target.closest('[edit="true"]')) {
+//      event.target.style.border = "solid, 1px, black"
+//      //console.log(event.target);
+//      let div = document.createElement("div");
+//      div.classList.add('edit');
+//      div.style.width = '15px';
+//      div.style.height = '15px';
+//      div.style.background = '#00e4ff';
+//      div.style.borderRadius = '50%';
+//      div.style.position = 'absolute'
+//      div.style.top = event.target.offsetTop + 5 + 'px';
+//      div.style.left = event.target.offsetLeft + 20 + 'px';
+//      div.style.zIndex = 999;
+//      const edit = document.querySelectorAll('.edit');
+//      edit.forEach(e => {
+//         e.remove();
+//      });
+//      document.body.appendChild(div);
+//   }
+//});
+//document.addEventListener("mouseout", (event) => {
+//   event.target.style.border = "";
 
-   if (event.target.closest('[edit="true"]')) {
-      const q = event.target.closest('[edit="true"]').nextElementSibling
-      //console.log(q)
-      //console.log(q.classList.contains('edit'));
+//   if (event.target.closest('[edit="true"]')) {
+//      const q = event.target.closest('[edit="true"]').nextElementSibling
+//      //console.log(q)
+//      //console.log(q.classList.contains('edit'));
 
-      //if (q.classList.contains('edit')) {
-      //   q.remove();
-      //}
-   }
-})
+//      //if (q.classList.contains('edit')) {
+//      //   q.remove();
+//      //}
+//   }
+//})
 //!console.log(navigator.clipboard.writeText('text'))

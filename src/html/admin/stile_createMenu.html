@@ -3,13 +3,14 @@
    <button class="stile-create-menu__close" data-name="btn-close-stile-create-menu"></button>
 
    <h3 class="stile-create-menu__title">Завантажте файли блоку:</h3>
-   <form class="stile-create-menu__upload-block-wrapper">
+   <form class="settings-form settings-item__param-upd-form" action="/setup/style/create/" title="create style"
+      method="post" enctype="multipart/form-data" name="style_create">
       <p class="stile-create-menu__text">Оберіть файли верстки блока для завантаження в форматі css</p>
       <div class="stile-create-menu__upload-block">
-         <img src="/img/admin/upload-pic.png" alt="">
-         <input class="stile-create-menu__input" type="file" accept=".css">
-         <label for="create-section-layout" data-id="Завантажити CSS">Завантажити CSS</label>
+         <!--<img src="/img/admin/upload-pic.png" alt="">-->
+         <input id="style_create_menu" class="stile-create-menu__input" type="file" accept="css" name="">
+         <label for="style_create_menu" data-id="Завантажити CSS">Завантажити CSS</label>
       </div>
-      <input class="stile-create-menu__submit" type="submit" value="Відправити">
+      <input class="stile-create-menu__submit" type="submit" value="Відправити" data-preventDefoult="true">
    </form>
 </div>

@@ -96,10 +96,10 @@ export function viewSectionModerationMenu(event) {
       const url = buttonView.dataset.url;
       const data = { 'section_id': section_id };
       // Вызываем функцию
-      fetchUrl.getUrlJSON(url, data)
-         .then((data) => {
+      fetchUrl.getUrlFormData(url, data)
+         .then((response) => {
             //console.log(document.body);
-            document.body.innerHTML += data;
+            document.body.innerHTML += response;
             //console.log(data); // JSON data parsed by `response.json()` call
             // console.log(myModal)
             //myModal.innerHTML = data; // JSON data parsed by `response.json()` call
