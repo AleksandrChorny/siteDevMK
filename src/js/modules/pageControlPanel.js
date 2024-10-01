@@ -1,10 +1,11 @@
 //import style select menu JS
 import * as styleSelectMenu from "./styleSelectMenu.js";
 
-//if
+//export function show style select menu
 export function showStyleSelectMenu(event) {
-   console.log(event.target.closest('button').name);
+   // if button name "show-style-select-menu"
    if (event.target.closest('button').name == 'show-style-select-menu') {
+      //show style select menu
       styleSelectMenu.show();
    }
 }

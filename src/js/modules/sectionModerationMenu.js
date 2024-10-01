@@ -1,6 +1,11 @@
 import * as controllerModal from "./controllerModal.js";
 import * as blockSelectMenu from "./blockSelectMenu.js";
 
+export function show(moderationMenu) {
+   console.log(moderationMenu.classList);
+   moderationMenu.classList.add('_view')
+}
+
 export function viewBlockSelectMenu(event) {
    if (event.target.closest('[name="btn-view-block-select-menu"]')) {
       const sectionId = event.target.closest('[name="btn-view-block-select-menu"]').dataset.sectionId;

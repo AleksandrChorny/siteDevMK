@@ -1,5 +1,11 @@
 export function view(element) {
-   element.classList.toggle('_view');
+   function isInPage(node) {
+      return node === document.body ? false : document.body.contains(node);
+   }
+   console.log(isInPage(element))
+   if (document.body.contains(element)) {
+      element.classList.toggle('_view');
+   }
 }
 
 export function close(element) {

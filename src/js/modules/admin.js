@@ -1,6 +1,6 @@
 import * as adminTool from "./adminTool.js";
 import * as inputs from "./inputs.js";
-import * as controlPanel from "./controlPanel.js";
+import * as sectionControlPanel from "./sectionControlPanel.js";
 import * as pageControlPanel from "./pageControlPanel.js";
 import * as sectionMenu from "./sectionMenu.js";
 import * as sectionSettingsMenu from "./sectionSettingsMenu.js";
@@ -44,7 +44,7 @@ document.addEventListener('click', (event) => {
    }
 
    pageControlPanel.showStyleSelectMenu(event);
-   controlPanel.viewControlPanel(event);
+   sectionControlPanel.show(event);
 
    sectionMenu.view_select_section_menu(event);
    //sectionMenu.viewBlockParam(event);
