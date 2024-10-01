@@ -1,5 +1,5 @@
 import * as sectionModerationMenu from "./sectionModerationMenu.js";
-import * as controllerModal from "./controllerModal.js";
+//import * as controllerModal from "./controllerModal.js";
 
 //show button && title on section control panel
 export function show(event) {
@@ -12,10 +12,16 @@ export function show(event) {
          //get button block && title
          const BUTTON_BLOCK = SECTION_CONTROL_PANEL.querySelector('.management-block');
          const TITLE = SECTION_CONTROL_PANEL.querySelector('.section-control-panel__name');
-         //togle button block && title
-         controllerModal.view(BUTTON_BLOCK);
-         controllerModal.view('TITLE');
-
+         //if isset button block, togle button block
+         if (BUTTON_BLOCK) {
+            //togle button block
+            BUTTON_BLOCK.classList.toggle('_view');
+         }
+         //if isset title, togle title
+         if (TITLE) {
+            //togle title
+            TITLE.classList.toggle('_view');
+         }
       }
    }
 }
