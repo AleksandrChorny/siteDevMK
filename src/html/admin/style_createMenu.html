@@ -1,0 +1,16 @@
+<div class="style-create-menu" data-name="style-create-menu">
+   <!-- Кнопка закриття модалки -->
+   <button class="style-create-menu__close" data-name="btn-close-style-create-menu"></button>
+
+   <h3 class="style-create-menu__title">Завантажте файли блоку:</h3>
+   <form class="settings-form settings-item__param-upd-form" action="/setup/style/create/" title="create style"
+      method="post" enctype="multipart/form-data" name="style_create">
+      <p class="style-create-menu__text">Оберіть файли верстки блока для завантаження в форматі css</p>
+      <div class="style-create-menu__upload-block">
+         <!--<img src="/img/admin/upload-pic.png" alt="">-->
+         <input id="style_create_menu" class="style-create-menu__input" type="file" accept="css" name="">
+         <label for="style_create_menu" data-id="Завантажити CSS">Завантажити CSS</label>
+      </div>
+      <input class="style-create-menu__submit" type="submit" value="Відправити" data-preventDefoult="true">
+   </form>
+</div>

@@ -1,6 +1,7 @@
 import * as controllerModal from "./controllerModal.js";
 
 export function viewStileCreateMenu(event) {
+   //const BUTTON_VIEW
    if (event.target.closest('[data-name="btn-view-stile-create-menu"]')) {
       controllerModal.view(document.querySelector('[data-name="stile-create-menu"]'));
    }
