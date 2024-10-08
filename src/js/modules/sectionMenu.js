@@ -113,15 +113,17 @@ export function viewSectionSettingsMenu(event) {
       && event.target.closest(".management__button").name == 'view-section-settings-menu'
    ) {
       const controlPanel = event.target.closest(".section-control-panel");
-      controllerModal.view(controlPanel.querySelector('[data-name="section-settings-menu"]'));
+      controllerModal.view(controlPanel.querySelector('[data-name="section-select-form"]'));
    }
-   if (event.target.closest('[data-button-name="close-section-settings-menu"]')) {
+   if (event.target.closest('[data-name="section-select-menu__close"]') || event.target.closest('[name="section_block-menu-container__confirm-btn"]')) {
+      
       const controlPanel = event.target.closest(".section-control-panel");
-      controllerModal.close(controlPanel.querySelector('[data-name="section-settings-menu"]'));
-      controllerModal.close(controlPanel.querySelector(".section-upd-params-menu"));
+      controllerModal.close(controlPanel.querySelector('[data-name="section-select-form"]'));
+      // controllerModal.close(controlPanel.querySelector(".section-upd-params-menu"));
       //controllerModal.close(controlPanel.querySelector(".create-section-param"));
    }
 }
+
 
 export function viewUpdSectionParamMenu(event) {
    if (
@@ -179,4 +181,32 @@ export function viewSectionType(event) {
          }
       })
    }
+}
+// Max..............................
+export function sectionElemetButton(event){
+   if(event.target.closest('[data-name="btn"]')){
+      const sectionBlockMenuContainer = event.target.closest('[data-name="section-select-form"]');
+      const forms = sectionBlockMenuContainer.querySelectorAll('form');
+      const btnId = event.target.closest('[data-name="btn"]').dataset.id;
+      forms.forEach((form) =>{
+         form.classList.remove('_element_selection_animation');
+         const q = sectionBlockMenuContainer.querySelector('form[data-id="'+btnId+'"]');
+         q.classList.add('_element_selection_animation');
+      })
+   }
+}
+
+export function viewCreatingSectionMenu(event) {
+      // const controlPanel = event.target.closest(".section-control-panel");
+      // controllerModal.view(controlPanel.querySelector('[data-name="section-select-form"]'));
+   if(event.target.closest('[data-name="create-section-menu__btn"]')){
+      controllerModal.view(controlPanel.querySelector('[data-name="section-select-form"]'));
+
+   }
+   // if (event.target.closest('[data-name="section-select-menu__close"]') || event.target.closest('[name="section_block-menu-container__confirm-btn"]')) {
+      
+   //    // const controlPanel = event.target.closest(".section-control-panel");
+   //    controllerModal.close(controlPanel.querySelector('[data-name="section-select-form"]'));
+
+   // }
 }

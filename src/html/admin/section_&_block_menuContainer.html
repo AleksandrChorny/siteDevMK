@@ -1,5 +1,5 @@
-<div class="section_block-menu-container _view" data-name="section-select-form">
-   <button class="section-select-menu__close" type="button"></button>
+<div class="section_block-menu-container" data-name="section-select-form">
+   <button class="section-select-menu__close" data-name="section-select-menu__close" type="button"></button>
 
    <div class="section_block-menu-container__items-wraper" action="/setup/section/select/" title="select section"
       method="post" enctype="multipart/form-data">
@@ -12,11 +12,11 @@
             <a class="section_block-menu-container__item" href="#text" title="text">Text</a>
          </div>
          <div class="section_block-menu-container__menu-navigation-items">
-            <a class="section_block-menu-container__item" href="#img" title="img">Image</a>
-            <a class="section_block-menu-container__item" href="#list" title="list">List</a>
-            <a class="section_block-menu-container__item" href="#btn" title="btn">Button</a>
-            <a class="section_block-menu-container__item" href="#textlink" title="link">Text link</a>
-            <a class="section_block-menu-container__item" href="#imagelink" title="link">Image link</a>
+            <a class="section_block-menu-container__item" href="#img" title="img" data-name="btn" data-id="param-1">Image</a>
+            <a class="section_block-menu-container__item" href="#list" title="list" data-name="btn" data-id="param-2">List</a>
+            <a class="section_block-menu-container__item" href="#btn" title="btn" data-name="btn" data-id="param-3">Button</a>
+            <a class="section_block-menu-container__item" href="#textlink" title="link" data-name="btn" data-id="param-4">Text link</a>
+            <a class="section_block-menu-container__item" href="#imagelink" title="link" data-name="btn" data-id="param-5">Image link</a>
          </div>
       </div>
       <div class="section_block-menu-container__items-list">
@@ -32,10 +32,11 @@
          </form>
          <form class="section_block-menu-container__item-tile" id="text">
             <p class="section_block-menu-container__item-tile-name">Text</p>
-            <textarea class="section_block-menu-container__param-input _textarea tall" type="text" name="param-input"></textarea>
+            <textarea class="section_block-menu-container__param-input _textarea tall" type="text"
+               name="param-input"></textarea>
             <button class="section_block-menu-container__tile-confirm-btn" type="submit">OK</button>
          </form>
-         <form class="section_block-menu-container__item-tile" id="img">
+         <form class="section_block-menu-container__item-tile" id="img" data-id="param-1">
             <button class="section_block-menu-container__del-button" type="submit" title="Видалити елемент">
                <svg class="section_block-menu-container__del-button-svg">
                   <use xlink:href="img/icons/icons.svg#del-btn"></use>
@@ -55,7 +56,7 @@
                </svg>
             </button>
          </form>
-         <form class="section_block-menu-container__item-tile" id="list">
+         <form class="section_block-menu-container__item-tile" id="list" data-id="param-2">
             <button class="section_block-menu-container__del-button" type="submit" title="Видалити елемент">
                <svg class="section_block-menu-container__del-button-svg">
                   <use xlink:href="img/icons/icons.svg#del-btn"></use>
@@ -79,7 +80,7 @@
                </svg>
             </button>
          </form>
-         <form class="section_block-menu-container__item-tile" id="btn">
+         <form class="section_block-menu-container__item-tile" id="btn" data-id="param-3">
             <button class="section_block-menu-container__del-button" type="submit" title="Видалити елемент">
                <svg class="section_block-menu-container__del-button-svg">
                   <use xlink:href="img/icons/icons.svg#del-btn"></use>
@@ -99,7 +100,7 @@
                </svg>
             </button>
          </form>
-         <form class="section_block-menu-container__item-tile" id="textlink">
+         <form class="section_block-menu-container__item-tile" id="textlink" data-id="param-4">
             <button class="section_block-menu-container__del-button" type="submit" title="Видалити елемент">
                <svg class="section_block-menu-container__del-button-svg">
                   <use xlink:href="img/icons/icons.svg#del-btn"></use>
@@ -119,7 +120,7 @@
                </svg>
             </button>
          </form>
-         <form class="section_block-menu-container__item-tile" id="imagelink">
+         <form class="section_block-menu-container__item-tile" id="imagelink" data-id="param-5">
             <button class="section_block-menu-container__del-button" type="submit" title="Видалити елемент">
                <svg class="section_block-menu-container__del-button-svg">
                   <use xlink:href="img/icons/icons.svg#del-btn"></use>
@@ -143,6 +144,7 @@
          </form>
       </div>
 
-      <button class="section_block-menu-container__confirm-btn" type="button">OK</button>
+      <button class="section_block-menu-container__confirm-btn" name="section_block-menu-container__confirm-btn"
+         type="button">OK</button>
    </div>
 </div>

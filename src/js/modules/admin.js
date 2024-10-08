@@ -43,6 +43,7 @@ document.addEventListener('click', (event) => {
       }
    }
 
+
    pageControlPanel.showStyleSelectMenu(event);
    sectionControlPanel.show(event);
 
@@ -54,8 +55,13 @@ document.addEventListener('click', (event) => {
    //sectionMenu.addSectionNumberToDataSectionNamber(event);
    sectionMenu.viewSectionModerationMenu(event);
    sectionMenu.viewSectionCreateParamMenu(event);
+   // Max
+   sectionMenu.sectionElemetButton(event);
+
    sectionMenu.viewUpdSectionParamMenu(event);
    sectionMenu.viewSectionType(event);
+
+
 
    sectionSettingsMenu.actionSettingsItem(event);
 
