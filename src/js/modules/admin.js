@@ -57,7 +57,9 @@ document.addEventListener('click', (event) => {
    sectionMenu.viewSectionCreateParamMenu(event);
    // Max
    sectionMenu.sectionElemetButton(event);
+   sectionMenu.CreatingSectionElemetButton(event);
 
+   sectionMenu.viewMenuForAddingSectionElements(event);
    sectionMenu.viewUpdSectionParamMenu(event);
    sectionMenu.viewSectionType(event);
 

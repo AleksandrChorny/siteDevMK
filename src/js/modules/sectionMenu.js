@@ -196,17 +196,25 @@ export function sectionElemetButton(event){
    }
 }
 
-export function viewCreatingSectionMenu(event) {
-      // const controlPanel = event.target.closest(".section-control-panel");
-      // controllerModal.view(controlPanel.querySelector('[data-name="section-select-form"]'));
-   if(event.target.closest('[data-name="create-section-menu__btn"]')){
-      controllerModal.view(controlPanel.querySelector('[data-name="section-select-form"]'));
-
+export function CreatingSectionElemetButton(event) {
+   if(event.target.closest('[data-name="element-item-btn"]')){
+      const CreatingSectionMenuContainer = event.target.closest('[data-name="section-select-form"]');
+      const forms = CreatingSectionMenuContainer.querySelectorAll('form');
+      const btnId = event.target.closest('[data-name="element-item-btn"]').dataset.id;
+      forms.forEach((form) =>{
+         form.classList.remove('_element_selection_animation');
+         const q = CreatingSectionMenuContainer.querySelector('form[data-id="'+btnId+'"]');
+         q.classList.add('_element_selection_animation');
+      })
    }
-   // if (event.target.closest('[data-name="section-select-menu__close"]') || event.target.closest('[name="section_block-menu-container__confirm-btn"]')) {
-      
-   //    // const controlPanel = event.target.closest(".section-control-panel");
-   //    controllerModal.close(controlPanel.querySelector('[data-name="section-select-form"]'));
+}
 
-   // }
+export function viewMenuForAddingSectionElements(event) {
+   if (event.target.closest('[data-name="add_item_btn"]')) {
+      controllerModal.view(document.querySelector('[data-name="parameter_creation-menu-wrapper"]'));
+   }
+
+   if (event.target.closest('[data-name="parameter_creation-menu-wrapper__close"]')) {
+      controllerModal.close(document.querySelector('[data-name="parameter_creation-menu-wrapper"]'));
+   }
 }

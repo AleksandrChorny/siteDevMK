@@ -1,4 +1,4 @@
-<div class="section_block-menu-container" data-name="section-select-form">
+<div class="section_block-menu-container _view" data-name="section-select-form">
    <button class="section-select-menu__close" type="button"></button>
 
    <div class="section_block-menu-container__items-wraper" action="/setup/section/select/" title="select section"
@@ -7,19 +7,19 @@
       <div class="section_block-menu-container__menu-navigation-block">
          <p class="section_block-menu-container__items-title">Елементи секції</p>
          <div class="section_block-menu-container__menu-navigation-items">
-            <a class="section_block-menu-container__item" href="#newitem" title="newitem">New item</a>
-            <button class="section_block-menu-container__add_item_btn" type="button" title="Додати елемент"></button>
+            <a class="section_block-menu-container__item" href="#newitem" title="newitem" data-name="element-item-btn" data-id="param-1">New item</a>
+            <button class="section_block-menu-container__add_item_btn" type="button" title="Додати елемент" data-name="add_item_btn"></button>
          </div>
          <p class="section_block-menu-container__items-title">Блоки секції</p>
          <div class="section_block-menu-container__menu-navigation-items">
-            <a class="section_block-menu-container__item" href="#newitem2" title="newitem2">New item 2</a>
+            <a class="section_block-menu-container__item" href="#newitem2" title="newitem2" data-name="element-item-btn" data-id="param-2">New item 2</a>
             <button class="section_block-menu-container__add_item_btn" type="button" title="Додати елемент"></button>
          </div>
       </div>
 
       <div class="section_block-menu-container__items-list">
          <!-- картка створення параметра -->
-         <form class="section_block-menu-container__item-tile" id="newitem2">
+         <form class="section_block-menu-container__item-tile _element_selection_animation" id="newitem2" data-id="param-1">
             <p class="section_block-menu-container__item-tile-name">New item 2</p>
             <span class="section_block-menu-container__param-name">Назва елементу</span>
             <input class="section_block-menu-container__param-input" type="text" name="param-input">
@@ -36,7 +36,7 @@
             <button class="section_block-menu-container__tile-confirm-btn" type="submit">OK</button>
 
          </form>
-         <form class="section_block-menu-container__item-tile _block" id="newitem2">
+         <form class="section_block-menu-container__item-tile _block" id="newitem2" data-id="param-2">
             <p class="section_block-menu-container__item-tile-name">New item 2</p>
             <span class="section_block-menu-container__param-name">Назва елементу</span>
             <input class="section_block-menu-container__param-input" type="text" name="param-input">
@@ -66,4 +66,5 @@
 
       <button class="section_block-menu-container__confirm-btn" type="button">OK</button>
    </div>
+@@include('creating_a_element_section_menu.html',{})
 </div>
