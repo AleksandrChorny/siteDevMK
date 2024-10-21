@@ -1,9 +1,5 @@
 import * as controllerModal from "./controllerModal.js";
 
-//export function showByFetch(event) {
-
-//}
-
 export function show() {
    const STYLE_SELECT_MENU = document.querySelector('[data-name="stile-select-menu"]')
    if (STYLE_SELECT_MENU) {
