@@ -1,12 +1,11 @@
-import * as controllerModal from "./controllerModal.js";
-
+//classList add _view to stile create menu
 export function viewStileCreateMenu(event) {
-   //const BUTTON_VIEW
-   if (event.target.closest('[data-name="btn-view-stile-create-menu"]')) {
-      controllerModal.view(document.querySelector('[data-name="stile-create-menu"]'));
-   }
-   if (event.target.closest('[data-name="btn-close-stile-create-menu"]')) {
-      controllerModal.close(document.querySelector('[data-name="stile-create-menu"]'));
-      //sc
+   if (event.target.closest('[data-name="btn-view-block-create-menu"]')) {
+      const STYLE_CREATE_MENU = document.querySelector('[data-name="stile-create-menu"]');
+      if (STYLE_CREATE_MENU) {
+         STYLE_CREATE_MENU.classList.add('_view');
+      } else {
+         alert('style create menu not found');
+      }
    }
 }

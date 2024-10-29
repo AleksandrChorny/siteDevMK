@@ -1,14 +1,14 @@
-<div class="section-select-menu" data-name="section-select-form">
-   <button class="section-select-menu__close"></button>
+<div class="section-select-menu" data-name="section-select-menu">
+   <button class="section-select-menu__close" name="close-section-select-menu"></button>
 
-   <form class="section-select-menu__tiles-container" action="/setup/section/select/" title="select section"
+   <form class="section-select-menu__tiles-container" action="/setup/section/select/" title="select-section-form"
       method="post" enctype="multipart/form-data">
       <p class="section-select-menu__tiles-container-title">Select or create a Section for this Teamplate</p>
       <div class="section-select-menu__tiles-wrapper">
          <!-- Кнопка додавання нового шаблона секції -->
          <div class="section-select-menu__selectors">
             <button class="new-bookmarks-button" type="button" data-button-name="section-create">NEW Section</button>
-            <div class="bookmarks-panel">
+            <!--<div class="bookmarks-panel">
                <button class="bookmarks _active" type="button" data-button-name="section-type"
                   data-type="available">available
                   Sections</button>
@@ -17,7 +17,7 @@
                <button class="bookmarks" type="button" data-button-name="section-type"
                   data-type="archive">archive</button>
                <button class="bookmarks _add" type="button" title="Додати новий тип секції">new type</button>
-            </div>
+            </div>-->
          </div>
 
          <!-- Каталог завантажених шаблонів секцій -->
@@ -59,61 +59,9 @@
                   data-button-name="view-section-moderation-menu" data-id="43">UPD</button>
             </div>
          </div>
-         <div class="section-select-menu__teamplate-tiles" data-name="section-tile" data-type="on moderation">
-            <!-- Картка шаблона секції -->
-            <div class="section-select-menu__tile-wrapper">
-               <label class="section-select-menu__tile">
-                  <input class="section-select-menu__radio" type="radio" name="section-id" value="sectionId">
-                  Mine1
-                  <spun class="section-select-menu__tile-img">
-                     <img class="section-select-menu__img" src="\img\admin\mine.jpg" alt="teamplate preview">
-                     </span>
-               </label>
-               <button class="section-select-menu__title-btn" type="button"
-                  data-button-name="view-section-moderation-menu" data-id="43">UPD</button>
-            </div>
-         </div>
-         <div class="section-select-menu__teamplate-tiles" data-name="section-tile" data-type="archive">
-            <!-- Картка шаблона секції -->
-            <div class="section-select-menu__tile-wrapper">
-               <label class="section-select-menu__tile">
-                  <input class="section-select-menu__radio" type="radio" value="Mine" name="section-id"
-                     value="sectionId">
-                  Mine1
-                  <spun class="section-select-menu__tile-img">
-                     <img class="section-select-menu__img" src="\img\admin\mine.jpg" alt="teamplate preview">
-                     </span>
-               </label>
-               <button class="section-select-menu__title-btn" type="button"
-                  data-button-name="view-section-moderation-menu" data-id="43">UPD</button>
-            </div>
-            <div class="section-select-menu__tile-wrapper">
-               <label class="section-select-menu__tile">
-                  <input class="section-select-menu__radio" type="radio" value="Mine" name="section-id"
-                     value="sectionId">
-                  Mine1
-                  <spun class="section-select-menu__tile-img">
-                     <img class="section-select-menu__img" src="\img\admin\mine.jpg" alt="teamplate preview">
-                     </span>
-               </label>
-               <button class="section-select-menu__title-btn" type="button"
-                  data-button-name="view-section-moderation-menu" data-id="43">UPD</button>
-            </div>
-            <div class="section-select-menu__tile-wrapper">
-               <label class="section-select-menu__tile">
-                  <input class="section-select-menu__radio" type="radio" value="Mine" name="section-id"
-                     value="sectionId">
-                  Mine1
-                  <spun class="section-select-menu__tile-img">
-                     <img class="section-select-menu__img" src="\img\admin\mine.jpg" alt="teamplate preview">
-                     </span>
-               </label>
-               <button class="section-select-menu__title-btn" type="button"
-                  data-button-name="view-section-moderation-menu" data-id="43">UPD</button>
-            </div>
-         </div>
 
       </div>
+      <input type="hidden" name="page_id" value="1">
       <button class="section-select-menu__confirm-btn" type="submit">OK</button>
    </form>
 </div>

@@ -133,3 +133,17 @@ export function close(event) {
       controllerModal.close(event.target.closest('[data-name="section-moderation-menu"]'));
    }
 }
+
+//Підсвічує елемент редагування
+export function actionItem(event) {
+   if (event.target.closest('[data-name="btn"]')) {
+      const sectionBlockMenuContainer = event.target.closest('[data-name="section-select-form"]');
+      const forms = sectionBlockMenuContainer.querySelectorAll('form');
+      const btnId = event.target.closest('[data-name="btn"]').dataset.id;
+      forms.forEach((form) => {
+         form.classList.remove('_element_selection_animation');
+         const q = sectionBlockMenuContainer.querySelector('form[data-id="' + btnId + '"]');
+         q.classList.add('_element_selection_animation');
+      })
+   }
+}

@@ -30,6 +30,5 @@ export function elementPosition() {
          console.log(x, y);
 
       }
-
    });
 }

@@ -1,107 +1,108 @@
-import * as adminTool from "./adminTool.js";
-import * as inputs from "./inputs.js";
-import * as sectionControlPanel from "./sectionControlPanel.js";
-import * as pageControlPanel from "./pageControlPanel.js";
-import * as sectionMenu from "./sectionMenu.js";
-import * as sectionSettingsMenu from "./sectionSettingsMenu.js";
-import * as sectionModerationMenu from "./sectionModerationMenu.js";
-import * as blocks from "./blocks.js";
-import * as blockSelectMenu from "./blockSelectMenu.js";
-import * as blockModerationMenu from "./blockModerationMenu.js";
-import * as blockUploadFilesMenu from "./blockUploadFilesMenu.js";
-import * as teamplateSettings from "./teamplateSettings.js";
-import * as styleSelectMenu from "./styleSelectMenu.js";
-import * as StileMenu from "./stileCreateMenu.js";
-import * as HeadMenu from "./headSettingsMenu.js";
-import * as modalWindow from "./modalWindow.js";
+import * as stileMenu from "./stileCreateMenu.js";
+import * as sectionSelectPanel from "./sectionSelectPanel.js";
+import * as sectionSelectMenu from "./sectionSelectMenu.js";
+import * as sectionCreateMenu from "./sectionCreateMenu.js";
+import * as sectionCreateItemMenu from "./sectionCreateItemMenu.js";
+
+
+
+
+
+
+//import * as adminTool from "./adminTool.js";
+//import * as inputs from "./inputs.js";
+//import * as sectionControlPanel from "./sectionControlPanel.js";
+////import * as pageControlPanel from "./pageControlPanel.js";
+//import * as sectionMenu from "./sectionMenu.js";
+//import * as sectionSettingsMenu from "./sectionSettingsMenu.js";
+//import * as sectionModerationMenu from "./sectionModerationMenu.js";
+//import * as blocks from "./blocks.js";
+//import * as blockSelectMenu from "./blockSelectMenu.js";
+//import * as blockModerationMenu from "./blockModerationMenu.js";
+//import * as blockUploadFilesMenu from "./blockUploadFilesMenu.js";
+//import * as teamplateSettings from "./teamplateSettings.js";
+////import * as styleSelectMenu from "./styleSelectMenu.js";
+//import * as HeadMenu from "./headSettingsMenu.js";
+//import * as modalWindow from "./modalWindow.js";
 
 
 import * as fetchUrl from "./fetchUrl.js";
+//console.log(new URLSearchParams(document.location.search).get("view"));
 
+sectionCreateItemMenu.viewOnload();
+
+//let age = parseInt(params.get("age"), 10)
 document.addEventListener('click', (event) => {
-   if (event.target.closest('[data-preventdefoult="true"]')) {
-      event.preventDefault();
-      const FORM = event.target.closest('form');
-      const TITLE = FORM.title;
-      const URL = FORM.action;
+   stileMenu.viewStileCreateMenu(event);
+   sectionSelectPanel.viewSectionSelectMenu(event);
+   sectionSelectMenu.close(event);
+   sectionSelectMenu.buttonViewSectionCreateMenu(event);
+   sectionCreateMenu.close(event)
 
-      let formData = new FormData(FORM);
+   sectionCreateItemMenu.actionItem(event);
+   sectionCreateItemMenu.viewSectionCreateParamMenu(event);
+   sectionCreateItemMenu.close(event);
+   //pageControlPanel.showStyleSelectMenu(event);
+   //sectionControlPanel.show(event);
 
-      fetchUrl.getUrlFormData(URL, formData)
-         .then((response) => {
-            //console.log(response);
-            document.body.innerHTML += response;
-         });
-   }
+   //sectionMenu.view_select_section_menu(event);
+   ////sectionMenu.viewBlockParam(event);
+   //sectionMenu.viewParamUpdForm(event);
+   //sectionMenu.viewCreateSectionMenu(event);
+   //sectionMenu.viewSectionSettingsMenu(event);
+   ////sectionMenu.addSectionNumberToDataSectionNamber(event);
+   //sectionMenu.viewSectionModerationMenu(event);
+   //sectionMenu.viewSectionCreateParamMenu(event);
 
-   if (event.target.closest('[data-name="btn-view-block-create-menu"]')) {
-      const STYLE_CREATE_MENU = document.querySelector('[data-name="stile-create-menu"]');
-      if (STYLE_CREATE_MENU) {
-         STYLE_CREATE_MENU.classList.add('_view');
-      } else {
-         alert('style create menu not found');
-      }
-   }
-
-
-   pageControlPanel.showStyleSelectMenu(event);
-   sectionControlPanel.show(event);
-
-   sectionMenu.view_select_section_menu(event);
-   //sectionMenu.viewBlockParam(event);
-   sectionMenu.viewParamUpdForm(event);
-   sectionMenu.viewCreateSectionMenu(event);
-   sectionMenu.viewSectionSettingsMenu(event);
-   //sectionMenu.addSectionNumberToDataSectionNamber(event);
-   sectionMenu.viewSectionModerationMenu(event);
-   sectionMenu.viewSectionCreateParamMenu(event);
-   // Max
-   sectionMenu.sectionElemetButton(event);
-   sectionMenu.CreatingSectionElemetButton(event);
-
-   sectionMenu.viewMenuForAddingSectionElements(event);
-   sectionMenu.viewUpdSectionParamMenu(event);
-   sectionMenu.viewSectionType(event);
+   ////Max==========================
+   ////sectionCreateItemMenu.sectionElemetButton(event);
 
 
+   ////Max==========================
 
-   sectionSettingsMenu.actionSettingsItem(event);
+   //sectionMenu.viewUpdSectionParamMenu(event);
+   //sectionMenu.viewSectionType(event);
 
-   sectionModerationMenu.viewBlockSelectMenu(event);
-   sectionModerationMenu.viewParamCreateForm(event);
-   sectionModerationMenu.activeSettingsGroup(event);
-   sectionModerationMenu.view_section_update_files_menu(event);
-   sectionModerationMenu.close(event);
+   //sectionSettingsMenu.actionSettingsItem(event);
 
-   blockModerationMenu.viewParamCreateForm(event);
-   blockModerationMenu.activeSettingsGroup(event);
-   blockModerationMenu.view_block_update_files_menu(event);
-   blockModerationMenu.close(event);
-   blockModerationMenu.viewBlockUploadFilesMenu(event);
+   //sectionModerationMenu.viewBlockSelectMenu(event);
+   //sectionModerationMenu.viewParamCreateForm(event);
+   //sectionModerationMenu.activeSettingsGroup(event);
+   //sectionModerationMenu.view_section_update_files_menu(event);
+   //sectionModerationMenu.close(event);
+   //sectionModerationMenu.actionItem(event);
 
-   blockUploadFilesMenu.buttonClose(event);
+   //blockModerationMenu.viewParamCreateForm(event);
+   //blockModerationMenu.activeSettingsGroup(event);
+   //blockModerationMenu.view_block_update_files_menu(event);
+   //blockModerationMenu.close(event);
+   //blockModerationMenu.viewBlockUploadFilesMenu(event);
 
-   blocks.viewBlockModerationMenu(event);
-   blocks.view_block_update_param_menu(event);
-   blocks.view_block_createParamMenu(event);
-   blocks.viewBlockCreateMenu(event);
-   blocks.viewblockSettingsMenu(event);
+   //blockUploadFilesMenu.buttonClose(event);
 
-   //blocks.viewblockUpdFilesMenu(event);
-   //blockUploadFilesMenu.viewUploadFilesMenu(event);
+   //blocks.viewBlockModerationMenu(event);
+   //blocks.view_block_update_param_menu(event);
+   //blocks.view_block_createParamMenu(event);
+   //blocks.viewBlockCreateMenu(event);
+   //blocks.viewblockSettingsMenu(event);
 
-   teamplateSettings.viewTeamplateSelectMenu(event);
-   teamplateSettings.viewTeamplateCreateMenu(event);
-   // ____Max____
-   //styleSelectMenu.viewStileSelectMenu(event);
-   ////styleSelectMenu.show();
-   StileMenu.viewStileCreateMenu(event);
+   ////blocks.viewblockUpdFilesMenu(event);
+   ////blockUploadFilesMenu.viewUploadFilesMenu(event);
 
-   HeadMenu.viewheadSettingsMenu(event);
-   blockSelectMenu.closeBlockSelectMenu(event);
-   blockSelectMenu.viewBlockType(event);
-   blockSelectMenu.viewBlockModerationMenu(event);
-   modalWindow.close(event);
+   //teamplateSettings.viewTeamplateSelectMenu(event);
+   //teamplateSettings.viewTeamplateCreateMenu(event);
+   //// ____Max____
+   ////styleSelectMenu.viewStileSelectMenu(event);
+   //////styleSelectMenu.show();
+
+   //HeadMenu.viewheadSettingsMenu(event);
+   //blockSelectMenu.closeBlockSelectMenu(event);
+   //blockSelectMenu.viewBlockType(event);
+   //blockSelectMenu.viewBlockModerationMenu(event);
+   //modalWindow.close(event);
+})
+document.addEventListener('input', (event) => {
+   //sectionCreateMenu.validateForm(event);
 })
 
 document.addEventListener('change', (event) => {
@@ -109,6 +110,33 @@ document.addEventListener('change', (event) => {
 
    inputs.typeFilesSetFileNameToLabel(event);
 })
+
+document.addEventListener('submit', (event) => {
+   //sectionCreateMenu.sendForm(event);
+
+
+
+   //sectionCreateItemMenu.someSingDo(event):
+   //view-admin-menu {body.innerHTML += response}
+   //add-in-DB {alert = response}
+   //виклкикати експортовані функції в файлах менюшек
+   if (event.target.closest('[data-preventdefoult="true"]')) {
+      event.preventDefault();
+      //sectionCreateItemMenu.addParamInDBandReloadPaje(event);
+      //console.log(event);
+      //const FORM = event.target.closest('form');
+      //const URL = FORM.action;
+
+      //let formData = new FormData(FORM);
+
+      //fetchUrl.getUrlFormData(URL, formData)
+      //   .then((response) => {
+      //      //document.body.appendChild(response);
+      //      //document.body.innerHTML += response;
+      //   });
+   }
+});
+
 
 
 //const editableElements = document.querySelectorAll('[edit="true"]');

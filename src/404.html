@@ -23,18 +23,30 @@
    @@include('html/mainScreen404.html',{
    "number": "0"
    })
-   @@include('html/admin/section_selectBtn.html',{})
+   @@include('html/admin/section_selectPanel.html',{'number': '1'})
    @@include('html/admin/section_controlPanel.html',{
    "number": "1",
    "name": "footer"
    })
+
+   <!-- admin ================================================================================= -->
+   @@include('html/admin/section_selectMenu.html',{})
+   @@include('html/admin/section_createMenu.html',{})
+
+   <!-- admin ================================================================================= -->
+
+
+
+
+
+
+
    @@include('html/admin/pageControlPanel.html',{})
 
-   @@include('html/admin/sectionSelectMenu.html',{})
    @@include('html/admin/sectionUpdateFilesMenu.html',{})
    @@include('html/admin/section_createMenu.html',{})
    @@include('html/admin/section_&_block_menuContainer.html',{})
-   @@include('html/admin/creating_a_section_menu.html',{})
+   @@include('html/admin/section_createItemMenu.html',{})
    <!-- @@include('html/admin/creating_a_element_section_menu.html',{}) -->
    @@include('html/admin/section_moderationMenu.html',{})
 
@@ -59,7 +71,7 @@
    @@include('html/footer.html',{
    "number": "1"
    })
-   @@include('html/admin/AddSectionBtn.html',{})
+   @@include('html/admin/section_selectPanel_last.html',{})
    @@include('html/admin/modal_window.html',{})
 
 
