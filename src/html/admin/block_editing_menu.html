@@ -1,0 +1,83 @@
+<div class="section_block-menu-container _view" data-name="section-select-form">
+   <button class="section-select-menu__close" type="button"></button>
+
+   <div class="section_block-menu-container__items-wraper" action="/setup/section/select/" title="select section"
+      method="post" enctype="multipart/form-data">
+      <p class="section_block-menu-container__tiles-container-title">Block name</p>
+      <div class="section_block-menu-container__menu-navigation-block">
+         <p class="section_block-menu-container__items-title">Елементи блока</p>
+         <div class="section_block-menu-container__menu-navigation-items">
+            <a class="section_block-menu-container__item" href="#newitem" title="newitem">New item</a>
+            <button class="section_block-menu-container__add_item_btn" type="button" title="Додати елемент"></button>
+         </div>
+         <p class="section_block-menu-container__items-title">Блоки в блоці</p>
+         <div class="section_block-menu-container__menu-navigation-items">
+            <a class="section_block-menu-container__item" href="#newitem2" title="newitem2">New item 2</a>
+            <button class="section_block-menu-container__add_item_btn" type="button" title="Додати елемент"></button>
+         </div>
+      </div>
+      <div class="section_block-menu-container__items-list">
+         <div class="section_block-menu-container__mesage">
+            <p class="section_block-menu-container__mesage-text">Почніть створення секціі додавши необідний елемент</p>
+         </div>
+         <!-- картка створення параметра -->
+         <form class="section_block-menu-container__item-tile" id="newitem2">
+            <p class="section_block-menu-container__item-tile-name">New item 2</p>
+            <button class="section_block-menu-container__del-button" type="submit" title="Видалити елемент">
+                <svg class="section_block-menu-container__del-button-svg">
+                   <use xlink:href="img/icons/icons.svg#del-btn"></use>
+                </svg>
+             </button>
+            <span class="section_block-menu-container__param-name">Назва елементу</span>
+            <input class="section_block-menu-container__param-input" type="text" name="param-input">
+            <span class="section_block-menu-container__param-name">Значення елементу</span>
+            <textarea class="section_block-menu-container__param-input _textarea " type="text" name="param-input"></textarea>
+            <div class="section_block-menu-container__key-copy-unit">
+               <span class="section_block-menu-container__param-name">Скопіювати PHP ключ елемента</span>
+               <button class="section_block-menu-container__key-copy-btn" type="button" title="Скопіювати PHP ключ елемента">
+                  <svg class="section_block-menu-container__key-copy-svg">
+                     <use xlink:href="img/icons/icons.svg#copy"></use>
+                  </svg>
+               </button>
+            </div>
+            <button class="section_block-menu-container__tile-confirm-btn" type="submit">OK</button>
+
+         </form>
+         <!-- картка створення блока -->
+         <form class="section_block-menu-container__item-tile _block" id="newitem2">
+            <p class="section_block-menu-container__item-tile-name">New item 2</p>
+            <button class="section_block-menu-container__del-button" type="submit" title="Видалити елемент">
+                <svg class="section_block-menu-container__del-button-svg">
+                   <use xlink:href="img/icons/icons.svg#del-btn"></use>
+                </svg>
+             </button>
+            <span class="section_block-menu-container__param-name">Назва елементу</span>
+            <input class="section_block-menu-container__param-input" type="text" name="param-input">
+            <span class="section_block-menu-container__param-name">Значення елементу</span>
+            <textarea class="section_block-menu-container__param-input _textarea " type="text" name="param-input"></textarea>
+            <!-- кнопка додавання нового параметра блоку -->
+            <div class="section_block-menu-container__menu-navigation-items">
+               <button class="section_block-menu-container__add_item_btn in_tile" type="button" title="Додати елемент"></button>
+            </div>
+            <div class="section_block-menu-container__key-copy-unit">
+               <span class="section_block-menu-container__param-name">Скопіювати PHP ключ блока</span>
+               <button class="section_block-menu-container__key-copy-btn" type="button" title="Скопіювати PHP ключ елемента">
+                  <svg class="section_block-menu-container__key-copy-svg">
+                     <use xlink:href="img/icons/icons.svg#copy"></use>
+                  </svg>
+               </button>
+            </div>
+            <button class="section_block-menu-container__tile-confirm-btn" type="submit">OK</button>
+         </form>
+      </div>
+
+      
+      <form class="section_block-menu-container__code_entry_block">
+         <span class="section_block-menu-container__code_entry_block_title">Вставте сюди HTML розмітку вашої секції</span>
+         <textarea class="section_block-menu-container__code_entry_block_input" name="" id=""></textarea>
+         <button class="section_block-menu-container__code_entry_block_submit_btn" type="submit" title="Надіслати">GO</button>
+      </form>
+
+      <button class="section_block-menu-container__confirm-btn" type="button">OK</button>
+   </div>
+</div>
