@@ -177,6 +177,18 @@
          display: none;
       }
    }
+   &__mesage {
+      width: 320px;
+      padding: 8px;
+
+   }
+   &__mesage-text {
+      font-size: 14px;
+      line-height: 14px;
+      font-weight: 400;
+      text-align: center;
+      color: $colorDarkGray;
+   }
    &__item-tile {
       position: relative;
       display: flex;
@@ -324,7 +336,7 @@
       align-items: center;
       position: absolute;
       bottom: 12px;
-      right: 48px;
+      right: 12px;
 
       width: 24px;
       height: 24px;
