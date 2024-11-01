@@ -3,7 +3,7 @@
 
    <div class="section_block-menu-container__items-wraper" action="/setup/section/select/" title="select section"
       method="post" enctype="multipart/form-data">
-      <p class="section_block-menu-container__tiles-container-title">Section name</p>
+      <p class="section_block-menu-container__tiles-container-title">Section moderation name</p>
       <div class="section_block-menu-container__menu-navigation-block">
          <p class="section_block-menu-container__items-title">Елементи секції</p>
          <div class="section_block-menu-container__menu-navigation-items">
@@ -21,9 +21,17 @@
       </div>
 
       <div class="section_block-menu-container__items-list">
+         <div class="section_block-menu-container__mesage">
+            <p class="section_block-menu-container__mesage-text">Почніть створення секціі додавши необідний елемент</p>
+         </div>
          <!-- картка створення параметра -->
          <form class="section_block-menu-container__item-tile _action" id="newitem2" data-id="param-1">
             <p class="section_block-menu-container__item-tile-name">New item 2</p>
+            <button class="section_block-menu-container__del-button" type="submit" title="Видалити елемент">
+               <svg class="section_block-menu-container__del-button-svg">
+                  <use xlink:href="img/icons/icons.svg#del-btn"></use>
+               </svg>
+            </button>
             <span class="section_block-menu-container__param-name">Назва елементу</span>
             <input class="section_block-menu-container__param-input" type="text" name="param-input">
             <span class="section_block-menu-container__param-name">Значення елементу</span>
@@ -43,6 +51,11 @@
          </form>
          <form class="section_block-menu-container__item-tile _block" id="newitem2" data-id="param-2">
             <p class="section_block-menu-container__item-tile-name">New item 2</p>
+            <button class="section_block-menu-container__del-button" type="submit" title="Видалити елемент">
+               <svg class="section_block-menu-container__del-button-svg">
+                  <use xlink:href="img/icons/icons.svg#del-btn"></use>
+               </svg>
+            </button>
             <span class="section_block-menu-container__param-name">Назва елементу</span>
             <input class="section_block-menu-container__param-input" type="text" name="param-input">
             <span class="section_block-menu-container__param-name">Значення елементу</span>
