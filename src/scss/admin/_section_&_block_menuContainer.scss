@@ -251,6 +251,10 @@
       font-weight: 400;
       text-align: left;
       color: $colorWhite;
+      &._kiy {
+         font-size: 14px;
+         line-height: 14px;
+      }
    }
    &__param-input {
       width: 320px;
