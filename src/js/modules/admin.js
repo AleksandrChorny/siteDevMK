@@ -2,7 +2,7 @@ import * as stileMenu from "./stileCreateMenu.js";
 import * as sectionSelectPanel from "./sectionSelectPanel.js";
 import * as sectionSelectMenu from "./sectionSelectMenu.js";
 import * as sectionCreateMenu from "./sectionCreateMenu.js";
-import * as sectionCreateItemMenu from "./sectionCreateItemMenu.js";
+import * as sectionModerationMenu from "./sectionCreateItemMenu.js";
 
 
 
@@ -29,7 +29,7 @@ import * as sectionCreateItemMenu from "./sectionCreateItemMenu.js";
 import * as fetchUrl from "./fetchUrl.js";
 //console.log(new URLSearchParams(document.location.search).get("view"));
 
-sectionCreateItemMenu.viewOnload();
+sectionModerationMenu.viewOnload();
 
 //let age = parseInt(params.get("age"), 10)
 document.addEventListener('click', (event) => {
@@ -39,9 +39,9 @@ document.addEventListener('click', (event) => {
    sectionSelectMenu.buttonViewSectionCreateMenu(event);
    sectionCreateMenu.close(event)
 
-   sectionCreateItemMenu.actionItem(event);
-   sectionCreateItemMenu.viewSectionCreateParamMenu(event);
-   sectionCreateItemMenu.close(event);
+   sectionModerationMenu.actionItem(event);
+   sectionModerationMenu.viewSectionCreateParamMenu(event);
+   sectionModerationMenu.close(event);
    //pageControlPanel.showStyleSelectMenu(event);
    //sectionControlPanel.show(event);
 
@@ -55,7 +55,7 @@ document.addEventListener('click', (event) => {
    //sectionMenu.viewSectionCreateParamMenu(event);
 
    ////Max==========================
-   ////sectionCreateItemMenu.sectionElemetButton(event);
+   ////sectionModerationMenu.sectionElemetButton(event);
 
 
    ////Max==========================
@@ -116,13 +116,13 @@ document.addEventListener('submit', (event) => {
 
 
 
-   //sectionCreateItemMenu.someSingDo(event):
+   //sectionModerationMenu.someSingDo(event):
    //view-admin-menu {body.innerHTML += response}
    //add-in-DB {alert = response}
    //виклкикати експортовані функції в файлах менюшек
    if (event.target.closest('[data-preventdefoult="true"]')) {
       event.preventDefault();
-      //sectionCreateItemMenu.addParamInDBandReloadPaje(event);
+      //sectionModerationMenu.addParamInDBandReloadPaje(event);
       //console.log(event);
       //const FORM = event.target.closest('form');
       //const URL = FORM.action;
