@@ -320,6 +320,20 @@
          background: $colorLightOrange;
       }
    }
+   &__dell-section-btn{
+      position: absolute;
+      right: 8px;
+      bottom: 8px;
+
+      width: 36px;
+      height: 36px;
+
+      background: 0;
+   }
+   &__dell-section-btn-svg{
+      width: 36px;
+      height: 36px;
+   }
    &__confirm-btn{
       display: flex;
       justify-content: center;
