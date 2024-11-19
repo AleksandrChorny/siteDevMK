@@ -13,7 +13,8 @@
             <img class="section-select-menu__cover-img" src="img/moderation.jpg" alt="img">
             <p class="section-select-menu__cover-txt">Секції на модерації</p>
          </div>
-         <div class="section-select-menu__teamplate-tiles moderation _active" data-name="section-tile" data-type="available">
+         <div class="section-select-menu__teamplate-tiles moderation _active" data-name="section-tile"
+            data-type="available">
             <!-- Картка шаблона секції -->
             <div class="section-select-menu__tile-wrapper">
                <label class="section-select-menu__tile">
@@ -27,48 +28,68 @@
                <button class="section-select-menu__title-btn" type="button"
                   data-button-name="view-section-moderation-menu" data-id="43"
                   data-url="/setup/section/view-moderation-menu/">UPD</button>
-                  <button class="section-select-menu__dell-section-btn" type="submit" title="Видалити секцію">
-                     <svg class="section-select-menu__dell-section-btn-svg">
-                        <use xlink:href="@img/icons/icons.svg#GearNew"></use>
-                     </svg>
-                  </button>
-            </div>
-         </div>
-      </div>
-   </div>
-   <form class="section-select-menu__tiles-container" action="/setup/section/select/" title="select-section-form"
-   method="post" enctype="multipart/form-data">
-   <div class="section-select-menu__tiles-wrapper _reverse-direction">
-      <!-- Каталог завантажених шаблонів секцій -->
-      <div class="section-select-menu__type-sections-cover">
-         <img class="section-select-menu__cover-img" src="img/available.jpg" alt="img">
-         <p class="section-select-menu__cover-txt">Доступні секції</p>
-      </div>
-      <div class="section-select-menu__teamplate-tiles available _active" data-name="section-tile" data-type="available">
-
-         <!-- Картка шаблона секції -->
-         <div class="section-select-menu__tile-wrapper">
-            <label class="section-select-menu__tile">
-               <input class="section-select-menu__radio" type="radio" value="Mine" name="section-id"
-                  value="sectionId">
-               Mine1
-               <spun class="section-select-menu__tile-img">
-                  <img class="section-select-menu__img" src="\img\admin\mine.jpg" alt="teamplate preview">
-                  </span>
-            </label>
-            <button class="section-select-menu__title-btn" type="button"
-               data-button-name="view-section-moderation-menu" data-id="43"
-               data-url="/setup/section/view-moderation-menu/">UPD</button>
                <button class="section-select-menu__dell-section-btn" type="submit" title="Видалити секцію">
                   <svg class="section-select-menu__dell-section-btn-svg">
                      <use xlink:href="@img/icons/icons.svg#GearNew"></use>
                   </svg>
                </button>
+            </div>
          </div>
       </div>
-
    </div>
-   <input type="hidden" name="page_id" value="1">
-   <button class="section-select-menu__confirm-btn" type="submit">OK</button>
+   <form class="section-select-menu__tiles-container" action="/setup/section/select/" title="select-section-form"
+      method="post" enctype="multipart/form-data">
+      <div class="section-select-menu__tiles-wrapper _reverse-direction">
+         <!-- Каталог завантажених шаблонів секцій -->
+         <div class="section-select-menu__type-sections-cover">
+            <img class="section-select-menu__cover-img" src="img/available.jpg" alt="img">
+            <p class="section-select-menu__cover-txt">Доступні секції</p>
+         </div>
+         <div class="section-select-menu__teamplate-tiles available _active" data-name="section-tile"
+            data-type="available">
+
+            <!-- Картка шаблона секції -->
+            <div class="section-select-menu__tile-wrapper">
+               <label class="section-select-menu__tile">
+                  <input class="section-select-menu__radio" type="radio" value="Mine" name="section-id"
+                     value="sectionId">
+                  Mine1
+                  <spun class="section-select-menu__tile-img">
+                     <img class="section-select-menu__img" src="\img\admin\mine.jpg" alt="teamplate preview">
+                     </span>
+               </label>
+               <button class="section-select-menu__title-btn" type="button"
+                  data-button-name="view-section-moderation-menu" data-id="43"
+                  data-url="/setup/section/view-moderation-menu/">UPD</button>
+               <button class="section-select-menu__dell-section-btn" type="submit" title="Видалити секцію">
+                  <svg class="section-select-menu__dell-section-btn-svg">
+                     <use xlink:href="@img/icons/icons.svg#GearNew"></use>
+                  </svg>
+               </button>
+            </div>
+            <div class="section-select-menu__tile-wrapper">
+               <label class="section-select-menu__tile">
+                  <input class="section-select-menu__radio" type="radio" value="Mine" name="section-id"
+                     value="sectionId">
+                  Mine1
+                  <spun class="section-select-menu__tile-img">
+                     <img class="section-select-menu__img" src="\img\admin\mine.jpg" alt="teamplate preview">
+                     </span>
+               </label>
+               <button class="section-select-menu__title-btn" type="button"
+                  data-button-name="view-section-moderation-menu" data-id="43"
+                  data-url="/setup/section/view-moderation-menu/">UPD</button>
+               <button class="section-select-menu__dell-section-btn" type="submit" title="Видалити секцію">
+                  <svg class="section-select-menu__dell-section-btn-svg">
+                     <use xlink:href="@img/icons/icons.svg#GearNew"></use>
+                  </svg>
+               </button>
+            </div>
+
+         </div>
+
+      </div>
+      <input type="hidden" name="page_id" value="1">
+      <button class="section-select-menu__confirm-btn" type="submit">OK</button>
    </form>
 </div>
