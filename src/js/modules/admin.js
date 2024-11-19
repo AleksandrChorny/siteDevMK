@@ -29,6 +29,7 @@ import * as sectionModerationMenu from "./sectionCreateItemMenu.js";
 import * as fetchUrl from "./fetchUrl.js";
 //console.log(new URLSearchParams(document.location.search).get("view"));
 
+sectionSelectMenu.viewOnload();
 sectionModerationMenu.viewOnload();
 
 //let age = parseInt(params.get("age"), 10)

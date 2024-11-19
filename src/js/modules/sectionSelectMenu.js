@@ -53,3 +53,13 @@ function create_hidden_input(name, value) {
    input.setAttribute("type", 'hidden');
    return input;
 }
+
+export function viewOnload() {
+   const VIEW = new URLSearchParams(document.location.search).get("view")
+   if (VIEW) {
+      const VIEW_IN_ARRAY = VIEW.split('_')
+      if (VIEW_IN_ARRAY.includes('selectSectionMenu')) {
+         document.querySelector('[data-name="section-select-menu"]').classList.add('_view');
+      }
+   }
+}
