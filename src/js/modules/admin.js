@@ -4,18 +4,22 @@ import * as sectionSelectMenu from "./sectionSelectMenu.js";
 import * as sectionCreateMenu from "./sectionCreateMenu.js";
 import * as sectionModerationMenu from "./sectionCreateItemMenu.js";
 
+// ___________________Max________________________
+
+import * as sectionControlPanel from "./sectionControlPanel.js";
+import * as sectionEditMenu from "./sectionEditMenu.js";
 
 
-
+// import * as sectionModerationMenu from "./sectionModerationMenu.js";
+// import * as pageControlPanel from "./pageControlPanel.js";
+// import * as sectionMenu from "./sectionMenu.js";
 
 
 //import * as adminTool from "./adminTool.js";
 //import * as inputs from "./inputs.js";
-//import * as sectionControlPanel from "./sectionControlPanel.js";
-////import * as pageControlPanel from "./pageControlPanel.js";
+
 //import * as sectionMenu from "./sectionMenu.js";
 //import * as sectionSettingsMenu from "./sectionSettingsMenu.js";
-//import * as sectionModerationMenu from "./sectionModerationMenu.js";
 //import * as blocks from "./blocks.js";
 //import * as blockSelectMenu from "./blockSelectMenu.js";
 //import * as blockModerationMenu from "./blockModerationMenu.js";
@@ -42,17 +46,21 @@ document.addEventListener('click', (event) => {
    sectionModerationMenu.actionItem(event);
    sectionModerationMenu.viewSectionCreateParamMenu(event);
    sectionModerationMenu.close(event);
-   //pageControlPanel.showStyleSelectMenu(event);
-   //sectionControlPanel.show(event);
+// ________Max______
 
-   //sectionMenu.view_select_section_menu(event);
-   ////sectionMenu.viewBlockParam(event);
-   //sectionMenu.viewParamUpdForm(event);
-   //sectionMenu.viewCreateSectionMenu(event);
-   //sectionMenu.viewSectionSettingsMenu(event);
-   ////sectionMenu.addSectionNumberToDataSectionNamber(event);
-   //sectionMenu.viewSectionModerationMenu(event);
-   //sectionMenu.viewSectionCreateParamMenu(event);
+   sectionControlPanel.show(event);
+   sectionEditMenu.view(event);
+
+
+   // pageControlPanel.showStyleSelectMenu(event);
+   // sectionMenu.view_select_section_menu(event);
+   // //sectionMenu.viewBlockParam(event);
+   // sectionMenu.viewParamUpdForm(event);
+   // sectionMenu.viewCreateSectionMenu(event);
+   // sectionMenu.viewSectionSettingsMenu(event);
+   // //sectionMenu.addSectionNumberToDataSectionNamber(event);
+   // sectionMenu.viewSectionModerationMenu(event);
+   // sectionMenu.viewSectionCreateParamMenu(event);
 
    ////Max==========================
    ////sectionModerationMenu.sectionElemetButton(event);
@@ -60,46 +68,46 @@ document.addEventListener('click', (event) => {
 
    ////Max==========================
 
-   //sectionMenu.viewUpdSectionParamMenu(event);
-   //sectionMenu.viewSectionType(event);
+   // sectionMenu.viewUpdSectionParamMenu(event);
+   // sectionMenu.viewSectionType(event);
 
-   //sectionSettingsMenu.actionSettingsItem(event);
+   // sectionSettingsMenu.actionSettingsItem(event);
 
-   //sectionModerationMenu.viewBlockSelectMenu(event);
-   //sectionModerationMenu.viewParamCreateForm(event);
-   //sectionModerationMenu.activeSettingsGroup(event);
-   //sectionModerationMenu.view_section_update_files_menu(event);
-   //sectionModerationMenu.close(event);
-   //sectionModerationMenu.actionItem(event);
+   // sectionModerationMenu.viewBlockSelectMenu(event);
+   // sectionModerationMenu.viewParamCreateForm(event);
+   // sectionModerationMenu.activeSettingsGroup(event);
+   // sectionModerationMenu.view_section_update_files_menu(event);
+   // sectionModerationMenu.close(event);
+   // sectionModerationMenu.actionItem(event);
 
-   //blockModerationMenu.viewParamCreateForm(event);
-   //blockModerationMenu.activeSettingsGroup(event);
-   //blockModerationMenu.view_block_update_files_menu(event);
-   //blockModerationMenu.close(event);
-   //blockModerationMenu.viewBlockUploadFilesMenu(event);
+   // blockModerationMenu.viewParamCreateForm(event);
+   // blockModerationMenu.activeSettingsGroup(event);
+   // blockModerationMenu.view_block_update_files_menu(event);
+   // blockModerationMenu.close(event);
+   // blockModerationMenu.viewBlockUploadFilesMenu(event);
 
-   //blockUploadFilesMenu.buttonClose(event);
+   // blockUploadFilesMenu.buttonClose(event);
 
-   //blocks.viewBlockModerationMenu(event);
-   //blocks.view_block_update_param_menu(event);
-   //blocks.view_block_createParamMenu(event);
-   //blocks.viewBlockCreateMenu(event);
-   //blocks.viewblockSettingsMenu(event);
+   // blocks.viewBlockModerationMenu(event);
+   // blocks.view_block_update_param_menu(event);
+   // blocks.view_block_createParamMenu(event);
+   // blocks.viewBlockCreateMenu(event);
+   // blocks.viewblockSettingsMenu(event);
 
    ////blocks.viewblockUpdFilesMenu(event);
    ////blockUploadFilesMenu.viewUploadFilesMenu(event);
 
-   //teamplateSettings.viewTeamplateSelectMenu(event);
-   //teamplateSettings.viewTeamplateCreateMenu(event);
+   // teamplateSettings.viewTeamplateSelectMenu(event);
+   // teamplateSettings.viewTeamplateCreateMenu(event);
    //// ____Max____
    ////styleSelectMenu.viewStileSelectMenu(event);
    //////styleSelectMenu.show();
 
-   //HeadMenu.viewheadSettingsMenu(event);
-   //blockSelectMenu.closeBlockSelectMenu(event);
-   //blockSelectMenu.viewBlockType(event);
-   //blockSelectMenu.viewBlockModerationMenu(event);
-   //modalWindow.close(event);
+   // HeadMenu.viewheadSettingsMenu(event);
+   // blockSelectMenu.closeBlockSelectMenu(event);
+   // blockSelectMenu.viewBlockType(event);
+   // blockSelectMenu.viewBlockModerationMenu(event);
+   // modalWindow.close(event);
 })
 document.addEventListener('input', (event) => {
    //sectionCreateMenu.validateForm(event);

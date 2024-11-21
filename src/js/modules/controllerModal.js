@@ -1,4 +1,5 @@
 export function view(element) {
+   console.log(element)
    element.classList.toggle('_view');
 }
 

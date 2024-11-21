@@ -1,16 +1,16 @@
 <!-- меню модерації секції -->
-<div class="moderation-menu" data-name="section-moderation-menu">
+<div class="section-upd-menu _view" data-name="section-upd-menu">
    <!-- кнопка закриття та заголовок меню модерації секції-->
-   <div class="moderation-menu__header">
+   <div class="section-upd-menu__header">
       <!-- Кнопка закриття меню модерації секції-->
-      <button class="close-btn" type="button" data-button="close-section-moderation-menu"></button>
+      <button class="close-btn" type="button" data-button="close-section-section-upd-menu"></button>
       <!-- заголовок меню -->
-      <p class="moderation-menu__title">Section moderation name</p>
+      <p class="section-upd-menu__title">Section upd name</p>
    </div>
    <!-- обгортка меню модерації секції -->
-   <div class="moderation-menu__wrapper">
+   <div class="section-upd-menu__wrapper">
       <!-- список-меню елементів для навігації по елементам -->
-      <div class="item-navigation moderation-menu__item-navigation">
+      <div class="item-navigation section-upd-menu__item-navigation">
          <!-- заголовок списку навігації по парметрам -->
          <p class="item-navigation__title">Елементи секції</p>
          <!-- параметри навігації -->
@@ -34,7 +34,7 @@
          </div>
       </div>
       <!-- список форм модерації елементів -->
-      <div class="item-forms moderation-menu__item-forms">
+      <div class="item-forms section-upd-menu__item-forms">
          <!-- підказка, що жодного параметра чи сеції не створенно -->
          <p class="hint">Почніть створення секціі додавши необідний елемент</p>
          <!-- форма модерації парметра -->
@@ -84,19 +84,35 @@
       </div>
 
       <!-- форма додавання ХТМЛ частини секції -->
-      <form class="create-view-form moderation-menu__create-view-form" action="/setup/section/add_php_view/"
-         title="add php view" method="post" enctype="multipart/form-data">
+      <div class="create-view-form section-upd-menu__create-view-form">
          <!-- поле додавння ХТМЛ частини секції -->
-         <label class="create-view-form__label">Вставте сюди HTML розмітку вашої
-            секції</label>
-         <textarea class="create-view-form__textarea" name="" id=""></textarea>
-         <!-- скритий інпут -->
-         <input type="hidden" name="section_id" value="1">
+         <label class="create-view-form__label">HTML цієї секції</label>
+         <xmp class="create-view-form__textarea" name="" id="">
+            <section class="main-screen">
+               <h1 class="main-screen__title" edit="true">
+                  Вибачте,
+                  сторінку не знайдено!
+               </h1>
+               <p class="main-screen__text" edit="true">
+                  Можливо, посилання, за яким ви перейшли,
+                  не працює або сторінку видалено.
+               </p>
+            
+               <a class="main-screen__link" href="#" edit="true">
+                  <svg>
+                     <use xlink:href="img/icons/icons.svg#triangle"></use>
+                  </svg>
+                  <span>Повернутися на головну сторінку</span>
+               </a>
+            
+               <img edit="true" data-section-id="0" class="main-screen__img" src="\img\cover\404.png" alt="img">
+            </section>
+         </xmp>
          <!-- кнопка відправки форми додавання ХТМЛ частини секції -->
-         <button class="create-view-form__submit" type="submit" title="Надіслати">GO</button>
-      </form>
+         <a class="create-view-form__submit" type="submit" title="Надіслати">EDIT</a>
+      </div>
       <!-- кнопка закриття форми -->
-      <button class="moderation-menu__confirm-btn" type="submit" data-button="close-section-moseration-menu">OK</button>
+      <button class="section-upd-menu__confirm-btn" type="submit" data-button="close-section-moseration-menu">OK</button>
    </div>
    <!-- модальне вікно створення параметра секції -->
    <div class="modal-window" data-name="section-create-param-menu">
@@ -106,7 +122,7 @@
          <button class="close-btn" type="button" data-name="close-section-create-param-menu"></button>
       </div>
       <!-- форма створення параметра секції -->
-      <form class="edit-form moderation-menu__edit-form _action" action="/setup/section/create-param/"
+      <form class="edit-form section-upd-menu__edit-form _action" action="/setup/section/create-param/"
          title="add php view" method="post" enctype="multipart/form-data" data-name="create-section-param-form">
          <p class="edit-form__title">create section param</p>
          <!-- поле створення назви параметра -->

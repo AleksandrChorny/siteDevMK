@@ -2,12 +2,12 @@ import * as controllerModal from "./controllerModal.js";
 import * as fetchUrl from "./fetchUrl.js";
 
 
-//function add_section_number_to_data_section_number(event) {
+// function add_section_number_to_data_section_number(event) {
 //   const section_upd_params_menu = event.target.closest('.section-control-panel');
 //   const number = section_upd_params_menu.querySelector('.items__number').dataset.number;
 //   //const section_select_menu = document.querySelector('.select-section-menu');
 //   document.querySelector('.section-select-menu').setAttribute('data-section-namber', number);
-//}
+// }
 
 function create_hidden_input(name, value) {
    const input = document.createElement("input");
@@ -64,12 +64,7 @@ export function viewCreateSectionMenu(event) {
 //   //}
 //}
 
-export function viewParamUpdForm(event) {
-   if (event.target.closest('[data-name="btn-view-param-upd-form"]')) {
-      const paramUpdForm = event.target.closest('[data-name="btn-view-param-upd-form"]').nextElementSibling;
-      controllerModal.view(paramUpdForm);
-   }
-}
+
 
 //export function setFileNameInCreateSectionMenu() {
 //   const inputs = document.querySelectorAll('.create-section-menu__upload-block-wrapper .create-section-menu__input');
@@ -107,23 +102,12 @@ export function viewSectionModerationMenu(event) {
    }
 }
 
-export function viewSectionSettingsMenu(event) {
-   if (
-      event.target.closest('.management__button')
-      && event.target.closest(".management__button").name == 'view-section-settings-menu'
-   ) {
-      const controlPanel = event.target.closest(".section-control-panel");
-      controllerModal.view(controlPanel.querySelector('[data-name="section-select-form"]'));
-   }
-   if (event.target.closest('[data-name="section-select-menu__close"]') || event.target.closest('[name="section_block-menu-container__confirm-btn"]')) {
-
-      const controlPanel = event.target.closest(".section-control-panel");
-      controllerModal.close(controlPanel.querySelector('[data-name="section-select-form"]'));
-      // controllerModal.close(controlPanel.querySelector(".section-upd-params-menu"));
-      //controllerModal.close(controlPanel.querySelector(".create-section-param"));
+export function viewParamUpdForm(event) {
+   if (event.target.closest('[data-name="btn-view-param-upd-form"]')) {
+      const paramUpdForm = event.target.closest('[data-name="btn-view-param-upd-form"]').nextElementSibling;
+      controllerModal.view(paramUpdForm);
    }
 }
-
 
 export function viewUpdSectionParamMenu(event) {
    if (

@@ -1,4 +1,4 @@
-<section class="section-control-panel" data-admin-element="true" data-section-id="@@number">
+<section class="section-control-panel" data-name="section-control-panel" data-section-id="@@number">
    <div class="section-control-panel__wrapper">
       <div class="section-control-panel__btns-wrapper">
          <button class="section-control-panel__btn" title="Налаштування секції">
@@ -10,7 +10,7 @@
             </div>
             <p class="section-control-panel__name">@@name</p>
          </button>
-         <div class="section-control-panel__management-block management-block ">
+         <div class="section-control-panel__management-block management-block">
             <div class="section-control-panel__management management">
                <form class="management__form" action="/setup/section/up/" title="up section" method="post"
                   enctype="multipart/form-data">
@@ -33,7 +33,7 @@
                </form>
             </div>
             <div class="section-control-panel__management">
-               <button class="management__button" name="view-section-settings-menu" type="button"
+               <button class="management__button" name="view-section-edit-menu" type="button"
                   title="Редагування контенту секції">
                   <svg class="management__svg">
                      <use xlink:href="@img/icons/icons.svg#editing-btn"></use>
@@ -53,5 +53,5 @@
          </div>
       </div>
    </div>
-   <!--@@include('section_&_block_menuContainer.html',{})-->
+   @@include('section_editMenu.html',{})
 </section>

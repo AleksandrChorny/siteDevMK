@@ -1,5 +1,5 @@
-import * as sectionModerationMenu from "./sectionModerationMenu.js";
-//import * as controllerModal from "./controllerModal.js";
+import * as sectionModerationMenu from "./sectionCreateItemMenu.js";
+// import * as controllerModal from "./controllerModal.js";
 
 //show button && title on section control panel
 export function show(event) {
