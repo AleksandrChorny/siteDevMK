@@ -8,6 +8,8 @@ import * as sectionModerationMenu from "./sectionCreateItemMenu.js";
 
 import * as sectionControlPanel from "./sectionControlPanel.js";
 import * as sectionEditMenu from "./sectionEditMenu.js";
+import * as sectionUpdMenu from "./sectionUpdMenu.js";
+
 
 
 // import * as sectionModerationMenu from "./sectionModerationMenu.js";
@@ -50,6 +52,12 @@ document.addEventListener('click', (event) => {
 
    sectionControlPanel.show(event);
    sectionEditMenu.view(event);
+   sectionUpdMenu.viewAlarm(event);
+   sectionUpdMenu.closeAlarm(event);
+
+
+
+
 
 
    // pageControlPanel.showStyleSelectMenu(event);
