@@ -53,3 +53,59 @@ function create_hidden_input(name, value) {
    input.setAttribute("type", 'hidden');
    return input;
 }
+
+export function viewAlarm(event) {
+   const BUTTON_EDIT = event.target.closest('[data-name="view-alarm-section-select-moderation-view"]');
+   if (BUTTON_EDIT) {
+      const SECTION_SELECT_MENU = event.target.closest('[data-name="section-select-menu"]');
+      if (SECTION_SELECT_MENU) {
+         const ALARM_MENU = SECTION_SELECT_MENU.querySelector('[data-name="alarm-section-select-moderation-view"]');
+         if (ALARM_MENU) {
+            ALARM_MENU.classList.add('_view');
+         }else {
+            alert('alarm-section-select-moderation-view не знайдено!');
+         }
+      } else {
+         alert('section-select-menu не знайдено!');
+      }
+   }
+}
+
+export function closeAlarm(event) {
+   const BUTTON_CLOSE = event.target.closest('[name="close-alarm-section-select-moderation-view"');
+   const BUTTON_REJECT = event.target.closest('[data-name="reject-alarm-section-select-moderation-view"]');
+   if (BUTTON_CLOSE || BUTTON_REJECT) {
+      const ALARM_MENU = event.target.closest('[data-name="alarm-section-select-moderation-view"]');
+      if (ALARM_MENU) {
+         ALARM_MENU.classList.remove('_view');
+      } else {
+         alert('alarm-section-select-moderation-view не знайдено!');
+      }
+   }
+}
+
+export function viewUpdButtons(event) {
+   const CLOSE_ALARM_MENU = event.target.closest('[data-name="confirm-alarm-section-select-moderation-view"]');
+   if (CLOSE_ALARM_MENU) {
+      const ALARM_MENU = event.target.closest('[data-name="alarm-section-select-moderation-view"]');
+      if (ALARM_MENU) {
+         ALARM_MENU.classList.remove('_view');
+      } else {
+         alert('alarm-section-select-moderation-view не знайдено!');
+      }
+   }
+   const BUTTON_CONFIRM = event.target.closest('[data-name="confirm-alarm-section-select-moderation-view"]');
+   if (BUTTON_CONFIRM) {
+      const SECTION_SELECT_MENU = event.target.closest('[data-name="section-select-menu"]');
+      if (SECTION_SELECT_MENU) {
+         const CONFIRMS = SECTION_SELECT_MENU.querySelectorAll('._preview');
+         CONFIRMS.forEach(element => {
+            if (element) {
+               element.classList.remove('_preview');
+            } else {
+               alert('Звернітся до адміністратора!');
+            }
+         });
+      }
+   }
+}

@@ -55,7 +55,9 @@ document.addEventListener('click', (event) => {
    sectionUpdMenu.viewAlarm(event);
    sectionUpdMenu.closeAlarm(event);
 
-
+   sectionSelectMenu.viewAlarm(event);
+   sectionSelectMenu.closeAlarm(event);
+   sectionSelectMenu.viewUpdButtons(event);
 
 
 
