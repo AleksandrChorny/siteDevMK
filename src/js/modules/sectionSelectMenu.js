@@ -109,3 +109,29 @@ export function viewUpdButtons(event) {
       }
    }
 }
+
+export function viewSectionSettingsModal(event) {
+   const GEAR_BUTTON = event.target.closest('[data-name="section-select-menu__dell-section-btn"]');
+   if (GEAR_BUTTON) {
+      const SECTION_SELECT_MENU = event.target.closest('[data-name="section-select-menu"]');
+      if (SECTION_SELECT_MENU) {
+         const SECTION_SETTING_MODAL = SECTION_SELECT_MENU.querySelector('[data-name="section-settings-modal-view"]');
+         SECTION_SETTING_MODAL.classList.add('_view');
+      } else {
+               alert('Звернітся до адміністратора!');
+      }
+   }
+}
+
+export function closeSectionSettingsModal(event) {
+   const CLOSE_BUTTON = event.target.closest('[name="close-section-select-menu-view"]');
+   // console.log(CLOSE_BUTTON)
+   if (CLOSE_BUTTON) {
+      const SECTION_SETTING_MODAL = event.target.closest('[data-name="section-settings-modal-view"]');
+      if (SECTION_SETTING_MODAL) {
+         SECTION_SETTING_MODAL.classList.remove('_view');
+      } else {
+         alert('Звернітся до адміністратора!');
+      }
+   }
+}

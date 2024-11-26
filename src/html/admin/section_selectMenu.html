@@ -33,7 +33,7 @@
                <button class="section-select-menu__title-btn _preview" type="button"
                   data-button-name="view-section-moderation-menu" data-id="43"
                   data-url="/setup/section/view-moderation-menu/">MOD</button>
-               <button class="section-select-menu__dell-section-btn _preview" type="submit" title="Видалити секцію">
+               <button class="section-select-menu__dell-section-btn _preview" data-name="section-select-menu__dell-section-btn" type="submit" title="Видалити секцію">
                   <svg class="section-select-menu__dell-section-btn-svg">
                      <use xlink:href="@img/icons/icons.svg#GearNew"></use>
                   </svg>
@@ -69,7 +69,7 @@
             <button class="section-select-menu__title-btn" type="button"
                data-button-name="view-section-moderation-menu" data-id="43"
                data-url="/setup/section/view-moderation-menu/">UPD</button>
-               <button class="section-select-menu__dell-section-btn" type="submit" title="Видалити секцію">
+               <button class="section-select-menu__dell-section-btn" data-name="section-select-menu__dell-section-btn" type="submit" title="Видалити секцію">
                   <svg class="section-select-menu__dell-section-btn-svg">
                      <use xlink:href="@img/icons/icons.svg#GearNew"></use>
                   </svg>
@@ -82,4 +82,6 @@
    <button class="section-select-menu__confirm-btn" type="submit">OK</button>
    </form>
    @@include('alarm_section-select-moderation-view.html',{})
+   @@include('section_settingsModal.html',{})
+
 </div>

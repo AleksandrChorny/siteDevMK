@@ -103,6 +103,15 @@
     &__ico_img {
         height: 32px;
     }
+    &__file-name {
+      text-align: center;
+      width: 100%;
+
+      color: $colorWhite;
+      font-size: 12;
+      line-height: 1em;
+      font-weight: 400;
+    }
     &__section-type-checkbox-wrapper {
         display: flex;
         flex-wrap: nowrap;
