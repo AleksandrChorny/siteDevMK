@@ -1,0 +1,25 @@
+<div class="section-settings-modal _view" >
+   <button class="section-select-menu__close" name="close-alarm-section-upd-view"></button>
+    <form class="section-settings-modal__form" action="" name="section-settings-form">
+        <!-- поле зміни назви секції -->
+        <span class="section-settings-modal__span">Тут ви можете змінити назву секції</span>
+        <input class="section-settings-modal__section-name-input" type="text" value="Section name">
+        <!-- завантаження титульного малюну (preview) секції -->
+        <span class="section-settings-modal__span">Тут ви можете завантажте зображення для прев'ю секції</span>
+        <input class="section-settings-modal__section-preview-input" id="section_preview" name="section_preview" type="file" accept="image/*">
+        <label class="section-settings-modal__section-preview-label" for="section_preview">
+            Обрати зображення
+            <img class="section-settings-modal__ico_img" src="/img/icons/img.png" alt="upload section preview">
+        </label>
+        <!-- меню вибору типу секції (section on moderation/regular section etc.) -->
+        <span class="section-settings-modal__span">Тут ви можете обрати тип секції</span>
+        <div class="section-settings-modal__section-type-checkbox-wrapper">
+            <input class="section-settings-modal__section-type-checkbox" type="radio" name="section-type-checkbox" value="moderation" id="moderation" checked>
+            <label class="section-settings-modal__label-for-checkbox" for="moderation">Section on moderation</label>
+            <input class="section-settings-modal__section-type-checkbox" type="radio" name="section-type-checkbox" value="regular" id="regular" focus>
+            <label class="section-settings-modal__label-for-checkbox" for="regular">Regular section</label>
+        </div>
+        <!-- кнопка збереження/відправки налаштувань -->
+        <input class="section-settings-modal__submit" type="submit" value="Зберегти">
+    </form>
+</div>
