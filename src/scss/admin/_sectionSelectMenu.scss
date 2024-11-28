@@ -336,6 +336,11 @@
       height: 36px;
 
       background: 0;
+      transition: all .3s;
+      &:hover {
+         scale: .9;
+      }
+
       &._preview {
          display: none;
       }
@@ -366,6 +371,35 @@
       &:hover{
          background: $colorLightOrange;
       }
+   }
+   &__block-settings-btn {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      position: absolute;
+      bottom: 8px;
+      right: 52px;
+
+      width: 36px;
+      height: 36px;
+
+      background: transparent;
+      border-radius: 50%;
+      overflow: hidden;
+      transition: all .5s;
+  
+      &:hover {
+         transform: rotate(360deg);
+         box-shadow: 0 0 8px 0 rgba(255, 255, 255, 0.7), 0 0 8px 0 rgba(255, 255, 255, 0.7) inset;
+      }
+
+      &._preview {
+         display: none;
+      }
+   }
+   &__block-settings-btn-svg {
+      width: 36px;
+      height: 36px;
    }
 }
 .moderation {
