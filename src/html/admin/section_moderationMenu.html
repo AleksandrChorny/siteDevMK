@@ -1,5 +1,5 @@
 <!-- меню модерації секції -->
-<div class="moderation-menu" data-name="section-moderation-menu">
+<div class="moderation-menu _view" data-name="section-moderation-menu">
    <!-- кнопка закриття та заголовок меню модерації секції-->
    <div class="moderation-menu__header">
       <!-- Кнопка закриття меню модерації секції-->
@@ -86,10 +86,13 @@
       <!-- форма додавання ХТМЛ частини секції -->
       <form class="create-view-form moderation-menu__create-view-form" action="/setup/section/add_php_view/"
          title="add php view" method="post" enctype="multipart/form-data">
+         <!-- Поле виводу завантаженого коду -->
+         <label class="create-view-form__label">HTML/PHP Код секції:</label>
+         <div class="create-view-form__code-display-panel _min-height">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Maxime similique laboriosam, ut quidem autem libero eligendi voluptates iste rerum ducimus, repellat tempore voluptas cum debitis iure dolorem sit id repellendus.</div>
          <!-- поле додавння ХТМЛ частини секції -->
-         <label class="create-view-form__label">Вставте сюди HTML розмітку вашої
-            секції</label>
-         <textarea class="create-view-form__textarea" name="" id=""></textarea>
+         <label class="create-view-form__label">Вставте сюди HTML розмітку вашої секції для створення/редагування</label>
+         <textarea class="create-view-form__textarea _max-height" name="" id=""></textarea>
+         <button class="create-view-form__textarea-scale_btn _scale_up" type="button"></button>
          <!-- скритий інпут -->
          <input type="hidden" name="section_id" value="1">
          <!-- кнопка відправки форми додавання ХТМЛ частини секції -->
