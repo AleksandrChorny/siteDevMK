@@ -135,3 +135,43 @@ export function closeSectionSettingsModal(event) {
       }
    }
 }
+
+// export function addClasses(event) {
+//    const MODERATION_MENU = document.querySelector('[data-name="section-moderation-menu"]');
+//    if (MODERATION_MENU) {
+//       const TEXTAREA = MODERATION_MENU.querySelector('[data-name="max-height"]');
+//       const TEXTAREA_SCALE_BTN = MODERATION_MENU.querySelector('[button-data-name="scale_up"]');
+//       if (event.target.closest('[button-data-name="scale_up"]')) {
+//          if (TEXTAREA.classList.contain('_max-height')){
+//             TEXTAREA.classList.remove('_max-height');
+//             TEXTAREA_SCALE_BTN.classList.remove('_scale_up');
+//          } else {
+//             TEXTAREA.classList.add('_max-height');
+//             TEXTAREA_SCALE_BTN.classList.add('_scale_up');
+//          }
+//          }
+//    // console.log(TEXTAREA)
+//    }
+// }
+
+export function addClasses(event) {
+   const MODERATION_MENU = document.querySelector('[data-name="section-moderation-menu"]');
+   if (MODERATION_MENU) {
+      const VIEW_ACTIVE = MODERATION_MENU.querySelector('[data-name="view-active"]');
+      const VIEW_NEW = MODERATION_MENU.querySelector('[data-name="view-new"]');
+
+      if (event.target.closest('[data-name="view-new"]')) {
+         if (!VIEW_NEW.classList.contains('_max-height')){
+            VIEW_ACTIVE.classList.add('_min-height');
+            VIEW_NEW.classList.add('_max-height');
+         }
+      }
+      if (event.target.closest('[data-name="view-active"]')) {
+         if (VIEW_ACTIVE.classList.contains('_min-height')){
+            VIEW_ACTIVE.classList.remove('_min-height');
+            VIEW_NEW.classList.remove('_max-height');
+         }
+      }
+   // console.log(TEXTAREA)
+   }
+}

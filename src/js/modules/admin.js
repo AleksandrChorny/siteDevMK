@@ -60,6 +60,8 @@ document.addEventListener('click', (event) => {
    sectionSelectMenu.viewUpdButtons(event);
    sectionSelectMenu.viewSectionSettingsModal(event);
    sectionSelectMenu.closeSectionSettingsModal(event);
+   sectionSelectMenu.addClasses(event);
+
 
 
 
