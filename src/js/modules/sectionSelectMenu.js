@@ -73,8 +73,10 @@ export function viewAlarm(event) {
 
 export function closeAlarm(event) {
    const BUTTON_CLOSE = event.target.closest('[name="close-alarm-section-select-moderation-view"');
+   const BUTTON_CONFIRM = event.target.closest('[data-name="confirm-alarm-section-select-moderation-view"');
+
    const BUTTON_REJECT = event.target.closest('[data-name="reject-alarm-section-select-moderation-view"]');
-   if (BUTTON_CLOSE || BUTTON_REJECT) {
+   if (BUTTON_CLOSE || BUTTON_REJECT || BUTTON_CONFIRM) {
       const ALARM_MENU = event.target.closest('[data-name="alarm-section-select-moderation-view"]');
       if (ALARM_MENU) {
          ALARM_MENU.classList.remove('_view');
@@ -84,29 +86,37 @@ export function closeAlarm(event) {
    }
 }
 
+// export function viewUpdButtons(event) {
+//    const PREVIEW = event.target.closest('[data-name="preview-activ-section"]');
+//    if (PREVIEW) {
+//       const SECTION_SELECT_MENU = event.target.closest('[data-name="section-tile"]');
+//       if (SECTION_SELECT_MENU) {
+//          const CONFIRMS = SECTION_SELECT_MENU.querySelectorAll('[data-name="activ-section"]');
+//          CONFIRMS.forEach(element => {
+//             if (element) {
+//                element.classList.add('_preview');
+//             } else {
+//                alert('Звернітся до адміністратора!');
+//             }
+//          });
+//       }
+//       PREVIEW.classList.remove('_preview');
+//    }
+// }
 export function viewUpdButtons(event) {
-   const CLOSE_ALARM_MENU = event.target.closest('[data-name="confirm-alarm-section-select-moderation-view"]');
-   if (CLOSE_ALARM_MENU) {
-      const ALARM_MENU = event.target.closest('[data-name="alarm-section-select-moderation-view"]');
-      if (ALARM_MENU) {
-         ALARM_MENU.classList.remove('_view');
-      } else {
-         alert('alarm-section-select-moderation-view не знайдено!');
-      }
-   }
-   const BUTTON_CONFIRM = event.target.closest('[data-name="confirm-alarm-section-select-moderation-view"]');
-   if (BUTTON_CONFIRM) {
-      const SECTION_SELECT_MENU = event.target.closest('[data-name="section-select-menu"]');
-      if (SECTION_SELECT_MENU) {
-         const CONFIRMS = SECTION_SELECT_MENU.querySelectorAll('._preview');
-         CONFIRMS.forEach(element => {
-            if (element) {
-               element.classList.remove('_preview');
-            } else {
-               alert('Звернітся до адміністратора!');
-            }
-         });
-      }
+   const PREVIEW = event.target.closest('[data-name="section-card"]');
+   if (PREVIEW) {
+      const FATHER = PREVIEW.querySelectorAll('[data-name="active-section-preview"]');
+      FATHER.forEach(element => {
+         if (element) {
+            element.classList.remove('_preview');
+         } else {
+            alert('Звернітся до адміністратора!');
+         }
+      });
+      // console.log(FATHER);
+
+      PREVIEW.classList.add('_preview');
    }
 }
 
