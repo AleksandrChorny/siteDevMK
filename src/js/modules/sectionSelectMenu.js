@@ -104,19 +104,29 @@ export function closeAlarm(event) {
 //    }
 // }
 export function viewUpdButtons(event) {
-   const PREVIEW = event.target.closest('[data-name="section-card"]');
-   if (PREVIEW) {
-      const FATHER = PREVIEW.querySelectorAll('[data-name="active-section-preview"]');
-      FATHER.forEach(element => {
+   const TILES = event.target.closest('[data-name="section-tiles"]');
+   const CARD = event.target.closest('[data-name="section-card"]');
+
+   if (TILES) {
+      const PREVIEW_TILES = TILES.querySelectorAll('[data-name="active-section-preview"]');
+      PREVIEW_TILES.forEach(element => {
+         if (element) {
+            element.classList.add('_preview');
+         } else {
+            alert('Звернітся до адміністратора!');
+         }
+      });
+   }
+   if (CARD) {
+      const PREVIEW_CARD = CARD.querySelectorAll('[data-name="active-section-preview"]');
+      PREVIEW_CARD.forEach(element => {
          if (element) {
             element.classList.remove('_preview');
          } else {
             alert('Звернітся до адміністратора!');
          }
       });
-      // console.log(FATHER);
-
-      PREVIEW.classList.add('_preview');
+      PREVIEW_CARD.classList.add('_preview');
    }
 }
 
