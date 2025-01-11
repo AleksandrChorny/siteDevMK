@@ -10,6 +10,7 @@ import * as sectionControlPanel from "./sectionControlPanel.js";
 import * as sectionEditMenu from "./sectionEditMenu.js";
 import * as sectionUpdMenu from "./sectionUpdMenu.js";
 
+import * as pageCreate from "./pageCreate.js";
 
 
 // import * as sectionModerationMenu from "./sectionModerationMenu.js";
@@ -61,7 +62,14 @@ document.addEventListener('click', (event) => {
    sectionSelectMenu.viewSectionSettingsModal(event);
    sectionSelectMenu.closeSectionSettingsModal(event);
    sectionSelectMenu.addClasses(event);
+   
+   pageCreate.viewPageCreateMenu(event);
+   pageCreate.closePageCreateMenu(event);
+
+   
    // sectionSelectMenu.viewUpdButtons(event);
+
+   // teamplateSettings.viewTeamplateSelectMenu(event);
 
 
 
