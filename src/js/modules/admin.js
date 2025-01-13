@@ -173,9 +173,6 @@ document.addEventListener('submit', (event) => {
    }
 });
 
-document.addEventListener('load', (event) => {
-   console.log(123123123);
-});
 
 //const editableElements = document.querySelectorAll('[edit="true"]');
 //editableElements.forEach((element) => {
