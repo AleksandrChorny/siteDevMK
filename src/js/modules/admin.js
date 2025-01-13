@@ -19,7 +19,7 @@ import * as pageCreate from "./pageCreate.js";
 
 
 //import * as adminTool from "./adminTool.js";
-//import * as inputs from "./inputs.js";
+import * as inputs from "./inputs.js";
 
 //import * as sectionMenu from "./sectionMenu.js";
 //import * as sectionSettingsMenu from "./sectionSettingsMenu.js";
@@ -139,7 +139,8 @@ document.addEventListener('input', (event) => {
 })
 
 document.addEventListener('change', (event) => {
-   adminTool.controlPanelSwitch(event);
+   // adminTool.controlPanelSwitch(event);
+   
 
    inputs.typeFilesSetFileNameToLabel(event);
 })
@@ -149,6 +150,8 @@ document.addEventListener('submit', (event) => {
 
 
 
+
+   
    //sectionModerationMenu.someSingDo(event):
    //view-admin-menu {body.innerHTML += response}
    //add-in-DB {alert = response}
@@ -170,7 +173,9 @@ document.addEventListener('submit', (event) => {
    }
 });
 
-
+document.addEventListener('load', (event) => {
+   console.log(123123123);
+});
 
 //const editableElements = document.querySelectorAll('[edit="true"]');
 //editableElements.forEach((element) => {
