@@ -183,6 +183,7 @@
       align-items: flex-start;
 
       width: min-content;
+      height: 216px;
 
       padding: 8px;
       gap: 8px;
@@ -301,7 +302,7 @@
       width: 100%;
    }
    &__title-btn{
-      display: flex;
+      // display: flex;
       justify-content: center;
       align-items: center;
 
@@ -320,10 +321,20 @@
       border-radius: 12px;
       background: $colorOrange;
       box-shadow: 1px 1px 2px 0px rgba(0, 0, 0, 0.25);
+      opacity: 0;
+
+      animation-name: showBtn;
+      animation-duration: .3s;
+      animation-delay: .3s;
+      animation-iteration-count: 1;
+      animation-fill-mode: forwards;
+
       &:hover{
          background: $colorLightOrange;
       }
       &._preview {
+         animation: hideBtn .01s linear forwards;
+
          display: none;
       }
    }
@@ -337,11 +348,19 @@
 
       background: 0;
       transition: all .3s;
+      opacity: 0;
+
+      animation-name: showBtn;
+      animation-duration: .3s;
+      animation-delay: .3s;
+      animation-iteration-count: 1;
+      animation-fill-mode: forwards;
       &:hover {
          scale: .9;
       }
 
       &._preview {
+         animation: hideBtn .01s linear forwards;
          display: none;
       }
    }
@@ -387,6 +406,13 @@
       border-radius: 50%;
       overflow: hidden;
       transition: all .5s;
+      opacity: 0;
+
+      animation-name: showBtn;
+      animation-duration: .3s;
+      animation-delay: .3s;
+      animation-iteration-count: 1;
+      animation-fill-mode: forwards;
   
       &:hover {
          transform: rotate(360deg);
@@ -394,6 +420,8 @@
       }
 
       &._preview {
+         animation: hideBtn .01s linear forwards;
+
          display: none;
       }
    }
@@ -447,6 +475,25 @@
       line-height: 1.3em;
       text-align: center;
       color: $colorDarkGray;
+   }
+}
+
+@keyframes showBtn {
+   0% {
+      display: none;
+      opacity: 0;
+   }
+   100% {
+      display: flex;
+      opacity: 1;
+   }
+}
+@keyframes hideBtn {
+   0% {
+      display: flex;
+   }
+   100% {
+      display: none;
    }
 }
 
