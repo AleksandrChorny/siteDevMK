@@ -11,6 +11,9 @@ import * as sectionEditMenu from "./sectionEditMenu.js";
 import * as sectionUpdMenu from "./sectionUpdMenu.js";
 
 import * as pageCreate from "./pageCreate.js";
+import * as modalWindow from "./modalWindow.js";
+import * as inputs from "./inputs.js";
+
 
 
 // import * as sectionModerationMenu from "./sectionModerationMenu.js";
@@ -19,7 +22,6 @@ import * as pageCreate from "./pageCreate.js";
 
 
 //import * as adminTool from "./adminTool.js";
-import * as inputs from "./inputs.js";
 
 //import * as sectionMenu from "./sectionMenu.js";
 //import * as sectionSettingsMenu from "./sectionSettingsMenu.js";
@@ -30,7 +32,6 @@ import * as inputs from "./inputs.js";
 //import * as teamplateSettings from "./teamplateSettings.js";
 ////import * as styleSelectMenu from "./styleSelectMenu.js";
 //import * as HeadMenu from "./headSettingsMenu.js";
-//import * as modalWindow from "./modalWindow.js";
 
 
 import * as fetchUrl from "./fetchUrl.js";
@@ -50,6 +51,7 @@ document.addEventListener('click', (event) => {
    sectionModerationMenu.viewSectionCreateParamMenu(event);
    sectionModerationMenu.close(event);
 // ________Max______
+   modalWindow.close(event);
 
    sectionControlPanel.show(event);
    sectionEditMenu.view(event);
@@ -136,11 +138,12 @@ document.addEventListener('click', (event) => {
 })
 document.addEventListener('input', (event) => {
    //sectionCreateMenu.validateForm(event);
+   pageCreate.Max(event);
+
 })
 
 document.addEventListener('change', (event) => {
    // adminTool.controlPanelSwitch(event);
-   
 
    inputs.typeFilesSetFileNameToLabel(event);
 })

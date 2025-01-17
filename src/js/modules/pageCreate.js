@@ -23,7 +23,33 @@ export function closePageCreateMenu(event) {
       }
    }
 }
+export function Max (event) {
+   const INPUT = event.target.closest('[data-name="input-create-page-url"]');
+   if (INPUT) {
+      let inputValue = INPUT.value;
 
+      if (inputValue.charAt(0) !== '/') {
+         inputValue = '/' + inputValue;
+      }
+      // if (inputValue.charAt(-1) !== '/') {
+      //    inputValue = inputValue + '/';
+      // }
+
+      console.log(window.location.href);
+      INPUT.value = inputValue;
+   }
+
+
+
+   // const MENU = event.target.closest('[data-name="page-create-menu"]');
+   // if(MENU) {
+   //    const INPUT = document.querySelector('input');
+   //    if (INPUT) {
+   //       INPUT.classList.add('/');
+   //    }
+   // }
+   
+}
 // export function viewTeamplateCreateMenu(event) {
 
 //    if (event.target.closest('[data-name="btn-view-teamplate-create-menu"]')) {
