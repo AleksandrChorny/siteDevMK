@@ -53,6 +53,8 @@ document.addEventListener('click', (event) => {
 // ________Max______
    modalWindow.close(event);
 
+
+
    sectionControlPanel.show(event);
    sectionEditMenu.view(event);
    sectionUpdMenu.viewAlarm(event);
@@ -139,12 +141,13 @@ document.addEventListener('click', (event) => {
 document.addEventListener('input', (event) => {
    //sectionCreateMenu.validateForm(event);
    pageCreate.Max(event);
+   modalWindow.testLS(event);
 
 })
 
 document.addEventListener('change', (event) => {
    // adminTool.controlPanelSwitch(event);
-
+   
    inputs.typeFilesSetFileNameToLabel(event);
 })
 
