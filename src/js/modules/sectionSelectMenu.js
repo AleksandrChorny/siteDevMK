@@ -6,7 +6,6 @@ import * as fetchUrl from "./fetchUrl.js";
 export function viewSectionSelectMenu(nuberOfSection) {
    //fetchUrl.loadContent("selectSectionMenu", { sectionNumber: nuberOfSection });
    fetchUrl.loadContent("selectSectionMenu", { sectionNumber: nuberOfSection });
-   fetchUrl.loadContent("modal2");
 }
 
 export function close(event) {

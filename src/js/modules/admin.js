@@ -37,7 +37,7 @@ import * as inputs from "./inputs.js";
 import * as fetchUrl from "./fetchUrl.js";
 
 
-sectionSelectMenu.viewOnload();
+//sectionSelectMenu.viewOnload();
 sectionModerationMenu.viewOnload();
 
 //let age = parseInt(params.get("age"), 10)
@@ -51,7 +51,7 @@ document.addEventListener('click', (event) => {
    sectionModerationMenu.actionItem(event);
    sectionModerationMenu.viewSectionCreateParamMenu(event);
    sectionModerationMenu.close(event);
-// ________Max______
+   // ________Max______
    modalWindow.close(event);
 
 
@@ -67,11 +67,11 @@ document.addEventListener('click', (event) => {
    sectionSelectMenu.viewSectionSettingsModal(event);
    sectionSelectMenu.closeSectionSettingsModal(event);
    sectionSelectMenu.addClasses(event);
-   
+
    pageCreate.viewPageCreateMenu(event);
    pageCreate.closePageCreateMenu(event);
 
-   
+
    // sectionSelectMenu.viewUpdButtons(event);
 
    // teamplateSettings.viewTeamplateSelectMenu(event);
@@ -148,7 +148,7 @@ document.addEventListener('input', (event) => {
 
 document.addEventListener('change', (event) => {
    // adminTool.controlPanelSwitch(event);
-   
+
    inputs.typeFilesSetFileNameToLabel(event);
 })
 
@@ -158,7 +158,7 @@ document.addEventListener('submit', (event) => {
 
 
 
-   
+
    //sectionModerationMenu.someSingDo(event):
    //view-admin-menu {body.innerHTML += response}
    //add-in-DB {alert = response}
