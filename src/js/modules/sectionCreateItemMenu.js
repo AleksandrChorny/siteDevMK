@@ -43,10 +43,14 @@ export function close(event) {
 }
 
 export function viewOnload() {
-   //console.log(new URLSearchParams(document.location.search).get("moderation"))
-   if (new URLSearchParams(document.location.search).get("moderation") == 'view') {
-      document.querySelector('[data-name="section-moderation-menu"]').classList.add('_view');
+   const VIEW = new URLSearchParams(document.location.search).get("view")
+   if (VIEW) {
+      const VIEW_IN_ARRAY = VIEW.split('_')
+      if (VIEW_IN_ARRAY.includes('moderation')) {
+         document.querySelector('[data-name="section-moderation-menu"]').classList.add('_view');
+      }
    }
+
    if (new URLSearchParams(document.location.search).get("section_id")) {
       const SECTION_ID = new URLSearchParams(document.location.search).get("section_id");
       const FORM = document.querySelector('[data-name="create-section-param-form"]');

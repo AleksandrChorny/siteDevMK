@@ -33,10 +33,11 @@ import * as inputs from "./inputs.js";
 ////import * as styleSelectMenu from "./styleSelectMenu.js";
 //import * as HeadMenu from "./headSettingsMenu.js";
 
-
+//Запит на сервер для завантаження частин html
 import * as fetchUrl from "./fetchUrl.js";
-//console.log(new URLSearchParams(document.location.search).get("view"));
 
+
+sectionSelectMenu.viewOnload();
 sectionModerationMenu.viewOnload();
 
 //let age = parseInt(params.get("age"), 10)
