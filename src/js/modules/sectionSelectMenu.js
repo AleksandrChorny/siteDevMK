@@ -1,32 +1,12 @@
 import * as sectionCreateMenu from "./sectionCreateMenu.js";
+import * as fetchUrl from "./fetchUrl.js";
+
 
 //classList add _view to stile create menu get section number and create hidden input "section number"
-export function viewSectionSelectMenu(sectionNumber) {
-   //get select section menu
-   const SECTION_SELECT_MENU = document.querySelector('[data-name="section-select-menu"]');
-   //add class view and create hidden input
-   if (SECTION_SELECT_MENU) {
-      //get select form
-      const SELECT_FORM = SECTION_SELECT_MENU.querySelector('form[title="select-section-form"]');
-      //if isset select form
-      if (SELECT_FORM) {
-         //get hidden input "section number"
-         const INPUT_SECTION_NUMBER = SELECT_FORM.querySelector('input[name="section_number"]');
-         //if isset hidden input? remove
-         if (INPUT_SECTION_NUMBER) {
-            INPUT_SECTION_NUMBER.remove();
-         }
-         //create hidden input "section number"
-         const INPUT = create_hidden_input('section_number', sectionNumber);
-         //inset input in form
-         SELECT_FORM.prepend(INPUT);
-      }
-      // view seelct section menu
-      SECTION_SELECT_MENU.classList.add('_view');
-      return;
-   }
-   //if !isset menu view alert
-   alert('cannot view SECTION_SELECT_MENU is epsent on document');
+export function viewSectionSelectMenu(nuberOfSection) {
+   //fetchUrl.loadContent("selectSectionMenu", { sectionNumber: nuberOfSection });
+   fetchUrl.loadContent("selectSectionMenu", { sectionNumber: nuberOfSection });
+   fetchUrl.loadContent("modal2");
 }
 
 export function close(event) {

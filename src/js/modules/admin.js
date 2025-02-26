@@ -25,9 +25,9 @@ import * as sectionModerationMenu from "./sectionCreateItemMenu.js";
 //import * as HeadMenu from "./headSettingsMenu.js";
 //import * as modalWindow from "./modalWindow.js";
 
-
+//Запит на сервер для завантаження частин html
 import * as fetchUrl from "./fetchUrl.js";
-//console.log(new URLSearchParams(document.location.search).get("view"));
+
 
 sectionSelectMenu.viewOnload();
 sectionModerationMenu.viewOnload();
