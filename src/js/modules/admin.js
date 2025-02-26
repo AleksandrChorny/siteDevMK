@@ -1,3 +1,4 @@
+import * as localStorage from "./localStorage.js";
 import * as stileMenu from "./stileCreateMenu.js";
 import * as sectionSelectPanel from "./sectionSelectPanel.js";
 import * as sectionSelectMenu from "./sectionSelectMenu.js";
@@ -34,7 +35,11 @@ import * as inputs from "./inputs.js";
 //import * as HeadMenu from "./headSettingsMenu.js";
 
 //Запит на сервер для завантаження частин html
-import * as fetchUrl from "./fetchUrl.js";
+//import * as fetchUrl from "./fetchUrl.js";
+
+document.addEventListener("DOMContentLoaded", function () {
+   localStorage.getAndSet();
+});
 
 
 //sectionSelectMenu.viewOnload();
