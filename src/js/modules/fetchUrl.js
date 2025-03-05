@@ -1,5 +1,5 @@
 
-const LOCAL_API_URL = "http://localhost:5501/files/";
+const LOCAL_API_URL = "http://localhost:5500/files/";
 const SERVER_API_URL = "https://yourserver.com";
 
 const isLocal = window.location.hostname === "localhost";
@@ -9,7 +9,15 @@ const CONFIG = {
    paths: {
       //виклик
       //fetchUrl.loadContent("selectSectionMenu", { sectionNumber: nuberOfSection });
-      selectSectionMenu: isLocal ? "selectSectionMenu.html" : "/adminModule/selectSectionMenu/",
+      section_selectMenu: isLocal ? "section_selectMenu.html" : "/adminModule/section_selectMenu/",
+      section_editMenu: isLocal ? "section_editMenu.html" : "/adminModule/section_editMenu/",
+      page_createMenu: isLocal ? "page_createMenu.html" : "/adminModule/page_createMenu/",
+      section_createMenu: isLocal ? "section_createMenu.html" : "/adminModule/section_createMenu/",
+      section_moderationMenu: isLocal ? "section_moderationMenu.html" : "/adminModule/section_moderationMenu/",
+      alarm_sectionSelectModerationView: isLocal ? "alarm_sectionSelectModerationView.html" : "/adminModule/alarm_sectionSelectModerationView/",
+
+
+
       modal2: isLocal ? "modal2.html" : "/adminModule/modal2/",
    }
 };

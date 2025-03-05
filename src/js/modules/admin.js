@@ -14,6 +14,7 @@ import * as pageCreate from "./pageCreate.js";
 import * as modalWindow from "./modalWindow.js";
 import * as inputs from "./inputs.js";
 
+// import * as sectionCreateItemMenu from "./sectionCreateItemMenu.js";
 
 
 // import * as sectionModerationMenu from "./sectionModerationMenu.js";
@@ -23,7 +24,7 @@ import * as inputs from "./inputs.js";
 
 //import * as adminTool from "./adminTool.js";
 
-//import * as sectionMenu from "./sectionMenu.js";
+// import * as sectionMenu from "./sectionMenu.js";
 //import * as sectionSettingsMenu from "./sectionSettingsMenu.js";
 //import * as blocks from "./blocks.js";
 //import * as blockSelectMenu from "./blockSelectMenu.js";
@@ -42,13 +43,14 @@ sectionModerationMenu.viewOnload();
 
 //let age = parseInt(params.get("age"), 10)
 document.addEventListener('click', (event) => {
+
    stileMenu.viewStileCreateMenu(event);
    sectionSelectPanel.viewSectionSelectMenu(event);
    sectionSelectMenu.close(event);
    sectionSelectMenu.buttonViewSectionCreateMenu(event);
    sectionCreateMenu.close(event)
 
-   sectionModerationMenu.actionItem(event);
+   // sectionModerationMenu.actionItem(event);
    sectionModerationMenu.viewSectionCreateParamMenu(event);
    sectionModerationMenu.close(event);
    // ________Max______
@@ -64,12 +66,16 @@ document.addEventListener('click', (event) => {
    sectionSelectMenu.viewAlarm(event);
    sectionSelectMenu.closeAlarm(event);
    sectionSelectMenu.viewUpdButtons(event);
+   sectionSelectMenu.viewSectionModerationMenu(event);
    sectionSelectMenu.viewSectionSettingsModal(event);
    sectionSelectMenu.closeSectionSettingsModal(event);
    sectionSelectMenu.addClasses(event);
 
    pageCreate.viewPageCreateMenu(event);
    pageCreate.closePageCreateMenu(event);
+
+   // sectionCreateItemMenu.viewSectionCreateParamMenu(event);
+   // sectionMenu.viewSectionModerationMenu(event);
 
 
    // sectionSelectMenu.viewUpdButtons(event);

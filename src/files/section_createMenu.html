@@ -1,0 +1,18 @@
+<div class="section-settings-modal _view" data-name="create-section-menu">
+   <button class="section-select-menu__close" data-button-name="close-create-section-menu"></button>
+    <form class="section-settings-modal__form" action="/setup/section/create/" title="create-section" method="post"
+    enctype="multipart/form-data" data-name="section-create-form">
+        <!-- поле зміни назви секції -->
+        <span class="section-settings-modal__span">Тут ви можете змінити назву секції</span>
+        <input class="section-settings-modal__section-name-input" type="text" name="section name">
+        <!-- завантаження титульного малюну (preview) секції -->
+        <span class="section-settings-modal__span">Тут ви можете завантажте зображення для прев'ю секції</span>
+        <input class="section-settings-modal__section-preview-input" id="create-section-menu-preview" name="section_preview" type="file" accept="image/*">
+        <label class="section-settings-modal__section-preview-label" for="create-section-menu-preview">
+            Обрати зображення
+            <img class="section-settings-modal__ico_img" src="/img/icons/img.png" alt="upload section preview">
+        </label>
+        <!-- кнопка збереження/відправки налаштувань -->
+        <input class="section-settings-modal__submit" type="submit" value="Зберегти">
+    </form>
+</div>
