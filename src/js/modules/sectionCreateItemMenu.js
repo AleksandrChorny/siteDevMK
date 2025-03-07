@@ -50,6 +50,24 @@ export function viewSectionCreateParamMenu(event) {
 //    }
 // }
 
+// export function viewSectionCreateParamMenu(event) {
+//    if (event.target.closest('[data-name="add_item_btn"]')) {
+//       const SECTION_CREATE_ITEM_MENU = event.target.closest('[data-name="section-moderation-menu"]');
+//       if (SECTION_CREATE_ITEM_MENU) {
+//          SECTION_CREATE_ITEM_MENU.querySelector('[data-name="section-create-param-menu"]').classList.add('_view');
+//       }
+//    }
+
+//    if (event.target.closest('[data-name="close-section-create-param-menu"]')) {
+//       const SECTION_CREATE_PARAM_MENU = event.target.closest('[data-name="section-create-param-menu"]');
+//       if (SECTION_CREATE_PARAM_MENU) {
+//          SECTION_CREATE_PARAM_MENU.classList.remove('_view');
+//          return;
+//       }
+//       console.log('SECTION_CREATE_PARAM_MENU is epsent on page');
+//    }
+// }
+
 //close section create item-menu
 export function close(event) {
    if (event.target.closest('[data-button="close-section-moderation-menu"]')) {

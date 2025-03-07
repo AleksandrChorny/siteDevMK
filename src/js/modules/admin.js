@@ -50,7 +50,7 @@ document.addEventListener('click', (event) => {
    sectionSelectMenu.buttonViewSectionCreateMenu(event);
    sectionCreateMenu.close(event)
 
-   // sectionModerationMenu.actionItem(event);
+   sectionModerationMenu.actionItem(event);
    sectionModerationMenu.viewSectionCreateParamMenu(event);
    sectionModerationMenu.close(event);
    // ________Max______
@@ -66,10 +66,11 @@ document.addEventListener('click', (event) => {
    sectionSelectMenu.viewAlarm(event);
    sectionSelectMenu.closeAlarm(event);
    sectionSelectMenu.viewUpdButtons(event);
-   sectionSelectMenu.viewSectionModerationMenu(event);
    sectionSelectMenu.viewSectionSettingsModal(event);
    sectionSelectMenu.closeSectionSettingsModal(event);
    sectionSelectMenu.addClasses(event);
+   sectionSelectMenu.viewSectionModerationMenu(event);
+
 
    pageCreate.viewPageCreateMenu(event);
    pageCreate.closePageCreateMenu(event);
