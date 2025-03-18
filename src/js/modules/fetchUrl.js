@@ -17,7 +17,7 @@ const CONFIG = {
       alarm_sectionSelectModerationView: isLocal ? "alarm_sectionSelectModerationView.html" : "/adminModule/alarm_sectionSelectModerationView/",
       blocks_moderationMenu: isLocal ? "blocks_moderationMenu.html" : "/adminModule/blocks_moderationMenu/",
       section_modalWindow: isLocal ? "section_modalWindow.html" : "/adminModule/section_modalWindow/",
-      blocks_modalWindow: isLocal ? "blocks_modalWindow.html" : "/adminModule/blocks_modalWindow/",
+      block_createModalWindow: isLocal ? "block_createModalWindow.html" : "/adminModule/block_createModalWindow/",
 
 
 

@@ -17,7 +17,7 @@ export function actionItem(event) {
 //add section create param menu
 export function viewSectionCreateParamMenu(event) {
    if (event.target.closest('[data-name="add_item_btn"]')) {
-      fetchUrl.loadContent("section_modalWindow");
+      fetchUrl.loadContent("block_createModalWindow");
    }
 
    if (event.target.closest('[data-name="close-section-create-param-menu"]')) {
