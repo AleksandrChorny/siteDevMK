@@ -26,7 +26,7 @@ import * as inputs from "./inputs.js";
 
 // import * as sectionMenu from "./sectionMenu.js";
 //import * as sectionSettingsMenu from "./sectionSettingsMenu.js";
-//import * as blocks from "./blocks.js";
+import * as blocks from "./blocks.js";
 //import * as blockSelectMenu from "./blockSelectMenu.js";
 //import * as blockModerationMenu from "./blockModerationMenu.js";
 //import * as blockUploadFilesMenu from "./blockUploadFilesMenu.js";
@@ -44,6 +44,9 @@ sectionModerationMenu.viewOnload();
 //let age = parseInt(params.get("age"), 10)
 document.addEventListener('click', (event) => {
 
+   blocks.viewBlockModerationMenu(event);
+
+
    stileMenu.viewStileCreateMenu(event);
    sectionSelectPanel.viewSectionSelectMenu(event);
    sectionSelectMenu.close(event);
@@ -53,9 +56,10 @@ document.addEventListener('click', (event) => {
    sectionModerationMenu.actionItem(event);
    sectionModerationMenu.viewSectionCreateParamMenu(event);
    sectionModerationMenu.close(event);
+
+   sectionModerationMenu.viewBlockModalWindow(event);
    // ________Max______
    modalWindow.close(event);
-
 
 
    sectionControlPanel.show(event);
@@ -125,7 +129,6 @@ document.addEventListener('click', (event) => {
 
    // blockUploadFilesMenu.buttonClose(event);
 
-   // blocks.viewBlockModerationMenu(event);
    // blocks.view_block_update_param_menu(event);
    // blocks.view_block_createParamMenu(event);
    // blocks.viewBlockCreateMenu(event);

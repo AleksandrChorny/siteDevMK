@@ -25,12 +25,11 @@ export function close(event) {
 export function buttonViewSectionCreateMenu(event) {
    if (event.target.closest('[data-button-name="section-create"]')) {
       fetchUrl.loadContent("section_createMenu");
-      // sectionCreateMenu.view();
    }
 }
 
 export function viewSectionModerationMenu(event) {
-   if (event.target.closest('[data-button-name="view-section-moderation-menu"]')) {
+   if (event.target.closest('[data-button-name="view-section-moderation-menu"]') || event.target.closest('[data-name="confirm-alarm-section-select-moderation-view"]')) {
       fetchUrl.loadContent("section_moderationMenu");
    }
 

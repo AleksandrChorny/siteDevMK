@@ -30,7 +30,7 @@
             <a class="item-navigation__item" href="#section-moderation-block-1" title="first block" data-name="item-btn"
                data-id="section-moderation-block-1">first block</a>
             <!-- кнопка додавання блока секції -->
-            <button class="item-navigation__add_item_btn" type="button" title="Додати елемент"></button>
+            <button class="item-navigation__add_item_btn" data-name="view-add-item-btn" type="button" title="Додати елемент"></button>
          </div>
       </div>
       <!-- список форм модерації елементів -->
@@ -125,4 +125,27 @@
          <button class="edit-form__submit" type="submit">OK</button>
       </form>
    </div>
+
+
+
+      <!-- модальне вікно створення параметра блоку -->
+      <div class="modal-window" data-name="block-create-param-menu">
+         <!-- верхня частина вікна створення параметра секції -->
+         <div class="modal-window__header">
+            <!-- кнопка закриття вікна створення параметра секції -->
+            <button class="close-btn" type="button" data-name="close-block-create-param-menu"></button>
+         </div>
+         <!-- форма створення параметра секції -->
+         <form class="edit-form moderation-menu__edit-form _action" action="/setup/section/create-param/"
+            title="add php view" method="post" enctype="multipart/form-data" data-name="create-section-param-form">
+            <p class="block-edit-form__title">create block</p>
+            <!-- поле створення назви параметра -->
+            <label for="s-m-p-create-name" class="edit-form__param-label">Назва елементу</label>
+            <input id="s-m-p-create-name" class="edit-form__param-input" type="text" name="param-name">
+            <!-- скритий інпут -->
+            <input type="hidden" name="section_id" value="1">
+            <!-- кнопка відправки форми створення параметра -->
+            <button class="block-edit-form__submit" data-button="view-blocks-moderation-menu" type="submit">OK</button>
+         </form>
+      </div>
 </div>

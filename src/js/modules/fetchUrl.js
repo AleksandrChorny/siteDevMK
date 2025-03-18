@@ -15,6 +15,10 @@ const CONFIG = {
       section_createMenu: isLocal ? "section_createMenu.html" : "/adminModule/section_createMenu/",
       section_moderationMenu: isLocal ? "section_moderationMenu.html" : "/adminModule/section_moderationMenu/",
       alarm_sectionSelectModerationView: isLocal ? "alarm_sectionSelectModerationView.html" : "/adminModule/alarm_sectionSelectModerationView/",
+      blocks_moderationMenu: isLocal ? "blocks_moderationMenu.html" : "/adminModule/blocks_moderationMenu/",
+      section_modalWindow: isLocal ? "section_modalWindow.html" : "/adminModule/section_modalWindow/",
+      blocks_modalWindow: isLocal ? "blocks_modalWindow.html" : "/adminModule/blocks_modalWindow/",
+
 
 
 

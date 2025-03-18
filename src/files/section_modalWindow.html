@@ -1,0 +1,24 @@
+
+   <!-- модальне вікно створення параметра секції -->
+   <div class="modal-window _view" data-name="section-create-param-menu">
+      <!-- верхня частина вікна створення параметра секції -->
+      <div class="modal-window__header">
+         <!-- кнопка закриття вікна створення параметра секції -->
+         <button class="close-btn" type="button" data-name="close-section-create-param-menu"></button>
+      </div>
+      <!-- форма створення параметра секції -->
+      <div class="edit-form moderation-menu__edit-form _action" title="add php view" data-name="create-section-param-form">
+         <p class="edit-form__title">create section param</p>
+         <!-- поле створення назви параметра -->
+         <label for="s-m-p-create-name" class="edit-form__param-label">Назва елементу</label>
+         <input id="s-m-p-create-name" class="edit-form__param-input" type="text" name="param-name">
+         <!-- поле створення значення параметра -->
+         <label for="s-m-p-create-value" class="edit-form__param-label">Значення елементу</label>
+         <textarea id="s-m-p-create-value" class="edit-form__param-input _textarea" type="text"
+            name="param-value"></textarea>
+         <!-- скритий інпут -->
+         <input type="hidden" name="section_id" value="1">
+         <!-- кнопка відправки форми створення параметра -->
+         <button class="edit-form__submit" type="submit">OK</button>
+      </div>
+   </div>
