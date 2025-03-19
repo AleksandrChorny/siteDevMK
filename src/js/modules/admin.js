@@ -16,6 +16,9 @@ import * as inputs from "./inputs.js";
 
 import * as blocks from "./blocks.js";
 
+import * as close_allModalsWindows from "./close_allModalsWindows.js";
+
+
 
 // import * as sectionCreateItemMenu from "./sectionCreateItemMenu.js";
 
@@ -45,6 +48,8 @@ sectionModerationMenu.viewOnload();
 
 //let age = parseInt(params.get("age"), 10)
 document.addEventListener('click', (event) => {
+
+   close_allModalsWindows.closeAllModalWidows(event);
 
    blocks.viewBlockModerationMenu(event);
 
