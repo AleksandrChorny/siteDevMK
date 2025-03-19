@@ -12,7 +12,7 @@ const CONFIG = {
       section_selectMenu: isLocal ? "section_selectMenu.html" : "/adminModule/section_selectMenu/",
       section_editMenu: isLocal ? "section_editMenu.html" : "/adminModule/section_editMenu/",
       page_createMenu: isLocal ? "page_createMenu.html" : "/adminModule/page_createMenu/",
-      section_createMenu: isLocal ? "section_createMenu.html" : "/adminModule/section_createMenu/",
+      section_createModalWindow: isLocal ? "section_createModalWindow.html" : "/adminModule/section_createModalWindow/",
       section_moderationMenu: isLocal ? "section_moderationMenu.html" : "/adminModule/section_moderationMenu/",
       alarm_sectionSelectModerationView: isLocal ? "alarm_sectionSelectModerationView.html" : "/adminModule/alarm_sectionSelectModerationView/",
       blocks_moderationMenu: isLocal ? "blocks_moderationMenu.html" : "/adminModule/blocks_moderationMenu/",
