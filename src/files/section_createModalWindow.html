@@ -1,9 +1,17 @@
-<div class="section-settings-modal _view" data-name="create-section-menu">
-   <button class="section-select-menu__close" data-button-name="close-create-section-menu"></button>
-    <form class="section-settings-modal__form" action="/setup/section/create/" title="create-section" method="post"
+<div class="modal-window _view" data-name="create-section-menu">
+   
+    <form class="content-container" action="/setup/section/create/" title="create-section" method="post"
     enctype="multipart/form-data" data-name="section-create-form">
+        <!-- Блок з кнопкою закриття та заголовком модалки -->
+        <div class="content-container__header">
+            <!-- кнопка закриття вікна створення параметра секції -->
+            <button class="close-btn" type="button" data-name="close-block-create-param-menu"></button>
+            <!-- Заголовок модального вікна -->
+            <p class="content-container__title">Створіть нову секцію</p>
+        </div>
+
         <!-- поле зміни назви секції -->
-        <span class="section-settings-modal__span">Тут ви можете змінити назву секції</span>
+        <span class="section-settings-modal__span">Тут ви можете ввести назву секції</span>
         <input class="section-settings-modal__section-name-input" type="text" name="section name">
         <!-- завантаження титульного малюну (preview) секції -->
         <span class="section-settings-modal__span">Тут ви можете завантажте зображення для прев'ю секції</span>

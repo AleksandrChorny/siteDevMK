@@ -24,7 +24,7 @@ export function close(event) {
 
 export function buttonViewSectionCreateMenu(event) {
    if (event.target.closest('[data-button-name="section-create"]')) {
-      fetchUrl.loadContent("section_createMenu");
+      fetchUrl.loadContent("section_createModalWindow");
    }
 }
 
