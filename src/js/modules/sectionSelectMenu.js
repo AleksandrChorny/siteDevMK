@@ -4,7 +4,6 @@ import * as fetchUrl from "./fetchUrl.js";
 
 //classList add _view to stile create menu get section number and create hidden input "section number"
 export function viewSectionSelectMenu(nuberOfSection) {
-   //fetchUrl.loadContent("selectSectionMenu", { sectionNumber: nuberOfSection });
    fetchUrl.loadContent("section_selectMenu", { sectionNumber: nuberOfSection });
 }
 
