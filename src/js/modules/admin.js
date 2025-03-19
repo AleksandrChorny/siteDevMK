@@ -11,8 +11,11 @@ import * as sectionEditMenu from "./sectionEditMenu.js";
 import * as sectionUpdMenu from "./sectionUpdMenu.js";
 
 import * as pageCreate from "./pageCreate.js";
-import * as modalWindow from "./modalWindow.js";
+// import * as modalWindow from "./modalWindow.js";
 import * as inputs from "./inputs.js";
+
+import * as blocks from "./blocks.js";
+
 
 // import * as sectionCreateItemMenu from "./sectionCreateItemMenu.js";
 
@@ -26,7 +29,6 @@ import * as inputs from "./inputs.js";
 
 // import * as sectionMenu from "./sectionMenu.js";
 //import * as sectionSettingsMenu from "./sectionSettingsMenu.js";
-import * as blocks from "./blocks.js";
 //import * as blockSelectMenu from "./blockSelectMenu.js";
 //import * as blockModerationMenu from "./blockModerationMenu.js";
 //import * as blockUploadFilesMenu from "./blockUploadFilesMenu.js";
@@ -35,7 +37,7 @@ import * as blocks from "./blocks.js";
 //import * as HeadMenu from "./headSettingsMenu.js";
 
 //Запит на сервер для завантаження частин html
-import * as fetchUrl from "./fetchUrl.js";
+// import * as fetchUrl from "./fetchUrl.js";
 
 
 //sectionSelectMenu.viewOnload();
@@ -59,7 +61,7 @@ document.addEventListener('click', (event) => {
 
    sectionModerationMenu.viewBlockModalWindow(event);
    // ________Max______
-   modalWindow.close(event);
+   // modalWindow.close(event);
 
 
    sectionControlPanel.show(event);
@@ -78,6 +80,16 @@ document.addEventListener('click', (event) => {
 
    pageCreate.viewPageCreateMenu(event);
    pageCreate.closePageCreateMenu(event);
+
+
+
+
+
+
+
+
+
+
 
    // sectionCreateItemMenu.viewSectionCreateParamMenu(event);
    // sectionMenu.viewSectionModerationMenu(event);
@@ -151,8 +163,8 @@ document.addEventListener('click', (event) => {
 })
 document.addEventListener('input', (event) => {
    //sectionCreateMenu.validateForm(event);
-   pageCreate.Max(event);
-   modalWindow.testLS(event);
+   // pageCreate.Max(event);
+   // modalWindow.testLS(event);
 
 })
 

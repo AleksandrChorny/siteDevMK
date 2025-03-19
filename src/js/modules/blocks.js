@@ -1,10 +1,9 @@
-import * as controllerModal from "./controllerModal.js";
 import * as fetchUrl from "./fetchUrl.js";
+
 
 export function viewBlockModerationMenu(event) {
    if (event.target.closest('[data-button="view-blocks-moderation-menu"]')) {
          fetchUrl.loadContent("blocks_moderationMenu");
-      // controllerModal.view(document.querySelector('[data-name="view-block_moderation_menu"]'));
    }
 
    if (event.target.closest('[data-button="close-section-block-moderation-menu"]')) {
@@ -15,7 +14,6 @@ export function viewBlockModerationMenu(event) {
         }, 200);
          return;
       }
-      // controllerModal.close(document.querySelector('[data-name="view-block_moderation_menu"]'));
    }
 }
 
@@ -38,7 +36,6 @@ export function viewBlockModerationMenu(event) {
 //       console.log('SECTION_CREATE_PARAM_MENU is epsent on page');
 //    }
 // }
-
 
 
 export function view_block_update_param_menu(event) {
@@ -66,29 +63,29 @@ export function view_block_createParamMenu(event) {
    }
 }
 
-export function viewBlockCreateMenu(event) {
-   const buttonView = event.target.closest('[data-button-name="block-create"]');
-   const buttonClose = event.target.closest('[data-button-name="close-block-create-menu"]');
+// export function viewBlockCreateMenu(event) {
+//    const buttonView = event.target.closest('[data-button-name="block-create"]');
+//    const buttonClose = event.target.closest('[data-button-name="close-block-create-menu"]');
 
-   if (buttonView) {
-      const url = buttonView.dataset.url;
-      //console.log(url);
-      const data = { 'section_id': 'section_id' };
-      // Вызываем функцию
-      //fetchUrl.htmlIncludeForDeveping(url);
-      fetchUrl.getUrlJSON(url)
-         .then((data) => {
-            document.body.innerHTML += data;
-         });
-   }
+//    if (buttonView) {
+//       const url = buttonView.dataset.url;
+//       //console.log(url);
+//       const data = { 'section_id': 'section_id' };
+//       // Вызываем функцию
+//       //fetchUrl.htmlIncludeForDeveping(url);
+//       fetchUrl.getUrlJSON(url)
+//          .then((data) => {
+//             document.body.innerHTML += data;
+//          });
+//    }
 
-   if (buttonClose) {
-      if (event.target.closest('[data-name="block-create-menu"]')) {
-         event.target.closest('[data-name="block-create-menu"]').remove();
-         return;
-      }
-   }
-}
+//    if (buttonClose) {
+//       if (event.target.closest('[data-name="block-create-menu"]')) {
+//          event.target.closest('[data-name="block-create-menu"]').remove();
+//          return;
+//       }
+//    }
+// }
 export function viewblockSettingsMenu(event) {
    if (event.target.closest('[name="btn-view-block-upd-files-menu"]')) {
       controllerModal.view(document.querySelector('[data-name="view-block-settings-menu"]'));

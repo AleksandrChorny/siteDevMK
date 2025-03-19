@@ -35,7 +35,7 @@ export function viewSectionCreateParamMenu(event) {
 //add block modal Window
 export function viewBlockModalWindow(event) {
    if (event.target.closest('[data-name="view-add-item-btn"]')) {
-         fetchUrl.loadContent("blocks_modalWindow");
+         fetchUrl.loadContent("block_createModalWindow");
    }
 
    if (event.target.closest('[data-name="close-block-create-param-menu"]')) {
