@@ -11,12 +11,12 @@ import * as sectionEditMenu from "./sectionEditMenu.js";
 import * as sectionUpdMenu from "./sectionUpdMenu.js";
 
 import * as pageCreate from "./pageCreate.js";
-// import * as modalWindow from "./modalWindow.js";
+import * as modal from "./modal.js";
 import * as inputs from "./inputs.js";
 
 import * as blocks from "./blocks.js";
 
-import * as close_allModalsWindows from "./close_allModalsWindows.js";
+// import * as close_allModalsWindows from "./close_allModalsWindows.js";
 
 
 
@@ -49,7 +49,7 @@ sectionModerationMenu.viewOnload();
 //let age = parseInt(params.get("age"), 10)
 document.addEventListener('click', (event) => {
 
-   close_allModalsWindows.closeAllModalWidows(event);
+   // close_allModalsWindows.closeAllModalWidows(event);
 
    blocks.viewBlockModerationMenu(event);
 
@@ -66,7 +66,8 @@ document.addEventListener('click', (event) => {
 
    sectionModerationMenu.viewBlockModalWindow(event);
    // ________Max______
-   // modalWindow.close(event);
+   modal.close(event);
+   modal.fetchModal(event);
 
 
    sectionControlPanel.show(event);
