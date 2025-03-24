@@ -1,9 +1,9 @@
 <!-- меню модерації секції -->
-<div class="block-moderation-menu _view" data-name="view-section-block-moderation-menu">
+<div class="block-moderation-menu _view" data-name="block-moderation-menu">
    <!-- кнопка закриття та заголовок меню модерації секції-->
    <div class="block-moderation-menu__header">
       <!-- Кнопка закриття меню модерації секції-->
-      <button class="close-btn" type="button" data-button="close-section-block-moderation-menu"></button>
+      <button class="close-btn" type="button" data-close-modal="block-moderation-menu"></button>
       <!-- заголовок меню -->
       <p class="block-moderation-menu__title">Block moderation name</p>
    </div>
@@ -11,33 +11,33 @@
    <div class="block-moderation-menu__wrapper">
       <!-- список-меню елементів для навігації по елементам -->
       <div class="block-item-navigation block-moderation-menu__item-navigation">
-        <!-- Контейнер навігаціі по елементам блока/секції -->
+         <!-- Контейнер навігаціі по елементам блока/секції -->
          <div class="block-item-navigation__items-container _items">
             <!-- заголовок списку навігації по парметрам -->
             <p class="block-item-navigation__title">Елементи блока</p>
             <!-- параметри навігації -->
             <div class="block-item-navigation__items">
-                <!-- посилання на форму модерації параметра секції -->
-                <a class="block-item-navigation__item" href="#section-moderation-param-1" title="title" data-name="item-btn"
-                data-id="section-moderation-param-1">title</a>
-                <!-- кнопка додавання параметра секції -->
-                <button class="block-item-navigation__add_item_btn" type="button" title="Додати елемент"
-                data-name="add_item_btn"></button>
+               <!-- посилання на форму модерації параметра секції -->
+               <a class="block-item-navigation__item" href="#section-moderation-param-1" title="title"
+                  data-name="item-btn" data-id="section-moderation-param-1">title</a>
+               <!-- кнопка додавання параметра секції -->
+               <button class="block-item-navigation__add_item_btn" type="button" title="Додати елемент"
+                  data-fetch-modal="paramForBlock_createModalWindow"></button>
             </div>
-        </div>
-        <!-- Контейнер навігаціі по блокам блока/секції -->
-        <div class="block-item-navigation__items-container _blocks">
+         </div>
+         <!-- Контейнер навігаціі по блокам блока/секції -->
+         <div class="block-item-navigation__items-container _blocks">
             <!-- заголовок списку навігації по блокам -->
             <p class="block-item-navigation__title">Блоки в блоці</p>
             <!-- блоки навігації -->
             <div class="block-item-navigation__items">
                <!-- посилання на форму модерації блоку секції -->
-               <a class="block-item-navigation__item" href="#section-moderation-block-1" title="first block" data-name="item-btn"
-                  data-id="section-moderation-block-1">first block</a>
+               <a class="block-item-navigation__item" href="#section-moderation-block-1" title="first block"
+                  data-name="item-btn" data-id="section-moderation-block-1">first block</a>
                <!-- кнопка додавання блока секції -->
                <button class="block-item-navigation__add_item_btn" type="button" title="Додати елемент"></button>
             </div>
-        </div>
+         </div>
       </div>
       <!-- список форм модерації елементів -->
       <div class="item-forms block-moderation-menu__item-forms">
@@ -53,7 +53,8 @@
                <p class="block-edit-form__title">title</p>
                <!-- поле модерації назви параметра -->
                <label for="s-m-p-input-1" class="block-edit-form__param-label">Назва елементу</label>
-               <input id="s-m-p-input-1" class="block-edit-form__param-input" type="text" name="param-name" value="title">
+               <input id="s-m-p-input-1" class="block-edit-form__param-input" type="text" name="param-name"
+                  value="title">
                <!-- поле модерації значення параметра -->
                <label for="param-value-1" class="block-edit-form__param-label">Значення елементу</label>
                <textarea id="param-value-1" class="block-edit-form__param-input _textarea" type="text"
@@ -94,9 +95,12 @@
          title="add php view" method="post" enctype="multipart/form-data">
          <!-- Поле виводу завантаженого коду -->
          <label class="create-view-form__label">HTML/PHP Код блока:</label>
-         <xmp class="create-view-form__code-display-panel" data-name="view-active"><div>34</div></xmp>
+         <xmp class="create-view-form__code-display-panel" data-name="view-active">
+            <div>34</div>
+         </xmp>
          <!-- поле додавння ХТМЛ частини секції -->
-         <label class="create-view-form__label">Вставте сюди HTML розмітку вашого блока для створення/редагування</label>
+         <label class="create-view-form__label">Вставте сюди HTML розмітку вашого блока для
+            створення/редагування</label>
          <textarea class="create-view-form__textarea" name="" id="" data-name="view-new"></textarea>
          <!-- <button class="create-view-form__textarea-scale_btn _scale_up" type="button" button-data-name="scale_up"></button> -->
          <!-- скритий інпут -->
@@ -105,6 +109,7 @@
          <button class="create-view-form__submit" type="submit" title="Надіслати">GO</button>
       </form>
       <!-- кнопка закриття форми -->
-      <button class="block-moderation-menu__confirm-btn" type="submit" data-button="close-section-block-moderation-menu">OK</button>
+      <button class="block-moderation-menu__confirm-btn" type="submit"
+      data-close-modal="block-moderation-menu">OK</button>
    </div>
 </div>
