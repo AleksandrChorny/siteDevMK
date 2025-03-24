@@ -1,5 +1,5 @@
 <div class="section-select-menu _view" data-name="section-select-menu">
-   <button class="section-select-menu__close" name="close-section-select-menu"></button>
+   <button class="section-select-menu__close" data-close-modal="section-select-menu"></button>
 
    <div class="section-select-menu__tiles-container">
       <p class="section-select-menu__tiles-container-title">Select or create a Section for this Teamplate</p>
@@ -34,7 +34,7 @@
                      </span>
                </label>
                <button class="section-select-menu__title-btn" type="button"
-                  data-button-name="view-section-moderation-menu" data-id="43"
+               data-fetch-modal="section_moderationMenu" data-id="43"
                   data-url="/setup/section/view-moderation-menu/">MOD</button>
                <button class="section-select-menu__block-settings-btn" data-name="section-select-menu__dell-section-btn"
                   type="submit" title="Gear">
@@ -147,7 +147,7 @@
 
       </div>
       <input type="hidden" name="page_id" value="1">
-      <button class="section-select-menu__confirm-btn" type="submit">OK</button>
+      <button class="section-select-menu__confirm-btn" data-close-modal="section-select-menu" type="submit">OK</button>
    </form>
    <!-- @@include('alarm_section-select-moderation-view.html',{}) -->
    <!-- @@include('section_settingsModal.html',{}) -->

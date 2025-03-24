@@ -20,7 +20,7 @@
                data-id="section-moderation-param-1">title</a>
             <!-- кнопка додавання параметра секції -->
             <button class="item-navigation__add_item_btn" type="button" title="Додати елемент"
-               data-name="add_item_btn"></button>
+            data-fetch-modal="section_createModalWindow"></button>
          </div>
          <!-- заголовок списку навігації по блокам -->
          <p class="item-navigation__title">Блоки секції</p>
@@ -69,7 +69,7 @@
                <!-- скритий інпут -->
                <input type="hidden" name="param_id" value="1">
                <!-- кнопка відправки форми модерації параметра -->
-               <button class="edit-form__submit" type="submit">OK</button>
+               <button class="edit-form__submit" data-close-modal="section-moderation-menu" type="submit">OK</button>
             </form>
             <form class="remove-form" action="/setup/param/remove-defoult-value/" title="remove param form"
                method="post" enctype="multipart/form-data">
@@ -101,51 +101,5 @@
       <!-- кнопка закриття форми -->
       <button class="moderation-menu__confirm-btn" type="submit" data-button="close-section-moderation-menu">OK</button>
    </div>
-   <!-- модальне вікно створення параметра секції -->
-   <div class="modal-window" data-name="section-create-param-menu">
-      <!-- верхня частина вікна створення параметра секції -->
-      <div class="modal-window__header">
-         <!-- кнопка закриття вікна створення параметра секції -->
-         <button class="close-btn" type="button" data-name="close-section-create-param-menu"></button>
-      </div>
-      <!-- форма створення параметра секції -->
-      <form class="edit-form moderation-menu__edit-form _action" action="/setup/section/create-param/"
-         title="add php view" method="post" enctype="multipart/form-data" data-name="create-section-param-form">
-         <p class="edit-form__title">create section param</p>
-         <!-- поле створення назви параметра -->
-         <label for="s-m-p-create-name" class="edit-form__param-label">Назва елементу</label>
-         <input id="s-m-p-create-name" class="edit-form__param-input" type="text" name="param-name">
-         <!-- поле створення значення параметра -->
-         <label for="s-m-p-create-value" class="edit-form__param-label">Значення елементу</label>
-         <textarea id="s-m-p-create-value" class="edit-form__param-input _textarea" type="text"
-            name="param-value"></textarea>
-         <!-- скритий інпут -->
-         <input type="hidden" name="section_id" value="1">
-         <!-- кнопка відправки форми створення параметра -->
-         <button class="edit-form__submit" type="submit">OK</button>
-      </form>
-   </div>
 
-
-
-      <!-- модальне вікно створення параметра блоку -->
-      <div class="modal-window" data-name="block-create-param-menu">
-         <!-- верхня частина вікна створення параметра секції -->
-         <div class="modal-window__header">
-            <!-- кнопка закриття вікна створення параметра секції -->
-            <button class="close-btn" type="button" data-name="close-block-create-param-menu"></button>
-         </div>
-         <!-- форма створення параметра секції -->
-         <form class="edit-form moderation-menu__edit-form _action" action="/setup/section/create-param/"
-            title="add php view" method="post" enctype="multipart/form-data" data-name="create-section-param-form">
-            <p class="block-edit-form__title">create block</p>
-            <!-- поле створення назви параметра -->
-            <label for="s-m-p-create-name" class="edit-form__param-label">Назва елементу</label>
-            <input id="s-m-p-create-name" class="edit-form__param-input" type="text" name="param-name">
-            <!-- скритий інпут -->
-            <input type="hidden" name="section_id" value="1">
-            <!-- кнопка відправки форми створення параметра -->
-            <button class="block-edit-form__submit" data-button="view-blocks-moderation-menu" type="submit">OK</button>
-         </form>
-      </div>
 </div>
