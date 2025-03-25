@@ -10,29 +10,36 @@
    <!-- обгортка меню модерації секції -->
    <div class="moderation-menu__wrapper">
       <!-- список-меню елементів для навігації по елементам -->
-      <div class="item-navigation moderation-menu__item-navigation">
-         <!-- заголовок списку навігації по парметрам -->
-         <p class="item-navigation__title">Елементи секції</p>
-         <!-- параметри навігації -->
-         <div class="item-navigation__items">
-            <!-- посилання на форму модерації параметра секції -->
-            <a class="item-navigation__item" href="#section-moderation-param-1" title="title" data-name="item-btn"
-               data-id="section-moderation-param-1">title</a>
-            <!-- кнопка додавання параметра секції -->
-            <button class="item-navigation__add_item_btn" type="button" title="Додати елемент"
-            data-fetch-modal="paramForSection_createModalWindow"></button>
+      <div class="section-item-navigation moderation-menu__item-navigation">
+         <!-- Контейнер навігаціі по елементам блока/секції -->
+         <div class="section-item-navigation__items-container _items">
+            <!-- заголовок списку навігації по парметрам -->
+            <p class="section-item-navigation__title">Елементи блока</p>
+            <!-- параметри навігації -->
+            <div class="section-item-navigation__items">
+               <!-- посилання на форму модерації параметра секції -->
+               <a class="section-item-navigation__item" href="#section-moderation-param-1" title="title"
+                  data-name="item-btn" data-id="section-moderation-param-1">title</a>
+               <!-- кнопка додавання параметра секції -->
+               <button class="section-item-navigation__add_item_btn" type="button" title="Додати елемент"
+                  data-fetch-modal="paramForBlock_createModalWindow"></button>
+            </div>
          </div>
-         <!-- заголовок списку навігації по блокам -->
-         <p class="item-navigation__title">Блоки секції</p>
-         <!-- блоки навігації -->
-         <div class="item-navigation__items">
-            <!-- посилання на форму модерації блоку секції -->
-            <a class="item-navigation__item" href="#section-moderation-block-1" title="first block" data-name="item-btn"
-               data-id="section-moderation-block-1">first block</a>
-            <!-- кнопка додавання блока секції -->
-            <button class="item-navigation__add_item_btn" data-name="view-add-item-btn" type="button" title="Додати елемент"></button>
+         <!-- Контейнер навігаціі по блокам блока/секції -->
+         <div class="section-item-navigation__items-container _blocks">
+            <!-- заголовок списку навігації по блокам -->
+            <p class="section-item-navigation__title">Блоки в блоці</p>
+            <!-- блоки навігації -->
+            <div class="section-item-navigation__items">
+               <!-- посилання на форму модерації блоку секції -->
+               <a class="section-item-navigation__item" href="#section-moderation-block-1" title="first block"
+                  data-name="item-btn" data-id="section-moderation-block-1">first block</a>
+               <!-- кнопка додавання блока секції -->
+               <button class="section-item-navigation__add_item_btn" type="button" title="Додати елемент" data-fetch-modal="block_createModalWindow"></button>
+            </div>
          </div>
       </div>
+      
       <!-- список форм модерації елементів -->
       <div class="item-forms moderation-menu__item-forms">
          <!-- підказка, що жодного параметра чи сеції не створенно -->
