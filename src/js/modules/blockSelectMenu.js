@@ -1,6 +1,29 @@
 import * as controllerModal from "./controllerModal.js";
 import * as blockModerationMenu from "./blockModerationMenu.js";
 
+export function addClasses(event) {
+   const MODERATION_MENU = document.querySelector('[data-name="block-moderation-menu"]');
+   if (MODERATION_MENU) {
+      const VIEW_ACTIVE = MODERATION_MENU.querySelector('[data-name="view-active"]');
+      const VIEW_NEW = MODERATION_MENU.querySelector('[data-name="view-new"]');
+
+      if (event.target.closest('[data-name="view-new"]')) {
+         if (!VIEW_NEW.classList.contains('_max-height')) {
+            VIEW_ACTIVE.classList.add('_min-height');
+            VIEW_NEW.classList.add('_max-height');
+         }
+      }
+      if (event.target.closest('[data-name="view-active"]')) {
+         if (VIEW_ACTIVE.classList.contains('_min-height')) {
+            VIEW_ACTIVE.classList.remove('_min-height');
+            VIEW_NEW.classList.remove('_max-height');
+         }
+      }
+      // console.log(TEXTAREA)
+   }
+}
+
+
 //Виклик вікна настройки меню "Block"
 export function closeBlockSelectMenu(event) {
    //console.log(event.target);

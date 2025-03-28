@@ -32,7 +32,7 @@ import * as blocks from "./blocks.js";
 
 // import * as sectionMenu from "./sectionMenu.js";
 //import * as sectionSettingsMenu from "./sectionSettingsMenu.js";
-//import * as blockSelectMenu from "./blockSelectMenu.js";
+import * as blockSelectMenu from "./blockSelectMenu.js";
 //import * as blockModerationMenu from "./blockModerationMenu.js";
 //import * as blockUploadFilesMenu from "./blockUploadFilesMenu.js";
 //import * as teamplateSettings from "./teamplateSettings.js";
@@ -52,6 +52,8 @@ document.addEventListener('click', (event) => {
    // close_allModalsWindows.closeAllModalWidows(event);
 
    blocks.viewBlockModerationMenu(event);
+
+   blockSelectMenu.addClasses(event);
 
 
    stileMenu.viewStileCreateMenu(event);
