@@ -1,4 +1,4 @@
-const LOCAL_API_URL = "http://localhost:5500/files/";
+const LOCAL_API_URL = "http://localhost:5501/files/";
 const SERVER_API_URL = "https://yourserver.com";
 
 const isLocal = window.location.hostname === "localhost";
