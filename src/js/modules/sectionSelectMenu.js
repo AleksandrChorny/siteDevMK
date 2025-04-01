@@ -4,15 +4,17 @@ import * as fetchUrl from "./fetchUrl.js";
 
 //classList add _view to stile create menu get section number and create hidden input "section number"
 export function viewSectionSelectMenu(nuberOfSection) {
-   //fetchUrl.loadContent("selectSectionMenu", { sectionNumber: nuberOfSection });
-   fetchUrl.loadContent("selectSectionMenu", { sectionNumber: nuberOfSection });
+   fetchUrl.loadContent("section_selectMenu", { sectionNumber: nuberOfSection });
 }
 
 export function close(event) {
    if (event.target.closest('[name="close-section-select-menu"]')) {
       const SECTION_SELECT_MENU = event.target.closest('[data-name="section-select-menu"]');
       if (SECTION_SELECT_MENU) {
-         SECTION_SELECT_MENU.classList.remove('_view');
+         // SECTION_SELECT_MENU.classList.remove('[data-name="section-select-menu"]');
+         setTimeout(() => {
+            document.querySelector('[data-name="section-select-menu"]')?.remove();
+        }, 200);
          return;
       }
       alert('cannont close SECTION_SELECT_MENU is epsent on document');
@@ -21,7 +23,23 @@ export function close(event) {
 
 export function buttonViewSectionCreateMenu(event) {
    if (event.target.closest('[data-button-name="section-create"]')) {
-      sectionCreateMenu.view();
+      fetchUrl.loadContent("section_createModalWindow");
+   }
+}
+
+export function viewSectionModerationMenu(event) {
+   if (event.target.closest('[data-button-name="view-section-moderation-menu"]') || event.target.closest('[data-name="confirm-alarm-section-select-moderation-view"]')) {
+      fetchUrl.loadContent("section_moderationMenu");
+   }
+
+   if (event.target.closest('[data-button="close-section-moderation-menu"]')) {
+      const MENU = event.target.closest('[data-name="section-moderation-menu"]')
+      if (MENU) {
+         setTimeout(() => {
+            MENU.remove();
+        }, 200);
+         return;
+      }
    }
 }
 
@@ -33,21 +51,30 @@ function create_hidden_input(name, value) {
    return input;
 }
 
+// export function viewAlarm(event) {
+//    const BUTTON_EDIT = event.target.closest('[data-name="view-alarm-section-select-moderation-view"]');
+//    if (BUTTON_EDIT) {
+//       const SECTION_SELECT_MENU = event.target.closest('[data-name="section-select-menu"]');
+//       if (SECTION_SELECT_MENU) {
+//          const ALARM_MENU = SECTION_SELECT_MENU.querySelector('[data-name="alarm-section-select-moderation-view"]');
+//          if (ALARM_MENU) {
+//             fetchUrl.loadContent("alarm_sectionSelectModerationView");
+
+//             // ALARM_MENU.classList.add('_view');
+//          } else {
+//             alert('alarm-section-select-moderation-view не знайдено!');
+//          }
+//       } else {
+//          alert('section-select-menu не знайдено!');
+//       }
+//    }
+// }
+
 export function viewAlarm(event) {
-   const BUTTON_EDIT = event.target.closest('[data-name="view-alarm-section-select-moderation-view"]');
-   if (BUTTON_EDIT) {
-      const SECTION_SELECT_MENU = event.target.closest('[data-name="section-select-menu"]');
-      if (SECTION_SELECT_MENU) {
-         const ALARM_MENU = SECTION_SELECT_MENU.querySelector('[data-name="alarm-section-select-moderation-view"]');
-         if (ALARM_MENU) {
-            ALARM_MENU.classList.add('_view');
-         } else {
-            alert('alarm-section-select-moderation-view не знайдено!');
-         }
-      } else {
-         alert('section-select-menu не знайдено!');
+      if (event.target.closest('[data-name="view-alarm-section-select-moderation-view"]')) {
+         fetchUrl.loadContent("alarm_sectionSelectModerationView");
+
       }
-   }
 }
 
 export function closeAlarm(event) {
@@ -58,7 +85,10 @@ export function closeAlarm(event) {
    if (BUTTON_CLOSE || BUTTON_REJECT || BUTTON_CONFIRM) {
       const ALARM_MENU = event.target.closest('[data-name="alarm-section-select-moderation-view"]');
       if (ALARM_MENU) {
-         ALARM_MENU.classList.remove('_view');
+         setTimeout(() => {
+            ALARM_MENU.remove();
+        }, 200);
+         // ALARM_MENU.classList.remove('_view');
       } else {
          alert('alarm-section-select-moderation-view не знайдено!');
       }
@@ -124,7 +154,6 @@ export function viewSectionSettingsModal(event) {
 
 export function closeSectionSettingsModal(event) {
    const CLOSE_BUTTON = event.target.closest('[name="close-section-select-menu-view"]');
-   // console.log(CLOSE_BUTTON)
    if (CLOSE_BUTTON) {
       const SECTION_SETTING_MODAL = event.target.closest('[data-name="section-settings-modal-view"]');
       if (SECTION_SETTING_MODAL) {
@@ -158,8 +187,10 @@ export function addClasses(event) {
    if (MODERATION_MENU) {
       const VIEW_ACTIVE = MODERATION_MENU.querySelector('[data-name="view-active"]');
       const VIEW_NEW = MODERATION_MENU.querySelector('[data-name="view-new"]');
+      const button = MODERATION_MENU.querySelector('[data-button="view"]');
 
       if (event.target.closest('[data-name="view-new"]')) {
+            button.classList.remove('_diplay-none');
          if (!VIEW_NEW.classList.contains('_max-height')) {
             VIEW_ACTIVE.classList.add('_min-height');
             VIEW_NEW.classList.add('_max-height');

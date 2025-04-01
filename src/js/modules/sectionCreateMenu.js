@@ -1,17 +1,21 @@
 import * as fetchUrl from "./fetchUrl.js";
 
-export function view() {
-   const MENU = document.querySelector('[data-name="create-section-menu"]')
-   if (MENU) {
-      MENU.classList.add('_view');
-   }
-}
+// export function view() {
+//    const MENU = document.querySelector('[data-name="create-section-menu"]')
+//    if (MENU) {
+
+//       // MENU.classList.add('_view');
+//    }
+// }
 
 export function close(event) {
    if (event.target.closest('[data-button-name="close-create-section-menu"]')) {
       const MENU = event.target.closest('[data-name="create-section-menu"]');
       if (MENU) {
-         MENU.classList.remove('_view');
+         setTimeout(() => {
+            MENU.remove();
+        }, 200);
+         // MENU.classList.remove('_view');
       }
    }
 }

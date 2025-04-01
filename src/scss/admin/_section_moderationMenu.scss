@@ -1,13 +1,15 @@
-.edit-form{
+.edit-form{ 
    display: flex;
    flex-direction: column;
    flex-wrap: nowrap;
    justify-content: flex-start;
    align-items: center;
 
-   width: 320px;
+   width: max-content;
+   min-width: 320px;
 
-   padding: 8px;
+
+   padding: 12px;
    gap: 8px;
 
    border-radius: 16px;
@@ -132,7 +134,7 @@
       }
    }
 }
-.remove-form{
+.remove-form {
    &__submit{
       position: absolute;
       bottom: 12px;
@@ -159,7 +161,7 @@
    }
 }
 
-.moderation-param-form{
+.moderation-param-form {
    position: relative;
    &._action {
       animation: element-illumination 2s linear;
@@ -168,21 +170,53 @@
       transition: all .3s;
    }
 }
-.item-navigation{
-   display: flex;
-   flex-direction: column;
-   flex-wrap: wrap;
+.section-item-navigation {
+   display: grid;
+   grid-template-columns: max-content;
+   grid-template-rows: 1fr 1fr;
+
    align-items: flex-start;
    justify-content: flex-start;
 
-   max-width: 160px;
+   gap: 12px;
+   &__items-container {
+      position: relative;
 
-   gap: 20px;
+      display: flex;
+      flex-wrap: nowrap;
+      flex-direction: column;
+      justify-content: flex-start;
+      align-items: flex-start;
+
+      max-width: 160px;
+      height: 100%;
+
+      padding: 12px 12px 32px 12px;
+      gap: 8px;
+
+      border-radius: 16px;
+      border: 1px solid #F5F5F5;
+      background: rgba(111, 111, 111, .6);
+      box-shadow: 1px 1px 2px 0px rgba(0, 0, 0, 0.25) inset, 1px 1px 2px 0px rgba(0, 0, 0, 0.25);
+
+      scroll-behavior: smooth;
+      overflow-y: auto;
+      &::-webkit-scrollbar {
+         display: none;
+      }
+      &._items {
+         grid-row: 1 / 2;
+      }
+      &._blocks {
+         grid-row: 2 / 3;
+      }
+   }
    &__title{
-      font-size: 12px;
-      font-weight: 400;
-      line-height: 12px;
+      font-size: 14px;
+      font-weight: 700;
+      line-height: 1em;
       color: $colorWhite;
+      margin-bottom: 4px;
    }
    &__items{
       display: flex;
@@ -224,7 +258,10 @@
       }
    }
    &__add_item_btn{
-      position: relative;
+      position: absolute;
+      bottom: 8px;
+      left: 50%;
+      transform: translateX(-50%);
       width: 16px;
       height: 16px;
       background: transparent;
@@ -375,24 +412,22 @@
 
 .moderation-menu {
    position: fixed;
-   top: 16px;
+   top: 0;
    right: -110%;
 
    display: flex;
    flex-direction: column;
 
-   width: auto;
-   padding: 8px 8px 8px 8px;
+   width: 100%;
+   height: 100svh;
+   padding: 8px;
    gap: 16px;
 
-   border-radius: 20px 0px 0px 20px;
-   border: 1px solid $colorWhite;
    background: rgba(111, 111, 111, 0.40);
-   box-shadow: 0px 0px 8px 0px rgba(0, 0, 0, 0.30), 1px 1px 2px 0px rgba(0, 0, 0, 0.25) inset;
    backdrop-filter: blur(10px);
 
    overflow: hidden;
-   z-index: 10;
+   z-index: 99;
 
    transition: all .5s;
    &__header{
@@ -417,7 +452,7 @@
       display: grid;
       grid-template-columns: max-content min-content 1fr;
       grid-template-rows: min-content 1fr min-content;
-      width: 100%;
+      width: auto;
       height: 89svh;
 
       gap: 12px;
@@ -427,7 +462,7 @@
       grid-column: 1/2;
       grid-row: 2/3;
       
-      padding-top: 40px;
+      // padding-top: 40px;
    }
    &__item-forms{
       grid-column: 2/3;

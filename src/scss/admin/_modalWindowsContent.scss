@@ -1,0 +1,187 @@
+
+.modal-element_description {
+    width: 100%;
+    margin-left: 16px;
+    font-size: 12px;
+    line-height: 12px;
+    font-weight: 400;
+    text-align: left;
+    color: $colorWhite;
+}
+.modal-element_input {
+    width: 100%;
+    margin-bottom: 4px;
+    padding: 8px;
+
+    border-radius: 16px;
+    border: 1px solid $colorWhite;
+    background: $colorLightGray;
+    box-shadow: 0 0 4px 0 rgba(0, 0, 0, .25), 1px 1px 2px 0 rgba(0, 0, 0, .25) inset;
+
+    font-size: 12px;
+    line-height: 12px;
+    font-weight: 400;
+    text-align: left;
+    color: $colorDarkGray;
+    &._textarea {
+        line-height: 14px;
+        resize: vertical;
+        &::-webkit-scrollbar {
+        display: none;
+        }
+    }
+}
+.modal_submit-btn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: min-content;
+    height: min-content;
+    padding: 1em 2em;
+    margin-top: 12px;
+
+    transition: all .3s;
+
+    color: $colorWhite;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 16px;
+
+    border-radius: 20px;
+    background: $colorOrange;
+    box-shadow: 1px 1px 2px 0px rgba(0, 0, 0, 0.25);
+    &:hover{
+        background: $colorLightOrange;
+        color: $colorDarkGray;
+    }
+}
+
+// Додаткові стилі для модалки творення секції
+.image-preview-upload_input {
+    width: 0.1px;
+    height: 0.1px;
+    opacity: 0;
+    overflow: hidden;
+    position: absolute;
+    z-index: -1;
+}
+.image-preview-upload_label {
+    display: flex;
+    flex-wrap: nowrap;
+    align-items: center;
+    justify-content: center;
+    align-self: center;
+
+    padding: 1em 1.5em;
+
+    font-size: 16px;
+    line-height: 1em;
+    font-weight: 400;
+    color: $colorDarkGray;
+    gap: 8px;
+
+    box-shadow: 0 0 4px 0 rgba(0, 0, 0, .25);
+    background: $colorLightGray;
+    border-radius: 16px;
+
+    transition: all .3s;
+
+    cursor: pointer;
+    &:hover {
+        background: $colorWhite;
+        box-shadow: 0 0 8px 0 rgba(0, 0, 0, .40);
+    }
+}
+.image-preview-upload_ico-img {
+    height: 32px;
+}
+
+.file-name {
+    text-align: center;
+    margin: 0;
+}
+
+.section-type-checkbox-wrapper {
+    display: flex;
+    flex-wrap: nowrap;
+    flex-direction: column;
+
+    gap: 12px;
+    padding: 12px;
+
+    width: 100%;
+
+    background: $colorLightGray;
+    border-radius: 8px;
+    border: 1px solid $colorWhite;
+    box-shadow: 0 0 4px 0 rgba(0, 0, 0, .25), 1px 1px 2px 0 rgba(0, 0, 0, .25) inset;
+    &__section-type-checkbox {
+        display: block;
+        position: absolute;
+        width: 1px;
+        height: 1px;
+        overflow: hidden;
+        clip: rect(0 0 0 0);
+        &:checked + .section-settings-modal__label-for-checkbox {
+                &::after {
+                    display: block;
+                }
+        }
+        &:focus + .section-settings-modal__label-for-checkbox {
+            color: $colorOrange;
+            &::before {
+                border: solid 1px $colorOrange;
+            }
+        }
+    }
+    &__label-for-checkbox {
+        position: relative;
+
+        margin-left: 28px;
+        font-size: 14px;
+        line-height: 1em;
+        font-weight: 400;
+        color: $colorDarkGray;
+
+        transition: all .3s;
+
+        cursor: pointer;
+        &::before {
+            content: ('');
+            position: absolute;
+            top: 50%;
+            left: -28px;
+            transform: translateY(-50%);
+
+            width: 20px;
+            height: 20px;
+
+            border: solid 1px $colorDarkGray;
+            border-radius: 50%;
+        }
+        &::after {
+            content: ('');
+            display: none;
+            position: absolute;
+            top: 50%;
+            left: -22px;
+            transform: translateY(-50%);
+
+            width: 8px;
+            height: 8px;
+
+            border-radius: 50%;
+            background: $colorDarkGray;
+        }
+        &:hover {
+            color: $colorOrange;
+            &::before {
+                border: solid 1px $colorOrange;
+            }
+            &::after {
+                background: $colorOrange;
+            }
+        }
+    }
+}

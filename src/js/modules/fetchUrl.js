@@ -1,38 +1,88 @@
-
-const LOCAL_API_URL = "http://localhost:5501/files/";
+const LOCAL_API_URL = "http://localhost:5500/files/";
 const SERVER_API_URL = "https://yourserver.com";
 
 const isLocal = window.location.hostname === "localhost";
 
 const CONFIG = {
    apiUrl: isLocal ? LOCAL_API_URL : SERVER_API_URL,
-   paths: {
-      //виклик
-      //fetchUrl.loadContent("selectSectionMenu", { sectionNumber: nuberOfSection });
-      selectSectionMenu: isLocal ? "selectSectionMenu.html" : "/adminModule/selectSectionMenu/",
-      modal2: isLocal ? "modal2.html" : "/adminModule/modal2/",
-   }
+   getPath: (section) => isLocal ? `${section}.html` : `/adminModule/${section}/`
 };
 
-export function loadContent(section, postData = null) {
-   const isLocal = window.location.hostname === "localhost";
-   const url = CONFIG.apiUrl + (CONFIG.paths[section] || "");
+export function loadContent(section, postData = null, containerSelector = "body") {
+   const url = CONFIG.apiUrl + CONFIG.getPath(section);
 
-   const options = isLocal
-      ? {} // GET-запит для локального середовища
-      : {
-         method: "POST",
-         headers: { "Content-Type": "application/json" },
-         body: JSON.stringify(postData)
-      };
+   const options = isLocal ? {} : {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify(postData)
+   };
 
    fetch(url, options)
-      .then(response => response.text())
+      .then(response => {
+         if (!response.ok) throw new Error(`HTTP error! Status: ${response.status}`);
+         return response.text();
+      })
       .then(html => {
-         document.body.insertAdjacentHTML("beforeend", html);
+         const container = document.querySelector(containerSelector);
+         if (container) {
+            container.insertAdjacentHTML("beforeend", html);
+         } else {
+            console.error(`Контейнер "${containerSelector}" не знайдено`);
+         }
       })
       .catch(error => console.error(`Помилка завантаження ${section}:`, error));
 }
+
+
+
+
+// const LOCAL_API_URL = "http://localhost:5500/files/";
+// const SERVER_API_URL = "https://yourserver.com";
+
+// const isLocal = window.location.hostname === "localhost";
+
+// const CONFIG = {
+//    apiUrl: isLocal ? LOCAL_API_URL : SERVER_API_URL,
+//    paths: {
+//       //виклик
+//       //fetchUrl.loadContent("selectSectionMenu", { sectionNumber: nuberOfSection });
+//       section_selectMenu: isLocal ? "section_selectMenu.html" : "/adminModule/section_selectMenu/",
+//       section_editMenu: isLocal ? "section_editMenu.html" : "/adminModule/section_editMenu/",
+//       page_createMenu: isLocal ? "page_createMenu.html" : "/adminModule/page_createMenu/",
+//       section_createModalWindow: isLocal ? "section_createModalWindow.html" : "/adminModule/section_createModalWindow/",
+//       section_moderationMenu: isLocal ? "section_moderationMenu.html" : "/adminModule/section_moderationMenu/",
+//       alarm_sectionSelectModerationView: isLocal ? "alarm_sectionSelectModerationView.html" : "/adminModule/alarm_sectionSelectModerationView/",
+//       blocks_moderationMenu: isLocal ? "blocks_moderationMenu.html" : "/adminModule/blocks_moderationMenu/",
+//       section_modalWindow: isLocal ? "section_modalWindow.html" : "/adminModule/section_modalWindow/",
+//       block_createModalWindow: isLocal ? "block_createModalWindow.html" : "/adminModule/block_createModalWindow/",
+//       // block_createModalWindow: isLocal ? "block_createModalWindow.html" : "/adminModule/block_createModalWindow/",
+
+
+
+
+//       modal2: isLocal ? "modal2.html" : "/adminModule/modal2/",
+//    }
+// };
+
+// export function loadContent(section, postData = null) {
+//    const isLocal = window.location.hostname === "localhost";
+//    const url = CONFIG.apiUrl + (CONFIG.paths[section] || "");
+
+//    const options = isLocal
+//       ? {} // GET-запит для локального середовища
+//       : {
+//          method: "POST",
+//          headers: { "Content-Type": "application/json" },
+//          body: JSON.stringify(postData)
+//       };
+
+//    fetch(url, options)
+//       .then(response => response.text())
+//       .then(html => {
+//          document.body.insertAdjacentHTML("beforeend", html);
+//       })
+//       .catch(error => console.error(`Помилка завантаження ${section}:`, error));
+// }
 
 
 

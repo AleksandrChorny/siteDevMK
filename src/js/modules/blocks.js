@@ -1,15 +1,42 @@
-import * as controllerModal from "./controllerModal.js";
 import * as fetchUrl from "./fetchUrl.js";
 
+
 export function viewBlockModerationMenu(event) {
-   if (event.target.closest("[data-name='btn-view-block-moderation-menu']")) {
-      controllerModal.view(document.querySelector('[data-name="view-block_moderation_menu"]'));
+   if (event.target.closest('[data-button="view-blocks-moderation-menu"]')) {
+         fetchUrl.loadContent("blocks_moderationMenu");
    }
 
-   if (event.target.closest('[data-name="block_moderation_menu__close"]')) {
-      controllerModal.close(document.querySelector('[data-name="view-block_moderation_menu"]'));
+   if (event.target.closest('[data-button="close-section-block-moderation-menu"]')) {
+      const MENU = event.target.closest('[data-name="view-section-block-moderation-menu"]')
+      if (MENU) {
+         setTimeout(() => {
+            MENU.remove();
+        }, 200);
+         return;
+      }
    }
 }
+
+// export function viewBlockModalWindow(event) {
+//    if (event.target.closest('[data-name="view-add-item-btn"]')) {
+
+//       // const BLOCK_CREATE_ITEM_MENU = event.target.closest('[data-name="section-moderation-menu"]');
+//       // if (BLOCK_CREATE_ITEM_MENU) {
+//       //    BLOCK_CREATE_ITEM_MENU.querySelector('[data-name="block-create-param-menu"]').classList.add('_view');
+//       // }
+//    }
+
+//    if (event.target.closest('[data-name="close-block-create-param-menu"]')) {
+//       const BLOCK_CREATE_PARAM_MENU = event.target.closest('[data-name="block-create-param-menu"]');
+//       if (BLOCK_CREATE_PARAM_MENU) {
+         
+//          // BLOCK_CREATE_PARAM_MENU.classList.remove('_view');
+//          return;
+//       }
+//       console.log('SECTION_CREATE_PARAM_MENU is epsent on page');
+//    }
+// }
+
 
 export function view_block_update_param_menu(event) {
    if (event.target.name == 'btn-view-block-upd-param-menu') {
@@ -36,29 +63,29 @@ export function view_block_createParamMenu(event) {
    }
 }
 
-export function viewBlockCreateMenu(event) {
-   const buttonView = event.target.closest('[data-button-name="block-create"]');
-   const buttonClose = event.target.closest('[data-button-name="close-block-create-menu"]');
+// export function viewBlockCreateMenu(event) {
+//    const buttonView = event.target.closest('[data-button-name="block-create"]');
+//    const buttonClose = event.target.closest('[data-button-name="close-block-create-menu"]');
 
-   if (buttonView) {
-      const url = buttonView.dataset.url;
-      //console.log(url);
-      const data = { 'section_id': 'section_id' };
-      // Вызываем функцию
-      //fetchUrl.htmlIncludeForDeveping(url);
-      fetchUrl.getUrlJSON(url)
-         .then((data) => {
-            document.body.innerHTML += data;
-         });
-   }
+//    if (buttonView) {
+//       const url = buttonView.dataset.url;
+//       //console.log(url);
+//       const data = { 'section_id': 'section_id' };
+//       // Вызываем функцию
+//       //fetchUrl.htmlIncludeForDeveping(url);
+//       fetchUrl.getUrlJSON(url)
+//          .then((data) => {
+//             document.body.innerHTML += data;
+//          });
+//    }
 
-   if (buttonClose) {
-      if (event.target.closest('[data-name="block-create-menu"]')) {
-         event.target.closest('[data-name="block-create-menu"]').remove();
-         return;
-      }
-   }
-}
+//    if (buttonClose) {
+//       if (event.target.closest('[data-name="block-create-menu"]')) {
+//          event.target.closest('[data-name="block-create-menu"]').remove();
+//          return;
+//       }
+//    }
+// }
 export function viewblockSettingsMenu(event) {
    if (event.target.closest('[name="btn-view-block-upd-files-menu"]')) {
       controllerModal.view(document.querySelector('[data-name="view-block-settings-menu"]'));

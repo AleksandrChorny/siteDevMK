@@ -1,3 +1,5 @@
+import * as fetchUrl from "./fetchUrl.js";
+
 //the action item that is selected to update
 export function actionItem(event) {
    if (event.target.closest('[data-name="item-btn"]')) {
@@ -12,27 +14,42 @@ export function actionItem(event) {
    }
 }
 
-
-//add class _view to section create param menu
+//add section create param menu
 export function viewSectionCreateParamMenu(event) {
    if (event.target.closest('[data-name="add_item_btn"]')) {
-      const SECTION_CREATE_ITEM_MENU = event.target.closest('[data-name="section-moderation-menu"]');
-      if (SECTION_CREATE_ITEM_MENU) {
-         SECTION_CREATE_ITEM_MENU.querySelector('[data-name="section-create-param-menu"]').classList.add('_view');
-      }
+      fetchUrl.loadContent("block_createModalWindow");
    }
 
    if (event.target.closest('[data-name="close-section-create-param-menu"]')) {
-      const SECTION_CREATE_PARAM_MENU = event.target.closest('[data-name="section-create-param-menu"]');
-      if (SECTION_CREATE_PARAM_MENU) {
-         SECTION_CREATE_PARAM_MENU.classList.remove('_view');
+      const MODAL_MENU = event.target.closest('[data-name="section-create-param-menu"]');
+         if (MODAL_MENU) {
+            setTimeout(() => {
+               MODAL_MENU.remove();
+           }, 200);
+            return;
+         }
+      console.log('SECTION_CREATE_PARAM_MENU is epsent on page');
+   }
+}
+
+//add block modal Window
+export function viewBlockModalWindow(event) {
+   if (event.target.closest('[data-name="view-add-item-btn"]')) {
+         fetchUrl.loadContent("block_createModalWindow");
+   }
+
+   if (event.target.closest('[data-name="close-block-create-param-menu"]')) {
+      const MODAL_MENU = event.target.closest('[data-name="block-create-param-menu"]');
+      if (MODAL_MENU) {
+         setTimeout(() => {
+            MODAL_MENU.remove();
+        }, 200);
          return;
       }
       console.log('SECTION_CREATE_PARAM_MENU is epsent on page');
    }
 }
 
-//close section create item-menu
 export function close(event) {
    if (event.target.closest('[data-button="close-section-moderation-menu"]')) {
       const menu = event.target.closest('[data-name="section-moderation-menu"]');

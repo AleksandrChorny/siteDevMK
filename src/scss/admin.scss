@@ -58,3 +58,9 @@
 @import "./admin/_section-version-panel";
 @import "./admin/_sectionsSettingsModal";
 
+// Підключення стилів модального вікна
+@import "./admin/_modal_window";
+@import "./admin/_modal_windowContentContainer";
+// Стилі для контенту модальних вікон
+@import "./admin/_modalWindowsContent";
+

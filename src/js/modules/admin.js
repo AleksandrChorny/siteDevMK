@@ -12,9 +12,16 @@ import * as sectionEditMenu from "./sectionEditMenu.js";
 import * as sectionUpdMenu from "./sectionUpdMenu.js";
 
 import * as pageCreate from "./pageCreate.js";
-import * as modalWindow from "./modalWindow.js";
+import * as modal from "./modal.js";
 import * as inputs from "./inputs.js";
 
+import * as blocks from "./blocks.js";
+
+// import * as close_allModalsWindows from "./close_allModalsWindows.js";
+
+
+
+// import * as sectionCreateItemMenu from "./sectionCreateItemMenu.js";
 
 
 // import * as sectionModerationMenu from "./sectionModerationMenu.js";
@@ -24,10 +31,9 @@ import * as inputs from "./inputs.js";
 
 //import * as adminTool from "./adminTool.js";
 
-//import * as sectionMenu from "./sectionMenu.js";
+// import * as sectionMenu from "./sectionMenu.js";
 //import * as sectionSettingsMenu from "./sectionSettingsMenu.js";
-//import * as blocks from "./blocks.js";
-//import * as blockSelectMenu from "./blockSelectMenu.js";
+import * as blockSelectMenu from "./blockSelectMenu.js";
 //import * as blockModerationMenu from "./blockModerationMenu.js";
 //import * as blockUploadFilesMenu from "./blockUploadFilesMenu.js";
 //import * as teamplateSettings from "./teamplateSettings.js";
@@ -35,11 +41,15 @@ import * as inputs from "./inputs.js";
 //import * as HeadMenu from "./headSettingsMenu.js";
 
 //Запит на сервер для завантаження частин html
+<<<<<<< HEAD
 //import * as fetchUrl from "./fetchUrl.js";
 
 document.addEventListener("DOMContentLoaded", function () {
    localStorage.getAndSet();
 });
+=======
+// import * as fetchUrl from "./fetchUrl.js";
+>>>>>>> 16.11.24_upd-Select-or-create-a-Section-menu-Max
 
 
 //sectionSelectMenu.viewOnload();
@@ -47,6 +57,19 @@ sectionModerationMenu.viewOnload();
 
 //let age = parseInt(params.get("age"), 10)
 document.addEventListener('click', (event) => {
+
+   // close_allModalsWindows.closeAllModalWidows(event);
+
+   blocks.viewBlockModerationMenu(event);
+
+   blockSelectMenu.addClasses(event);
+   // blockSelectMenu.displayNone(event);
+
+
+
+   // sectionSelectMenu.displayNone(event);
+
+
    stileMenu.viewStileCreateMenu(event);
    sectionSelectPanel.viewSectionSelectMenu(event);
    sectionSelectMenu.close(event);
@@ -56,9 +79,12 @@ document.addEventListener('click', (event) => {
    sectionModerationMenu.actionItem(event);
    sectionModerationMenu.viewSectionCreateParamMenu(event);
    sectionModerationMenu.close(event);
-   // ________Max______
-   modalWindow.close(event);
 
+   sectionModerationMenu.viewBlockModalWindow(event);
+
+   // ________Max______
+   modal.close(event);
+   modal.fetchModal(event);
 
 
    sectionControlPanel.show(event);
@@ -72,9 +98,24 @@ document.addEventListener('click', (event) => {
    sectionSelectMenu.viewSectionSettingsModal(event);
    sectionSelectMenu.closeSectionSettingsModal(event);
    sectionSelectMenu.addClasses(event);
+   sectionSelectMenu.viewSectionModerationMenu(event);
+
 
    pageCreate.viewPageCreateMenu(event);
    pageCreate.closePageCreateMenu(event);
+
+
+
+
+
+
+
+
+
+
+
+   // sectionCreateItemMenu.viewSectionCreateParamMenu(event);
+   // sectionMenu.viewSectionModerationMenu(event);
 
 
    // sectionSelectMenu.viewUpdButtons(event);
@@ -123,7 +164,6 @@ document.addEventListener('click', (event) => {
 
    // blockUploadFilesMenu.buttonClose(event);
 
-   // blocks.viewBlockModerationMenu(event);
    // blocks.view_block_update_param_menu(event);
    // blocks.view_block_createParamMenu(event);
    // blocks.viewBlockCreateMenu(event);
@@ -146,8 +186,8 @@ document.addEventListener('click', (event) => {
 })
 document.addEventListener('input', (event) => {
    //sectionCreateMenu.validateForm(event);
-   pageCreate.Max(event);
-   modalWindow.testLS(event);
+   // pageCreate.Max(event);
+   // modalWindow.testLS(event);
 
 })
 
