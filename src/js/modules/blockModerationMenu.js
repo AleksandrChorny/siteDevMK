@@ -103,38 +103,38 @@ export function close(event) {
    }
 }
 
-export function viewBlockModerationMenu(id) {
-   const url = '/setup/block/view-moderation-menu/';
-   const data = { 'block_id': id };
-   // Вызываем функцию
-   fetchUrl.getUrlJSON(url, data)
-      .then((data) => {
-         //console.log(document.body);
-         document.body.innerHTML += data;
-         //console.log(data); // JSON data parsed by `response.json()` call
-         // console.log(myModal)
-         //myModal.innerHTML = data; // JSON data parsed by `response.json()` call
-      });
-}
+//export function viewBlockModerationMenu(id) {
+//   const url = '/setup/block/view-moderation-menu/';
+//   const data = { 'block_id': id };
+//   // Вызываем функцию
+//   fetchUrl.getUrlJSON(url, data)
+//      .then((data) => {
+//         //console.log(document.body);
+//         document.body.innerHTML += data;
+//         //console.log(data); // JSON data parsed by `response.json()` call
+//         // console.log(myModal)
+//         //myModal.innerHTML = data; // JSON data parsed by `response.json()` call
+//      });
+//}
 
-export function viewBlockModerationMenu1(event) {
-   const buttonView = event.target.closest('[data-button-name="view-block-moderation-menu"]');
+//export function viewBlockModerationMenu1(event) {
+//   const buttonView = event.target.closest('[data-button-name="view-block-moderation-menu"]');
 
-   if (buttonView) {
-      const section_id = buttonView.dataset.id;
-      const url = buttonView.dataset.url;
-      const data = { 'section_id': section_id };
-      // Вызываем функцию
-      fetchUrl.getUrlJSON(url, data)
-         .then((data) => {
-            //console.log(document.body);
-            document.body.innerHTML += data;
-            //console.log(data); // JSON data parsed by `response.json()` call
-            // console.log(myModal)
-            //myModal.innerHTML = data; // JSON data parsed by `response.json()` call
-         });
-   }
-}
+//   if (buttonView) {
+//      const section_id = buttonView.dataset.id;
+//      const url = buttonView.dataset.url;
+//      const data = { 'section_id': section_id };
+//      // Вызываем функцию
+//      fetchUrl.getUrlJSON(url, data)
+//         .then((data) => {
+//            //console.log(document.body);
+//            document.body.innerHTML += data;
+//            //console.log(data); // JSON data parsed by `response.json()` call
+//            // console.log(myModal)
+//            //myModal.innerHTML = data; // JSON data parsed by `response.json()` call
+//         });
+//   }
+//}
 
 export function viewBlockUploadFilesMenu(event) {
    const button = event.target.closest('[name="view-block-files-upload-menu"]');
