@@ -187,8 +187,10 @@ export function addClasses(event) {
    if (MODERATION_MENU) {
       const VIEW_ACTIVE = MODERATION_MENU.querySelector('[data-name="view-active"]');
       const VIEW_NEW = MODERATION_MENU.querySelector('[data-name="view-new"]');
+      const button = MODERATION_MENU.querySelector('[data-button="view"]');
 
       if (event.target.closest('[data-name="view-new"]')) {
+            button.classList.remove('_diplay-none');
          if (!VIEW_NEW.classList.contains('_max-height')) {
             VIEW_ACTIVE.classList.add('_min-height');
             VIEW_NEW.classList.add('_max-height');

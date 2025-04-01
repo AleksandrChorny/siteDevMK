@@ -383,7 +383,7 @@
       resize: none;
    }
    &__submit{
-      display: flex;
+            display: flex;
       justify-content: center;
       align-items: center;
       align-self: center;
@@ -406,6 +406,10 @@
       &:hover{
          background: $colorLightOrange;
          color: $colorDarkGray;
+      }
+      &._diplay-none {
+      display: none;
+
       }
    }
 }

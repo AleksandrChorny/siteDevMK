@@ -54,6 +54,11 @@ document.addEventListener('click', (event) => {
    blocks.viewBlockModerationMenu(event);
 
    blockSelectMenu.addClasses(event);
+   // blockSelectMenu.displayNone(event);
+
+
+
+   // sectionSelectMenu.displayNone(event);
 
 
    stileMenu.viewStileCreateMenu(event);
@@ -67,6 +72,7 @@ document.addEventListener('click', (event) => {
    sectionModerationMenu.close(event);
 
    sectionModerationMenu.viewBlockModalWindow(event);
+
    // ________Max______
    modal.close(event);
    modal.fetchModal(event);
