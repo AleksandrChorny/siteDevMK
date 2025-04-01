@@ -1,5 +1,5 @@
 import * as controllerModal from "./controllerModal.js";
-import * as blockModerationMenu from "./blockModerationMenu.js";
+//import * as blockModerationMenu from "./blockModerationMenu.js";
 
 export function addClasses(event) {
    const MODERATION_MENU = document.querySelector('[data-name="block-moderation-menu"]');
@@ -9,7 +9,7 @@ export function addClasses(event) {
       const button = MODERATION_MENU.querySelector('[data-button="view"]');
 
       if (event.target.closest('[data-name="view-new"]')) {
-            button.classList.remove('_diplay-none');
+         button.classList.remove('_diplay-none');
          if (!VIEW_NEW.classList.contains('_max-height')) {
             VIEW_ACTIVE.classList.add('_min-height');
             VIEW_NEW.classList.add('_max-height');
@@ -73,11 +73,11 @@ export function viewBlockType(event) {
    }
 }
 
-export function viewBlockModerationMenu(event) {
-   const buttonView = event.target.closest('[data-button-name="view-block-moderation-menu"]');
-   if (buttonView) {
-      const block_id = buttonView.dataset.id
-      blockModerationMenu.viewBlockModerationMenu(block_id);
-   }
-}
+//export function viewBlockModerationMenu(event) {
+//   const buttonView = event.target.closest('[data-button-name="view-block-moderation-menu"]');
+//   if (buttonView) {
+//      const block_id = buttonView.dataset.id
+//      blockModerationMenu.viewBlockModerationMenu(block_id);
+//   }
+//}
 
