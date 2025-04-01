@@ -54,11 +54,6 @@ document.addEventListener('click', (event) => {
    blocks.viewBlockModerationMenu(event);
 
    blockSelectMenu.addClasses(event);
-   // blockSelectMenu.displayNone(event);
-
-
-
-   // sectionSelectMenu.displayNone(event);
 
 
    stileMenu.viewStileCreateMenu(event);
