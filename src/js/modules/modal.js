@@ -3,11 +3,17 @@ import * as fetchUrl from "./fetchUrl.js";
 // Функція для створення FormData
 function createFetchParam(eventTarget) {
    let result = new FormData(); // Використовуємо FormData для створення іменованого масиву
-
+   //Додаю адресу з якої надходить запит
+   result.append('requestUrl', window.location.pathname);
    // Якщо є атрибут data-section-id, додаємо його до fetchParam
    if (eventTarget.matches('[data-section-id]')) {
       const sectionId = eventTarget.getAttribute('data-section-id');
       result.append("sectionId", sectionId); // Додаємо значення в форму
+   }
+   // Якщо є атрибут data-section-number, додаємо його до fetchParam
+   if (eventTarget.matches('[data-section-number]')) {
+      const sectionNumber = eventTarget.getAttribute('data-section-number');
+      result.append("sectionNumber", sectionNumber); // Додаємо значення в форму
    }
    return result;
 }
@@ -26,7 +32,7 @@ export function fetchModal(event) {
       fetchUrl.loadContent(modalName, fetchParam);
 
       // Якщо потрібно, можна логувати fetchParam для перевірки
-      console.log([...fetchParam]); // Це виведе масив з FormData у консоль
+      //console.log([...fetchParam]); // Це виведе масив з FormData у консоль
    }
 }
 
