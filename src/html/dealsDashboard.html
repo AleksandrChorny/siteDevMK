@@ -1,0 +1,189 @@
+<div class="dash-board">
+    <!-- Animated gradient BG -->
+    <div class="blob-outer-container">
+        <div class="blob-inner-container">
+            <div class="blob"></div>
+        </div>
+    </div>
+
+    <div class="dash-board__items-block">
+      <div class="dash-board__date-screen">
+         <p class="dash-board__date-screen-month">ТРАВЕНЬ</p>
+         <p class="dash-board__date-screen-date">13</p>
+         <p class="dash-board__date-screen-day">Вівторок</p>
+      </div>
+      <div class="dash-board__daily-efficiency">
+         <p class="dash-board__daily-efficiency-title">Данні за день</p>
+         <div class="dash-board__daily-efficiency-items">
+               <p class="dash-board__daily-efficiency-data result _result-green">+ 7 000 <span class="dash-board__daily-efficiency-data-currency">грн.</span></p>
+               <p class="dash-board__daily-efficiency-data outlay">Витрати: 5 000 грн.</p>
+               <p class="dash-board__daily-efficiency-data profit">Дохід: 12 000 грн.</p>
+         </div>
+      </div>
+      <div class="dash-board__date-selection-block">
+         <button class="dash-board__change-of-week-btn back" type="button" title="попередній тиждень"></button>
+         <div class="dash-board__days-block">
+               <button class="dash-board__button-day _negative-red" type="button" title="понеділок">12<span class="dash-board__button-day_name">ПН</span></button>
+               <button class="dash-board__button-day _positive-green _active_positive" type="button" title="вівторок">13<span class="dash-board__button-day_name">ВТ</span></button>
+               <button class="dash-board__button-day _positive-green" type="button" title="середа">14 <span class="dash-board__button-day_name">СР</span></button>
+               <button class="dash-board__button-day _positive-green" type="button" title="четвер">15 <span class="dash-board__button-day_name">ЧЕ</span></button>
+               <button class="dash-board__button-day _negative-red" type="button" title="п'ятниця">16 <span class="dash-board__button-day_name">ПТ</span></button>
+               <button class="dash-board__button-day" type="button" title="субота">17 <span class="dash-board__button-day_name">СБ</span></button>
+               <button class="dash-board__button-day _negative-red _active_negative" type="button" title="неділя">18 <span class="dash-board__button-day_name">НД</span></button>
+         </div>
+         <button class="dash-board__change-of-week-btn forward" type="button" title="наступний тиждень"></button>
+      </div>
+      <div class="dash-board__fin-inform-buttons-block">
+         <button class="dash-board__fin-inform-button income _active">
+            <p class="dash-board__fin-inform-button-name">ДОХІД</p>
+            <svg class="dash-board__fin-inform-button-ico">
+               <use xlink:href="@img/icons/icons.svg#ico_income"></use>
+            </svg>
+         </button>
+         <p class="dash-board__fin-inform-button-description for-income">Докладна інформація щодо доходів за цей день. Щоб побачити інформацію натисніть на кнопку.</p>
+         <button class="dash-board__fin-inform-button outlay">
+            <p class="dash-board__fin-inform-button-name">ВИДАТКИ</p>
+            <svg class="dash-board__fin-inform-button-ico">
+               <use xlink:href="@img/icons/icons.svg#ico_outlay"></use>
+            </svg>
+         </button>
+         <p class="dash-board__fin-inform-button-description for-outlay">Розгорнуті данні щодо видвтків за поточний день. Щоб побачити інформацію натисніть на кнопку.</p>
+         <button class="dash-board__fin-inform-button weekly">
+            <p class="dash-board__fin-inform-button-name">ЗА ТИЖДЕНЬ</p>
+            <svg class="dash-board__fin-inform-button-ico">
+               <use xlink:href="@img/icons/icons.svg#ico_weekly"></use>
+            </svg>
+         </button>
+         <p class="dash-board__fin-inform-button-description for-weekly">Статистика по фінансовій фективності за тиждень. Щоб побачити інформацію натисніть на кнопку.</p>
+      </div>
+      <div class="dash-board__fin-inform-display">
+      <!-- Подробиці по доходу за день -->
+         <div class="dash-board__daily-income-info _on-screen">
+            <p class="dash-board__daily-income-info-title">перелік виконаних робіт за день</p>
+            <div class="dash-board__employee-panel">
+               <p class="dash-board__employee-title">Робітник 1</p>
+               <div class="dash-board__work-done">
+                  <p class="dash-board__order-number">000</p>
+                  <p class="dash-board__order-title">Ручки, 100 шт., 1+0, Золото, Ріксос</p>
+                  <p class="dash-board__order-cost">630,00 грн</p>
+               </div>
+               <div class="dash-board__work-done">
+                  <p class="dash-board__order-number">000</p>
+                  <p class="dash-board__order-title">РРучки 100 шт., 1+0 , Золото Готель</p>
+                  <p class="dash-board__order-cost">630,00 грн</p>
+               </div>
+               <p class="dash-board__employee-income">1 260,00 грн</p>
+            </div>
+            <div class="dash-board__employee-panel">
+               <p class="dash-board__employee-title">Робітник 2</p>
+               <div class="dash-board__work-done">
+                  <p class="dash-board__order-number">000</p>
+                  <p class="dash-board__order-title">Ручки, 100 шт., 1+0, Золото, Ріксос</p>
+                  <p class="dash-board__order-cost">630,00 грн</p>
+               </div>
+               <div class="dash-board__work-done">
+                  <p class="dash-board__order-number">000</p>
+                  <p class="dash-board__order-title">РРучки 100 шт., 1+0 , Золото Готель</p>
+                  <p class="dash-board__order-cost">630,00 грн</p>
+               </div>
+               <div class="dash-board__work-done">
+                  <p class="dash-board__order-number">000</p>
+                  <p class="dash-board__order-title">РРучки 100 шт., 1+0 , Золото Готель</p>
+                  <p class="dash-board__order-cost">630,00 грн</p>
+               </div>
+               <div class="dash-board__work-done">
+                  <p class="dash-board__order-number">000</p>
+                  <p class="dash-board__order-title">РРучки 100 шт., 1+0 , Золото Готель</p>
+                  <p class="dash-board__order-cost">630,00 грн</p>
+               </div>
+               <div class="dash-board__work-done">
+                  <p class="dash-board__order-number">000</p>
+                  <p class="dash-board__order-title">РРучки 100 шт., 1+0 , Золото Готель</p>
+                  <p class="dash-board__order-cost">630,00 грн</p>
+               </div>
+               <div class="dash-board__work-done">
+                  <p class="dash-board__order-number">000</p>
+                  <p class="dash-board__order-title">РРучки 100 шт., 1+0 , Золото Готель</p>
+                  <p class="dash-board__order-cost">630,00 грн</p>
+               </div>
+               <div class="dash-board__work-done">
+                  <p class="dash-board__order-number">000</p>
+                  <p class="dash-board__order-title">РРучки 100 шт., 1+0 , Золото Готель</p>
+                  <p class="dash-board__order-cost">630,00 грн</p>
+               </div>
+               <p class="dash-board__employee-income">1 260,00 грн</p>
+            </div>
+            <div class="dash-board__employee-panel">
+               <p class="dash-board__employee-title">Робітник 3</p>
+               <div class="dash-board__work-done">
+                  <p class="dash-board__order-number">000</p>
+                  <p class="dash-board__order-title">Ручки, 100 шт., 1+0, Золото, Ріксос</p>
+                  <p class="dash-board__order-cost">630,00 грн</p>
+               </div>
+               <p class="dash-board__employee-income">1 260,00 грн</p>
+            </div>
+         </div>
+      <!-- Подробиці по видатках за день -->
+         <div class="dash-board__daily-outlay-info "></div>
+      <!-- Подробиці по ефективності за тиждень -->
+         <div class="dash-board__daily-weekly-info"></div>
+      </div>
+      <div class="dash-board__efficiency-chart-block">
+         <div class="dash-board__efficiency-chart">
+
+            <!-- Графік фінансової ефективності за тиждень -->
+            <div class="chart-wrapper">
+               <div class="y-axis">
+                  <div class="y-label">10K</div>
+                  <div class="y-label">9K</div>
+                  <div class="y-label">8K</div>
+                  <div class="y-label">7K</div>
+                  <div class="y-label">6K</div>
+                  <div class="y-label">5K</div>
+                  <div class="y-label">4K</div>
+                  <div class="y-label">3K</div>
+                  <div class="y-label">2K</div>
+                  <div class="y-label">1K</div>
+                  <div class="y-label">0</div>
+               </div>
+               <div class="chart">
+                  <svg class="line-chart" viewBox="0 0 548 178" preserveAspectRatio="none">
+                  <defs>
+                     <linearGradient id="lineGradient" x1="0%" y1="0%" x2="100%" y2="0%">
+                        <stop offset="0%" stop-color="#2cffed" />
+                        <stop offset="100%" stop-color="#ff7b3d" />
+                     </linearGradient>
+                  </defs>
+
+                  <!-- Плавна крива -->
+                  <path
+                     d="
+                        M 0,103.04
+                        C 45.67,22.86 45.67,22.86 91.33,22.86
+                        C 136.995,22.86 136.995,56.96 182.66,56.96
+                        C 228.325,56.96 228.325,122.82 273.99,122.82
+                        C 319.655,122.82 319.655,16.22 365.32,16.22
+                        C 410.985,16.22 410.985,67.96 456.65,67.96
+                        C 502.315,67.96 502.315,178 547.98,178
+                     "
+                     fill="none"
+                     stroke="url(#lineGradient)"
+                     stroke-width="2"
+                  />
+                  </svg>
+                  <div class="x-axis">
+                     <span>Пн</span>
+                     <span>Вт</span>
+                     <span>Ср</span>
+                     <span>Чт</span>
+                     <span>Пт</span>
+                     <span>Сб</span>
+                     <span>Нд</span>
+                  </div>
+               </div>
+            </div>
+
+         </div>
+      </div>
+    </div>
+</div>
