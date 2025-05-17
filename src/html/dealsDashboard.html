@@ -7,11 +7,13 @@
     </div>
 
     <div class="dash-board__items-block">
+      <!-- Панель дати -->
       <div class="dash-board__date-screen">
          <p class="dash-board__date-screen-month">ТРАВЕНЬ</p>
          <p class="dash-board__date-screen-date">13</p>
          <p class="dash-board__date-screen-day">Вівторок</p>
       </div>
+      <!-- Панель відображення денної ефективності -->
       <div class="dash-board__daily-efficiency">
          <p class="dash-board__daily-efficiency-title">Данні за день</p>
          <div class="dash-board__daily-efficiency-items">
@@ -20,21 +22,23 @@
                <p class="dash-board__daily-efficiency-data profit">Дохід: 12 000 грн.</p>
          </div>
       </div>
+      <!-- Панель вибору дати та тижня -->
       <div class="dash-board__date-selection-block">
          <button class="dash-board__change-of-week-btn back" type="button" title="попередній тиждень"></button>
          <div class="dash-board__days-block">
-               <button class="dash-board__button-day _negative-red" type="button" title="понеділок">12<span class="dash-board__button-day_name">ПН</span></button>
-               <button class="dash-board__button-day _positive-green _active_positive" type="button" title="вівторок">13<span class="dash-board__button-day_name">ВТ</span></button>
-               <button class="dash-board__button-day _positive-green" type="button" title="середа">14 <span class="dash-board__button-day_name">СР</span></button>
-               <button class="dash-board__button-day _positive-green" type="button" title="четвер">15 <span class="dash-board__button-day_name">ЧЕ</span></button>
-               <button class="dash-board__button-day _negative-red" type="button" title="п'ятниця">16 <span class="dash-board__button-day_name">ПТ</span></button>
+               <button class="dash-board__button-day _red" type="button" title="понеділок">12<span class="dash-board__button-day_name">ПН</span></button>
+               <button class="dash-board__button-day _green _active" type="button" title="вівторок">13<span class="dash-board__button-day_name">ВТ</span></button>
+               <button class="dash-board__button-day _green" type="button" title="середа">14 <span class="dash-board__button-day_name">СР</span></button>
+               <button class="dash-board__button-day _green" type="button" title="четвер">15 <span class="dash-board__button-day_name">ЧЕ</span></button>
+               <button class="dash-board__button-day _red" type="button" title="п'ятниця">16 <span class="dash-board__button-day_name">ПТ</span></button>
                <button class="dash-board__button-day" type="button" title="субота">17 <span class="dash-board__button-day_name">СБ</span></button>
-               <button class="dash-board__button-day _negative-red _active_negative" type="button" title="неділя">18 <span class="dash-board__button-day_name">НД</span></button>
+               <button class="dash-board__button-day _red _active" type="button" title="неділя">18 <span class="dash-board__button-day_name">НД</span></button>
          </div>
          <button class="dash-board__change-of-week-btn forward" type="button" title="наступний тиждень"></button>
       </div>
+      <!-- Панель вибору докладної аналітики -->
       <div class="dash-board__fin-inform-buttons-block">
-         <button class="dash-board__fin-inform-button income _active">
+         <button class="dash-board__fin-inform-button income">
             <p class="dash-board__fin-inform-button-name">ДОХІД</p>
             <svg class="dash-board__fin-inform-button-ico">
                <use xlink:href="@img/icons/icons.svg#ico_income"></use>
@@ -48,7 +52,7 @@
             </svg>
          </button>
          <p class="dash-board__fin-inform-button-description for-outlay">Розгорнуті данні щодо видвтків за поточний день. Щоб побачити інформацію натисніть на кнопку.</p>
-         <button class="dash-board__fin-inform-button weekly">
+         <button class="dash-board__fin-inform-button weekly _active">
             <p class="dash-board__fin-inform-button-name">ЗА ТИЖДЕНЬ</p>
             <svg class="dash-board__fin-inform-button-ico">
                <use xlink:href="@img/icons/icons.svg#ico_weekly"></use>
@@ -56,10 +60,11 @@
          </button>
          <p class="dash-board__fin-inform-button-description for-weekly">Статистика по фінансовій фективності за тиждень. Щоб побачити інформацію натисніть на кнопку.</p>
       </div>
+      <!-- Дісплей виводу докладної аналітики -->
       <div class="dash-board__fin-inform-display">
-      <!-- Подробиці по доходу за день -->
-         <div class="dash-board__daily-income-info _on-screen">
-            <p class="dash-board__daily-income-info-title">перелік виконаних робіт за день</p>
+         <!-- Подробиці по доходу за день -->
+         <div class="dash-board__daily-income-info">
+            <p class="dash-board__fin-inform-display-title">перелік виконаних робіт за день</p>
             <div class="dash-board__employee-panel">
                <p class="dash-board__employee-title">Робітник 1</p>
                <div class="dash-board__work-done">
@@ -123,11 +128,72 @@
                <p class="dash-board__employee-income">1 260,00 грн</p>
             </div>
          </div>
-      <!-- Подробиці по видатках за день -->
-         <div class="dash-board__daily-outlay-info "></div>
-      <!-- Подробиці по ефективності за тиждень -->
-         <div class="dash-board__daily-weekly-info"></div>
+         <!-- Подробиці по видатках за день -->
+         <div class="dash-board__daily-outlay-info">
+            <p class="dash-board__fin-inform-display-title">данні щодо витрат за день</p>
+            <div class="dash-board__statistics-panel">
+               <div class="dash-board__outlay-block">
+                  <p class="dash-board__outlay-title">Стаття видаткв 1</p>
+                  <p class="dash-board__outlay-cost">000,00 грн</p>
+               </div>
+               <div class="dash-board__outlay-block">
+                  <p class="dash-board__outlay-title">Стаття видаткв 2</p>
+                  <p class="dash-board__outlay-cost">000,00 грн</p>
+               </div>
+               <div class="dash-board__outlay-block">
+                  <p class="dash-board__outlay-title">Стаття видаткв 3</p>
+                  <p class="dash-board__outlay-cost">000,00 грн</p>
+               </div>
+               <div class="dash-board__outlay-block">
+                  <p class="dash-board__outlay-title">Стаття видаткв 4</p>
+                  <p class="dash-board__outlay-cost">000,00 грн</p>
+               </div>
+               <div class="dash-board__outlay-block">
+                  <p class="dash-board__outlay-title">Стаття видаткв 5</p>
+                  <p class="dash-board__outlay-cost">000,00 грн</p>
+               </div>
+               <div class="dash-board__outlay-block">
+                  <p class="dash-board__outlay-title">Стаття видаткв 6</p>
+                  <p class="dash-board__outlay-cost">000,00 грн</p>
+               </div>
+               <div class="dash-board__outlay-block">
+                  <p class="dash-board__outlay-title">Стаття видаткв 7</p>
+                  <p class="dash-board__outlay-cost">000,00 грн</p>
+               </div>
+               <div class="dash-board__outlay-block">
+                  <p class="dash-board__outlay-title">Стаття видаткв 8</p>
+                  <p class="dash-board__outlay-cost">000,00 грн</p>
+               </div>
+               <div class="dash-board__outlay-block">
+                  <p class="dash-board__outlay-title">Стаття видаткв 9</p>
+                  <p class="dash-board__outlay-cost">000,00 грн</p>
+               </div>
+               <p class="dash-board__amount-of-expenses">0 000,00 грн</p>
+            </div>
+         </div>
+         <!-- Подробиці по ефективності за тиждень -->
+         <div class="dash-board__weekly-report _on-screen">
+            <p class="dash-board__fin-inform-display-title">фінансова ефективність за тиждень</p>
+            <div class="dash-board__weekly-report-items">
+               <div class="dash-board__weekly-profit-info">
+                  <p class="dash-board__weekly-profit_gradient-text">+ 26 475,00 <span>грн</span></p>
+               </div>
+               <div class="dash-board__weekly-report-data _weekly-income">
+                  <span>Зароблено:</span>
+                  <span>47 475,00 грн</span>
+               </div>
+               <div class="dash-board__weekly-report-data _weekly-break-even-point">
+                  <span>Мінімально потрібно:</span>
+                  <span>21 000,00 грн</span>
+               </div>
+            </div>
+            <div class="dash-board__circular-progress-bar">
+
+
+            </div>
+         </div>
       </div>
+      <!-- Графік ефективності за тиждень -->
       <div class="dash-board__efficiency-chart-block">
          <div class="dash-board__efficiency-chart">
 
@@ -155,7 +221,7 @@
                      </linearGradient>
                   </defs>
 
-                  <!-- Плавна крива -->
+              
                   <path
                      d="
                         M 0,103.04
