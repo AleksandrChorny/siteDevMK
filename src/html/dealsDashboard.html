@@ -38,21 +38,21 @@
       </div>
       <!-- Панель вибору докладної аналітики -->
       <div class="dash-board__fin-inform-buttons-block">
-         <button class="dash-board__fin-inform-button income" data-name="fin-inform-button">
+         <button class="dash-board__fin-inform-button income" data-btn-name="fin-inform-button">
             <p class="dash-board__fin-inform-button-name">ДОХІД</p>
             <svg class="dash-board__fin-inform-button-ico">
                <use xlink:href="@img/icons/icons.svg#ico_income"></use>
             </svg>
          </button>
          <p class="dash-board__fin-inform-button-description for-income">Докладна інформація щодо доходів за цей день. Щоб побачити інформацію натисніть на кнопку.</p>
-         <button class="dash-board__fin-inform-button outlay">
+         <button class="dash-board__fin-inform-button outlay" data-btn-name="fin-inform-button-outlay">
             <p class="dash-board__fin-inform-button-name">ВИДАТКИ</p>
             <svg class="dash-board__fin-inform-button-ico">
                <use xlink:href="@img/icons/icons.svg#ico_outlay"></use>
             </svg>
          </button>
          <p class="dash-board__fin-inform-button-description for-outlay">Розгорнуті данні щодо видвтків за поточний день. Щоб побачити інформацію натисніть на кнопку.</p>
-         <button class="dash-board__fin-inform-button weekly _active">
+         <button class="dash-board__fin-inform-button weekly" data-btn-name="fin-inform-button-weekly">
             <p class="dash-board__fin-inform-button-name">ЗА ТИЖДЕНЬ</p>
             <svg class="dash-board__fin-inform-button-ico">
                <use xlink:href="@img/icons/icons.svg#ico_weekly"></use>
@@ -519,7 +519,7 @@
             </div>
          </div>
          <!-- Подробиці по видатках за день -->
-         <div class="dash-board__daily-outlay-info">
+         <div class="dash-board__daily-outlay-info" data-day data-name="cost-data">
             <p class="dash-board__fin-inform-display-title">данні щодо витрат за день</p>
             <div class="dash-board__statistics-panel">
                <div class="dash-board__outlay-block">
@@ -562,7 +562,7 @@
             </div>
          </div>
          <!-- Подробиці по ефективності за тиждень -->
-         <div class="dash-board__weekly-report _on-screen">
+         <div class="dash-board__weekly-report weekly" data-day data-name="details-for-the-week">
             <p class="dash-board__fin-inform-display-title">фінансова ефективність за тиждень</p>
             <div class="dash-board__weekly-report-items">
                <div class="dash-board__weekly-profit-info">
