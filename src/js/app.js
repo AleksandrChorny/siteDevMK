@@ -5,6 +5,9 @@ import * as nav from "./modules/navigation.js";
 import * as welcomeText from "./modules/welcomeText.js";
 import * as login from "./modules/login.js";
 
+import * as dealsDashboard from "./modules/dealsDashboard.js";
+
+
 //* include admin js
 import * as adminJS from "./modules/admin.js";
 //* include admin js
