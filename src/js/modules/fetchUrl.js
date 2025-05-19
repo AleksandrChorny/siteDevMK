@@ -1,21 +1,24 @@
 const LOCAL_API_URL = "http://localhost:5500/files/";
+const PHP_API_URL = "http://localhost:8888";
 const SERVER_API_URL = "https://yourserver.com";
 
 const isLocal = window.location.hostname === "localhost";
+const isPhp = window.location.host === "localhost:8888";
 
 const CONFIG = {
-   apiUrl: isLocal ? LOCAL_API_URL : SERVER_API_URL,
-   getPath: (section) => isLocal ? `${section}.html` : `/adminModule/${section}/`
+   apiUrl: isPhp ? PHP_API_URL : (isLocal ? LOCAL_API_URL : SERVER_API_URL),
+   //getPath: (section) => isLocal ? (isPhp ? `/fragment/${section}/` : `${section}.html`) : `/fragment/${section}/`
+   getPath: (section) => (isLocal && !isPhp) ? `${section}.html` : `/fragment/${section}/`
 };
    console.log("Фетч URL");
 
 export function loadContent(section, postData = null, containerSelector = "body") {
    const url = CONFIG.apiUrl + CONFIG.getPath(section);
+   //console.log([...postData]);
 
-   const options = isLocal ? {} : {
+   const options = (isLocal && !isPhp) ? {} : {
       method: "POST",
-      headers: { "Content-Type": "application/json" },
-      body: JSON.stringify(postData)
+      body: postData
    };
 
    fetch(url, options)
@@ -24,6 +27,7 @@ export function loadContent(section, postData = null, containerSelector = "body"
          return response.text();
       })
       .then(html => {
+         console.log(html);
          const container = document.querySelector(containerSelector);
          if (container) {
             container.insertAdjacentHTML("beforeend", html);
