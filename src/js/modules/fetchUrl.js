@@ -7,6 +7,7 @@ const CONFIG = {
    apiUrl: isLocal ? LOCAL_API_URL : SERVER_API_URL,
    getPath: (section) => isLocal ? `${section}.html` : `/adminModule/${section}/`
 };
+   console.log("Фетч URL");
 
 export function loadContent(section, postData = null, containerSelector = "body") {
    const url = CONFIG.apiUrl + CONFIG.getPath(section);
