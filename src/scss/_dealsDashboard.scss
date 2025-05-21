@@ -7,6 +7,8 @@
     place-items: center;
 
     overflow: hidden;
+    font-family: Montserrat;
+
     @media (max-width: 576px) {
         height: auto;
     }
@@ -344,6 +346,9 @@
         mix-blend-mode: multiply;
 
         overflow-y: auto;
+        &::-webkit-scrollbar {
+            display: none;
+        }
         @media (max-width: 576px) {
             padding: 12px;
         }
@@ -401,11 +406,11 @@
     }
     &__work-done {
         display: grid;
-        grid-template-columns: max-content 1fr max-content;
+        grid-template-columns: 1fr max-content;
         grid-template-rows: max-content;
 
-        width: min-content;
-        min-width: 86.4svw;
+        width: 100%;
+        // min-width: 86.4svw;
 
         gap: 16px;
         padding-left: 24px;
@@ -453,6 +458,9 @@
         mix-blend-mode: multiply;
 
         overflow-y: auto;
+        &::-webkit-scrollbar {
+            display: none;
+        }
         &._on-screen {
             display: flex;
 
@@ -506,6 +514,9 @@
         padding: 40px;
 
         overflow: hidden;
+        &::-webkit-scrollbar {
+            display: none;
+        }
         @media (max-width: 576px) {
             // width: calc(100svw - 24px);
             padding: 12px;
