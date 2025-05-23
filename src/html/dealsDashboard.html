@@ -9,7 +9,7 @@
     <div class="dash-board__items-block">
       <!-- Панель дати -->
       <div class="dash-board__date-screen">
-         <p class="dash-board__date-screen-month">ТРАВЕНЬ</p>
+         <p class="dash-board__date-screen-month" data-name="date-screen-month">ТРАВЕНЬ</p>
          <p class="dash-board__date-screen-date" data-name="date-screen-date">13</p>
          <p class="dash-board__date-screen-day" data-name="date-screen-day">Вівторок</p>
       </div>
@@ -26,13 +26,13 @@
       <div class="dash-board__date-selection-block">
          <button class="dash-board__change-of-week-btn back" type="button" title="попередній тиждень"></button>
          <div class="dash-board__days-block">
-               <button class="dash-board__button-day _red" data-btn-day="Monday" type="button" title="понеділок">12<span class="dash-board__button-day_name">ПН</span></button>
-               <button class="dash-board__button-day _green _active" data-btn-day="Tuesday" type="button" title="вівторок">13<span class="dash-board__button-day_name">ВТ</span></button>
-               <button class="dash-board__button-day _green" data-btn-day="Wednesday" type="button" title="середа">14 <span class="dash-board__button-day_name">СР</span></button>
-               <button class="dash-board__button-day _green" data-btn-day="Thursday" type="button" title="четвер">15 <span class="dash-board__button-day_name">ЧЕ</span></button>
-               <button class="dash-board__button-day _red" data-btn-day="Friday" type="button" title="п'ятниця">16 <span class="dash-board__button-day_name">ПТ</span></button>
-               <button class="dash-board__button-day" data-btn-day="Saturday" type="button" title="субота">17 <span class="dash-board__button-day_name">СБ</span></button>
-               <button class="dash-board__button-day _red" data-btn-day="Sunday" type="button" title="неділя">18 <span class="dash-board__button-day_name">НД</span></button>
+               <button class="dash-board__button-day _red" data-btn-day="Monday" data-date="2025-01-12" type="button" title="понеділок">12<span class="dash-board__button-day_name">ПН</span></button>
+               <button class="dash-board__button-day _green _active" data-btn-day="Tuesday" data-date="2025-02-13" type="button" title="вівторок">13<span class="dash-board__button-day_name">ВТ</span></button>
+               <button class="dash-board__button-day _green" data-btn-day="Wednesday" data-date="2025-03-14" type="button" title="середа">14 <span class="dash-board__button-day_name">СР</span></button>
+               <button class="dash-board__button-day _green" data-btn-day="Thursday" data-date="2025-04-15" type="button" title="четвер">15 <span class="dash-board__button-day_name">ЧЕ</span></button>
+               <button class="dash-board__button-day _red" data-btn-day="Friday" data-date="2025-05-16" type="button" title="п'ятниця">16 <span class="dash-board__button-day_name">ПТ</span></button>
+               <button class="dash-board__button-day" data-btn-day="Saturday" data-date="2025-06-17" type="button" title="субота">17 <span class="dash-board__button-day_name">СБ</span></button>
+               <button class="dash-board__button-day _red" data-btn-day="Sunday" data-date="2025-12-18" type="button" title="неділя">18 <span class="dash-board__button-day_name">НД</span></button>
          </div>
          <button class="dash-board__change-of-week-btn forward" type="button" title="наступний тиждень"></button>
       </div>
@@ -428,7 +428,7 @@
             </div>
          </div>
          <!-- Подробиці по видатках за день -->
-         <div class="dash-board__daily-outlay-info" data-day data-name="cost-data">
+         <div class="dash-board__daily-outlay-info" data-day="Monday" data-name="cost-data">
             <p class="dash-board__fin-inform-display-title">данні щодо витрат за день</p>
             <div class="dash-board__statistics-panel">
                <div class="dash-board__outlay-block">
@@ -467,7 +467,259 @@
                   <p class="dash-board__outlay-title">Стаття видаткв 9</p>
                   <p class="dash-board__outlay-cost">000,00 грн</p>
                </div>
-               <p class="dash-board__amount-of-expenses">1 300,00 грн</p>
+               <p class="dash-board__amount-of-expenses">7 000,00 грн</p>
+            </div>
+         </div>
+         <div class="dash-board__daily-outlay-info" data-day="Tuesday" data-name="cost-data">
+            <p class="dash-board__fin-inform-display-title">данні щодо витрат за день</p>
+            <div class="dash-board__statistics-panel">
+               <div class="dash-board__outlay-block">
+                  <p class="dash-board__outlay-title">Стаття видаткв 1</p>
+                  <p class="dash-board__outlay-cost">000,00 грн</p>
+               </div>
+               <div class="dash-board__outlay-block">
+                  <p class="dash-board__outlay-title">Стаття видаткв 2</p>
+                  <p class="dash-board__outlay-cost">000,00 грн</p>
+               </div>
+               <div class="dash-board__outlay-block">
+                  <p class="dash-board__outlay-title">Стаття видаткв 3</p>
+                  <p class="dash-board__outlay-cost">000,00 грн</p>
+               </div>
+               <div class="dash-board__outlay-block">
+                  <p class="dash-board__outlay-title">Стаття видаткв 4</p>
+                  <p class="dash-board__outlay-cost">000,00 грн</p>
+               </div>
+               <div class="dash-board__outlay-block">
+                  <p class="dash-board__outlay-title">Стаття видаткв 5</p>
+                  <p class="dash-board__outlay-cost">000,00 грн</p>
+               </div>
+               <div class="dash-board__outlay-block">
+                  <p class="dash-board__outlay-title">Стаття видаткв 6</p>
+                  <p class="dash-board__outlay-cost">000,00 грн</p>
+               </div>
+               <div class="dash-board__outlay-block">
+                  <p class="dash-board__outlay-title">Стаття видаткв 7</p>
+                  <p class="dash-board__outlay-cost">000,00 грн</p>
+               </div>
+               <div class="dash-board__outlay-block">
+                  <p class="dash-board__outlay-title">Стаття видаткв 8</p>
+                  <p class="dash-board__outlay-cost">000,00 грн</p>
+               </div>
+               <div class="dash-board__outlay-block">
+                  <p class="dash-board__outlay-title">Стаття видаткв 9</p>
+                  <p class="dash-board__outlay-cost">000,00 грн</p>
+               </div>
+               <p class="dash-board__amount-of-expenses">3 400,00 грн</p>
+            </div>
+         </div>
+         <div class="dash-board__daily-outlay-info" data-day="Wednesday" data-name="cost-data">
+            <p class="dash-board__fin-inform-display-title">данні щодо витрат за день</p>
+            <div class="dash-board__statistics-panel">
+               <div class="dash-board__outlay-block">
+                  <p class="dash-board__outlay-title">Стаття видаткв 1</p>
+                  <p class="dash-board__outlay-cost">000,00 грн</p>
+               </div>
+               <div class="dash-board__outlay-block">
+                  <p class="dash-board__outlay-title">Стаття видаткв 2</p>
+                  <p class="dash-board__outlay-cost">000,00 грн</p>
+               </div>
+               <div class="dash-board__outlay-block">
+                  <p class="dash-board__outlay-title">Стаття видаткв 3</p>
+                  <p class="dash-board__outlay-cost">000,00 грн</p>
+               </div>
+               <div class="dash-board__outlay-block">
+                  <p class="dash-board__outlay-title">Стаття видаткв 4</p>
+                  <p class="dash-board__outlay-cost">000,00 грн</p>
+               </div>
+               <div class="dash-board__outlay-block">
+                  <p class="dash-board__outlay-title">Стаття видаткв 5</p>
+                  <p class="dash-board__outlay-cost">000,00 грн</p>
+               </div>
+               <div class="dash-board__outlay-block">
+                  <p class="dash-board__outlay-title">Стаття видаткв 6</p>
+                  <p class="dash-board__outlay-cost">000,00 грн</p>
+               </div>
+               <div class="dash-board__outlay-block">
+                  <p class="dash-board__outlay-title">Стаття видаткв 7</p>
+                  <p class="dash-board__outlay-cost">000,00 грн</p>
+               </div>
+               <div class="dash-board__outlay-block">
+                  <p class="dash-board__outlay-title">Стаття видаткв 8</p>
+                  <p class="dash-board__outlay-cost">000,00 грн</p>
+               </div>
+               <div class="dash-board__outlay-block">
+                  <p class="dash-board__outlay-title">Стаття видаткв 9</p>
+                  <p class="dash-board__outlay-cost">000,00 грн</p>
+               </div>
+               <p class="dash-board__amount-of-expenses">12 000,00 грн</p>
+            </div>
+         </div>
+         <div class="dash-board__daily-outlay-info" data-day="Thursday" data-name="cost-data">
+            <p class="dash-board__fin-inform-display-title">данні щодо витрат за день</p>
+            <div class="dash-board__statistics-panel">
+               <div class="dash-board__outlay-block">
+                  <p class="dash-board__outlay-title">Стаття видаткв 1</p>
+                  <p class="dash-board__outlay-cost">000,00 грн</p>
+               </div>
+               <div class="dash-board__outlay-block">
+                  <p class="dash-board__outlay-title">Стаття видаткв 2</p>
+                  <p class="dash-board__outlay-cost">000,00 грн</p>
+               </div>
+               <div class="dash-board__outlay-block">
+                  <p class="dash-board__outlay-title">Стаття видаткв 3</p>
+                  <p class="dash-board__outlay-cost">000,00 грн</p>
+               </div>
+               <div class="dash-board__outlay-block">
+                  <p class="dash-board__outlay-title">Стаття видаткв 4</p>
+                  <p class="dash-board__outlay-cost">000,00 грн</p>
+               </div>
+               <div class="dash-board__outlay-block">
+                  <p class="dash-board__outlay-title">Стаття видаткв 5</p>
+                  <p class="dash-board__outlay-cost">000,00 грн</p>
+               </div>
+               <div class="dash-board__outlay-block">
+                  <p class="dash-board__outlay-title">Стаття видаткв 6</p>
+                  <p class="dash-board__outlay-cost">000,00 грн</p>
+               </div>
+               <div class="dash-board__outlay-block">
+                  <p class="dash-board__outlay-title">Стаття видаткв 7</p>
+                  <p class="dash-board__outlay-cost">000,00 грн</p>
+               </div>
+               <div class="dash-board__outlay-block">
+                  <p class="dash-board__outlay-title">Стаття видаткв 8</p>
+                  <p class="dash-board__outlay-cost">000,00 грн</p>
+               </div>
+               <div class="dash-board__outlay-block">
+                  <p class="dash-board__outlay-title">Стаття видаткв 9</p>
+                  <p class="dash-board__outlay-cost">000,00 грн</p>
+               </div>
+               <p class="dash-board__amount-of-expenses">756,00 грн</p>
+            </div>
+         </div>
+         <div class="dash-board__daily-outlay-info" data-day="Friday" data-name="cost-data">
+            <p class="dash-board__fin-inform-display-title">данні щодо витрат за день</p>
+            <div class="dash-board__statistics-panel">
+               <div class="dash-board__outlay-block">
+                  <p class="dash-board__outlay-title">Стаття видаткв 1</p>
+                  <p class="dash-board__outlay-cost">000,00 грн</p>
+               </div>
+               <div class="dash-board__outlay-block">
+                  <p class="dash-board__outlay-title">Стаття видаткв 2</p>
+                  <p class="dash-board__outlay-cost">000,00 грн</p>
+               </div>
+               <div class="dash-board__outlay-block">
+                  <p class="dash-board__outlay-title">Стаття видаткв 3</p>
+                  <p class="dash-board__outlay-cost">000,00 грн</p>
+               </div>
+               <div class="dash-board__outlay-block">
+                  <p class="dash-board__outlay-title">Стаття видаткв 4</p>
+                  <p class="dash-board__outlay-cost">000,00 грн</p>
+               </div>
+               <div class="dash-board__outlay-block">
+                  <p class="dash-board__outlay-title">Стаття видаткв 5</p>
+                  <p class="dash-board__outlay-cost">000,00 грн</p>
+               </div>
+               <div class="dash-board__outlay-block">
+                  <p class="dash-board__outlay-title">Стаття видаткв 6</p>
+                  <p class="dash-board__outlay-cost">000,00 грн</p>
+               </div>
+               <div class="dash-board__outlay-block">
+                  <p class="dash-board__outlay-title">Стаття видаткв 7</p>
+                  <p class="dash-board__outlay-cost">000,00 грн</p>
+               </div>
+               <div class="dash-board__outlay-block">
+                  <p class="dash-board__outlay-title">Стаття видаткв 8</p>
+                  <p class="dash-board__outlay-cost">000,00 грн</p>
+               </div>
+               <div class="dash-board__outlay-block">
+                  <p class="dash-board__outlay-title">Стаття видаткв 9</p>
+                  <p class="dash-board__outlay-cost">000,00 грн</p>
+               </div>
+               <p class="dash-board__amount-of-expenses">2 4370,00 грн</p>
+            </div>
+         </div>
+         <div class="dash-board__daily-outlay-info" data-day="Saturday" data-name="cost-data">
+            <p class="dash-board__fin-inform-display-title">данні щодо витрат за день</p>
+            <div class="dash-board__statistics-panel">
+               <div class="dash-board__outlay-block">
+                  <p class="dash-board__outlay-title">Стаття видаткв 1</p>
+                  <p class="dash-board__outlay-cost">000,00 грн</p>
+               </div>
+               <div class="dash-board__outlay-block">
+                  <p class="dash-board__outlay-title">Стаття видаткв 2</p>
+                  <p class="dash-board__outlay-cost">000,00 грн</p>
+               </div>
+               <div class="dash-board__outlay-block">
+                  <p class="dash-board__outlay-title">Стаття видаткв 3</p>
+                  <p class="dash-board__outlay-cost">000,00 грн</p>
+               </div>
+               <div class="dash-board__outlay-block">
+                  <p class="dash-board__outlay-title">Стаття видаткв 4</p>
+                  <p class="dash-board__outlay-cost">000,00 грн</p>
+               </div>
+               <div class="dash-board__outlay-block">
+                  <p class="dash-board__outlay-title">Стаття видаткв 5</p>
+                  <p class="dash-board__outlay-cost">000,00 грн</p>
+               </div>
+               <div class="dash-board__outlay-block">
+                  <p class="dash-board__outlay-title">Стаття видаткв 6</p>
+                  <p class="dash-board__outlay-cost">000,00 грн</p>
+               </div>
+               <div class="dash-board__outlay-block">
+                  <p class="dash-board__outlay-title">Стаття видаткв 7</p>
+                  <p class="dash-board__outlay-cost">000,00 грн</p>
+               </div>
+               <div class="dash-board__outlay-block">
+                  <p class="dash-board__outlay-title">Стаття видаткв 8</p>
+                  <p class="dash-board__outlay-cost">000,00 грн</p>
+               </div>
+               <div class="dash-board__outlay-block">
+                  <p class="dash-board__outlay-title">Стаття видаткв 9</p>
+                  <p class="dash-board__outlay-cost">000,00 грн</p>
+               </div>
+               <p class="dash-board__amount-of-expenses">300,00 грн</p>
+            </div>
+         </div>
+         <div class="dash-board__daily-outlay-info" data-day="Sunday" data-name="cost-data">
+            <p class="dash-board__fin-inform-display-title">данні щодо витрат за день</p>
+            <div class="dash-board__statistics-panel">
+               <div class="dash-board__outlay-block">
+                  <p class="dash-board__outlay-title">Стаття видаткв 1</p>
+                  <p class="dash-board__outlay-cost">000,00 грн</p>
+               </div>
+               <div class="dash-board__outlay-block">
+                  <p class="dash-board__outlay-title">Стаття видаткв 2</p>
+                  <p class="dash-board__outlay-cost">000,00 грн</p>
+               </div>
+               <div class="dash-board__outlay-block">
+                  <p class="dash-board__outlay-title">Стаття видаткв 3</p>
+                  <p class="dash-board__outlay-cost">000,00 грн</p>
+               </div>
+               <div class="dash-board__outlay-block">
+                  <p class="dash-board__outlay-title">Стаття видаткв 4</p>
+                  <p class="dash-board__outlay-cost">000,00 грн</p>
+               </div>
+               <div class="dash-board__outlay-block">
+                  <p class="dash-board__outlay-title">Стаття видаткв 5</p>
+                  <p class="dash-board__outlay-cost">000,00 грн</p>
+               </div>
+               <div class="dash-board__outlay-block">
+                  <p class="dash-board__outlay-title">Стаття видаткв 6</p>
+                  <p class="dash-board__outlay-cost">000,00 грн</p>
+               </div>
+               <div class="dash-board__outlay-block">
+                  <p class="dash-board__outlay-title">Стаття видаткв 7</p>
+                  <p class="dash-board__outlay-cost">000,00 грн</p>
+               </div>
+               <div class="dash-board__outlay-block">
+                  <p class="dash-board__outlay-title">Стаття видаткв 8</p>
+                  <p class="dash-board__outlay-cost">000,00 грн</p>
+               </div>
+               <div class="dash-board__outlay-block">
+                  <p class="dash-board__outlay-title">Стаття видаткв 9</p>
+                  <p class="dash-board__outlay-cost">000,00 грн</p>
+               </div>
+               <p class="dash-board__amount-of-expenses">1 000,00 грн</p>
             </div>
          </div>
          <!-- Подробиці по ефективності за тиждень -->
