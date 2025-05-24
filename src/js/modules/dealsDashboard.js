@@ -155,10 +155,6 @@ document.addEventListener("click", function (event) {
 });
 
 
-
-
-
-
 // // Сток працюючий
 // document.addEventListener("click", function (event) {
 //    const btnDay = event.target.closest('[data-btn-day]');
