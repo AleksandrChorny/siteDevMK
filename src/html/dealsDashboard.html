@@ -17,7 +17,7 @@
       <div class="dash-board__daily-efficiency">
          <p class="dash-board__daily-efficiency-title">Данні за день</p>
          <div class="dash-board__daily-efficiency-items">
-               <p class="dash-board__daily-efficiency-data result _result-green">+ 7 000 <span class="dash-board__daily-efficiency-data-currency">грн.</span></p>
+               <p class="dash-board__daily-efficiency-data result _green" data-name="daily-efficiency-data">+ 7 000 <span class="dash-board__daily-efficiency-data-currency">грн.</span></p>
                <p class="dash-board__daily-efficiency-data outlay">Витрати: 5 000 грн.</p>
                <p class="dash-board__daily-efficiency-data profit">Дохід: 12 000 грн.</p>
          </div>
@@ -52,7 +52,7 @@
             </svg>
          </button>
          <p class="dash-board__fin-inform-button-description for-outlay">Розгорнуті данні щодо видвтків за поточний день. Щоб побачити інформацію натисніть на кнопку.</p>
-         <button class="dash-board__fin-inform-button weekly" data-btn-name="fin-inform-button-weekly">
+         <button class="dash-board__fin-inform-button weekly _active" data-btn-name="fin-inform-button-weekly">
             <p class="dash-board__fin-inform-button-name">ЗА ТИЖДЕНЬ</p>
             <svg class="dash-board__fin-inform-button-ico">
                <use xlink:href="@img/icons/icons.svg#ico_weekly"></use>
@@ -723,7 +723,7 @@
             </div>
          </div>
          <!-- Подробиці по ефективності за тиждень -->
-         <div class="dash-board__weekly-report weekly" data-day data-name="details-for-the-week">
+         <div class="dash-board__weekly-report weekly _on-screen" data-day data-name="details-for-the-week">
             <p class="dash-board__fin-inform-display-title">фінансова ефективність за тиждень</p>
             <div class="dash-board__weekly-report-items">
                <div class="dash-board__weekly-profit-info">

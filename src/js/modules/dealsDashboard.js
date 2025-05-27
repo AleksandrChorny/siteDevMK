@@ -1,3 +1,4 @@
+// Працюючий
 document.addEventListener("click", function (event) {
    const btnDay = event.target.closest('[data-btn-day]');
    const finBtn = event.target.closest('[data-btn-name="fin-inform-button"]');
@@ -33,7 +34,7 @@ document.addEventListener("click", function (event) {
       }
    }
 
-   function updateDayDataAndColors(dayValue, btnEl) {
+   function updateDayData(dayValue, date) {
       const incomeEl = document.querySelector(`.dash-board__daily-income-info[data-day="${dayValue}"]`);
       const outlayEl = document.querySelector(`.dash-board__daily-outlay-info[data-day="${dayValue}"]`);
 
@@ -55,13 +56,7 @@ document.addEventListener("click", function (event) {
 
       const result = totalIncome - totalOutlay;
 
-      // Додаємо _green або _red лише до поточної кнопки
-      if (btnEl) {
-         btnEl.classList.remove('_green', '_red');
-         btnEl.classList.add(result >= 0 ? '_green' : '_red');
-      }
-
-      const resultEl = document.querySelector('.dash-board__daily-efficiency-data.result');
+      const resultEl = document.querySelector(`.dash-board__daily-efficiency-data.result[data-name="daily-efficiency-data"][data-date="${date}"]`);
       const outlayDisplay = document.querySelector('.dash-board__daily-efficiency-data.outlay');
       const incomeDisplay = document.querySelector('.dash-board__daily-efficiency-data.profit');
 
@@ -69,8 +64,6 @@ document.addEventListener("click", function (event) {
          const resultSign = result >= 0 ? '+ ' : '- ';
          const formatted = `${resultSign}${Math.abs(result).toLocaleString('uk-UA')}`;
          resultEl.childNodes[0].textContent = formatted + ' ';
-         resultEl.classList.toggle('_result-green', result >= 0);
-         resultEl.classList.toggle('_result-red', result < 0);
       }
 
       if (incomeDisplay) incomeDisplay.textContent = `Дохід: ${totalIncome.toLocaleString('uk-UA')} грн.`;
@@ -95,27 +88,39 @@ document.addEventListener("click", function (event) {
       }
    }
 
-   // ========== Клік по кнопці дня ==========
+   // ========= Клік по кнопці дня =========
    if (btnDay) {
       const dayValue = btnDay.getAttribute('data-btn-day');
-      if (!dayValue) return;
+      const date = btnDay.getAttribute('data-date');
+      if (!dayValue || !date) return;
 
       activateButtonGroup('[data-btn-day]', btnDay);
 
-      // Якщо жодна вкладка ще не активна — активуємо дохід
-      const hasActiveTab = document.querySelector('[data-btn-name]._active');
-      if (!hasActiveTab) {
+      if (!document.querySelector('[data-btn-name]._active')) {
          const defaultFinBtn = document.querySelector('[data-btn-name="fin-inform-button"]');
          if (defaultFinBtn) defaultFinBtn.classList.add('_active');
       }
 
       updateHeaderDate(btnDay);
       showRelevantBlock(dayValue);
-      updateDayDataAndColors(dayValue, btnDay);
+      updateDayData(dayValue, date);
+
+      // ==== Копіюємо клас _green або _red із кнопки до результату ====
+      const resultEl = document.querySelector(`.dash-board__daily-efficiency-data.result[data-name="daily-efficiency-data"]`);
+      if (resultEl) {
+         resultEl.classList.remove('_green', '_red');
+
+         if (btnDay.classList.contains('_green')) {
+            resultEl.classList.add('_green');
+         } else if (btnDay.classList.contains('_red')) {
+            resultEl.classList.add('_red');
+         }
+      }
+
       return;
    }
 
-   // ========== Клік по кнопці "дохід" ==========
+   // ========= Клік по кнопці "дохід" =========
    if (finBtn) {
       const activeDayBtn = document.querySelector('[data-btn-day]._active');
       if (!activeDayBtn) return;
@@ -129,7 +134,7 @@ document.addEventListener("click", function (event) {
       return;
    }
 
-   // ========== Клік по кнопці "витрати" ==========
+   // ========= Клік по кнопці "витрати" =========
    if (outlayBtn) {
       const activeDayBtn = document.querySelector('[data-btn-day]._active');
       if (!activeDayBtn) return;
@@ -143,7 +148,7 @@ document.addEventListener("click", function (event) {
       return;
    }
 
-   // ========== Клік по кнопці "тиждень" ==========
+   // ========= Клік по кнопці "тиждень" =========
    if (weeklyBtn) {
       activateButtonGroup('[data-btn-name]', weeklyBtn);
       document.querySelectorAll('[data-day]').forEach(el => el.classList.remove('_on-screen'));
@@ -153,7 +158,6 @@ document.addEventListener("click", function (event) {
       return;
    }
 });
-
 
 // // Сток працюючий
 // document.addEventListener("click", function (event) {
@@ -304,4 +308,32 @@ document.addEventListener("click", function (event) {
 //       if (weekBlock) weekBlock.classList.add('_on-screen');
 //       return;
 //    }
+
+
+
+// document.querySelectorAll('.dash-board__button-day').forEach(button => {
+//   button.addEventListener('click', () => {
+//     const date = button.getAttribute('data-date');
+    
+//     const resultElement = document.querySelector(
+//       `.dash-board__daily-efficiency-data.result[data-name="daily-efficiency-data"][data-date="${date}"]`
+//     );
+
+//     if (!resultElement) return;
+
+//     const isGreen = resultElement.classList.contains('_result-green');
+
+//     // Видалити попередні стилі кнопки
+//     button.classList.remove('_red', '_green');
+
+//     // Додати відповідний клас
+//     button.classList.add(isGreen ? '_green' : '_red');
+
+//     // Видалити _result-green з <p>
+//     resultElement.classList.remove('_result-green');
+//   });
+// });
+
+
+   
 // });
