@@ -7,6 +7,13 @@
     </div>
 
     <div class="dash-board__items-block">
+      <!-- Кнопка повернення до сьогодняшньої дати -->
+      <button class="return-to-today-btn" type="button" title="Повернутись до сьогодняшньої дати">
+         <svg class="return-to-today-btn__svg">
+            <use xlink:href="@img/icons/icons.svg#today"></use>
+         </svg>
+         <p class="return-to-today-btn__txt">today</p>
+      </button>
       <!-- Панель дати -->
       <div class="dash-board__date-screen">
          <p class="dash-board__date-screen-month" data-name="date-screen-month">ТРАВЕНЬ</p>
@@ -17,9 +24,9 @@
       <div class="dash-board__daily-efficiency">
          <p class="dash-board__daily-efficiency-title">Данні за день</p>
          <div class="dash-board__daily-efficiency-items">
+               <p class="dash-board__daily-efficiency-data cost-value">Витрати: 5 000 грн.</p>
+               <p class="dash-board__daily-efficiency-data profit-falue">Дохід: 12 000 грн.</p>
                <p class="dash-board__daily-efficiency-data result _green" data-name="daily-efficiency-data">+ 27 000 <span class="dash-board__daily-efficiency-data-currency">грн.</span></p>
-               <p class="dash-board__daily-efficiency-data outlay">Витрати: 5 000 грн.</p>
-               <p class="dash-board__daily-efficiency-data profit">Дохід: 12 000 грн.</p>
          </div>
       </div>
       <!-- Панель вибору дати та тижня -->
@@ -64,7 +71,7 @@
       </div>
       <!-- Дісплей виводу докладної аналітики -->
       <div class="dash-board__fin-inform-display">
-         <!-- Подробиці по доходу за день -->
+      <!-- Подробиці по доходу за день -->
          <!-- ЗА ПОНЕДІЛОК -->
          <div class="dash-board__daily-income-info" data-day="Monday">
             <p class="dash-board__fin-inform-display-title">перелік виконаних робіт за день</p>
@@ -429,10 +436,25 @@
                <p class="dash-board__employee-income">1 260,00 грн</p>
             </div>
          </div>
-         <!-- Подробиці по видатках за день -->
+
+      <!-- Подробиці по видатках за день -->
+         <!-- Понеділок -->
          <div class="dash-board__daily-outlay-info" data-day="Monday" data-name="cost-data">
             <p class="dash-board__fin-inform-display-title">данні щодо витрат за день</p>
             <div class="dash-board__statistics-panel">
+               <!-- кнопка виклику форми для додавання нової статті витрат -->
+               <button class="dash-board__outlay-add-btn" type="button" title="Додати статтю видатків">Додати</button>
+               <!-- форма додавання новогї статті витрат -->
+               <form class="dash-board__outlay-add-form _active" action="">
+                  <!-- кнопка закриття форми витрат -->
+                  <button class="form-close-btn" type="button"></button>
+                  <p class="dash-board__outlay-add-input-title">Стаття видатків</p>
+                  <input class="dash-board__outlay-add-input" type="text">
+                  <p class="dash-board__outlay-add-input-title">Сума</p>
+                  <input class="dash-board__outlay-add-input" type="text">
+                  <!-- кнопка відправки форми -->
+                  <input class="dash-board__outlay-add-input _submit" type="submit">
+               </form>
                <div class="dash-board__outlay-block">
                   <p class="dash-board__outlay-title">Стаття видаткв 1</p>
                   <p class="dash-board__outlay-cost">000,00 грн</p>
@@ -471,8 +493,29 @@
                </div>
                <p class="dash-board__amount-of-expenses">7 000,00 грн</p>
             </div>
+            <!-- Панель виводу додаткових/нерегулярних витрат -->
+            <div class="dash-board__statistics-panel additional-costs">
+               <div class="dash-board__additional-costs-block">
+                  <p class="dash-board__additional-costs-title">Стаття нерегулярних видаткв 1</p>
+                  <p class="dash-board__additional-costs-cost">000,00 грн</p>
+                  <!-- Кнопка видалення запису про додаткові/нерегулярні витрати -->
+                  <button class="dash-board__additional-costs-del-btn" type="button" title="Видалити запис"></button>
+               </div>
+               <!-- Форма підтвердження видалення запису про додаткові/нерегулярні витрати -->
+               <form class="dash-board__additional-costs-del-form" action="">
+                  <button class="form-close-btn" type="button"></button>
+                  <p class="dash-board__additional-costs-del-form-title">Ви впевнені що хочете видалити цей запис?</p>
+                  <span>Стаття нерегулярних видаткв 1</span>
+                  <span>000,00 грн</span>
+                  <!-- Кнопка підтвердження видалення запису про додаткові/нерегулярні витрати -->
+                  <input class="dash-board__additional-costs-del-form-submit" type="submit" value="Видалити" title="Підтвердити видалення">
+               </form>
+            </div>
          </div>
+         <!-- Вівторок -->
          <div class="dash-board__daily-outlay-info" data-day="Tuesday" data-name="cost-data">
+            <!-- кнопка виклику форми для додавання нової статті витрат -->
+            <button class="dash-board__outlay-add-btn" type="button" title="Додати статтю видатків">Додати</button>
             <p class="dash-board__fin-inform-display-title">данні щодо витрат за день</p>
             <div class="dash-board__statistics-panel">
                <div class="dash-board__outlay-block">
@@ -513,8 +556,29 @@
                </div>
                <p class="dash-board__amount-of-expenses">3 400,00 грн</p>
             </div>
+            <!-- Панель виводу додаткових/нерегулярних витрат -->
+            <div class="dash-board__statistics-panel additional-costs">
+               <div class="dash-board__additional-costs-block">
+                  <p class="dash-board__additional-costs-title">Стаття нерегулярних видаткв 1</p>
+                  <p class="dash-board__additional-costs-cost">000,00 грн</p>
+                  <!-- Кнопка видалення запису про додаткові/нерегулярні витрати -->
+                  <button class="dash-board__additional-costs-del-btn" type="button" title="Видалити запис"></button>
+               </div>
+               <!-- Форма підтвердження видалення запису про додаткові/нерегулярні витрати -->
+               <form class="dash-board__additional-costs-del-form _active" action="">
+                  <button class="form-close-btn" type="button"></button>
+                  <p class="dash-board__additional-costs-del-form-title">Ви впевнені що хочете видалити цей запис?</p>
+                  <span>Стаття нерегулярних видаткв 1</span>
+                  <span>000,00 грн</span>
+                  <!-- Кнопка підтвердження видалення запису про додаткові/нерегулярні витрати -->
+                  <input class="dash-board__additional-costs-del-form-submit" type="submit" value="Видалити" title="Підтвердити видалення">
+               </form>
+            </div>
          </div>
+         <!-- Середа -->
          <div class="dash-board__daily-outlay-info" data-day="Wednesday" data-name="cost-data">
+            <!-- кнопка виклику форми для додавання нової статті витрат -->
+            <button class="dash-board__outlay-add-btn" type="button" title="Додати статтю видатків">Додати</button>
             <p class="dash-board__fin-inform-display-title">данні щодо витрат за день</p>
             <div class="dash-board__statistics-panel">
                <div class="dash-board__outlay-block">
@@ -555,8 +619,29 @@
                </div>
                <p class="dash-board__amount-of-expenses">12 000,00 грн</p>
             </div>
+            <!-- Панель виводу додаткових/нерегулярних витрат -->
+            <div class="dash-board__statistics-panel additional-costs">
+               <div class="dash-board__additional-costs-block">
+                  <p class="dash-board__additional-costs-title">Стаття нерегулярних видаткв 1</p>
+                  <p class="dash-board__additional-costs-cost">000,00 грн</p>
+                  <!-- Кнопка видалення запису про додаткові/нерегулярні витрати -->
+                  <button class="dash-board__additional-costs-del-btn" type="button" title="Видалити запис"></button>
+               </div>
+               <!-- Форма підтвердження видалення запису про додаткові/нерегулярні витрати -->
+               <form class="dash-board__additional-costs-del-form" action="">
+                  <button class="form-close-btn" type="button"></button>
+                  <p class="dash-board__additional-costs-del-form-title">Ви впевнені що хочете видалити цей запис?</p>
+                  <span>Стаття нерегулярних видаткв 1</span>
+                  <span>000,00 грн</span>
+                  <!-- Кнопка підтвердження видалення запису про додаткові/нерегулярні витрати -->
+                  <input class="dash-board__additional-costs-del-form-submit" type="submit" value="Видалити" title="Підтвердити видалення">
+               </form>
+            </div>
          </div>
+         <!-- Четвер -->
          <div class="dash-board__daily-outlay-info" data-day="Thursday" data-name="cost-data">
+            <!-- кнопка виклику форми для додавання нової статті витрат -->
+            <button class="dash-board__outlay-add-btn" type="button" title="Додати статтю видатків">Додати</button>
             <p class="dash-board__fin-inform-display-title">данні щодо витрат за день</p>
             <div class="dash-board__statistics-panel">
                <div class="dash-board__outlay-block">
@@ -597,8 +682,29 @@
                </div>
                <p class="dash-board__amount-of-expenses">756,00 грн</p>
             </div>
+            <!-- Панель виводу додаткових/нерегулярних витрат -->
+            <div class="dash-board__statistics-panel additional-costs">
+               <div class="dash-board__additional-costs-block">
+                  <p class="dash-board__additional-costs-title">Стаття нерегулярних видаткв 1</p>
+                  <p class="dash-board__additional-costs-cost">000,00 грн</p>
+                  <!-- Кнопка видалення запису про додаткові/нерегулярні витрати -->
+                  <button class="dash-board__additional-costs-del-btn" type="button" title="Видалити запис"></button>
+               </div>
+               <!-- Форма підтвердження видалення запису про додаткові/нерегулярні витрати -->
+               <form class="dash-board__additional-costs-del-form" action="">
+                  <button class="form-close-btn" type="button"></button>
+                  <p class="dash-board__additional-costs-del-form-title">Ви впевнені що хочете видалити цей запис?</p>
+                  <span>Стаття нерегулярних видаткв 1</span>
+                  <span>000,00 грн</span>
+                  <!-- Кнопка підтвердження видалення запису про додаткові/нерегулярні витрати -->
+                  <input class="dash-board__additional-costs-del-form-submit" type="submit" value="Видалити" title="Підтвердити видалення">
+               </form>
+            </div>
          </div>
+         <!-- П'ятниця -->
          <div class="dash-board__daily-outlay-info" data-day="Friday" data-name="cost-data">
+            <!-- кнопка виклику форми для додавання нової статті витрат -->
+            <button class="dash-board__outlay-add-btn" type="button" title="Додати статтю видатків">Додати</button>
             <p class="dash-board__fin-inform-display-title">данні щодо витрат за день</p>
             <div class="dash-board__statistics-panel">
                <div class="dash-board__outlay-block">
@@ -639,8 +745,29 @@
                </div>
                <p class="dash-board__amount-of-expenses">2 4370,00 грн</p>
             </div>
+            <!-- Панель виводу додаткових/нерегулярних витрат -->
+            <div class="dash-board__statistics-panel additional-costs">
+               <div class="dash-board__additional-costs-block">
+                  <p class="dash-board__additional-costs-title">Стаття нерегулярних видаткв 1</p>
+                  <p class="dash-board__additional-costs-cost">000,00 грн</p>
+                  <!-- Кнопка видалення запису про додаткові/нерегулярні витрати -->
+                  <button class="dash-board__additional-costs-del-btn" type="button" title="Видалити запис"></button>
+               </div>
+               <!-- Форма підтвердження видалення запису про додаткові/нерегулярні витрати -->
+               <form class="dash-board__additional-costs-del-form" action="">
+                  <button class="form-close-btn" type="button"></button>
+                  <p class="dash-board__additional-costs-del-form-title">Ви впевнені що хочете видалити цей запис?</p>
+                  <span>Стаття нерегулярних видаткв 1</span>
+                  <span>000,00 грн</span>
+                  <!-- Кнопка підтвердження видалення запису про додаткові/нерегулярні витрати -->
+                  <input class="dash-board__additional-costs-del-form-submit" type="submit" value="Видалити" title="Підтвердити видалення">
+               </form>
+            </div>
          </div>
+         <!-- Субота -->
          <div class="dash-board__daily-outlay-info" data-day="Saturday" data-name="cost-data">
+            <!-- кнопка виклику форми для додавання нової статті витрат -->
+            <button class="dash-board__outlay-add-btn" type="button" title="Додати статтю видатків">Додати</button>
             <p class="dash-board__fin-inform-display-title">данні щодо витрат за день</p>
             <div class="dash-board__statistics-panel">
                <div class="dash-board__outlay-block">
@@ -681,8 +808,29 @@
                </div>
                <p class="dash-board__amount-of-expenses">300,00 грн</p>
             </div>
+            <!-- Панель виводу додаткових/нерегулярних витрат -->
+            <div class="dash-board__statistics-panel additional-costs">
+               <div class="dash-board__additional-costs-block">
+                  <p class="dash-board__additional-costs-title">Стаття нерегулярних видаткв 1</p>
+                  <p class="dash-board__additional-costs-cost">000,00 грн</p>
+                  <!-- Кнопка видалення запису про додаткові/нерегулярні витрати -->
+                  <button class="dash-board__additional-costs-del-btn" type="button" title="Видалити запис"></button>
+               </div>
+               <!-- Форма підтвердження видалення запису про додаткові/нерегулярні витрати -->
+               <form class="dash-board__additional-costs-del-form" action="">
+                  <button class="form-close-btn" type="button"></button>
+                  <p class="dash-board__additional-costs-del-form-title">Ви впевнені що хочете видалити цей запис?</p>
+                  <span>Стаття нерегулярних видаткв 1</span>
+                  <span>000,00 грн</span>
+                  <!-- Кнопка підтвердження видалення запису про додаткові/нерегулярні витрати -->
+                  <input class="dash-board__additional-costs-del-form-submit" type="submit" value="Видалити" title="Підтвердити видалення">
+               </form>
+            </div>
          </div>
+         <!-- Неділя -->
          <div class="dash-board__daily-outlay-info" data-day="Sunday" data-name="cost-data">
+            <!-- кнопка виклику форми для додавання нової статті витрат -->
+            <button class="dash-board__outlay-add-btn" type="button" title="Додати статтю видатків">Додати</button>
             <p class="dash-board__fin-inform-display-title">данні щодо витрат за день</p>
             <div class="dash-board__statistics-panel">
                <div class="dash-board__outlay-block">
@@ -723,8 +871,27 @@
                </div>
                <p class="dash-board__amount-of-expenses">1 000,00 грн</p>
             </div>
+            <!-- Панель виводу додаткових/нерегулярних витрат -->
+            <div class="dash-board__statistics-panel additional-costs">
+               <div class="dash-board__additional-costs-block">
+                  <p class="dash-board__additional-costs-title">Стаття нерегулярних видаткв 1</p>
+                  <p class="dash-board__additional-costs-cost">000,00 грн</p>
+                  <!-- Кнопка видалення запису про додаткові/нерегулярні витрати -->
+                  <button class="dash-board__additional-costs-del-btn" type="button" title="Видалити запис"></button>
+               </div>
+               <!-- Форма підтвердження видалення запису про додаткові/нерегулярні витрати -->
+               <form class="dash-board__additional-costs-del-form" action="">
+                  <button class="form-close-btn" type="button"></button>
+                  <p class="dash-board__additional-costs-del-form-title">Ви впевнені що хочете видалити цей запис?</p>
+                  <span>Стаття нерегулярних видаткв 1</span>
+                  <span>000,00 грн</span>
+                  <!-- Кнопка підтвердження видалення запису про додаткові/нерегулярні витрати -->
+                  <input class="dash-board__additional-costs-del-form-submit" type="submit" value="Видалити" title="Підтвердити видалення">
+               </form>
+            </div>
          </div>
-         <!-- Подробиці по ефективності за тиждень -->
+
+      <!-- Подробиці по ефективності за тиждень -->
          <div class="dash-board__weekly-report weekly _on-screen" data-day data-name="details-for-the-week">
             <p class="dash-board__fin-inform-display-title">фінансова ефективність за тиждень</p>
             <div class="dash-board__weekly-report-items">
